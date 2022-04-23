@@ -18,7 +18,7 @@
 <link rel="shortcut icon" href="/images/favicon.png">
 
 
-<title>categories - think - shutterbug sweet diary</title>
+<title>zsh - shutterbug sweet diary</title>
 
 <meta name="keywords" content="">
 
@@ -26,7 +26,7 @@
 
 <!-- Jetpack Open Graph Tags -->
 <meta property="og:type" content="article" />
-<meta property="og:title" content="categories - think - shutterbug sweet diary" />
+<meta property="og:title" content="zsh - shutterbug sweet diary" />
 <meta property="og:description" content="" />
 <meta property="og:url" content="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main" />
 <meta property="og:site_name" content="shutterbug sweet diary" />
@@ -39,7 +39,7 @@
         (function() {
             let jsi_config = {
                 rootUrl: 'https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main/',
-                isPost: 'false',
+                isPost: 'true',
                 buildingTime: '04/23/2022',
                 snsQRCode: '',
                 donateImg: '',
@@ -102,17 +102,17 @@
 
             <div class="page-title">
     <ul>
-        <li class="">
-            <a href="/" data-name="Recent Posts">Recent Posts</a>
-        </li>
+        <li><a href="/">Recent Posts</a></li>
         
-        <li class="">
-            <a href="/categories/learn" data-name="learn">learn</a>
-        </li>
-        
-        <li class="active">
-            <a href="/categories/think" data-name="think">think</a>
-        </li>
+            
+                <li class="active">
+                    <a href="/categories/learn" data-name="learn">learn</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/think" data-name="think">think</a>
+                </li>
+            
         
         <li class="page-search">
     <form id="search" class="search-form">
@@ -127,43 +127,85 @@
     </ul>
 </div>
 <div class="main-inner">
-    <!-- default get newest -->
-    
-        
-<article class="post">
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main" target="_blank">
-                <strong>shutterbug</strong>
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="post-header">
+            <div class="post-author clearfix">
+                <a class="avatar fleft" href="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main"
+                   target="_blank">
+                    <img width="48" src="/images/favicon.png" alt="avatar"/>
+                </a>
+                <p><span class="label">Author</span>
+                    <a href="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main"
+                       target="_blank">shutterbug</a>
+                    <span title="Last edited at&nbsp;2022-04-23">2022-04-23</span>
+                </p>
+                <p>sweet diary</p>
+            </div>
+            <h2 class="post-title">zsh</h2>
+            <div class="post-meta">
+                emm... 1220 words in the article |
+                you are the&nbsp;<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>th friend who reading now
+            </div>
+        </div>
+        <div class="post-content markdown-body">
+            <h1 id="ZSH"><a href="#ZSH" class="headerlink" title="ZSH"></a>ZSH</h1><h2 id="change-default-location"><a href="#change-default-location" class="headerlink" title="change default location"></a>change default location</h2><p><code>.zshrc and .zcompdump</code> location in <code>$HOME</code> directory.  and we can change it to another folder</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">add this to ~/.zprofile</span></span><br><span class="line">export ZDOTDIR=$HOME/.config/zsh</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Note:</p>
+<p><code>.zcompdump</code> file used to speed up the zsh completion</p>
+</blockquote>
+<h2 id="change-oh-my-zsh-default-location"><a href="#change-oh-my-zsh-default-location" class="headerlink" title="change oh-my-zsh default location"></a>change oh-my-zsh default location</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export ZSH=$HOME/.config/zsh/.oh-my-zsh</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="auto-correct"><a href="#auto-correct" class="headerlink" title="auto correct"></a>auto correct</h2><p>In archlinux installer, i have ever saw auto correct effect while error typing and it is very helpful, however i cannot find the plugin which has the same effect. Today, i searched and found it finally, you know what? It is even not a plugin but a configuration in <code>.zshrc</code>.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">uncomment to <span class="built_in">enable</span> it</span></span><br><span class="line">ENABLE_CORRECTION=&quot;true&quot;</span><br></pre></td></tr></table></figure>
+
+<p><img src=".images/zsh-correct.gif" alt="zsh-correct"></p>
+<ul>
+<li>n which means <strong>no</strong>, don’t correct my command and execute it as it is</li>
+<li>y which means <strong>yes</strong>, correct my command</li>
+<li>a which means <strong>abort</strong>, don’t execute the command and give me an empty prompt</li>
+<li>e which means <strong>edit</strong>, don’t execute the command and let me edit it again</li>
+</ul>
+<h2 id="auto-suggestion"><a href="#auto-suggestion" class="headerlink" title="auto suggestion"></a>auto suggestion</h2><p>oh-my-zsh includes this function. Add <code>zsh-autosuggestions</code> to <code>plugin&#123;&#125;</code> will okay. However, it is much more customizable, we can even define <a target="_blank" rel="noopener" href="https://github.com/zsh-users/zsh-autosuggestions#configuration">its color</a>.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">plugins=(git</span><br><span class="line">    zsh-autosuggestions</span><br><span class="line">    )</span><br><span class="line">ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE=&quot;fg=#7e749d,bg=#42414d,bold,underline&quot;</span><br></pre></td></tr></table></figure>
+
+<p><img src=".images/zsh-suggest.gif" alt="zsh-suggest"></p>
+
+            
+                
+            
+        </div>
+        <div class="post-tool">
+            <a class="btn-thumbs-up" href="javascript:void(0);" data-cid="52" title="95">
+                <i class="fa fa-thumbs-up" aria-hidden="true"></i> Donate
             </a>
-            <em>·</em>2022-04-23
+        </div>
+        
+        <div class="post-tags">Tags：
+            
+            <a href="/tags/zsh/">zsh</a>
             
         </div>
-        <a class="post-title" href="/2022/04/23/learn-from-shield/" target="_blank" title="learn_from_shield">learn_from_shield</a>
-        <div class="post-meta">
-            <a href="/tags" target="_blank"><i class="fa fa-tags"></i></a>
-            
-                <em>·</em>
-                <a href="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main/tags/shield/" target="_blank">shield</a>
-            
-        </div>
-    </div>
-    <div class="post-desc">
-        learn_from_shield
-    </div>
-</article>
-
-
-
+        
+    </article>
     
+        <p style="text-align: center">This article just represents my own viewpoint. If there is something wrong, please correct me.</p>
+    
+    
+    
+
 </div>
 
 
         </div><!-- end #main-->
     </div><!-- end #body -->
     <footer class="footer">
-    <div class="footer-inner" style="text-align: left">
+    <div class="footer-inner" style="text-align: center">
         <p>
             <a href="/about"  title="About">About</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
             <!-- 自定义链接 -->

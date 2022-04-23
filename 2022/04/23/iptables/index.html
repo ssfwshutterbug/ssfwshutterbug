@@ -1,0 +1,327 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="zh-CN">
+<head>
+    <!--[if lte IE 9]>
+<meta http-equiv="refresh" content="0;url=https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main/warn.html">
+<![endif]-->
+<meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta name="author" content="shutterbug">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta http-equiv="mobile-agent" content="format=html5; url=https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main">
+<meta http-equiv="X-DNS-Prefetch-Control" content="on">
+
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+
+<link rel="shortcut icon" href="/images/favicon.png">
+
+
+<title>iptables - shutterbug sweet diary</title>
+
+<meta name="keywords" content="">
+
+<meta name="description " content="">
+
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="iptables - shutterbug sweet diary" />
+<meta property="og:description" content="" />
+<meta property="og:url" content="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main" />
+<meta property="og:site_name" content="shutterbug sweet diary" />
+
+<link rel="dns-prefetch" href="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main">
+<link rel="prefetch" href="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main">
+<link rel="prerender" href="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main">
+<link rel="stylesheet" href="/css/JSimple.min.css">
+    <script type="text/javascript">
+        (function() {
+            let jsi_config = {
+                rootUrl: 'https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main/',
+                isPost: 'true',
+                buildingTime: '04/23/2022',
+                snsQRCode: '',
+                donateImg: '',
+                readMode: 'day',
+                localSearch: { dbPath: '' }
+            };
+            
+            window.jsi_config = jsi_config;
+        })()
+    </script>
+    
+<script src="/js/SimpleCore.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.2"></head>
+<body>
+<div id="nav">
+    <nav class="nav-menu">
+        <a class="site-name current" href="/" title="S">S</a>
+        <a class="site-index current" href="/"><i class="fa fa-home"></i><span>Home</span></a>
+        <a href="/archives" title="Archives"><i class="fa fa-archives"></i><span>Archives</span></a>
+        <a href="/tags" title="Tags"><i class="fa fa-tags"></i><span>Tags</span></a>
+        <!-- custom single page of menus -->
+        
+        
+        <a href="/help" title="帮助">
+            <i class="fa fa-question-circle"></i>
+            <span>帮助</span>
+        </a>
+        
+    </nav>
+</div>
+
+<div class="nav-user">
+    <a class="btn-search" href="#"><i class="fa fa-search"></i></a>
+    <a class="btn-read-mode" href="#"><i class="fa fa-sun-o"></i></a>
+    
+</div>
+<div id="wrapper" class="clearfix">
+    <div id="body">
+        <div class="main" id="main">
+            <div id="cover">
+    <img class="cover-img" src="https://shuoit.net/images/cover-day.jpg" alt="cover-img" loading="lazy" />
+    <div class="cover-info">
+        
+        <h1 class="cover-siteName">blog</h1>
+        <h3 class="cover-siteTitle">the world you see</h3>
+        <p class="cover-siteDesc">not depend on what you received but your response</p>
+        <div class="cover-sns">
+            
+    &nbsp;&nbsp;<div class="btn btn-github">
+        <a href="https://github.com/ssfwshutterbug" target="_blank" title="github" ref="friend">
+            <i class="fa fa-github"></i>
+        </a>
+    </div>
+
+
+        </div>
+    </div>
+</div>
+
+            <div class="page-title">
+    <ul>
+        <li><a href="/">Recent Posts</a></li>
+        
+            
+                <li class="active">
+                    <a href="/categories/learn" data-name="learn">learn</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/think" data-name="think">think</a>
+                </li>
+            
+        
+        <li class="page-search">
+    <form id="search" class="search-form">
+        <input type="text"
+               readonly="readonly"
+               id="local-search-input-tip"
+               placeholder="click to search..." />
+        <button type="button" disabled="disabled" class="search-form-submit"><i class="fa fa-search"></i></button>
+    </form>
+</li>
+
+    </ul>
+</div>
+<div class="main-inner">
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="post-header">
+            <div class="post-author clearfix">
+                <a class="avatar fleft" href="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main"
+                   target="_blank">
+                    <img width="48" src="/images/favicon.png" alt="avatar"/>
+                </a>
+                <p><span class="label">Author</span>
+                    <a href="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main"
+                       target="_blank">shutterbug</a>
+                    <span title="Last edited at&nbsp;2022-04-23">2022-04-23</span>
+                </p>
+                <p>sweet diary</p>
+            </div>
+            <h2 class="post-title">iptables</h2>
+            <div class="post-meta">
+                emm... 5385 words in the article |
+                you are the&nbsp;<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>th friend who reading now
+            </div>
+        </div>
+        <div class="post-content markdown-body">
+            <h1 id="IPTABLES"><a href="#IPTABLES" class="headerlink" title="IPTABLES"></a>IPTABLES</h1><p>iptables is a powerful tool(front of kernel netfilter module) to manually change the way that network connection of our computer. we can do everything with the network connection such as port forward, nat network transfer, load balancer and etc.</p>
+<h2 id="tables"><a href="#tables" class="headerlink" title="tables"></a>tables</h2><p>as first we need to know that there are 5 tables for us to store our ip table rules:</p>
+<table>
+<thead>
+<tr>
+<th>table</th>
+<th>aims</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>raw</td>
+<td>exempt from connection tracking</td>
+</tr>
+<tr>
+<td>filter</td>
+<td>common to adjust input and output policy</td>
+</tr>
+<tr>
+<td>nat</td>
+<td>common to do network address translation</td>
+</tr>
+<tr>
+<td>mangle</td>
+<td>specialized packet alterations</td>
+</tr>
+<tr>
+<td>security</td>
+<td>security access</td>
+</tr>
+</tbody></table>
+<p>the most important thing is that the life of packet working though isn’t from one table to another table, so, table is just a group of rules that have the same effective function. in order to make the configuration much easier, there comes <code>chain</code> concept. each table has different chains.</p>
+<h2 id="startup-and-save"><a href="#startup-and-save" class="headerlink" title="startup and save"></a>startup and save</h2><p>in my archlinux, it isn’t enabled by default.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">enable</span> iptables and start</span></span><br><span class="line">sudo systemctl enable --now iptables</span><br></pre></td></tr></table></figure>
+
+<p>terminal setting of iptables will not store in disk, in order to make it effect after reboot we need to save it.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo iptables-save -f /etc/iptables/iptables.rules</span><br></pre></td></tr></table></figure>
+
+<p>in general, we don’t modify this file directly. however if we do that a reload is needed.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo iptables-restart /etc/iptables/iptables.rules</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="list-rules"><a href="#list-rules" class="headerlink" title="list rules"></a>list rules</h2><p><code>--list</code>: list all rules with DNS resolve, don’t use this along since it will display for a long time.</p>
+<p><code>--numeric</code>: don’t resolve DNS, display ip directly.</p>
+<p><code>--list-rules</code>: list all origin commands.</p>
+<p><code>--line-number</code>: list rules with line number.</p>
+<p><code>--verbose</code>: show packet account.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo iptables --table filter --list --numeric</span><br><span class="line">sudo iptables --table nat --list --numeric --line-number</span><br><span class="line">sudo iptables --table mangle --list-rules</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Note:</p>
+<p>use <code>list</code> with <code>numeric</code> together, or it will <a target="_blank" rel="noopener" href="https://serverfault.com/questions/85602/iptables-l-pretty-slow-is-this-normal">spend lots of time</a> to reverse ip address to DNS/hostname</p>
+</blockquote>
+<h2 id="import-modules"><a href="#import-modules" class="headerlink" title="import modules"></a>import modules</h2><p>In iptables, there are lots of modules we can use. For example <code>--protocol tcp</code> will import a module named tcp in backend. If we want to use other modules, we can use <code>--module module_name</code> to import.</p>
+<p>Module <code>comment</code> is very useful for us to add a comment to a rule in case of forgotten.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo iptables --table filter --append FORWARD --jump DROP --module comment --comment &quot;disable all forward traffice by default&quot;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="disable-input-request"><a href="#disable-input-request" class="headerlink" title="disable input request"></a>disable input request</h2><p>in order to enhance personal PC security, i want to disable all request to my PC but only allow local area ssh connect.</p>
+<p>if i disable all input traffic, though all output traffic is allowed i cannot access any web site via browser. The reason is that when i send a request to remote web server, the remote server need reply the information that i need, but i already disabled all input traffic, so i cannot visit any web site. Since all connection have a state, if the connection is established, the state will be changed. So i can use this feature.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">disable</span> all input traffic by default</span></span><br><span class="line">sudo iptables --table filter --policy INPUT DROP</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">allow established connection</span></span><br><span class="line">sudo iptables --table filter --append INPUT --module state --state ESTABLISHED --jump ACCEPT --module comment --comment &quot;allow established connection&quot;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">allow <span class="built_in">local</span> area network ssh connectin</span></span><br><span class="line">sudo iptables --table filter --append INPUT --protocol tcp --dport 22 --jump ACCEPT --module comment --comment &quot;allow local area network ssh connection&quot;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="flush-old-rule-and-modify-default-chain-policy"><a href="#flush-old-rule-and-modify-default-chain-policy" class="headerlink" title="flush old rule and modify default chain policy"></a>flush old rule and modify default chain policy</h2><p>we can choose which one to flush, all table/ one table/ a chain?</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">flush all table</span></span><br><span class="line">sudo iptables --flush</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">flush specified table</span></span><br><span class="line">sudo iptables --table [table_name] --flush</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">flush specified table<span class="string">&#x27;s chain</span></span></span><br><span class="line">sudo iptables --table [table_name] --flush [chain_name]</span><br></pre></td></tr></table></figure>
+
+<p>there are two ways to change the default chain policy:</p>
+<ol>
+<li>directly change chain policy</li>
+<li>add a global policy at the end of one chain</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">eg: change default ACCEPT to DROP of filter table INPUT chain</span></span><br><span class="line">sudo iptables --table filter --policy INPUT DROP</span><br><span class="line">sudo iptables --table filter --append INPUT --jump DROP</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="NAT-table"><a href="#NAT-table" class="headerlink" title="NAT table"></a>NAT table</h2><p>learn from <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=NAdJojxENEU">youtube video</a>. net table is used to forward packet, much powerful in port forward, ip forward, even load balance.</p>
+<h3 id="port-forward"><a href="#port-forward" class="headerlink" title="port forward"></a>port forward</h3><p>all traffic coming to local network will work though nat’s <code>PREROUTING</code> chain. in this chain, we can modify access port to other port realizing port forward.</p>
+<p>for example i want other people access my PC’s 8080 port to really visit 80  port.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo iptables --table nat --append PREROUTING --protocol tcp --dport 8080 --jump REDIRECT --to 80 --module comment --comment &quot;redirect 8080 to 80 port&quot;</span><br></pre></td></tr></table></figure>
+
+<p>now other people visit my PC’s 8080 port will redirect to 80 port.</p>
+<p>it is very useful, yeah? one hand, we can enhance security, on the other hand, we can start several same applications with different ports in one machine.</p>
+<h3 id="ip-forward"><a href="#ip-forward" class="headerlink" title="ip forward"></a>ip forward</h3><p><img src=".images/image-20210313153205046.png" alt="ip forward"></p>
+<p>环境：192.168.31.235主机安装了nginx服务，可以进行web页面80端口访问。现在需要在192.168.31.31（本机）访问192.168.31.114的80端口来间接访问192.168.31.235的nginx服务</p>
+<p><code>所有iptables策略在转发192.168.31.114主机上进行配置</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">将来自114：80端口的请求转发到235:80端口</span></span><br><span class="line">iptables --table nat \</span><br><span class="line">--append PREROUTING \</span><br><span class="line">--protocol tcp \</span><br><span class="line">--dport 80 \</span><br><span class="line">--destination 192.168.31.114 \</span><br><span class="line">--jump DNAT \</span><br><span class="line">--to-destination 192.168.31.235:80</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">将转发到235:80端口的数据源地址31（本机）地址修改为114</span></span><br><span class="line">iptables --table nat \</span><br><span class="line">--append POSTROUTING \</span><br><span class="line">--protocol tcp \</span><br><span class="line">--dport 80 \</span><br><span class="line">--destination 192.168.31.235 \</span><br><span class="line">--jump SNAT \</span><br><span class="line">--to-source 192.168.31.114</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Note: </p>
+<p>默认主机的ip转发是关闭的，需要手动开启。如果需要永久开启需要在/etc/sysctl.conf中添加</p>
+<p>net.ipv4.ip_forward=1</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo 1 &gt; /proc/sys/net/ipv4/ip_forward</span><br></pre></td></tr></table></figure>
+
+
+
+
+            
+                
+            
+        </div>
+        <div class="post-tool">
+            <a class="btn-thumbs-up" href="javascript:void(0);" data-cid="52" title="95">
+                <i class="fa fa-thumbs-up" aria-hidden="true"></i> Donate
+            </a>
+        </div>
+        
+        <div class="post-tags">Tags：
+            
+            <a href="/tags/iptables/">iptables</a>
+            
+        </div>
+        
+    </article>
+    
+        <p style="text-align: center">This article just represents my own viewpoint. If there is something wrong, please correct me.</p>
+    
+    
+    
+
+</div>
+
+
+        </div><!-- end #main-->
+    </div><!-- end #body -->
+    <footer class="footer">
+    <div class="footer-inner" style="text-align: center">
+        <p>
+            <a href="/about"  title="About">About</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <!-- 自定义链接 -->
+            <a href="/help" title="Help" >Help</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/links" title="Links">Links</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/sitemap.xml" title="SiteMap">SiteMap</a>
+        </p>
+        <p>
+            Has been established&nbsp<a href="/timeline" id="siteBuildingTime"></a>&nbspDays，<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="licence">Based on Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</a><br/>
+            ©2017-<span id="cpYear"></span> Based on&nbsp<a href="http://hexo.io" target="_blank" rel="nofollow">Hexo</a>
+            ，Theme by&nbsp&nbsp<a href="https://github.com/tangkunyin/hexo-theme-jsimple" target="_blank" rel="bookmark">JSimple</a>
+            ，Author&nbsp<a href="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main" target="_blank" rel="friend">shutterbug</a>
+            ，Hosted by <a href="https://pages.github.com/" target="_blank" rel="nofollow">GitHub Pages</a>
+            
+        </p>
+    </div>
+</footer>
+</div>
+<!-- search pop -->
+<div class="popup search-popup local-search-popup">
+    <div class="local-search-header clearfix">
+        <span class="search-icon">
+            <i class="fa fa-search"></i>
+        </span>
+        <span class="popup-btn-close">
+            <i class="fa fa-times-circle"></i>
+        </span>
+        <div class="local-search-input-wrapper">
+            <input id="local-search-input"
+                   spellcheck="false"
+                   type="text"
+                   autocomplete="off"
+                   placeholder="Input query keywords here..."/>
+        </div>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+<div class="fixed-btn">
+    <a class="btn-gotop" href="javascript:"> <i class="fa fa-angle-up"></i></a>
+</div>
+
+
+</body>
+</html>

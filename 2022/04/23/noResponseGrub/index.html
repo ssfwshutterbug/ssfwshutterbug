@@ -18,7 +18,7 @@
 <link rel="shortcut icon" href="/images/favicon.png">
 
 
-<title>categories - think - shutterbug sweet diary</title>
+<title>noresponsegrub - shutterbug sweet diary</title>
 
 <meta name="keywords" content="">
 
@@ -26,7 +26,7 @@
 
 <!-- Jetpack Open Graph Tags -->
 <meta property="og:type" content="article" />
-<meta property="og:title" content="categories - think - shutterbug sweet diary" />
+<meta property="og:title" content="noresponsegrub - shutterbug sweet diary" />
 <meta property="og:description" content="" />
 <meta property="og:url" content="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main" />
 <meta property="og:site_name" content="shutterbug sweet diary" />
@@ -39,7 +39,7 @@
         (function() {
             let jsi_config = {
                 rootUrl: 'https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main/',
-                isPost: 'false',
+                isPost: 'true',
                 buildingTime: '04/23/2022',
                 snsQRCode: '',
                 donateImg: '',
@@ -102,17 +102,17 @@
 
             <div class="page-title">
     <ul>
-        <li class="">
-            <a href="/" data-name="Recent Posts">Recent Posts</a>
-        </li>
+        <li><a href="/">Recent Posts</a></li>
         
-        <li class="">
-            <a href="/categories/learn" data-name="learn">learn</a>
-        </li>
-        
-        <li class="active">
-            <a href="/categories/think" data-name="think">think</a>
-        </li>
+            
+                <li class="active">
+                    <a href="/categories/learn" data-name="learn">learn</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/think" data-name="think">think</a>
+                </li>
+            
         
         <li class="page-search">
     <form id="search" class="search-form">
@@ -127,43 +127,67 @@
     </ul>
 </div>
 <div class="main-inner">
-    <!-- default get newest -->
-    
-        
-<article class="post">
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main" target="_blank">
-                <strong>shutterbug</strong>
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="post-header">
+            <div class="post-author clearfix">
+                <a class="avatar fleft" href="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main"
+                   target="_blank">
+                    <img width="48" src="/images/favicon.png" alt="avatar"/>
+                </a>
+                <p><span class="label">Author</span>
+                    <a href="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main"
+                       target="_blank">shutterbug</a>
+                    <span title="Last edited at&nbsp;2022-04-23">2022-04-23</span>
+                </p>
+                <p>sweet diary</p>
+            </div>
+            <h2 class="post-title">noResponseGrub</h2>
+            <div class="post-meta">
+                emm... 756 words in the article |
+                you are the&nbsp;<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>th friend who reading now
+            </div>
+        </div>
+        <div class="post-content markdown-body">
+            <h2 id="issue"><a href="#issue" class="headerlink" title="issue"></a>issue</h2><p>在grub双启动界面无法用键盘进行上下移动选择需要的启动项，并且也无法用del键进入bios</p>
+<h2 id="analysize"><a href="#analysize" class="headerlink" title="analysize"></a>analysize</h2><p>无论是方向键还是del键都不起作用，推测是grub启动的时候未识别到键盘，或者配置了什么参数导致grub freeze。google搜索了一下，发现有人遇到过这个问题，是因为在bios中设置了快速启动，所以我需要进bios中将快速启动关掉试试。然而现在的问题是无法进入bios</p>
+<h2 id="resolve"><a href="#resolve" class="headerlink" title="resolve"></a>resolve</h2><p>那么现在需要解决如何进入bios的问题，键盘没有反应肯定是不行了。之前设置过usb始终作为第一个启动项，所以将usb插上后可能就会进入usb的启动界面，或许键盘可以用。然而usb似乎是没有识别出来，所以还是只能在之前的grub上面进行修改。幸好grub是可以自定义启动顺序的，所以将进入bios的启动项配置为第一个就可以了。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">if [ $&#123;grub_platform&#125; == &quot;efi&quot; ]; then</span><br><span class="line">        menuentry &quot;Firmware setup&quot; &#123;</span><br><span class="line">                fwsetup</span><br><span class="line">        &#125;</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
+
+<p>将以上代码写入<code>/boot/grub/grub.cfg</code>中，放到第一个启动位置。然后重启，顺利进入bios。最终找到了问题所在</p>
+<p><img src=".images/MSI_SnapShot.bmp"></p>
+<p>MSI的fast boot会导致在bios加载过程中不进行usb，硬盘识别，由于键盘/启动盘是用usb连接的，所以识别不到。将MSI快速关机禁止掉之后就解决了问题。</p>
+<p>所以如果是台式机，这个选项一定不能开启，否则bios都进入不了。笔记本电脑才能开启这个选项。不管怎么说，这个功能确实很不错，开启这个选项后进入系统的时间确实会减少很多。</p>
+
+            
+                
+            
+        </div>
+        <div class="post-tool">
+            <a class="btn-thumbs-up" href="javascript:void(0);" data-cid="52" title="95">
+                <i class="fa fa-thumbs-up" aria-hidden="true"></i> Donate
             </a>
-            <em>·</em>2022-04-23
+        </div>
+        
+        <div class="post-tags">Tags：
+            
+            <a href="/tags/grub/">grub</a>
             
         </div>
-        <a class="post-title" href="/2022/04/23/learn-from-shield/" target="_blank" title="learn_from_shield">learn_from_shield</a>
-        <div class="post-meta">
-            <a href="/tags" target="_blank"><i class="fa fa-tags"></i></a>
-            
-                <em>·</em>
-                <a href="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main/tags/shield/" target="_blank">shield</a>
-            
-        </div>
-    </div>
-    <div class="post-desc">
-        learn_from_shield
-    </div>
-</article>
-
-
-
+        
+    </article>
     
+        <p style="text-align: center">This article just represents my own viewpoint. If there is something wrong, please correct me.</p>
+    
+    
+    
+
 </div>
 
 
         </div><!-- end #main-->
     </div><!-- end #body -->
     <footer class="footer">
-    <div class="footer-inner" style="text-align: left">
+    <div class="footer-inner" style="text-align: center">
         <p>
             <a href="/about"  title="About">About</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
             <!-- 自定义链接 -->

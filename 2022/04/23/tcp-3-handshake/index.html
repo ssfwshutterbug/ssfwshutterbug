@@ -18,7 +18,7 @@
 <link rel="shortcut icon" href="/images/favicon.png">
 
 
-<title>categories - think - shutterbug sweet diary</title>
+<title>tcp_3_handshake - shutterbug sweet diary</title>
 
 <meta name="keywords" content="">
 
@@ -26,7 +26,7 @@
 
 <!-- Jetpack Open Graph Tags -->
 <meta property="og:type" content="article" />
-<meta property="og:title" content="categories - think - shutterbug sweet diary" />
+<meta property="og:title" content="tcp_3_handshake - shutterbug sweet diary" />
 <meta property="og:description" content="" />
 <meta property="og:url" content="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main" />
 <meta property="og:site_name" content="shutterbug sweet diary" />
@@ -39,7 +39,7 @@
         (function() {
             let jsi_config = {
                 rootUrl: 'https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main/',
-                isPost: 'false',
+                isPost: 'true',
                 buildingTime: '04/23/2022',
                 snsQRCode: '',
                 donateImg: '',
@@ -102,17 +102,17 @@
 
             <div class="page-title">
     <ul>
-        <li class="">
-            <a href="/" data-name="Recent Posts">Recent Posts</a>
-        </li>
+        <li><a href="/">Recent Posts</a></li>
         
-        <li class="">
-            <a href="/categories/learn" data-name="learn">learn</a>
-        </li>
-        
-        <li class="active">
-            <a href="/categories/think" data-name="think">think</a>
-        </li>
+            
+                <li class="active">
+                    <a href="/categories/learn" data-name="learn">learn</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/think" data-name="think">think</a>
+                </li>
+            
         
         <li class="page-search">
     <form id="search" class="search-form">
@@ -127,43 +127,69 @@
     </ul>
 </div>
 <div class="main-inner">
-    <!-- default get newest -->
-    
-        
-<article class="post">
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main" target="_blank">
-                <strong>shutterbug</strong>
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="post-header">
+            <div class="post-author clearfix">
+                <a class="avatar fleft" href="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main"
+                   target="_blank">
+                    <img width="48" src="/images/favicon.png" alt="avatar"/>
+                </a>
+                <p><span class="label">Author</span>
+                    <a href="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main"
+                       target="_blank">shutterbug</a>
+                    <span title="Last edited at&nbsp;2022-04-23">2022-04-23</span>
+                </p>
+                <p>sweet diary</p>
+            </div>
+            <h2 class="post-title">tcp_3_handshake</h2>
+            <div class="post-meta">
+                emm... 1252 words in the article |
+                you are the&nbsp;<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>th friend who reading now
+            </div>
+        </div>
+        <div class="post-content markdown-body">
+            <h1 id="TCP-3-HandShake"><a href="#TCP-3-HandShake" class="headerlink" title="TCP 3 HandShake"></a>TCP 3 HandShake</h1><p>as we know that TCP(transmission control protocol) is much more security than UDP(user datagram protocol). so why? and what makes it?</p>
+<h2 id="the-problem-of-transmission"><a href="#the-problem-of-transmission" class="headerlink" title="the problem of transmission"></a>the problem of transmission</h2><ol>
+<li>data sending will be split into several packets, how do i(server/client) know the sequence order of packets and how to rebuild them?</li>
+<li>how can i(server/client) know that you(client/server) really received my request? no data lost or hacked?</li>
+</ol>
+<h2 id="the-method-to-resolve-problem"><a href="#the-method-to-resolve-problem" class="headerlink" title="the method to resolve problem"></a>the method to resolve problem</h2><p>in order to resolve the problem 1, packet use <code>SYN</code> synchronize sequence number to confirm data beginning number.</p>
+<p>in order to resolve the problem 2, server/client needs to confirm the <code>SYC</code> with <code>ACK</code> acknowledgement that it really received the <code>SYN</code>. (until receive ACK, server/client will resend <code>SYN</code>).</p>
+<h2 id="the-way-it-works"><a href="#the-way-it-works" class="headerlink" title="the way it works"></a>the way it works</h2><p><strong>STEP1</strong>: client sends a syn <code>x</code> to server announce that client is likely start communication</p>
+<p><strong>STEP2</strong>: server received the request and then send a ack <code>x + size of request packet</code>(equal 1) to client confirms let’s begin with packet with number x+1. then send a syn <code>y</code> to client announce that the data server sends to client begins with number of <code>y</code>.</p>
+<p><strong>STEP3</strong>: client received the syn <code>y</code> of server and then announce that i will receive server’s data begins with number of <code>y + size of request packet</code>(equal 1).</p>
+<p><img src=".images/tcp-3hk.png" alt="tcp-3hk"></p>
+
+            
+                
+            
+        </div>
+        <div class="post-tool">
+            <a class="btn-thumbs-up" href="javascript:void(0);" data-cid="52" title="95">
+                <i class="fa fa-thumbs-up" aria-hidden="true"></i> Donate
             </a>
-            <em>·</em>2022-04-23
+        </div>
+        
+        <div class="post-tags">Tags：
+            
+            <a href="/tags/tcp/">tcp</a>
             
         </div>
-        <a class="post-title" href="/2022/04/23/learn-from-shield/" target="_blank" title="learn_from_shield">learn_from_shield</a>
-        <div class="post-meta">
-            <a href="/tags" target="_blank"><i class="fa fa-tags"></i></a>
-            
-                <em>·</em>
-                <a href="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main/tags/shield/" target="_blank">shield</a>
-            
-        </div>
-    </div>
-    <div class="post-desc">
-        learn_from_shield
-    </div>
-</article>
-
-
-
+        
+    </article>
     
+        <p style="text-align: center">This article just represents my own viewpoint. If there is something wrong, please correct me.</p>
+    
+    
+    
+
 </div>
 
 
         </div><!-- end #main-->
     </div><!-- end #body -->
     <footer class="footer">
-    <div class="footer-inner" style="text-align: left">
+    <div class="footer-inner" style="text-align: center">
         <p>
             <a href="/about"  title="About">About</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
             <!-- 自定义链接 -->

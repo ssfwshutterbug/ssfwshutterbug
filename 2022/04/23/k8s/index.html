@@ -1,0 +1,393 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="zh-CN">
+<head>
+    <!--[if lte IE 9]>
+<meta http-equiv="refresh" content="0;url=https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main/warn.html">
+<![endif]-->
+<meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta name="author" content="shutterbug">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta http-equiv="mobile-agent" content="format=html5; url=https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main">
+<meta http-equiv="X-DNS-Prefetch-Control" content="on">
+
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+
+<link rel="shortcut icon" href="/images/favicon.png">
+
+
+<title>k8s - shutterbug sweet diary</title>
+
+<meta name="keywords" content="">
+
+<meta name="description " content="">
+
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="k8s - shutterbug sweet diary" />
+<meta property="og:description" content="" />
+<meta property="og:url" content="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main" />
+<meta property="og:site_name" content="shutterbug sweet diary" />
+
+<link rel="dns-prefetch" href="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main">
+<link rel="prefetch" href="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main">
+<link rel="prerender" href="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main">
+<link rel="stylesheet" href="/css/JSimple.min.css">
+    <script type="text/javascript">
+        (function() {
+            let jsi_config = {
+                rootUrl: 'https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main/',
+                isPost: 'true',
+                buildingTime: '04/23/2022',
+                snsQRCode: '',
+                donateImg: '',
+                readMode: 'day',
+                localSearch: { dbPath: '' }
+            };
+            
+            window.jsi_config = jsi_config;
+        })()
+    </script>
+    
+<script src="/js/SimpleCore.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.2"></head>
+<body>
+<div id="nav">
+    <nav class="nav-menu">
+        <a class="site-name current" href="/" title="S">S</a>
+        <a class="site-index current" href="/"><i class="fa fa-home"></i><span>Home</span></a>
+        <a href="/archives" title="Archives"><i class="fa fa-archives"></i><span>Archives</span></a>
+        <a href="/tags" title="Tags"><i class="fa fa-tags"></i><span>Tags</span></a>
+        <!-- custom single page of menus -->
+        
+        
+        <a href="/help" title="帮助">
+            <i class="fa fa-question-circle"></i>
+            <span>帮助</span>
+        </a>
+        
+    </nav>
+</div>
+
+<div class="nav-user">
+    <a class="btn-search" href="#"><i class="fa fa-search"></i></a>
+    <a class="btn-read-mode" href="#"><i class="fa fa-sun-o"></i></a>
+    
+</div>
+<div id="wrapper" class="clearfix">
+    <div id="body">
+        <div class="main" id="main">
+            <div id="cover">
+    <img class="cover-img" src="https://shuoit.net/images/cover-day.jpg" alt="cover-img" loading="lazy" />
+    <div class="cover-info">
+        
+        <h1 class="cover-siteName">blog</h1>
+        <h3 class="cover-siteTitle">the world you see</h3>
+        <p class="cover-siteDesc">not depend on what you received but your response</p>
+        <div class="cover-sns">
+            
+    &nbsp;&nbsp;<div class="btn btn-github">
+        <a href="https://github.com/ssfwshutterbug" target="_blank" title="github" ref="friend">
+            <i class="fa fa-github"></i>
+        </a>
+    </div>
+
+
+        </div>
+    </div>
+</div>
+
+            <div class="page-title">
+    <ul>
+        <li><a href="/">Recent Posts</a></li>
+        
+            
+                <li class="active">
+                    <a href="/categories/learn" data-name="learn">learn</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/think" data-name="think">think</a>
+                </li>
+            
+        
+        <li class="page-search">
+    <form id="search" class="search-form">
+        <input type="text"
+               readonly="readonly"
+               id="local-search-input-tip"
+               placeholder="click to search..." />
+        <button type="button" disabled="disabled" class="search-form-submit"><i class="fa fa-search"></i></button>
+    </form>
+</li>
+
+    </ul>
+</div>
+<div class="main-inner">
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="post-header">
+            <div class="post-author clearfix">
+                <a class="avatar fleft" href="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main"
+                   target="_blank">
+                    <img width="48" src="/images/favicon.png" alt="avatar"/>
+                </a>
+                <p><span class="label">Author</span>
+                    <a href="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main"
+                       target="_blank">shutterbug</a>
+                    <span title="Last edited at&nbsp;2022-04-23">2022-04-23</span>
+                </p>
+                <p>sweet diary</p>
+            </div>
+            <h2 class="post-title">k8s</h2>
+            <div class="post-meta">
+                emm... 8153 words in the article |
+                you are the&nbsp;<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>th friend who reading now
+            </div>
+        </div>
+        <div class="post-content markdown-body">
+            <h1 id="kubernetes"><a href="#kubernetes" class="headerlink" title="kubernetes"></a>kubernetes</h1><h2 id="core-component"><a href="#core-component" class="headerlink" title="core component"></a>core component</h2><ul>
+<li>etcd：分布式存储，保存集群状态</li>
+<li>apiserver：api操作接口</li>
+<li>controller manager：维护集群状态</li>
+<li>scheduler：资源调度</li>
+<li>kubelet：容器生命周期，volume和网络管理</li>
+<li>container runtime：镜像管理，pod和容器管理</li>
+<li>kube-proxy：内部服务发现和负载均衡</li>
+</ul>
+<h2 id="basic-concept"><a href="#basic-concept" class="headerlink" title="basic concept"></a>basic concept</h2><p><strong>container</strong>: k8s构建在容器之上，容器被k8s所管理，容器间采用namespace进行隔离</p>
+<p><strong>pod</strong>: k8s使用pod来管理容器，一个pod中一般运行相同的程序，因为pod内的容器共享网络（处于同网段）和文件系统，可进行进程间通信和文件共享</p>
+<p><strong>node</strong>: node是部署pod的地方，所以node的大小决定能够部署虚拟机的多少</p>
+<p><strong>service</strong>: 服务可以跨越pod，每个服务会分配一个内部的cluster ip和dns，供其它容器访问</p>
+<p><strong>label &amp; annotation</strong>: label用来标识对象，annatation用来做注释</p>
+<p><strong>volume</strong>: 为了pod的启停不对数据造成损坏，volume可实现数据持久化</p>
+<p><em><strong>确保pod数量的方式</strong></em></p>
+<p><strong>rc (replication controller)</strong>: 保证pod的高可用，申明确定的pod数量，并维持pod数量不变</p>
+<p><strong>rs (replica set)</strong>: 新一代的rc，支持更多种类的匹配模式</p>
+<p><strong>deployment</strong>：比rs应用更广，用于创建、更新、滚动升级服务</p>
+<p><em><strong>服务发现和负载均衡</strong></em></p>
+<p><strong>service</strong>提供了pod对外服务的确定ip和端口，不需要考虑pod新建和销毁所引起的ip地址变化</p>
+<p><strong>job</strong>:用来控制批处理型任务，执行一次完成后自动退出</p>
+<h2 id="commands"><a href="#commands" class="headerlink" title="commands"></a>commands</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">kubectl get				# list pods</span><br><span class="line">kubectl describe 		# detail info</span><br><span class="line">kubectl logs			# logs</span><br><span class="line">kubectl exec			# execute command in container</span><br><span class="line">kubectl run				# run a simple container</span><br><span class="line">kubectl create -f xx.yaml # run container commonly</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<h2 id="install"><a href="#install" class="headerlink" title="install"></a>install</h2><p>成功安装kubernetes的前提条件：</p>
+<ol>
+<li>安装k8s的机器保证cpu个数大于等于2</li>
+<li>内存不使用swap分区</li>
+<li>多节点的时候需要有主机名与对应ip的映射关系</li>
+<li>关闭防火墙<code>setenforce</code> <code>firewalld</code></li>
+<li>对应版本的docker和k8s</li>
+</ol>
+<blockquote>
+<p>这里使用的版本为：</p>
+<p>docker:</p>
+<p>​    docker-ce-19.03.0-3.el7 </p>
+<p>​    docker-ce-cli-19.03.0-3.el7 </p>
+<p>​    containerd.io-1.4.4-3.1.el7</p>
+<p>k8s:</p>
+<p>​    kubelet-1.20.0-0 </p>
+<p>​    kubeadm-1.20.0-0 </p>
+<p>​    kubectl-1.20.0-0 </p>
+</blockquote>
+<h2 id="install-1"><a href="#install-1" class="headerlink" title="install"></a>install</h2><h4 id="修改主机名"><a href="#修改主机名" class="headerlink" title="修改主机名"></a>修改主机名</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">leader</span></span><br><span class="line">hostnamectl set-hostname k8l</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">node</span></span><br><span class="line">hostnamectl set-hostname k8n1</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="设置主机与ip的映射关系"><a href="#设置主机与ip的映射关系" class="headerlink" title="设置主机与ip的映射关系"></a>设置主机与ip的映射关系</h4><blockquote>
+<p>Note:</p>
+<ol>
+<li>k8s的节点主机最好设置为静态ip，因为ip变化之后node节点也会消失</li>
+<li>一般多节点最好是奇数个，但这里采用2个</li>
+</ol>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">建立映射关系</span></span><br><span class="line">cat &gt;&gt; /etc/hosts &lt;&lt; EOF</span><br><span class="line">192.168.31.11 k8l</span><br><span class="line">192.168.31.12 k8n1</span><br><span class="line">EOF</span><br><span class="line"></span><br><span class="line">echo nameserver 114.114.114.114 &gt; /etc/resolv.conf</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="关闭防火墙-amp-swap分区"><a href="#关闭防火墙-amp-swap分区" class="headerlink" title="关闭防火墙&amp;swap分区"></a>关闭防火墙&amp;swap分区</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">关闭firewalld</span></span><br><span class="line">systemctl stop firewalld</span><br><span class="line">systemctl disable firewalld</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">关闭selinux</span></span><br><span class="line">setenforce 0</span><br><span class="line">sed -i &#x27;s/=enforcing/=permissive/&#x27; /etc/sysconfig/selinux</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">关闭swap分区</span></span><br><span class="line">swapoff -a</span><br><span class="line">sed -i &#x27;/swap/s/^/#/&#x27; /etc/fstab</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="docker安装-amp-配置"><a href="#docker安装-amp-配置" class="headerlink" title="docker安装&amp;配置"></a>docker安装&amp;配置</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">配置docker源</span></span><br><span class="line">yum install -y yum-utils</span><br><span class="line">yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">安装docker</span></span><br><span class="line">yum install docker-ce-19.03.0-3.el7 docker-ce-cli-19.03.0-3.el7 containerd.io-1.4.4-3.1.el7 -y</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Note:</p>
+<p>查看版本：yum list containerd.io –showduplicates | sort -r</p>
+</blockquote>
+<p>修改docker<code>cgroupdriver</code>为<code>systemd</code> (默认为cgroupfs)</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">mkdir /etc/docker</span><br><span class="line">cat &gt; /etc/docker/daemon.json &lt;&lt; EOF</span><br><span class="line">&#123;</span><br><span class="line">  &quot;exec-opts&quot;: [&quot;native.cgroupdriver=systemd&quot;]</span><br><span class="line">&#125;</span><br><span class="line">EOF</span><br></pre></td></tr></table></figure>
+
+<p>启动docker，配置自启动</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl enable docker</span><br><span class="line">systemctl start docker</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="k8s安装-amp-配置"><a href="#k8s安装-amp-配置" class="headerlink" title="k8s安装&amp;配置"></a>k8s安装&amp;配置</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">允许k8s进行流量代理</span></span><br><span class="line">cat &gt; /etc/sysctl.d/k8s.conf &lt;&lt; EOF</span><br><span class="line">net.bridge.bridge-nf-call-ip6tables = 1</span><br><span class="line">net.bridge.bridge-nf-call-iptables = 1</span><br><span class="line">EOF</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">添加国内k8s镜像源</span></span><br><span class="line">cat &gt; /etc/yum.repos.d/kubernetes.repo &lt;&lt; EOF</span><br><span class="line">[kubernetes]</span><br><span class="line">name=Kubernetes Repo</span><br><span class="line">baseurl=https://mirrors.aliyun.com/kubernetes/yum/repos/kubernetes-el7-x86_64/</span><br><span class="line">gpgcheck=0</span><br><span class="line">enabled=1</span><br><span class="line">EOF</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">安装k8s</span></span><br><span class="line">yum install -y kubelet-1.20.0-0 kubeadm-1.20.0-0 kubectl-1.20.0-0 </span><br></pre></td></tr></table></figure>
+
+<p>允许k8s自启动</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl enable kubelet</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Note:</p>
+<p>这里不需要启动k8s，现在启动会报错</p>
+</blockquote>
+<h5 id="主节点配置"><a href="#主节点配置" class="headerlink" title="主节点配置"></a>主节点配置</h5><p>主节点初始化</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">修改apiserver-advertise-address为master的ip</span></span><br><span class="line">kubeadm init --kubernetes-version=1.20.0  \</span><br><span class="line">--apiserver-advertise-address=192.168.31.11   \</span><br><span class="line">--image-repository registry.aliyuncs.com/google_containers  \</span><br><span class="line">--service-cidr=10.10.0.0/16 --pod-network-cidr=10.122.0.0/16</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Note:</p>
+<p>主节点初始化失败后可以重新初始化，不过需要先清空之前初始化的配置</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">kubeadm reset</span><br><span class="line">rm -rf /etc/cni</span><br><span class="line">rm -rf $HOME/.kube/config</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>初始化完成后会在终端打印一些重要信息，需要记录下来。比如node接入的命令</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p $HOME/.kube</span><br><span class="line">sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config</span><br><span class="line">sudo chown $(id -u):$(id -g) $HOME/.kube/config</span><br><span class="line">export KUBECONFIG=/etc/kubernetes/admin.conf</span><br></pre></td></tr></table></figure>
+
+<p>修改端口</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed -i &#x27;s/insecure-port=0/insecure-port=8080/&#x27; /etc/kubernetes/manifests/kube-apiserver.yaml</span><br></pre></td></tr></table></figure>
+
+<p>启动kubelet</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start kubelet</span><br></pre></td></tr></table></figure>
+
+<p>安装网络管理插件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Note:<br>The connection to the server 192.168.31.11:6443 was refused - did you specify the right host or port?</p>
+<p>遇到以上报错时，需要重新初始化，一般是某些k8s的docker启动失败。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop kubelet</span><br><span class="line">systemctl stop docker</span><br><span class="line"></span><br><span class="line">kubeadm reset</span><br><span class="line">rm -rf /etc/cni</span><br><span class="line">rm -rf $HOME/.kube/config</span><br><span class="line"></span><br><span class="line">systemctl start docker</span><br><span class="line">systemctl start kubelet</span><br><span class="line"></span><br><span class="line">kubeadm init --kubernetes-version=1.20.0  \</span><br><span class="line">--apiserver-advertise-address=192.168.31.11   \</span><br><span class="line">--image-repository registry.aliyuncs.com/google_containers  \</span><br><span class="line">--service-cidr=10.10.0.0/16 --pod-network-cidr=10.122.0.0/16</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h5 id="node接入主节点"><a href="#node接入主节点" class="headerlink" title="node接入主节点"></a>node接入主节点</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">node上运行</span></span><br><span class="line">kubeadm join 192.168.31.11:6443 --token nfb8gw.46gfska1dhfevlg9 --discovery-token-ca-cert-hash sha256:5ca678d7bcda290d7a692474711cbf1e5d5a11bc51969cbd453561e1f3186476</span><br></pre></td></tr></table></figure>
+
+<p>如果忘记了以上命令，那么需要重新获取</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看token的值</span></span><br><span class="line">kubeadm token list</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">如果过期了重新生成</span></span><br><span class="line">kubeadm token create</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">获取ca证书的sha256编码<span class="built_in">hash</span>值</span></span><br><span class="line">openssl x509 -pubkey -in /etc/kubernetes/pki/ca.crt | openssl rsa -pubin -outform der 2&gt;/dev/null | openssdgst -sha256 -hex | sed &#x27;s/^.* //&#x27;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">组装</span></span><br><span class="line">kubeadm join 192.168.31.11:6443 --token &#123;&#123;token&#125;&#125; --discovery-token-ca-cert-hash sha256:&#123;&#123;hash&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h4 id="查看状态"><a href="#查看状态" class="headerlink" title="查看状态"></a>查看状态</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">kubectl get nodes</span><br><span class="line">kubectl get pods -n kube-system</span><br><span class="line">kubectl get namespace</span><br><span class="line">kubectl get pods</span><br></pre></td></tr></table></figure>
+
+<p>需要等待一会才是ready状态</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@k8l ~]# kubectl get nodes</span><br><span class="line">NAME   STATUS   ROLES                  AGE     VERSION</span><br><span class="line">k8l    Ready    control-plane,master   25m     v1.20.0</span><br><span class="line">k8n1   Ready    &lt;none&gt;                 8m33s   v1.20.0</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h4 id="创建nginx"><a href="#创建nginx" class="headerlink" title="创建nginx"></a>创建nginx</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">kubectl create deployment nginx --image=nginx</span><br><span class="line">kubectl expose deployment nginx --port=80 --type=NodePort</span><br><span class="line">kubectl get pod,svc</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看80映射端口</span></span><br><span class="line">[root@k8s-master ~]# kubectl get pod,svc</span><br><span class="line">NAME                         READY   STATUS              RESTARTS   AGE</span><br><span class="line">pod/nginx-6799fc88d8-7rgq6   0/1     ContainerCreating   0          16s</span><br><span class="line"></span><br><span class="line">NAME                 TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)        AGE</span><br><span class="line">service/kubernetes   ClusterIP   10.10.0.1      &lt;none&gt;        443/TCP        34m</span><br><span class="line">service/nginx        NodePort    10.10.78.172   &lt;none&gt;        80:31613/TCP   7s</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">web界面访问</span></span><br><span class="line">http://192.168.31.111:31613</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<h2 id="daskboard"><a href="#daskboard" class="headerlink" title="daskboard"></a>daskboard</h2><p><strong>install</strong></p>
+<p>follow <a target="_blank" rel="noopener" href="https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/">this website</a>) to install dashboard</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">run this <span class="built_in">command</span></span> </span><br><span class="line">kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.2.0/aio/deploy/recommended.yaml</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">如果上面下载不下来也可以用我的gitee文件。内容和上面一样</span></span><br><span class="line">kubectl apply -f https://gitee.com/ulomo/some-config-file/raw/master/recommended.yaml</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>edit settting</strong></p>
+<p>in default we cannot access dashboard outsite the host machine where k8s installed. with [this method](<a target="_blank" rel="noopener" href="https://www.thegeekdiary.com/how-to-access-kubernetes-dashboard-externally/">How To Access Kubernetes Dashboard Externally – The Geek Diary</a>) we can access dashboard with host ip address </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">change service “<span class="built_in">type</span>” from ClusterIP to NodePort</span></span><br><span class="line">kubectl -n kubernetes-dashboard edit service kubernetes-dashboard</span><br></pre></td></tr></table></figure>
+
+<p>then find port to visit.<code> it is 31235</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@k8m ~]# kubectl get services --all-namespaces</span><br><span class="line">NAMESPACE              NAME                        TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)                  AGE</span><br><span class="line">default                kubernetes                  ClusterIP   10.10.0.1      &lt;none&gt;        443/TCP                  74m</span><br><span class="line">kube-system            kube-dns                    ClusterIP   10.10.0.10     &lt;none&gt;        53/UDP,53/TCP,9153/TCP   74m</span><br><span class="line">kubernetes-dashboard   dashboard-metrics-scraper   ClusterIP   10.10.27.176   &lt;none&gt;        8000/TCP                 59m</span><br><span class="line">kubernetes-dashboard   kubernetes-dashboard        NodePort    10.10.222.86   &lt;none&gt;        443:31235/TCP            59m</span><br></pre></td></tr></table></figure>
+
+<p><strong>create user</strong></p>
+<p>[follow this website](<a target="_blank" rel="noopener" href="https://github.com/kubernetes/dashboard/blob/master/docs/user/access-control/creating-sample-user.md">dashboard/creating-sample-user.md at master · kubernetes/dashboard · GitHub</a>) to create user</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">cat &lt;&lt;EOF | kubectl apply -f -</span><br><span class="line">apiVersion: v1</span><br><span class="line">kind: ServiceAccount</span><br><span class="line">metadata:</span><br><span class="line">  name: admin-user</span><br><span class="line">  namespace: kubernetes-dashboard</span><br><span class="line">EOF</span><br><span class="line"></span><br><span class="line">cat &lt;&lt;EOF | kubectl apply -f -</span><br><span class="line">apiVersion: rbac.authorization.k8s.io/v1</span><br><span class="line">kind: ClusterRoleBinding</span><br><span class="line">metadata:</span><br><span class="line">  name: admin-user</span><br><span class="line">roleRef:</span><br><span class="line">  apiGroup: rbac.authorization.k8s.io</span><br><span class="line">  kind: ClusterRole</span><br><span class="line">  name: cluster-admin</span><br><span class="line">subjects:</span><br><span class="line">- kind: ServiceAccount</span><br><span class="line">  name: admin-user</span><br><span class="line">  namespace: kubernetes-dashboard</span><br><span class="line">EOF</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>get tocken</strong></p>
+<p>get tocken login needed</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl -n kubernetes-dashboard get secret $(kubectl -n kubernetes-dashboard get sa/admin-user -o jsonpath=&quot;&#123;.secrets[0].name&#125;&quot;) -o go-template=&quot;&#123;&#123;.data.token | base64decode&#125;&#125;&quot; |less</span><br></pre></td></tr></table></figure>
+
+<p>at last, we can visit dashboard with k8s master ip address: <code>https://192.168.31.11:31235/</code></p>
+
+            
+                
+            
+        </div>
+        <div class="post-tool">
+            <a class="btn-thumbs-up" href="javascript:void(0);" data-cid="52" title="95">
+                <i class="fa fa-thumbs-up" aria-hidden="true"></i> Donate
+            </a>
+        </div>
+        
+        <div class="post-tags">Tags：
+            
+            <a href="/tags/k8s/">k8s</a>
+            
+        </div>
+        
+    </article>
+    
+        <p style="text-align: center">This article just represents my own viewpoint. If there is something wrong, please correct me.</p>
+    
+    
+    
+
+</div>
+
+
+        </div><!-- end #main-->
+    </div><!-- end #body -->
+    <footer class="footer">
+    <div class="footer-inner" style="text-align: center">
+        <p>
+            <a href="/about"  title="About">About</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <!-- 自定义链接 -->
+            <a href="/help" title="Help" >Help</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/links" title="Links">Links</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/sitemap.xml" title="SiteMap">SiteMap</a>
+        </p>
+        <p>
+            Has been established&nbsp<a href="/timeline" id="siteBuildingTime"></a>&nbspDays，<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="licence">Based on Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</a><br/>
+            ©2017-<span id="cpYear"></span> Based on&nbsp<a href="http://hexo.io" target="_blank" rel="nofollow">Hexo</a>
+            ，Theme by&nbsp&nbsp<a href="https://github.com/tangkunyin/hexo-theme-jsimple" target="_blank" rel="bookmark">JSimple</a>
+            ，Author&nbsp<a href="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main" target="_blank" rel="friend">shutterbug</a>
+            ，Hosted by <a href="https://pages.github.com/" target="_blank" rel="nofollow">GitHub Pages</a>
+            
+        </p>
+    </div>
+</footer>
+</div>
+<!-- search pop -->
+<div class="popup search-popup local-search-popup">
+    <div class="local-search-header clearfix">
+        <span class="search-icon">
+            <i class="fa fa-search"></i>
+        </span>
+        <span class="popup-btn-close">
+            <i class="fa fa-times-circle"></i>
+        </span>
+        <div class="local-search-input-wrapper">
+            <input id="local-search-input"
+                   spellcheck="false"
+                   type="text"
+                   autocomplete="off"
+                   placeholder="Input query keywords here..."/>
+        </div>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+<div class="fixed-btn">
+    <a class="btn-gotop" href="javascript:"> <i class="fa fa-angle-up"></i></a>
+</div>
+
+
+</body>
+</html>

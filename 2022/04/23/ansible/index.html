@@ -1,0 +1,463 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="zh-CN">
+<head>
+    <!--[if lte IE 9]>
+<meta http-equiv="refresh" content="0;url=https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main/warn.html">
+<![endif]-->
+<meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta name="author" content="shutterbug">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta http-equiv="mobile-agent" content="format=html5; url=https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main">
+<meta http-equiv="X-DNS-Prefetch-Control" content="on">
+
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+
+<link rel="shortcut icon" href="/images/favicon.png">
+
+
+<title>ansible - shutterbug sweet diary</title>
+
+<meta name="keywords" content="">
+
+<meta name="description " content="">
+
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="ansible - shutterbug sweet diary" />
+<meta property="og:description" content="" />
+<meta property="og:url" content="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main" />
+<meta property="og:site_name" content="shutterbug sweet diary" />
+
+<link rel="dns-prefetch" href="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main">
+<link rel="prefetch" href="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main">
+<link rel="prerender" href="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main">
+<link rel="stylesheet" href="/css/JSimple.min.css">
+    <script type="text/javascript">
+        (function() {
+            let jsi_config = {
+                rootUrl: 'https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main/',
+                isPost: 'true',
+                buildingTime: '04/23/2022',
+                snsQRCode: '',
+                donateImg: '',
+                readMode: 'day',
+                localSearch: { dbPath: '' }
+            };
+            
+            window.jsi_config = jsi_config;
+        })()
+    </script>
+    
+<script src="/js/SimpleCore.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.2"></head>
+<body>
+<div id="nav">
+    <nav class="nav-menu">
+        <a class="site-name current" href="/" title="S">S</a>
+        <a class="site-index current" href="/"><i class="fa fa-home"></i><span>Home</span></a>
+        <a href="/archives" title="Archives"><i class="fa fa-archives"></i><span>Archives</span></a>
+        <a href="/tags" title="Tags"><i class="fa fa-tags"></i><span>Tags</span></a>
+        <!-- custom single page of menus -->
+        
+        
+        <a href="/help" title="帮助">
+            <i class="fa fa-question-circle"></i>
+            <span>帮助</span>
+        </a>
+        
+    </nav>
+</div>
+
+<div class="nav-user">
+    <a class="btn-search" href="#"><i class="fa fa-search"></i></a>
+    <a class="btn-read-mode" href="#"><i class="fa fa-sun-o"></i></a>
+    
+</div>
+<div id="wrapper" class="clearfix">
+    <div id="body">
+        <div class="main" id="main">
+            <div id="cover">
+    <img class="cover-img" src="https://shuoit.net/images/cover-day.jpg" alt="cover-img" loading="lazy" />
+    <div class="cover-info">
+        
+        <h1 class="cover-siteName">blog</h1>
+        <h3 class="cover-siteTitle">the world you see</h3>
+        <p class="cover-siteDesc">not depend on what you received but your response</p>
+        <div class="cover-sns">
+            
+    &nbsp;&nbsp;<div class="btn btn-github">
+        <a href="https://github.com/ssfwshutterbug" target="_blank" title="github" ref="friend">
+            <i class="fa fa-github"></i>
+        </a>
+    </div>
+
+
+        </div>
+    </div>
+</div>
+
+            <div class="page-title">
+    <ul>
+        <li><a href="/">Recent Posts</a></li>
+        
+            
+                <li class="active">
+                    <a href="/categories/learn" data-name="learn">learn</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/think" data-name="think">think</a>
+                </li>
+            
+        
+        <li class="page-search">
+    <form id="search" class="search-form">
+        <input type="text"
+               readonly="readonly"
+               id="local-search-input-tip"
+               placeholder="click to search..." />
+        <button type="button" disabled="disabled" class="search-form-submit"><i class="fa fa-search"></i></button>
+    </form>
+</li>
+
+    </ul>
+</div>
+<div class="main-inner">
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="post-header">
+            <div class="post-author clearfix">
+                <a class="avatar fleft" href="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main"
+                   target="_blank">
+                    <img width="48" src="/images/favicon.png" alt="avatar"/>
+                </a>
+                <p><span class="label">Author</span>
+                    <a href="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main"
+                       target="_blank">shutterbug</a>
+                    <span title="Last edited at&nbsp;2022-04-23">2022-04-23</span>
+                </p>
+                <p>sweet diary</p>
+            </div>
+            <h2 class="post-title">ansible</h2>
+            <div class="post-meta">
+                emm... 16542 words in the article |
+                you are the&nbsp;<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>th friend who reading now
+            </div>
+        </div>
+        <div class="post-content markdown-body">
+            <h1 id="Ansible"><a href="#Ansible" class="headerlink" title="Ansible"></a>Ansible</h1><p>ansible is a software without the concept of server or client, but it can do the job of cluster management. the magic is that it uses ssh to connect to other os, that’s it. it can do all of the thing what you do in hosts.</p>
+<h2 id="features"><a href="#features" class="headerlink" title="features"></a>features</h2><ul>
+<li>no client</li>
+<li>via ssh</li>
+<li>moduled</li>
+<li>yaml file</li>
+<li>parallel</li>
+</ul>
+<h2 id="function"><a href="#function" class="headerlink" title="function"></a>function</h2><ul>
+<li>software deployment, install software via ansible</li>
+<li>configuration management, configure system via ansible</li>
+<li>software provisioning</li>
+</ul>
+<h2 id="install"><a href="#install" class="headerlink" title="install"></a>install</h2><p>in centos</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum install epel-release -y</span><br><span class="line">yum install ansible -y</span><br></pre></td></tr></table></figure>
+
+<p>in archlinux</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pacman -S ansible</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="syntax"><a href="#syntax" class="headerlink" title="syntax"></a>syntax</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ansible host_pattern action</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">or</span></span><br><span class="line">ansible-playbook host_pattern</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="inventory-file"><a href="#inventory-file" class="headerlink" title="inventory file"></a>inventory file</h2><p>if only one ip address to connect, we can write it directly. if more than one ip address we can write it in a special file called <code>inventory file</code>.</p>
+<p>inventory file is a file that ansible store variable messages(such as ip, login user name, password etc). the default file is <code>/etc/ansible/hosts</code>. we can simplily put ip in the file, however the way much better is group hosts.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[group_name]</span><br><span class="line">host_ip_1</span><br><span class="line">host_ip_2</span><br><span class="line">host_ip_3</span><br></pre></td></tr></table></figure>
+
+<p>eg:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[testCentos]</span><br><span class="line">192.168.31.114</span><br></pre></td></tr></table></figure>
+
+<p>then we can list all host in this file by</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">ansible all --list-hosts</span></span><br><span class="line">  hosts (1):</span><br><span class="line">    192.168.31.114</span><br></pre></td></tr></table></figure>
+
+<p>if we know group name, we can specify group to show</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">ansible testCentos --list-hosts</span></span><br><span class="line">  hosts (1):</span><br><span class="line">    192.168.31.114</span><br></pre></td></tr></table></figure>
+
+
+
+<p>we can also specify ourself inventory file. there are two methords.</p>
+<ol>
+<li><p>change the default location in <code>/etc/ansible/ansible.cfg</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">inventory      = /any/other/file/location</span><br></pre></td></tr></table></figure></li>
+<li><p>specify by parameter</p>
+<p>make personal inventory file</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;</span><br><span class="line">[testCentos]</span><br><span class="line">192.168.31.114</span><br><span class="line">&quot; &gt;&gt; ip_addr.txt</span><br></pre></td></tr></table></figure>
+
+<p>use <code>--inventory</code> to define.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible --inventory ./ip_addr.txt all --list-hosts</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="module"><a href="#module" class="headerlink" title="module"></a>module</h2><p>module in ansible is command collection. we can find module help by</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible-doc module_name</span><br></pre></td></tr></table></figure>
+
+<p>such as find shell module usage </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible-doc shell</span><br></pre></td></tr></table></figure>
+
+<p>check total module in local machine</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible-doc --list | wc -l</span><br></pre></td></tr></table></figure>
+
+<p>we can use those modules by <code>--module-name</code>.</p>
+<h2 id="Ad-hoc"><a href="#Ad-hoc" class="headerlink" title="Ad-hoc"></a>Ad-hoc</h2><p>Ad-hoc commands in ansible means those one-line commands run in hosts. it is easy, simple without multi tasks to run. so if we just wanna to do a simple task, we can write Ad-hoc. for example check connection with machine.</p>
+<p>one ip can write directly</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible 192.168.31.114 --module-name ping</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">ansible all --module-name ping</span></span><br><span class="line">The authenticity of host &#x27;192.168.31.114 (192.168.31.114)&#x27; can&#x27;t be established.</span><br><span class="line">ECDSA key fingerprint is SHA256:LzEdo+P7rgs1gJgODVWJaPFgHKk+Zl8/9ULzGN6z/8Q.</span><br><span class="line">Are you sure you want to continue connecting (yes/no/[fingerprint])? no</span><br><span class="line">192.168.31.114 | UNREACHABLE! =&gt; &#123;</span><br><span class="line">    &quot;changed&quot;: false,</span><br><span class="line">    &quot;msg&quot;: &quot;Failed to connect to the host via ssh: Host key verification failed.&quot;,</span><br><span class="line">    &quot;unreachable&quot;: true</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>if we have ever not connect to the hosts, it may get an error msg, at this time we need to type password by adding <code>--ask-pass</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">ansible all --module-name ping --ask-pass</span></span><br><span class="line">SSH password: </span><br><span class="line">192.168.31.114 | FAILED! =&gt; &#123;</span><br><span class="line">    &quot;msg&quot;: &quot;Using a SSH password instead of a key is not possible because Host Key checking is enabled and sshpass does not support this.  Please add this host&#x27;s fingerprint to your known_hosts file to manage this host.&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>okay, it says that the default config has enabled host key check, so we need disable it</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/ansible/ansible.cfg</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">uncomment to <span class="built_in">disable</span> host key check</span></span><br><span class="line">host_key_checking = False</span><br></pre></td></tr></table></figure>
+
+<p>then, run command again</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">ansible all --module-name ping --ask-pass</span></span><br><span class="line">SSH password: </span><br><span class="line">192.168.31.114 | SUCCESS =&gt; &#123;</span><br><span class="line">    &quot;ansible_facts&quot;: &#123;</span><br><span class="line">        &quot;discovered_interpreter_python&quot;: &quot;/usr/bin/python&quot;</span><br><span class="line">    &#125;,</span><br><span class="line">    &quot;changed&quot;: false,</span><br><span class="line">    &quot;ping&quot;: &quot;pong&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>yes, we get it. <code>&quot;changed&quot;: false</code> above means we don’t change anything in remote machine.</p>
+<blockquote>
+<p>Note:</p>
+<ol>
+<li>instead of typing password every times, the recommand way is configuring ansible machine connects to remote machine without password (put ansible ssh public key to remote machine).</li>
+<li>if we don’t specify a login user, it will use ansible machine login user name, we can use <code>--user user_name</code> to specify other login user.</li>
+<li>we can use <code>--ask-pass</code> to input login user password</li>
+</ol>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">ansible testCentos --ask-pass --user root --module-name shell --args <span class="string">&quot;ip -c -br a&quot;</span></span>           </span><br><span class="line">SSH password: </span><br><span class="line">192.168.31.114 | CHANGED | rc=0 &gt;&gt;</span><br><span class="line">lo               UNKNOWN        127.0.0.1/8 ::1/128 </span><br><span class="line">enp0s3           UP             192.168.31.114/24 fe80::cd8e:43e4:458d:9ab3/64</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Note:</p>
+<p><code>command</code> module can only be used in one command with its parameter, one liner command(several commands connected with <code>&amp;&amp;, ;, |, &gt;</code>) need use <code>shell</code> module.</p>
+</blockquote>
+<p>sometimes, we cannot login directly with root user, but we need root priviledge. there are two ways:</p>
+<ol>
+<li> if the login user has <code>sudo</code> priviledge</li>
+</ol>
+   <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible all --user login_user --ask-pass --become --become-user root --ask-become-pass --module-name shell --args &quot;systemctl restart network&quot;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><p>if the login user has no sudo priviledge, then we need to change to root user with <code>su</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible all --user login_user --ask-pass --become --become-user root --become-method su --ask-become-pass --module-name shell --args &quot;systemctl restart network&quot;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="variable-of-user-name-and-password"><a href="#variable-of-user-name-and-password" class="headerlink" title="variable of user name and password"></a>variable of user name and password</h2><p>okay, as we write above, if we want to execute some command in remote machine, a login user and password is needed. we can use <code>--user</code> and <code>--ask-pass</code> then typing in terminal, and there is another way without typing.</p>
+<p>ansible has already defined this variables. the thing that we need to do is sign a value to it. there are four  ways.</p>
+<ol>
+<li><p>write in inventory file.</p>
+<p>if we only specify a group login info, we can use <code>[group_name:vars]</code>. if we define global login info, we can use <code>[all:vars]</code>.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[testCentos]</span><br><span class="line">192.168.31.114</span><br><span class="line"></span><br><span class="line">[testCentos:vars]</span><br><span class="line">ansible_ssh_user=test</span><br><span class="line">ansible_ssh_pass=123</span><br><span class="line">ansible_become_pass=123456</span><br></pre></td></tr></table></figure>
+
+<p>then execute without password input</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible --inventory ./hosts all --module-name shell --args &quot;ps -ef|grep sshd&quot; --become --become-user root --become-method su</span><br></pre></td></tr></table></figure></li>
+<li><p>write in playbook file <code>playbook.yml</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch playbook.yml</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">hosts:</span> <span class="string">testCentos</span></span><br><span class="line">  <span class="attr">vars:</span></span><br><span class="line">    <span class="attr">ansible_ssh_user:</span> <span class="string">test</span></span><br><span class="line">    <span class="attr">ansible_ssh_pass:</span> <span class="number">123</span></span><br><span class="line">    <span class="attr">ansible_become_pass:</span> <span class="number">123456</span></span><br><span class="line">  <span class="attr">gather_facts:</span> <span class="literal">no</span></span><br><span class="line">  <span class="attr">tasks:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">copy</span> <span class="string">file</span> <span class="string">to</span> <span class="string">remote</span></span><br><span class="line">      <span class="attr">become:</span> <span class="literal">yes</span></span><br><span class="line">      <span class="attr">become_user:</span> <span class="string">root</span></span><br><span class="line">      <span class="attr">become_method:</span> <span class="string">su</span></span><br><span class="line">      <span class="attr">copy:</span></span><br><span class="line">      	<span class="attr">src:</span> <span class="string">/tmp/hosts</span></span><br><span class="line">   	<span class="attr">dest:</span> <span class="string">/root</span></span><br></pre></td></tr></table></figure>
+
+<p>then execute</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible --inventory ./hosts playbook.yml</span><br></pre></td></tr></table></figure></li>
+<li><p>write in a seperate variable file</p>
+<p>in this way , we need to import the file in playbook</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">touch</span> ansible_vars.yml</span></span><br><span class="line"></span><br><span class="line">---</span><br><span class="line">ansible_ssh_user=test</span><br><span class="line">ansible_ssh_pass=123</span><br><span class="line">ansible_become_pass=123456</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># import variable file in playbook</span></span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> <span class="attr">hosts:</span> <span class="string">testCentos</span></span><br><span class="line">  <span class="attr">vars_files:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">./ansible_vars.yml</span></span><br><span class="line">  <span class="attr">gather_facts:</span> <span class="literal">no</span></span><br><span class="line">  <span class="attr">tasks:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">check</span> <span class="string">sshd</span> <span class="string">status</span></span><br><span class="line">      <span class="attr">become:</span> <span class="literal">yes</span></span><br><span class="line">      <span class="attr">become_user:</span> <span class="string">root</span></span><br><span class="line">      <span class="attr">become_method:</span> <span class="string">su</span></span><br><span class="line">      <span class="attr">shell:</span> <span class="string">ps</span> <span class="string">-ef|grep</span> <span class="string">sshd|grep</span> <span class="string">-v</span> <span class="string">grep</span></span><br></pre></td></tr></table></figure></li>
+<li><p>write in specify floder <code>group_vars</code></p>
+<p>in the way, we write a yaml variable’s file in group_vars and named with the same group name as inventory file.  and we don’t need to import the variable file by this way.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="keyword">in</span> ansible working folder make a folder named group_vars</span></span><br><span class="line">mkdir group_vars</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="keyword">in</span> group_vars, make group name file and write variables</span></span><br><span class="line">touch testCentos</span><br><span class="line">echo &quot;</span><br><span class="line">---</span><br><span class="line">ansible_ssh_user=test</span><br><span class="line">ansible_ssh_pass=123</span><br><span class="line">ansible_become_pass=123456</span><br><span class="line">&quot; &gt;&gt; testCentos</span><br></pre></td></tr></table></figure>
+
+<p><em>note: if we wanna to define global variable, we need to make a file named <code>all</code></em></p>
+</li>
+</ol>
+<blockquote>
+<p>Note:</p>
+<p><code>become_method: su</code> is very useful , default is use sudo method, however most of time we are not in sudo group. but with su method, we login with root then execute command.</p>
+</blockquote>
+<ul>
+<li><code>vars</code>: collection of variables</li>
+<li><code>name</code>: what kind of thing the task does</li>
+<li><code>ansible_ssh_user</code>: login user name</li>
+<li><code>ansible_ssh_pass</code>: login user password</li>
+<li><code>ansible_become_pass</code>: root user password</li>
+<li><code>gather_facts</code>: whether will we collect remote machine info, don’t gather saves lot of time</li>
+<li><code>become</code>: change user or not </li>
+<li><code>become_user</code>:  default </li>
+<li>use sudo to run the tasks</li>
+<li><code>become_method: su</code>: don’t use sudo, login with root. it is very userful when we have no sudo priviledge </li>
+<li><code>shell</code>: run linux shell command.</li>
+</ul>
+<h2 id="playbook"><a href="#playbook" class="headerlink" title="playbook"></a>playbook</h2><p>what is playbook? playbook is a set of Ad-hoc tasks writing in a yaml file. the method to execute playbook different from Ad-hoc. use <code>ansible-playbook</code> instead of <code>ansible</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">such as i make a playbook file named playbook.yml</span></span><br><span class="line">ansible-playbook playbook.yml</span><br></pre></td></tr></table></figure>
+
+<p>for example</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># hosts file</span></span><br><span class="line"></span><br><span class="line">[<span class="string">testCentos</span>]</span><br><span class="line"><span class="number">192.168</span><span class="number">.31</span><span class="number">.114</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># playbook</span></span><br><span class="line"></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">hosts:</span> <span class="string">testCentos</span></span><br><span class="line">  <span class="attr">gather_facts:</span> <span class="literal">no</span></span><br><span class="line">  <span class="attr">become:</span> <span class="literal">yes</span></span><br><span class="line">  <span class="attr">become_user:</span> <span class="string">root</span></span><br><span class="line">  <span class="attr">become_method:</span> <span class="string">su</span></span><br><span class="line">  <span class="attr">vars:</span></span><br><span class="line">    <span class="attr">ansible_ssh_user:</span> <span class="string">test</span></span><br><span class="line">    <span class="attr">ansible_ssh_pass:</span> <span class="number">123</span></span><br><span class="line">    <span class="attr">ansible_become_pass:</span> <span class="number">123456</span></span><br><span class="line">    <span class="attr">pkgname:</span> <span class="string">nginx</span></span><br><span class="line">  <span class="attr">tasks:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">add</span> <span class="string">nginx</span> <span class="string">resource</span></span><br><span class="line">      <span class="attr">shell:</span> <span class="string">rpm</span> <span class="string">-Uvh</span> <span class="string">http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">install</span> &#123;&#123;<span class="string">pkgname</span>&#125;&#125;</span><br><span class="line">      <span class="attr">yum:</span> <span class="string">name=&#123;&#123;pkgname&#125;&#125;</span> <span class="string">state=present</span></span><br><span class="line">      <span class="attr">notify:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">restart</span> &#123;&#123;<span class="string">pkgname</span>&#125;&#125;</span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">start</span> <span class="string">at</span> <span class="string">boot</span></span><br><span class="line">      <span class="attr">systemd:</span> <span class="string">name=&#123;&#123;pkgname&#125;&#125;</span> <span class="string">state=started</span> <span class="string">enabled=yes</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">open</span> <span class="string">firewalld</span> <span class="number">80</span> <span class="string">port</span></span><br><span class="line">      <span class="attr">shell:</span> <span class="string">|</span></span><br><span class="line"><span class="string">        firewall-cmd --zone=public --permanent --add-port=80/tcp</span></span><br><span class="line"><span class="string">        firewall-cmd --reload</span></span><br><span class="line"><span class="string"></span>  <span class="attr">handlers:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">restart</span> &#123;&#123;<span class="string">pkgname</span>&#125;&#125;</span><br><span class="line">      <span class="attr">systemd:</span> <span class="string">name=&#123;&#123;pkgname&#125;&#125;</span> <span class="string">state=restarted</span></span><br></pre></td></tr></table></figure>
+
+<p>execute</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible-playbook --inventroy hosts playbook.yml</span><br></pre></td></tr></table></figure>
+
+<p>then we can visit nginx web page at <a target="_blank" rel="noopener" href="http://192.168.31.114/">http://192.168.31.114</a></p>
+<p>above we used modules: </p>
+<p>​    <code>shell</code> to execute shell command </p>
+<p>​    <code>yum</code> to download nginx </p>
+<p>​    <code>systemd</code> to start and enable nginx auto start.</p>
+<p>we also used <code>notify</code>: when task execute successfully, it will raise a notify.</p>
+<p>we also used <code>handlers</code>: to receive notify and execute others</p>
+<p>we also used <code>vars</code>: it anounced serveral variables, and we can call it with <code>&#123;&#123;variable_name&#125;&#125;</code></p>
+<blockquote>
+<p>note:</p>
+<p>we may say we can use shell instead of yum or systemd module, yeah, you can do it like that, but the best way is using available modules.</p>
+<p>use <code>|</code> to combine multi line into one line. it is useful to execute more than one command.</p>
+</blockquote>
+<h3 id="condition"><a href="#condition" class="headerlink" title="condition"></a>condition</h3><p>we use <code>when</code> condition to do logical judge. <code>register</code> to store return value. <code>failed_when:no</code> to continue when return value isn’t true(in default task will stop when return value is false).</p>
+<p>as we write above, if we execute again, it may failed because we already have a nginx repo. so what should we do? we need to check whether exists nginx repo. if exists then jump</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">...</span></span><br><span class="line">  <span class="attr">tasks:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">check</span> <span class="string">whether</span> <span class="string">nginx</span> <span class="string">repo</span> <span class="string">added</span></span><br><span class="line">      <span class="attr">shell:</span> <span class="string">ls</span> <span class="string">/etc/yum.repos.d/</span> <span class="string">|</span> <span class="string">grep</span> <span class="string">nginx</span></span><br><span class="line">      <span class="attr">register:</span> <span class="string">repo</span></span><br><span class="line">      <span class="attr">failed_when:</span> <span class="literal">no</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">add</span> <span class="string">nginx</span> <span class="string">resource</span></span><br><span class="line">      <span class="attr">shell:</span> <span class="string">rpm</span> <span class="string">-Uvh</span> <span class="string">http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm</span></span><br><span class="line">      <span class="attr">when:</span> <span class="string">repo.rc</span> <span class="string">==</span> <span class="number">1</span></span><br><span class="line"><span class="string">...</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="loop"><a href="#loop" class="headerlink" title="loop"></a>loop</h3><p>we can use loop syntax in ansible playbook. use <code>with_items</code> to loop list. the variable default </p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">hosts:</span> <span class="string">testCentos</span></span><br><span class="line">  <span class="attr">gather_facts:</span> <span class="literal">no</span></span><br><span class="line">  <span class="attr">become:</span> <span class="literal">yes</span></span><br><span class="line">  <span class="attr">become_user:</span> <span class="string">root</span></span><br><span class="line">  <span class="attr">become_method:</span> <span class="string">su</span></span><br><span class="line">  <span class="attr">tasks:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">install</span> <span class="string">software</span></span><br><span class="line">      <span class="attr">yum:</span> <span class="string">name=&#123;&#123;</span> <span class="string">item</span> <span class="string">&#125;&#125;</span> <span class="string">state=present</span></span><br><span class="line">      <span class="attr">with_items:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">curl</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">wget</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">ansible » ansible-playbook --inventory hosts playbook.yml                                                                         </span><br><span class="line"></span><br><span class="line">PLAY [testCentos] **************************************************************************************************************************************************************************</span><br><span class="line"></span><br><span class="line">TASK [install software] ********************************************************************************************************************************************************************</span><br><span class="line">changed: [192.168.31.114] =&gt; (item=[&#x27;curl&#x27;, &#x27;wget&#x27;])</span><br><span class="line"></span><br><span class="line">PLAY RECAP *********************************************************************************************************************************************************************************</span><br><span class="line">192.168.31.114             : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   </span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="tags"><a href="#tags" class="headerlink" title="tags"></a>tags</h3><p>with tags, we can specify which task to be execute in shell command</p>
+<ol>
+<li><p>write tag at the end of task</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">hosts:</span> <span class="string">testCentos</span></span><br><span class="line">  <span class="attr">gather_facts:</span> <span class="literal">no</span></span><br><span class="line">  <span class="attr">become:</span> <span class="literal">yes</span></span><br><span class="line">  <span class="attr">become_user:</span> <span class="string">root</span></span><br><span class="line">  <span class="attr">become_method:</span> <span class="string">su</span></span><br><span class="line">  <span class="attr">tasks:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">install</span> <span class="string">curl</span></span><br><span class="line">      <span class="attr">yum:</span> <span class="string">name=curl</span> <span class="string">state=present</span></span><br><span class="line">      <span class="attr">tags:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">curl</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">install</span> <span class="string">wget</span></span><br><span class="line">      <span class="attr">yum:</span> <span class="string">name=wget</span> <span class="string">state=present</span></span><br><span class="line">      <span class="attr">tags:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">wget</span></span><br></pre></td></tr></table></figure></li>
+<li><p>specify which task should be execute by using <code>--tags tag_name</code></p>
+</li>
+</ol>
+  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">ansible » ansible-playbook --inventory hosts playbook.yml --tags wget                                                         </span><br><span class="line">   </span><br><span class="line">   PLAY [testCentos] **************************************************************************************************************************************************************************</span><br><span class="line">   </span><br><span class="line">   TASK [install wget] ************************************************************************************************************************************************************************</span><br><span class="line">   ok: [192.168.31.114]</span><br><span class="line">   </span><br><span class="line">   PLAY RECAP *********************************************************************************************************************************************************************************</span><br><span class="line">   192.168.31.114             : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   </span><br></pre></td></tr></table></figure>
+
+<h3 id="block"><a href="#block" class="headerlink" title="block"></a>block</h3><p><code>block</code> can help us execute multi task in one condition.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">- hosts: testCentos</span><br><span class="line">  gather_facts: no</span><br><span class="line">  become: yes</span><br><span class="line">  become_user: root</span><br><span class="line">  become_method: su</span><br><span class="line">  tasks:</span><br><span class="line">    - name: check network</span><br><span class="line">      shell: ping www.baidu.com -c 3</span><br><span class="line">      register: connect</span><br><span class="line">    - name: install curl</span><br><span class="line">      block:</span><br><span class="line">        - yum: name=curl state=present</span><br><span class="line">        - yum: name=wget state=present</span><br><span class="line">      when: connect.rc == 0</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h1 id="Ansible-Tower"><a href="#Ansible-Tower" class="headerlink" title="Ansible Tower"></a>Ansible Tower</h1><p>ansible tower is a paid software(not free) aiming provide an easy usage gui for ansible. before install, we need to know the minimal machine requirement</p>
+<ul>
+<li>cpu: 2 core</li>
+<li>mem: 4Gib</li>
+<li>software size: almost 2 Gib</li>
+</ul>
+<h2 id="install-1"><a href="#install-1" class="headerlink" title="install"></a>install</h2><p>download tar.gz it from <a target="_blank" rel="noopener" href="https://releases.ansible.com/ansible-tower/setup/">this website</a>, then extract</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -xzf ansible-tower-setup-3.6.0-1.tar.gz -C /opt</span><br></pre></td></tr></table></figure>
+
+<p>before installing, we need to add password to inventory configure file</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cd /opt/ansible-tower-setup-3.6.0-1</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="keyword">for</span> example, not exactly the same as below. but need to fill all empty password</span></span><br><span class="line">admin_password=&#x27;ansible&#x27;</span><br><span class="line">pg_password=&#x27;ansible&#x27;</span><br><span class="line">rabbitmq_password=&#x27;ansible&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>then install with a shell script. may be a coffee time</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./setup.sh</span><br></pre></td></tr></table></figure>
+
+<p>when all tasks execute successfully. we can visit the web page with <code>https://ip</code></p>
+<p><img src=".images/image-20210327235730512.png" alt="image-20210327235730512"></p>
+<p>the default user name is <code>admin</code>, and the password is what you typed in inventory file.</p>
+<h2 id="license-hack"><a href="#license-hack" class="headerlink" title="license hack"></a>license hack</h2><p>as we mentioned before, ansible tower is a paid software, so we cannot login the main page. however there is a way to hack the license and making it valid forever.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">add epel repo</span></span><br><span class="line">yum -y install epel-release</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">install pip</span></span><br><span class="line">yum -y install python-pip</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">download reverse compile module</span></span><br><span class="line">pip install uncompyle6</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">change to license diretory</span></span><br><span class="line">cd /var/lib/awx/venv/awx/lib/python3.6/site-packages/tower_license</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">reverse compile init file</span></span><br><span class="line">uncompyle6 __init__.pyc &gt; __init__.py</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">change reversed compile file</span></span><br><span class="line">vi __init__.py</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">at line 84, remove last character <span class="string">&quot;L&quot;</span></span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">after line 89, add a new line with <span class="string">&quot;return True&quot;</span></span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">compile it</span></span><br><span class="line">python -m py_compile __init__.py</span><br><span class="line">python -O -m py_compile __init__.py</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">restart ansible-tower-service</span></span><br><span class="line">ansible-tower-service restart</span><br></pre></td></tr></table></figure>
+
+<p>file <code>__init__.py</code> changed like this:</p>
+<p><img src=".images/image-20210328001646132.png" alt="image-20210328001646132"></p>
+<p>then we can login the main page, and check it’s license.</p>
+<p><img src=".images/image-20210328001906174.png" alt="image-20210328001906174"></p>
+<p>the default main page of ansible tower looks like this</p>
+<p><img src=".images/image-20210328002019561.png" alt="image-20210328002019561"></p>
+<h1 id="template"><a href="#template" class="headerlink" title="template"></a>template</h1><p>a template to execute command in remote and check remote service status</p>
+<p><strong>ip_info</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">[client1]</span><br><span class="line">192.168.31.197</span><br><span class="line">192.168.31.196</span><br><span class="line"></span><br><span class="line">[client2]</span><br><span class="line">192.168.31.182</span><br><span class="line"></span><br><span class="line">[client1:vars]</span><br><span class="line">ansible_ssh_user=ngus</span><br><span class="line">ansible_ssh_pass=123</span><br><span class="line">ansible_become_pass=123456</span><br><span class="line"></span><br><span class="line">[client2:vars]</span><br><span class="line">ansible_ssh_user=dba</span><br><span class="line">ansible_ssh_pass=321</span><br><span class="line">ansible_become_pass=654321</span><br></pre></td></tr></table></figure>
+
+<p><strong>yaml file</strong>: playbook.yaml</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">hosts:</span> <span class="string">all</span></span><br><span class="line">  <span class="attr">gather_facts:</span> <span class="literal">no</span></span><br><span class="line">  <span class="attr">become:</span> <span class="literal">yes</span></span><br><span class="line">  <span class="attr">become_user:</span> <span class="string">root</span></span><br><span class="line">  <span class="attr">become_method:</span> <span class="string">su</span></span><br><span class="line">  <span class="attr">tasks:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">install</span> <span class="string">client</span></span><br><span class="line">        <span class="attr">shell:</span> &#123;&#123;<span class="string">command</span> <span class="string">here</span>&#125;&#125;</span><br><span class="line">        <span class="attr">register:</span> <span class="string">install_status</span></span><br><span class="line">        <span class="attr">failed_when:</span> <span class="literal">no</span></span><br><span class="line">        <span class="attr">tags:</span></span><br><span class="line">          <span class="bullet">-</span> <span class="string">install</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">check</span> <span class="string">client</span> <span class="string">status</span></span><br><span class="line">        <span class="attr">shell:</span> <span class="string">ps</span> <span class="string">-ef</span> <span class="string">|grep</span> <span class="string">service_name</span></span><br><span class="line">        <span class="attr">tags:</span> </span><br><span class="line">          <span class="bullet">-</span> <span class="string">check</span></span><br><span class="line"><span class="string">...</span></span><br></pre></td></tr></table></figure>
+
+<p>run with command</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="comment"># install</span></span></span><br><span class="line">ansible-playbook --inventory ip_info playbook.yaml --tag install</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="comment"># check</span></span></span><br><span class="line">ansible-playbook --inventory ip_info playbook.yaml --tag check</span><br></pre></td></tr></table></figure>
+
+
+            
+                
+            
+        </div>
+        <div class="post-tool">
+            <a class="btn-thumbs-up" href="javascript:void(0);" data-cid="52" title="95">
+                <i class="fa fa-thumbs-up" aria-hidden="true"></i> Donate
+            </a>
+        </div>
+        
+        <div class="post-tags">Tags：
+            
+            <a href="/tags/ansible/">ansible</a>
+            
+        </div>
+        
+    </article>
+    
+        <p style="text-align: center">This article just represents my own viewpoint. If there is something wrong, please correct me.</p>
+    
+    
+    
+
+</div>
+
+
+        </div><!-- end #main-->
+    </div><!-- end #body -->
+    <footer class="footer">
+    <div class="footer-inner" style="text-align: center">
+        <p>
+            <a href="/about"  title="About">About</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <!-- 自定义链接 -->
+            <a href="/help" title="Help" >Help</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/links" title="Links">Links</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/sitemap.xml" title="SiteMap">SiteMap</a>
+        </p>
+        <p>
+            Has been established&nbsp<a href="/timeline" id="siteBuildingTime"></a>&nbspDays，<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="licence">Based on Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</a><br/>
+            ©2017-<span id="cpYear"></span> Based on&nbsp<a href="http://hexo.io" target="_blank" rel="nofollow">Hexo</a>
+            ，Theme by&nbsp&nbsp<a href="https://github.com/tangkunyin/hexo-theme-jsimple" target="_blank" rel="bookmark">JSimple</a>
+            ，Author&nbsp<a href="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main" target="_blank" rel="friend">shutterbug</a>
+            ，Hosted by <a href="https://pages.github.com/" target="_blank" rel="nofollow">GitHub Pages</a>
+            
+        </p>
+    </div>
+</footer>
+</div>
+<!-- search pop -->
+<div class="popup search-popup local-search-popup">
+    <div class="local-search-header clearfix">
+        <span class="search-icon">
+            <i class="fa fa-search"></i>
+        </span>
+        <span class="popup-btn-close">
+            <i class="fa fa-times-circle"></i>
+        </span>
+        <div class="local-search-input-wrapper">
+            <input id="local-search-input"
+                   spellcheck="false"
+                   type="text"
+                   autocomplete="off"
+                   placeholder="Input query keywords here..."/>
+        </div>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+<div class="fixed-btn">
+    <a class="btn-gotop" href="javascript:"> <i class="fa fa-angle-up"></i></a>
+</div>
+
+
+</body>
+</html>

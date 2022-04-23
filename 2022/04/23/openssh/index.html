@@ -1,0 +1,315 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="zh-CN">
+<head>
+    <!--[if lte IE 9]>
+<meta http-equiv="refresh" content="0;url=https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main/warn.html">
+<![endif]-->
+<meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta name="author" content="shutterbug">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta http-equiv="mobile-agent" content="format=html5; url=https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main">
+<meta http-equiv="X-DNS-Prefetch-Control" content="on">
+
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+
+<link rel="shortcut icon" href="/images/favicon.png">
+
+
+<title>openssh - shutterbug sweet diary</title>
+
+<meta name="keywords" content="">
+
+<meta name="description " content="">
+
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="openssh - shutterbug sweet diary" />
+<meta property="og:description" content="" />
+<meta property="og:url" content="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main" />
+<meta property="og:site_name" content="shutterbug sweet diary" />
+
+<link rel="dns-prefetch" href="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main">
+<link rel="prefetch" href="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main">
+<link rel="prerender" href="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main">
+<link rel="stylesheet" href="/css/JSimple.min.css">
+    <script type="text/javascript">
+        (function() {
+            let jsi_config = {
+                rootUrl: 'https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main/',
+                isPost: 'true',
+                buildingTime: '04/23/2022',
+                snsQRCode: '',
+                donateImg: '',
+                readMode: 'day',
+                localSearch: { dbPath: '' }
+            };
+            
+            window.jsi_config = jsi_config;
+        })()
+    </script>
+    
+<script src="/js/SimpleCore.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.2"></head>
+<body>
+<div id="nav">
+    <nav class="nav-menu">
+        <a class="site-name current" href="/" title="S">S</a>
+        <a class="site-index current" href="/"><i class="fa fa-home"></i><span>Home</span></a>
+        <a href="/archives" title="Archives"><i class="fa fa-archives"></i><span>Archives</span></a>
+        <a href="/tags" title="Tags"><i class="fa fa-tags"></i><span>Tags</span></a>
+        <!-- custom single page of menus -->
+        
+        
+        <a href="/help" title="帮助">
+            <i class="fa fa-question-circle"></i>
+            <span>帮助</span>
+        </a>
+        
+    </nav>
+</div>
+
+<div class="nav-user">
+    <a class="btn-search" href="#"><i class="fa fa-search"></i></a>
+    <a class="btn-read-mode" href="#"><i class="fa fa-sun-o"></i></a>
+    
+</div>
+<div id="wrapper" class="clearfix">
+    <div id="body">
+        <div class="main" id="main">
+            <div id="cover">
+    <img class="cover-img" src="https://shuoit.net/images/cover-day.jpg" alt="cover-img" loading="lazy" />
+    <div class="cover-info">
+        
+        <h1 class="cover-siteName">blog</h1>
+        <h3 class="cover-siteTitle">the world you see</h3>
+        <p class="cover-siteDesc">not depend on what you received but your response</p>
+        <div class="cover-sns">
+            
+    &nbsp;&nbsp;<div class="btn btn-github">
+        <a href="https://github.com/ssfwshutterbug" target="_blank" title="github" ref="friend">
+            <i class="fa fa-github"></i>
+        </a>
+    </div>
+
+
+        </div>
+    </div>
+</div>
+
+            <div class="page-title">
+    <ul>
+        <li><a href="/">Recent Posts</a></li>
+        
+            
+                <li class="active">
+                    <a href="/categories/learn" data-name="learn">learn</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/think" data-name="think">think</a>
+                </li>
+            
+        
+        <li class="page-search">
+    <form id="search" class="search-form">
+        <input type="text"
+               readonly="readonly"
+               id="local-search-input-tip"
+               placeholder="click to search..." />
+        <button type="button" disabled="disabled" class="search-form-submit"><i class="fa fa-search"></i></button>
+    </form>
+</li>
+
+    </ul>
+</div>
+<div class="main-inner">
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="post-header">
+            <div class="post-author clearfix">
+                <a class="avatar fleft" href="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main"
+                   target="_blank">
+                    <img width="48" src="/images/favicon.png" alt="avatar"/>
+                </a>
+                <p><span class="label">Author</span>
+                    <a href="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main"
+                       target="_blank">shutterbug</a>
+                    <span title="Last edited at&nbsp;2022-04-23">2022-04-23</span>
+                </p>
+                <p>sweet diary</p>
+            </div>
+            <h2 class="post-title">openssh</h2>
+            <div class="post-meta">
+                emm... 4418 words in the article |
+                you are the&nbsp;<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>th friend who reading now
+            </div>
+        </div>
+        <div class="post-content markdown-body">
+            <h1 id="openssh"><a href="#openssh" class="headerlink" title="openssh"></a>openssh</h1><h2 id="install"><a href="#install" class="headerlink" title="install"></a>install</h2><p>in archlinux, openssh is a ssh toolkit, includes client <code>ssh</code> and server <code>sshd</code>. </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pacman -S openssh</span><br></pre></td></tr></table></figure>
+
+<h2 id="client"><a href="#client" class="headerlink" title="client"></a>client</h2><p>usage examples.</p>
+<h3 id="remote-connect"><a href="#remote-connect" class="headerlink" title="remote connect"></a>remote connect</h3><p>connect to remote pc with default port 22.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh user@ip</span><br></pre></td></tr></table></figure>
+
+<p>connect to remote pc with specified port.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -p port user@ip</span><br></pre></td></tr></table></figure>
+
+<h3 id="file-copy"><a href="#file-copy" class="headerlink" title="file copy"></a>file copy</h3><p>we can download file from server and upload file to server in client.</p>
+<blockquote>
+<p>Note:</p>
+<p>whatever we download or upload, we only need a ssh client tool called <code>scp</code>  in local machine, needless server in local. and server runs in remote machine</p>
+</blockquote>
+<p>download file from server</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp server_user@server_ip:/file/directory /local/file/directory</span><br></pre></td></tr></table></figure>
+
+<p>upload file to server</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp /local/file/directory server_user@server_ip:/file/directory</span><br></pre></td></tr></table></figure>
+
+<h3 id="root-login"><a href="#root-login" class="headerlink" title="root login"></a>root login</h3><p>add following to allow root user login</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PermitRootLogin yes</span><br></pre></td></tr></table></figure>
+
+<h3 id="change-default-port"><a href="#change-default-port" class="headerlink" title="change default port"></a>change default port</h3><p>change default port 22 to other ports</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">nvim /etc/ssh/sshd_config</span><br><span class="line"></span><br><span class="line">Port 40000</span><br></pre></td></tr></table></figure>
+
+<p>now, connect to the machine need specify port</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -p 40000 user@ip</span><br></pre></td></tr></table></figure>
+
+<h3 id="login-without-password"><a href="#login-without-password" class="headerlink" title="login without password"></a>login without password</h3><ul>
+<li><p><em>machine A: who want to connect to B</em></p>
+</li>
+<li><p><em>machine B: with ssh service running</em></p>
+</li>
+</ul>
+<p>if we use ssh command often, we can configure it without password to login(A=&gt;B). there are two things we need to do:</p>
+<ol>
+<li><p>in machine A: need to product a public key</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">or Specifies the <span class="built_in">type</span> of key to create.  The possible values are “dsa”, “ecdsa”, “ecdsa-sk”, “ed25519”, “ed25519-sk”, or “rsa”.</span></span><br><span class="line">ssh-keygen -t rsa</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">this step will create a public key (id_rsa.pub) <span class="keyword">in</span> ~/.ssh</span></span><br><span class="line">ls ~/.ssh</span><br><span class="line">  id_rsa       id_rsa.pub       known_hosts</span><br></pre></td></tr></table></figure></li>
+<li><p>in machine A: copy public key <code>id_rsa.pub</code>  to B’s <code>~/.ssh/authorized_keys</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="keyword">in</span> machine A we can use a <span class="built_in">command</span> to <span class="keyword">do</span> it, this will copy content to B automaticly</span></span><br><span class="line">ssh-copy-id user_B@ip_B</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">or we can login machine B, and copy content of id_rsa.pub to ~/.ssh/authorized_keys</span></span><br><span class="line">scp .ssh/id_rsa.pub user_B@ip_B:/tmp</span><br><span class="line">ssh user_B@ip_B</span><br><span class="line">mkdir ~/.ssh</span><br><span class="line">touch ~/.ssh/authorized_keys</span><br><span class="line">cat /tmp/id_rsa.pub &gt;&gt; ~/.ssh/authorized_keys</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>after the two steps, A can connect to B without password.</p>
+<h2 id="issues"><a href="#issues" class="headerlink" title="issues"></a>issues</h2><h3 id="connect-to-an-old-version-ssh-server"><a href="#connect-to-an-old-version-ssh-server" class="headerlink" title="connect to an old version ssh server"></a>connect to an old version ssh server</h3><p><code>Unable to negotiate with x.x.x.x port 22: no matching host key type found. Their offer: ssh-rsa fatal: Could not read from remote repository.</code></p>
+<p>this problem comes when the remote ssh encryption method is too old/weak such as isa1. since isa1 method  will be regarded unsafe.</p>
+<p>in order to resolve this problem, there comes two methods:</p>
+<ol>
+<li><p>upgrade remote ssh version and then use the new encryption method such as isa2</p>
+</li>
+<li><p>write a config in <code>~/.ssh/config</code>, allow the connection specified</p>
+</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Host 192.168.1.80</span><br><span class="line">    User root</span><br><span class="line">    PubkeyAcceptedAlgorithms +ssh-rsa</span><br><span class="line">    HostkeyAlgorithms +ssh-rsa</span><br></pre></td></tr></table></figure>
+
+<h2 id="ssh-tunnel"><a href="#ssh-tunnel" class="headerlink" title="ssh tunnel"></a>ssh tunnel</h2><p>there are two parts.</p>
+<ul>
+<li>local port forwarding</li>
+<li>remote port forwarding</li>
+</ul>
+<img src=".images/image-20210303233558102-1627524858296.png" alt="ssh tunnel" style="zoom: 50%;" />
+
+<h4 id="local-port-forwarding"><a href="#local-port-forwarding" class="headerlink" title="local port forwarding"></a>local port forwarding</h4><img src=".images/image-20210303234044887-1627524858297.png" alt="image-20210303234044887" style="zoom:50%;" />
+
+<p>access local ip with port 8888 with redirect to remote server 192.168.1.3 with port 8080 though ssh server 44.11.22.33</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -L local_port:remote_ip:remote_port ssh_user@ssh_ip</span><br></pre></td></tr></table></figure>
+
+<p>eg:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -L 10000:192.168.31.84:8080 root@192.168.31.116</span><br></pre></td></tr></table></figure>
+
+<p>above means i can visit <code>http://localhost:10000</code> in my pc to visit remote <code>http://192.168.31.84:8080</code> though ssh server <code>192.168.31.116</code>. it builds a ssh tunnel between local and ssh server.</p>
+<h4 id="remote-port-forwarding"><a href="#remote-port-forwarding" class="headerlink" title="remote port forwarding"></a>remote port forwarding</h4><p><img src=".images/image-20210303234221412-1627524858297.png" alt="image-20210303234221412"></p>
+<p>if any outside machine wanna to access local network service, we can create a ssh tunnel between local network machine with a outside ssh server, then any request to ssh server will redirect to local network service.</p>
+<p>any request to ssh server 44.11.22.33 with port 8888 will redirect to 10.0.0.3 with port 8080.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -R remote_port:local_ip:local_port user@remote_ssh_ip</span><br></pre></td></tr></table></figure>
+
+<p><strong>much more important for remote port forwarding</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">192.168.31.214 has a website</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">my machine and 192.168.31.214 are the same network, my machine and 192.168.31.221 are the other same network</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">execute this <span class="built_in">command</span> <span class="keyword">in</span> my machine will create a ssh tunnel between my machine and 221</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="keyword">then</span> we can visit the website though https://192.168.31.221:4444</span></span><br><span class="line"></span><br><span class="line">ssh -R 4444:192.168.31.214:443 healer@192.168.31.221 -N -f</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">-N : don<span class="string">&#x27;t allow to execute command in remote machine</span></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="string">-f : run in background</span></span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Note:</p>
+<p>when the ssh tunnel created successfully, we can only access  website in 214 with localhost(described in <a target="_blank" rel="noopener" href="https://serverfault.com/questions/478171/reverse-ssh-tunnel-connexion-refused">this article</a>), becase ssh disabled gatewayport by default and it only listen on <code>127.0.0.1:port</code> <code>[::1]:port</code>. such as:</p>
+</blockquote>
+<p><img src=".images/image-20210726105921414.png" alt="image-20210726105921414"></p>
+<p><strong>in order to access remote machine with ip address, we need enable gatewayport</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/ssh/sshd_config</span><br><span class="line"></span><br><span class="line">GatewayPorts yes</span><br></pre></td></tr></table></figure>
+
+<p>then recreate ssh tunnel in my machine and  restart sshd of 214</p>
+<p><img src=".images/image-20210726110546994.png" alt="image-20210726110546994"></p>
+<p>then all will be okay</p>
+
+            
+                
+            
+        </div>
+        <div class="post-tool">
+            <a class="btn-thumbs-up" href="javascript:void(0);" data-cid="52" title="95">
+                <i class="fa fa-thumbs-up" aria-hidden="true"></i> Donate
+            </a>
+        </div>
+        
+        <div class="post-tags">Tags：
+            
+            <a href="/tags/ssh/">ssh</a>
+            
+        </div>
+        
+    </article>
+    
+        <p style="text-align: center">This article just represents my own viewpoint. If there is something wrong, please correct me.</p>
+    
+    
+    
+
+</div>
+
+
+        </div><!-- end #main-->
+    </div><!-- end #body -->
+    <footer class="footer">
+    <div class="footer-inner" style="text-align: center">
+        <p>
+            <a href="/about"  title="About">About</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <!-- 自定义链接 -->
+            <a href="/help" title="Help" >Help</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/links" title="Links">Links</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/sitemap.xml" title="SiteMap">SiteMap</a>
+        </p>
+        <p>
+            Has been established&nbsp<a href="/timeline" id="siteBuildingTime"></a>&nbspDays，<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="licence">Based on Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</a><br/>
+            ©2017-<span id="cpYear"></span> Based on&nbsp<a href="http://hexo.io" target="_blank" rel="nofollow">Hexo</a>
+            ，Theme by&nbsp&nbsp<a href="https://github.com/tangkunyin/hexo-theme-jsimple" target="_blank" rel="bookmark">JSimple</a>
+            ，Author&nbsp<a href="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main" target="_blank" rel="friend">shutterbug</a>
+            ，Hosted by <a href="https://pages.github.com/" target="_blank" rel="nofollow">GitHub Pages</a>
+            
+        </p>
+    </div>
+</footer>
+</div>
+<!-- search pop -->
+<div class="popup search-popup local-search-popup">
+    <div class="local-search-header clearfix">
+        <span class="search-icon">
+            <i class="fa fa-search"></i>
+        </span>
+        <span class="popup-btn-close">
+            <i class="fa fa-times-circle"></i>
+        </span>
+        <div class="local-search-input-wrapper">
+            <input id="local-search-input"
+                   spellcheck="false"
+                   type="text"
+                   autocomplete="off"
+                   placeholder="Input query keywords here..."/>
+        </div>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+<div class="fixed-btn">
+    <a class="btn-gotop" href="javascript:"> <i class="fa fa-angle-up"></i></a>
+</div>
+
+
+</body>
+</html>
