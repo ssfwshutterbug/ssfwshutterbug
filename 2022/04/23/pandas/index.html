@@ -17,13 +17,11 @@
 <link rel="stylesheet" href="/css/style.css">
 
     <link rel="shortcut icon" href="/images/logo.svg">
-    
-<link rel="stylesheet" href="/css/font-awesome.min.css">
-
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/css/font-awesome.min.css">
     <script id="hexo-configurations">
     let KEEP = window.KEEP || {};
-    KEEP.hexo_config = {"hostname":"raw.githubusercontent.com","root":"/","language":"en"};
-    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/avatar.svg","favicon":"/images/logo.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/4.jpg","description":"the world you see is not depend on what you received but your response."},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":false}}},"local_search":{"enable":false,"preload":false},"code_copy":{"enable":false,"style":"default"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.5"};
+    KEEP.hexo_config = {"hostname":"raw.githubusercontent.com","root":"/","language":"en","path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":true},"style":{"primary_color":"#0066CC","avatar":"/images/avatar.svg","favicon":"/images/logo.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/4.jpg","description":"the world you see is not depend on what you received but your response."},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":false},"code_copy":{"enable":false,"style":"default"},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"3.4.5"};
     KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
   </script>
 <meta name="generator" content="Hexo 5.4.2"></head>
@@ -33,6 +31,11 @@
 <div class="progress-bar-container">
     
 
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fas fa-circle-notch fa-spin"></i>
+        </span>
     
 </div>
 
@@ -74,10 +77,32 @@
                             </a>
                         </li>
                     
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                CATEGORIES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                TAGS
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
                     
                 </ul>
             </div>
             <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
                 
                 <div class="icon-item menu-bar">
                     <div class="menu-bar-middle"></div>
@@ -97,6 +122,16 @@
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/archives">ARCHIVES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">CATEGORIES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">TAGS</a>
                 </li>
             
         </ul>
@@ -770,6 +805,10 @@
     <ul class="tools-list">
         <!-- TOC aside toggle -->
         
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
 
         <!-- go comment -->
         
@@ -823,6 +862,14 @@
     </div>
 
     
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#pandas"><span class="nav-number">1.</span> <span class="nav-text">pandas</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#install"><span class="nav-number">1.1.</span> <span class="nav-text">install</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#three-data-type"><span class="nav-number">1.2.</span> <span class="nav-text">three data type</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#simple-read-write"><span class="nav-number">1.3.</span> <span class="nav-text">simple read write</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#excel"><span class="nav-number">1.3.1.</span> <span class="nav-text">excel</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mysql"><span class="nav-number">1.3.2.</span> <span class="nav-text">mysql</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sqlite"><span class="nav-number">1.3.3.</span> <span class="nav-text">sqlite</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#json"><span class="nav-number">1.3.4.</span> <span class="nav-text">json</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#csv-tsv-txt"><span class="nav-number">1.3.5.</span> <span class="nav-text">csv&#x2F;tsv&#x2F;txt</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%99%E5%85%A5"><span class="nav-number">1.3.6.</span> <span class="nav-text">写入</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#DataFrame"><span class="nav-number">2.</span> <span class="nav-text">DataFrame</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA"><span class="nav-number">2.1.</span> <span class="nav-text">创建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%B7%B1%E6%8C%87%E5%AE%9Aindex"><span class="nav-number">2.2.</span> <span class="nav-text">自己指定index</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%9A%E8%BF%87index%E6%89%BE%E5%87%BA%E5%AF%B9%E5%BA%94%E6%95%B0%E6%8D%AE"><span class="nav-number">2.3.</span> <span class="nav-text">通过index找出对应数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%87%E5%AE%9Aheader"><span class="nav-number">2.4.</span> <span class="nav-text">指定header</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E5%BC%80%E5%A4%B4%E5%92%8C%E7%BB%93%E5%B0%BE"><span class="nav-number">2.5.</span> <span class="nav-text">查看开头和结尾</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E6%95%B0%E6%8D%AE%E4%BF%A1%E6%81%AF"><span class="nav-number">2.6.</span> <span class="nav-text">查看数据信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E8%A1%8C%E5%88%97%E6%95%B0"><span class="nav-number">2.7.</span> <span class="nav-text">查看行列数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E4%B8%8E%E5%8E%BB%E9%87%8D"><span class="nav-number">2.8.</span> <span class="nav-text">添加与去重</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0DataFrame"><span class="nav-number">2.8.1.</span> <span class="nav-text">添加DataFrame</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0Series"><span class="nav-number">2.8.2.</span> <span class="nav-text">添加Series</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E5%88%97"><span class="nav-number">2.8.3.</span> <span class="nav-text">添加列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%BE%E5%88%B0%E9%87%8D%E5%A4%8D%E6%95%B0%E6%8D%AE"><span class="nav-number">2.8.4.</span> <span class="nav-text">找到重复数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8E%BB%E9%87%8D"><span class="nav-number">2.8.5.</span> <span class="nav-text">去重</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9"><span class="nav-number">2.9.</span> <span class="nav-text">修改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9B%BF%E6%8D%A2"><span class="nav-number">2.10.</span> <span class="nav-text">替换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8F%92%E5%85%A5"><span class="nav-number">2.11.</span> <span class="nav-text">插入</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A1%8C"><span class="nav-number">2.11.1.</span> <span class="nav-text">行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%97"><span class="nav-number">2.11.2.</span> <span class="nav-text">列</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A0%E9%99%A4"><span class="nav-number">2.12.</span> <span class="nav-text">删除</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A1%8C-1"><span class="nav-number">2.12.1.</span> <span class="nav-text">行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%97-1"><span class="nav-number">2.12.2.</span> <span class="nav-text">列</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#columns"><span class="nav-number">2.13.</span> <span class="nav-text">columns</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Null%E6%95%B0%E6%8D%AE%E8%A1%8C%E6%B8%85%E9%99%A4"><span class="nav-number">2.14.</span> <span class="nav-text">Null数据行清除</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Null%E6%95%B0%E6%8D%AE%E5%88%97%E7%9A%84%E6%B8%85%E9%99%A4"><span class="nav-number">2.15.</span> <span class="nav-text">Null数据列的清除</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8mean%E6%9D%A5%E5%A1%AB%E5%85%85null%E6%95%B0%E6%8D%AE%E5%88%97"><span class="nav-number">2.16.</span> <span class="nav-text">使用mean来填充null数据列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96%E6%95%B0%E6%8D%AE%E6%8F%8F%E8%BF%B0"><span class="nav-number">2.17.</span> <span class="nav-text">获取数据描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E6%9F%90%E5%88%97%E6%95%B0%E6%8D%AE%E7%9B%B8%E5%90%8C%E6%95%B0%E6%8D%AE%E7%9A%84%E4%B8%AA%E6%95%B0"><span class="nav-number">2.18.</span> <span class="nav-text">查看某列数据相同数据的个数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%87%8D%E7%BB%84DataFrame"><span class="nav-number">2.19.</span> <span class="nav-text">重组DataFrame</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%9A%84%E8%BF%87%E6%BB%A4"><span class="nav-number">2.20.</span> <span class="nav-text">数据的过滤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8Series%E7%9A%84%E5%9F%BA%E7%A1%80%E4%B8%8A%E8%BF%87%E6%BB%A4"><span class="nav-number">2.20.1.</span> <span class="nav-text">在Series的基础上过滤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8DataFrame%E5%9F%BA%E7%A1%80%E4%B8%8A%E8%BF%87%E6%BB%A4"><span class="nav-number">2.20.2.</span> <span class="nav-text">在DataFrame基础上过滤</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%8E%E6%8C%87%E5%AE%9A%E8%A1%8C%E6%88%96%E5%88%97%E5%BC%80%E5%A7%8B%E8%AF%BB%E5%8F%96"><span class="nav-number">2.21.</span> <span class="nav-text">从指定行或列开始读取</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%85%85%E5%8A%9F%E8%83%BD"><span class="nav-number">2.22.</span> <span class="nav-text">自动填充功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E5%8A%9F%E8%83%BD"><span class="nav-number">2.23.</span> <span class="nav-text">计算功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#x%E8%BD%B4%E5%90%91%E4%B9%98%E6%B3%95"><span class="nav-number">2.23.1.</span> <span class="nav-text">x轴向乘法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#x%E8%BD%B4%E5%90%91%E6%B1%82%E5%92%8C-%E5%B9%B3%E5%9D%87"><span class="nav-number">2.23.2.</span> <span class="nav-text">x轴向求和&#x2F;平均</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#y%E8%BD%B4%E5%90%91%E6%B1%82%E5%92%8C-%E5%B9%B3%E5%9D%87%E5%B9%B6%E6%B7%BB%E5%8A%A0%E5%88%B0DataFrame"><span class="nav-number">2.23.3.</span> <span class="nav-text">y轴向求和&#x2F;平均并添加到DataFrame</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%92%E5%BA%8F"><span class="nav-number">2.24.</span> <span class="nav-text">排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%9B%B8%E5%85%B3%E6%80%A7"><span class="nav-number">2.25.</span> <span class="nav-text">数据相关性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%8E%E4%B8%8D%E5%90%8Csheet%E9%A1%B5%E8%AF%BB%E5%8F%96"><span class="nav-number">2.26.</span> <span class="nav-text">从不同sheet页读取</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%9A%E8%A1%A8%E8%81%94%E5%90%88%E6%9F%A5%E8%AF%A2"><span class="nav-number">2.27.</span> <span class="nav-text">多表联合查询</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%88%97%E5%88%86%E5%89%B2"><span class="nav-number">2.28.</span> <span class="nav-text">数据列分割</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%8C%E5%88%97%E8%BD%AC%E6%8D%A2"><span class="nav-number">2.29.</span> <span class="nav-text">行列转换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8F%90%E5%8F%96%E6%97%A5%E6%9C%9F"><span class="nav-number">2.30.</span> <span class="nav-text">提取日期</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E7%BB%84%EF%BC%8C%E8%81%9A%E5%90%88"><span class="nav-number">2.31.</span> <span class="nav-text">分组，聚合</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9D%A1%E4%BB%B6%E9%A2%9C%E8%89%B2"><span class="nav-number">2.32.</span> <span class="nav-text">条件颜色</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%9C%E8%89%B2%E6%9D%A1"><span class="nav-number">2.33.</span> <span class="nav-text">颜色条</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B8%90%E5%8F%98%E9%A2%9C%E8%89%B2"><span class="nav-number">2.34.</span> <span class="nav-text">渐变颜色</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Series"><span class="nav-number">3.</span> <span class="nav-text">Series</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Series%E5%BA%8F%E5%88%97"><span class="nav-number">3.1.</span> <span class="nav-text">Series序列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Series%E7%BB%84%E8%A3%85DataFrame"><span class="nav-number">3.2.</span> <span class="nav-text">Series组装DataFrame</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DataFrame%E5%8F%96%E5%87%BASeries"><span class="nav-number">3.3.</span> <span class="nav-text">DataFrame取出Series</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%B6%E5%9B%BE"><span class="nav-number">4.</span> <span class="nav-text">制图</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%B1%E7%8A%B6%E5%9B%BE"><span class="nav-number">4.1.</span> <span class="nav-text">柱状图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%AD%E6%96%87%E6%94%AF%E6%8C%81"><span class="nav-number">4.2.</span> <span class="nav-text">中文支持</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8matplotlib%E4%BF%AE%E9%A5%B0"><span class="nav-number">4.3.</span> <span class="nav-text">使用matplotlib修饰</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E7%BB%84%E6%9F%B1%E7%8A%B6%E5%9B%BE"><span class="nav-number">4.4.</span> <span class="nav-text">分组柱状图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%A0%E5%8A%A0%E6%9F%B1%E7%8A%B6%E5%9B%BE"><span class="nav-number">4.5.</span> <span class="nav-text">叠加柱状图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B0%B4%E5%B9%B3%E5%8F%A0%E5%8A%A0%E6%9F%B1%E7%8A%B6%E5%9B%BE"><span class="nav-number">4.6.</span> <span class="nav-text">水平叠加柱状图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A5%BC%E5%9B%BE"><span class="nav-number">4.7.</span> <span class="nav-text">饼图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%98%E7%BA%BF%E5%9B%BE"><span class="nav-number">4.8.</span> <span class="nav-text">折线图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%A0%E5%8A%A0%E5%8C%BA%E5%9F%9F%E5%9B%BE"><span class="nav-number">4.9.</span> <span class="nav-text">叠加区域图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%A3%E7%82%B9%E5%9B%BE"><span class="nav-number">4.10.</span> <span class="nav-text">散点图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E5%B8%83%E5%9B%BE"><span class="nav-number">4.11.</span> <span class="nav-text">分布图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%86%E5%BA%A6%E5%9B%BE"><span class="nav-number">4.12.</span> <span class="nav-text">密度图</span></a></li></ol></li></ol>
+    </div>
+</div>
+        </aside>
+    
 
     <div class="image-viewer-container">
     <img src="">
@@ -830,32 +877,89 @@
 
 
     
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
 
 </main>
 
 
 
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/dark-light-toggle.js"></script>
 
-<script src="/js/utils.js"></script>
 
-<script src="/js/main.js"></script>
-
-<script src="/js/header-shrink.js"></script>
-
-<script src="/js/back2top.js"></script>
-
-<script src="/js/dark-light-toggle.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/local-search.js"></script>
 
 
 
 
 
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/lazyload.js"></script>
 
 
-
-<div class="post-scripts">
+<div class="post-scripts pjax">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/toc.js"></script>
     
 </div>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            KEEP.refresh();
+        });
+    });
+</script>
 
 
 

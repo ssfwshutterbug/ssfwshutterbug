@@ -17,13 +17,11 @@
 <link rel="stylesheet" href="/css/style.css">
 
     <link rel="shortcut icon" href="/images/logo.svg">
-    
-<link rel="stylesheet" href="/css/font-awesome.min.css">
-
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/css/font-awesome.min.css">
     <script id="hexo-configurations">
     let KEEP = window.KEEP || {};
-    KEEP.hexo_config = {"hostname":"raw.githubusercontent.com","root":"/","language":"en"};
-    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/avatar.svg","favicon":"/images/logo.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/4.jpg","description":"the world you see is not depend on what you received but your response."},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":false}}},"local_search":{"enable":false,"preload":false},"code_copy":{"enable":false,"style":"default"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.5"};
+    KEEP.hexo_config = {"hostname":"raw.githubusercontent.com","root":"/","language":"en","path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":true},"style":{"primary_color":"#0066CC","avatar":"/images/avatar.svg","favicon":"/images/logo.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/4.jpg","description":"the world you see is not depend on what you received but your response."},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":false},"code_copy":{"enable":false,"style":"default"},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"3.4.5"};
     KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
   </script>
 <meta name="generator" content="Hexo 5.4.2"></head>
@@ -33,6 +31,11 @@
 <div class="progress-bar-container">
     
 
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fas fa-circle-notch fa-spin"></i>
+        </span>
     
 </div>
 
@@ -74,10 +77,32 @@
                             </a>
                         </li>
                     
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                CATEGORIES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                TAGS
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
                     
                 </ul>
             </div>
             <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
                 
                 <div class="icon-item menu-bar">
                     <div class="menu-bar-middle"></div>
@@ -97,6 +122,16 @@
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/archives">ARCHIVES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">CATEGORIES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">TAGS</a>
                 </li>
             
         </ul>
@@ -719,6 +754,10 @@
     <ul class="tools-list">
         <!-- TOC aside toggle -->
         
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
 
         <!-- go comment -->
         
@@ -772,6 +811,14 @@
     </div>
 
     
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#TERMINAL"><span class="nav-number">1.</span> <span class="nav-text">TERMINAL</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#SHORTCUT"><span class="nav-number">1.1.</span> <span class="nav-text">SHORTCUT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GREAT-WORKFLOW"><span class="nav-number">1.2.</span> <span class="nav-text">GREAT WORKFLOW</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#COMMAND"><span class="nav-number">1.3.</span> <span class="nav-text">COMMAND</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#wrap-terminal-long-line"><span class="nav-number">1.3.1.</span> <span class="nav-text">wrap terminal long line</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#last-command"><span class="nav-number">1.3.2.</span> <span class="nav-text">last command</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mktemp"><span class="nav-number">1.3.3.</span> <span class="nav-text">mktemp</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#trap"><span class="nav-number">1.3.4.</span> <span class="nav-text">trap</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sshfs"><span class="nav-number">1.3.5.</span> <span class="nav-text">sshfs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#stty"><span class="nav-number">1.3.6.</span> <span class="nav-text">stty</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#qmv"><span class="nav-number">1.3.7.</span> <span class="nav-text">qmv</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pidof"><span class="nav-number">1.3.8.</span> <span class="nav-text">pidof</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">1.3.9.</span> <span class="nav-text">$!</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#rg"><span class="nav-number">1.3.10.</span> <span class="nav-text">rg</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#fd"><span class="nav-number">1.3.11.</span> <span class="nav-text">fd</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#exa"><span class="nav-number">1.3.12.</span> <span class="nav-text">exa</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#crontab"><span class="nav-number">1.3.13.</span> <span class="nav-text">crontab</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#not-stores-in-history"><span class="nav-number">1.3.14.</span> <span class="nav-text">not stores in history</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#disown"><span class="nav-number">1.3.15.</span> <span class="nav-text">disown</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tmpfs"><span class="nav-number">1.3.16.</span> <span class="nav-text">tmpfs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#long-commnad"><span class="nav-number">1.3.17.</span> <span class="nav-text">long commnad</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#fc"><span class="nav-number">1.3.18.</span> <span class="nav-text">fc</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#catch-log-file"><span class="nav-number">1.3.19.</span> <span class="nav-text">catch log file</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#reset"><span class="nav-number">1.3.20.</span> <span class="nav-text">reset</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#doas"><span class="nav-number">1.3.21.</span> <span class="nav-text">doas</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#rsync"><span class="nav-number">1.3.22.</span> <span class="nav-text">rsync</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bat"><span class="nav-number">1.3.23.</span> <span class="nav-text">bat</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cpufetch"><span class="nav-number">1.3.24.</span> <span class="nav-text">cpufetch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#xdotool"><span class="nav-number">1.3.25.</span> <span class="nav-text">xdotool</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#yad"><span class="nav-number">1.3.26.</span> <span class="nav-text">yad</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mount-bind"><span class="nav-number">1.3.27.</span> <span class="nav-text">mount bind</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nsenter"><span class="nav-number">1.3.28.</span> <span class="nav-text">nsenter</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ccze"><span class="nav-number">1.3.29.</span> <span class="nav-text">ccze</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SHELL"><span class="nav-number">1.4.</span> <span class="nav-text">SHELL</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#find-test-shortcut-meaning"><span class="nav-number">1.4.1.</span> <span class="nav-text">find test shortcut meaning</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#grant-privilege-to-normal-user-with-the-owner%E2%80%99s-permission"><span class="nav-number">1.4.2.</span> <span class="nav-text">grant privilege to normal user with the owner’s permission</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#remote-X11-forward-with-ssh"><span class="nav-number">1.4.3.</span> <span class="nav-text">remote X11 forward with ssh</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#use-Xvfb-open-application-without-GUI"><span class="nav-number">1.4.4.</span> <span class="nav-text">use Xvfb open application without GUI</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#the-problem-of-num"><span class="nav-number">1.4.5.</span> <span class="nav-text">the problem of num</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#the-problem-of-column-alignment"><span class="nav-number">1.4.6.</span> <span class="nav-text">the problem of column alignment</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#for-loop-in-shell"><span class="nav-number">1.4.7.</span> <span class="nav-text">for loop in shell</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#variable-expansion"><span class="nav-number">1.4.8.</span> <span class="nav-text">variable expansion</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#privilege-of-script"><span class="nav-number">1.4.9.</span> <span class="nav-text">privilege of script</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#alias-act-as-function"><span class="nav-number">1.4.10.</span> <span class="nav-text">alias act as function</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#use-to-complete-syntax"><span class="nav-number">1.4.11.</span> <span class="nav-text">use : to complete syntax</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#use-local-to-define-a-local-variable"><span class="nav-number">1.4.12.</span> <span class="nav-text">use local to define a local variable</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#use-type-to-check-command%E2%80%99s-type"><span class="nav-number">1.4.13.</span> <span class="nav-text">use type to check command’s type</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#disable-truncate-file-in-global"><span class="nav-number">1.4.14.</span> <span class="nav-text">disable truncate file in global</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#array-in-shell"><span class="nav-number">1.4.15.</span> <span class="nav-text">array in shell</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#map-in-shell"><span class="nav-number">1.4.16.</span> <span class="nav-text">map in shell</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#case-convert"><span class="nav-number">1.4.17.</span> <span class="nav-text">case convert</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#check-run-level"><span class="nav-number">1.4.18.</span> <span class="nav-text">check run level</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#get-ip-address"><span class="nav-number">1.4.19.</span> <span class="nav-text">get ip address</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#check-live-environment"><span class="nav-number">1.4.20.</span> <span class="nav-text">check live environment</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#share-terminal-output-to-remote-user"><span class="nav-number">1.4.21.</span> <span class="nav-text">share terminal output to remote user</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#share-terminal-to-remote-user"><span class="nav-number">1.4.22.</span> <span class="nav-text">share terminal to remote user</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sort-ss-port-number-via-numeric"><span class="nav-number">1.4.23.</span> <span class="nav-text">sort ss port number via numeric</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#find-process-working-directory"><span class="nav-number">1.4.24.</span> <span class="nav-text">find process working directory</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#loop-until-succeed"><span class="nav-number">1.4.25.</span> <span class="nav-text">loop until succeed</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#execute-one-command-in-remote-machine"><span class="nav-number">1.4.26.</span> <span class="nav-text">execute one command in remote machine</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#simulate-packages-installation"><span class="nav-number">1.4.27.</span> <span class="nav-text">simulate packages installation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#repeat-history-command-with-tag"><span class="nav-number">1.4.28.</span> <span class="nav-text">repeat history command with tag</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CTRL-CHARACTER"><span class="nav-number">1.5.</span> <span class="nav-text">CTRL CHARACTER</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UlIMIT"><span class="nav-number">1.6.</span> <span class="nav-text">UlIMIT</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#define-os-resource-limit"><span class="nav-number">1.6.0.1.</span> <span class="nav-text">define os resource limit</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#service-limit"><span class="nav-number">1.6.0.2.</span> <span class="nav-text">service limit</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#systemd-limit"><span class="nav-number">1.6.0.3.</span> <span class="nav-text">systemd limit</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#modify-resource-limit-for-running-program"><span class="nav-number">1.6.0.4.</span> <span class="nav-text">modify resource limit for running program</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UFW"><span class="nav-number">1.7.</span> <span class="nav-text">UFW</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SYSTEMD"><span class="nav-number">1.8.</span> <span class="nav-text">SYSTEMD</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PORT-DETECT"><span class="nav-number">1.9.</span> <span class="nav-text">PORT DETECT</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-ways-to-check-if-a-port-is-open-on-a-remote-linux"><span class="nav-number">1.9.1.</span> <span class="nav-text">4 ways to check if a port is open on a remote linux</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-ways-to-check-if-a-port-is-open-on-local-machine"><span class="nav-number">1.9.2.</span> <span class="nav-text">3 ways to check if a port is open on local machine</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#KILLERS"><span class="nav-number">1.10.</span> <span class="nav-text">KILLERS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#SED"><span class="nav-number">1.10.1.</span> <span class="nav-text">SED</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Selections"><span class="nav-number">1.11.</span> <span class="nav-text">Selections</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DISCUSS"><span class="nav-number">1.12.</span> <span class="nav-text">DISCUSS</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#how-centos-6-download-package-with-repository"><span class="nav-number">1.12.0.1.</span> <span class="nav-text">how centos 6 download package with repository?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#how-centos-download-package-with-all-of-its-dependences"><span class="nav-number">1.12.0.2.</span> <span class="nav-text">how centos download package with all of its dependences?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#how-WSL-download-python-using-China-repo"><span class="nav-number">1.12.0.3.</span> <span class="nav-text">how WSL download python using China repo?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Why-was-I-able-to-delete-a-file-owned-by-root-in-my-home-directory-without-being-root"><span class="nav-number">1.12.0.4.</span> <span class="nav-text">Why was I able to delete a file owned by root in my home directory without being root?</span></a></li></ol></li></ol></li></ol></li></ol>
+    </div>
+</div>
+        </aside>
+    
 
     <div class="image-viewer-container">
     <img src="">
@@ -779,32 +826,89 @@
 
 
     
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
 
 </main>
 
 
 
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/dark-light-toggle.js"></script>
 
-<script src="/js/utils.js"></script>
 
-<script src="/js/main.js"></script>
-
-<script src="/js/header-shrink.js"></script>
-
-<script src="/js/back2top.js"></script>
-
-<script src="/js/dark-light-toggle.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/local-search.js"></script>
 
 
 
 
 
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/lazyload.js"></script>
 
 
-
-<div class="post-scripts">
+<div class="post-scripts pjax">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/toc.js"></script>
     
 </div>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            KEEP.refresh();
+        });
+    });
+</script>
 
 
 
