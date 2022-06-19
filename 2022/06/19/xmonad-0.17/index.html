@@ -172,8 +172,8 @@
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fas fa-edit"></i>&nbsp;
-        <span class="pc">2022-06-19 20:22:20</span>
-        <span class="mobile">2022-06-19 20:22</span>
+        <span class="pc">2022-06-19 00:58:16</span>
+        <span class="mobile">2022-06-19 00:58</span>
     </span>
     
         <span class="article-categories article-meta-item">
@@ -212,94 +212,87 @@
         
 
         <div class="article-content markdown-body">
-            <h1 id="XMONAD"><a href="#XMONAD" class="headerlink" title="XMONAD"></a>XMONAD</h1><p>What is xmonad? It is a window manager which i used for years and it is also my favorite one among tens of WM. Although i have used it so many years, i can not really understand it’s configure language haskell, so do some of features that i like. Recently, when i see a installation guide in <a class="link"   target="_blank" rel="noopener" href="https://xmonad.org/INSTALL.html" >official web site<i class="fas fa-external-link-alt"></i></a>, i find something new i have never know and also a solution for every time upgrade system will broken xmonad in archlinux.</p>
-<p>Main point:</p>
-<ul>
-<li>we can put xmonad configure file under <code>~/.config/xmonad</code> instead of <code>~/.xmonad</code>.</li>
-<li>we should not install xmonad and xmonad-contrib via system package manager(<code>pacman</code>).</li>
-<li>we need download origion file of xmonad and xmonad-contrib from github.</li>
-<li>we need a tool called <a class="link"   target="_blank" rel="noopener" href="https://docs.haskellstack.org/en/stable/README/" >stack<i class="fas fa-external-link-alt"></i></a> to manage our xmonad.</li>
-</ul>
-<blockquote>
-<p>Note: </p>
-<ul>
-<li><p>when we use our system package manager pacman to download xmonad, it will also download many dependences, once some of them upgrade, our xmonad should be recompiled, if not it will broken once restart computer since it builds xmonad with dependences though system dynamic link.</p>
-</li>
-<li><p>when compile xmonad, it needs a tool called ghc. once we use stack, we need create a project, and then it can automatically download ghc, auto download project dependences, auto compile. very useful.</p>
-</li>
-</ul>
-</blockquote>
-<h2 id="Install-Stack"><a href="#Install-Stack" class="headerlink" title="Install Stack"></a>Install Stack</h2><p>Open up <a class="link"   target="_blank" rel="noopener" href="https://docs.haskellstack.org/en/stable/README/" >official website<i class="fas fa-external-link-alt"></i></a>, we can find the full introduction. what i <a class="link"   target="_blank" rel="noopener" href="https://docs.haskellstack.org/en/stable/install_and_upgrade/" >recommend<i class="fas fa-external-link-alt"></i></a> is to download the binary file of stack(manual style).</p>
-<p><em>uncompress to local path</em></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -xzf stack-2.7.5-linux-x86_64.tar.gz -C ~/.local/share/bin</span><br></pre></td></tr></table></figure>
-
-<p><em><strong>make sure the path already added to system path</strong></em></p>
-<p><strong>China-based users</strong></p>
-<p>because we live in China, we cannot download need file with stack until we do some configuration.</p>
-<p><em>append this in ~/.stack/config.yaml</em></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="comment">##ADD THIS IF YOU LIVE IN CHINA</span></span></span><br><span class="line">setup-info-locations: </span><br><span class="line">- &quot;http://mirrors.tuna.tsinghua.edu.cn/stackage/stack-setup.yaml&quot;</span><br><span class="line">urls:</span><br><span class="line">  latest-snapshot: http://mirrors.tuna.tsinghua.edu.cn/stackage/snapshots.json</span><br><span class="line"></span><br><span class="line">package-indices:</span><br><span class="line">  - download-prefix: http://mirrors.tuna.tsinghua.edu.cn/hackage/</span><br><span class="line">    hackage-security:</span><br><span class="line">        keyids:</span><br><span class="line">        - 0a5c7ea47cd1b15f01f5f51a33adda7e655bc0f0b0615baa8e271f4c3351e21d</span><br><span class="line">        - 1ea9ba32c526d1cc91ab5e5bd364ec5e9e8cb67179a471872f6e26f0ae773d42</span><br><span class="line">        - 280b10153a522681163658cb49f632cde3f38d768b736ddbc901d99a1a772833</span><br><span class="line">        - 2a96b1889dc221c17296fcc2bb34b908ca9734376f0f361660200935916ef201</span><br><span class="line">        - 2c6c3627bd6c982990239487f1abd02e08a02e6cf16edb105a8012d444d870c3</span><br><span class="line">        - 51f0161b906011b52c6613376b1ae937670da69322113a246a09f807c62f6921</span><br><span class="line">        - 772e9f4c7db33d251d5c6e357199c819e569d130857dc225549b40845ff0890d</span><br><span class="line">        - aa315286e6ad281ad61182235533c41e806e5a787e0b6d1e7eef3f09d137d2e9</span><br><span class="line">        - fe331502606802feac15e514d9b9ea83fee8b6ffef71335479a2e68d84adc6b0</span><br><span class="line">        key-threshold: 3</span><br><span class="line">        ignore-expiry: no</span><br></pre></td></tr></table></figure>
-
-<p>and that is all we need do for installation</p>
-<h2 id="Install-Needed-Dependences"><a href="#Install-Needed-Dependences" class="headerlink" title="Install Needed Dependences"></a>Install Needed Dependences</h2><p>in archlinux, we need download below dependences:</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S \</span><br><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash">git \</span></span><br><span class="line"><span class="language-bash">&gt; xorg-server xorg-apps xorg-xinit xorg-xmessage \</span></span><br><span class="line"><span class="language-bash">&gt; libx11 libxft libxinerama libxrandr libxss \</span></span><br><span class="line"><span class="language-bash">&gt; pkgconf</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="Install-Xmonad"><a href="#Install-Xmonad" class="headerlink" title="Install Xmonad"></a>Install Xmonad</h2><ul>
-<li>create xmonad configure directory and change to it.</li>
+            <h1 id="XMONAD"><a href="#XMONAD" class="headerlink" title="XMONAD"></a>XMONAD</h1><p>上大学的时候就开始用xmonad了，过段时间可能就要重新配置一下xmonad，这也成为了一种乐趣。曾经尝试过很多的WE，DE，最终还是最喜欢xmonad。xmonad的版本也从0.15变成了现在的0.17，logo也换了，everything is changed。有一种沧桑的感觉</p>
+<p>最近又在配置xmonad，想要实现用快捷键切换窗口的布局。然后发现了一些其它比较好的功能，但是我的archlinux上的版本不支持，所以考虑下载最新的版本使用。</p>
+<p>跟着<a class="link"   target="_blank" rel="noopener" href="https://xmonad.org/INSTALL.html" >教程<i class="fas fa-external-link-alt"></i></a>一步一步配置，这种方式就不是用pacman上的安装包，而是从github克隆源码下来，用stack来编译安装。</p>
+<p>而且使用这种方式安装有一个附加的好处是系统升级不需要重新编译它，因为它不是用pacman来安装的，非常好。以前更新之后必须要编译不然重启后就会报错。</p>
+<p>以前一直以为配置文件只能放家目录下，现在发现可以放<code>~/.config/xmonad</code>下了，又是一个惊喜。</p>
+<h2 id="install-new-0-17"><a href="#install-new-0-17" class="headerlink" title="install new 0.17"></a>install new 0.17</h2><ul>
+<li>进入配置目录</li>
 </ul>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir ~/.config/xmonad</span><br><span class="line">cd ~/.config/xmonad</span><br></pre></td></tr></table></figure>
 
 <ul>
-<li>copy our configure file to new directory</li>
+<li>复制之前的配置文件</li>
 </ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp ~/.xmonad/xmonad.hs ~/.config/xmonad</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp ~/.xmonad/xmonad.hs ~/.config/xmonad/</span><br></pre></td></tr></table></figure>
+
+
 
 <ul>
-<li>follow <a class="link"   target="_blank" rel="noopener" href="https://xmonad.org/INSTALL.html" >this page<i class="fas fa-external-link-alt"></i></a>, download xmonad via git</li>
+<li>克隆源码</li>
 </ul>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/xmonad/xmonad</span><br><span class="line">git clone https://github.com/xmonad/xmonad-contrib</span><br></pre></td></tr></table></figure>
 
 <ul>
-<li>create stack project</li>
+<li>下载编译工具</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pacman -S stack</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>创建stack project</li>
 </ul>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">stack init</span><br></pre></td></tr></table></figure>
 
-<p><em>with this command, stack will create a yaml file to record our xmonad project</em></p>
+<p>从这一步开始就报错了，还是老问题，国内访问不到，只能开vpn下载了</p>
 <ul>
-<li>install everything</li>
+<li>安装编译</li>
 </ul>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">stack install</span><br></pre></td></tr></table></figure>
 
-<p><strong>it will auto download ghc, build all required package, copy <code>xmonad</code> executable file to <code>~/.local/bin</code></strong></p>
+<p>这一步会下载ghc，并且自动编译<code>stack build</code>，然后自动把<code>xmonad</code>命令移动到<code>~/.local/bin</code>下。</p>
+<p>现在准备工作已经完毕，只需要编译配置文件就行。因为用pacman安装的有xmonad，所以现在运行<code>xmonad --recompile</code>还是用的之前的版本，所以我们必须指定路径来编译配置。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~/.local/bin/xmonad --recompile</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Note: 为什么不先卸载系统的xmonad呢？因为我们不能确定编译没有问题，所以需要先保证编译没问题后再卸载。</p>
+</blockquote>
+<p>编译过程自然是会报错，问题就是0.15版本的一些语法在0.17不兼容了。包括两个地方：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1. </span><br><span class="line">XMonad.Hooks.StatusBar.PP 取代 XMonad.Hooks.DynamicLog</span><br><span class="line">2. </span><br><span class="line">XMonad.Actions.CycleWS 用emptyWS取代EmptyWS</span><br></pre></td></tr></table></figure>
+
 <ul>
-<li>configure xmonad to be our window manager</li>
+<li>编译没问题之后卸载系统xmonad</li>
 </ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">add this to the end of ~/.xinitrc</span></span><br><span class="line">exec xmonad</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pacman -Rns xmonad xmonad-contrib</span><br></pre></td></tr></table></figure>
 
 
 
-<h2 id="Stack-simple-usage"><a href="#Stack-simple-usage" class="headerlink" title="Stack simple usage"></a>Stack simple usage</h2><p>ghci command</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">stack ghci --no-build --no-load</span><br></pre></td></tr></table></figure>
-
-<p>runhaskell command which used in vscodium</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">stack runhaskell</span><br></pre></td></tr></table></figure>
-
-<p>we can add the two with alias</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">nvim ~/.config/zsh/.zshrc</span><br><span class="line"></span><br><span class="line">alias ghci=&quot;stack ghci --no-build --no-load&quot;</span><br><span class="line">alias runhaskell=&quot;stack runhaskell&quot;</span><br></pre></td></tr></table></figure>
 
 
+<h2 id="new-feature"><a href="#new-feature" class="headerlink" title="new feature"></a>new feature</h2><h3 id="keybinding-to-toggle-layout"><a href="#keybinding-to-toggle-layout" class="headerlink" title="keybinding to toggle layout"></a>keybinding to toggle layout</h3><p>这个功能在0.15版本就是可以实现的，只不过之前不知道怎么配置，因为自带的配置没有对应的layout调用，需要自己写数据结构</p>
+<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- self define toggle layout transformer</span></span><br><span class="line"><span class="class"><span class="keyword">data</span> <span class="type">ACCORDION</span> = <span class="type">ACCORDION</span> <span class="keyword">deriving</span> (<span class="type">Read</span>, <span class="type">Show</span>, <span class="type">Eq</span>)</span></span><br><span class="line"><span class="class"><span class="keyword">instance</span> <span class="type">Transformer</span> <span class="type">ACCORDION</span> <span class="type">Window</span> <span class="keyword">where</span></span></span><br><span class="line">    transform _ x k = k <span class="type">Accordion</span> (const x)</span><br><span class="line"><span class="class"><span class="keyword">data</span> <span class="type">CROSS</span> = <span class="type">CROSS</span> <span class="keyword">deriving</span> (<span class="type">Read</span>, <span class="type">Show</span>, <span class="type">Eq</span>)</span></span><br><span class="line"><span class="class"><span class="keyword">instance</span> <span class="type">Transformer</span> <span class="type">CROSS</span> <span class="type">Window</span> <span class="keyword">where</span></span></span><br><span class="line">    transform _ x k = k simpleCross (const x)</span><br><span class="line"><span class="class"><span class="keyword">data</span> <span class="type">PST</span> = <span class="type">PST</span> <span class="keyword">deriving</span> (<span class="type">Read</span>, <span class="type">Show</span>, <span class="type">Eq</span>)</span></span><br><span class="line"><span class="class"><span class="keyword">instance</span> <span class="type">Transformer</span> <span class="type">PST</span> <span class="type">Window</span> <span class="keyword">where</span></span></span><br><span class="line">    transform _ x k = k positionStoreFloat (const x)</span><br><span class="line"><span class="class"><span class="keyword">data</span> <span class="type">THREE</span> = <span class="type">THREE</span> <span class="keyword">deriving</span> (<span class="type">Read</span>, <span class="type">Show</span>, <span class="type">Eq</span>)</span></span><br><span class="line"><span class="class"><span class="keyword">instance</span> <span class="type">Transformer</span> <span class="type">THREE</span> <span class="type">Window</span> <span class="keyword">where</span></span></span><br><span class="line">    transform _ x k = k (<span class="type">ThreeColMid</span> <span class="number">1</span> (<span class="number">3</span>/<span class="number">100</span>) (<span class="number">1</span>/<span class="number">2</span>)) (const x)</span><br></pre></td></tr></table></figure>
 
-<h2 id="Uninstall-system-xmonad"><a href="#Uninstall-system-xmonad" class="headerlink" title="Uninstall system xmonad"></a>Uninstall system xmonad</h2><p>if we use xmonad by pacman in the past, now we can uninstall it.</p>
-<p>uninstall xmonad which is installed by system package manger pacman</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -Rns xmonad xmonad-contrib</span><br></pre></td></tr></table></figure>
+<p>然后调用</p>
+<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$  mkToggle (single <span class="type">MIRROR</span>)</span><br><span class="line">$  mkToggle (single <span class="type">ACCORDION</span>)</span><br><span class="line">$  mkToggle (single <span class="type">CROSS</span>)</span><br><span class="line">$  mkToggle (single <span class="type">PST</span>)</span><br><span class="line">$  mkToggle (single <span class="type">THREE</span>)</span><br></pre></td></tr></table></figure>
 
-<p>uninstall all other haskell package which is installed by system package manager pacman</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pacman -Qq |rg haskell |xargs -I &#123;&#125; sudo pacman -Rnsc --noconfirm &#123;&#125;</span><br></pre></td></tr></table></figure>
+<p>设置快捷键</p>
+<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">, ((_M , xK_apostrophe), submap . <span class="type">M</span>.fromList $</span><br><span class="line">   [ ((<span class="number">0</span> , xK_m), sendMessage $ <span class="type">Toggle</span> <span class="type">MIRROR</span>)</span><br><span class="line">   , ((<span class="number">0</span> , xK_a), sendMessage $ <span class="type">Toggle</span> <span class="type">ACCORDION</span>)</span><br><span class="line">   , ((<span class="number">0</span> , xK_c), sendMessage $ <span class="type">Toggle</span> <span class="type">CROSS</span>)</span><br><span class="line">   , ((<span class="number">0</span> , xK_p), sendMessage $ <span class="type">Toggle</span> <span class="type">PST</span>)</span><br><span class="line">   , ((<span class="number">0</span> , xK_t), sendMessage $ <span class="type">Toggle</span> <span class="type">THREE</span>)</span><br><span class="line">   ])</span><br></pre></td></tr></table></figure>
 
 
 
-<h2 id="At-last"><a href="#At-last" class="headerlink" title="At last"></a>At last</h2><p>and now we have an inpendent, clean xmonad.</p>
+<h3 id="swallow-parent-while-child-GUI-open"><a href="#swallow-parent-while-child-GUI-open" class="headerlink" title="swallow parent while child GUI open"></a>swallow parent while child GUI open</h3><p>这个功能只有0.17才支持，非常适合在terminal中打开图形程序。设置之后，如果在terminal中打开GUI程序，那么terminal会被隐藏直到GUI被关闭。例如用feh打开图片后就不会开一个新的窗口，而是隐藏终端，非常nice</p>
+<p>导入模块</p>
+<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> XMonad.Hooks.WindowSwallowing</span><br></pre></td></tr></table></figure>
+
+<p>配置</p>
+<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">, handleEventHook       = swallowEventHook (className =? <span class="string">&quot;XTerm&quot;</span>) (return <span class="type">True</span>) </span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
 
         </div>
 
@@ -318,14 +311,29 @@
         
             <div class="article-nav">
                 
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2022/06/19/to-be-gentle/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">to-be-gentle</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
+                
                 
                     <div class="article-next">
                         <a class="next"
                            rel="next"
-                           href="/2022/06/19/to-be-gentle/"
+                           href="/2022/06/12/20220612-%E5%96%84%E8%89%AF%E6%98%AF%E5%A6%82%E4%BD%95%E6%B6%88%E5%A4%B1%E7%9A%84/"
                         >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">to-be-gentle</span>
+                                <span class="post-nav-title-item">20220612-善良是如何消失的</span>
                                 <span class="post-nav-item">Next posts</span>
                             </span>
                             <span class="right arrow-icon flex-center">
@@ -436,7 +444,7 @@
         <aside class="page-aside">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#XMONAD"><span class="nav-number">1.</span> <span class="nav-text">XMONAD</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Install-Stack"><span class="nav-number">1.1.</span> <span class="nav-text">Install Stack</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Install-Needed-Dependences"><span class="nav-number">1.2.</span> <span class="nav-text">Install Needed Dependences</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Install-Xmonad"><span class="nav-number">1.3.</span> <span class="nav-text">Install Xmonad</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Stack-simple-usage"><span class="nav-number">1.4.</span> <span class="nav-text">Stack simple usage</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Uninstall-system-xmonad"><span class="nav-number">1.5.</span> <span class="nav-text">Uninstall system xmonad</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#At-last"><span class="nav-number">1.6.</span> <span class="nav-text">At last</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#XMONAD"><span class="nav-number">1.</span> <span class="nav-text">XMONAD</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#install-new-0-17"><span class="nav-number">1.1.</span> <span class="nav-text">install new 0.17</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#new-feature"><span class="nav-number">1.2.</span> <span class="nav-text">new feature</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#keybinding-to-toggle-layout"><span class="nav-number">1.2.1.</span> <span class="nav-text">keybinding to toggle layout</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#swallow-parent-while-child-GUI-open"><span class="nav-number">1.2.2.</span> <span class="nav-text">swallow parent while child GUI open</span></a></li></ol></li></ol></li></ol>
     </div>
 </div>
         </aside>
