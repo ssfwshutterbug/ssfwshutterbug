@@ -9,7 +9,7 @@
     
     <title>
         
-            Tags |
+            create-cursor |
         
         Sweet Diary
     </title>
@@ -86,7 +86,7 @@
                         </li>
                     
                         <li class="menu-item">
-                            <a class="active"
+                            <a class=""
                                href="/tags"
                             >
                                 TAGS
@@ -130,7 +130,7 @@
                 </li>
             
                 <li class="drawer-menu-item flex-center">
-                    <a class="active"
+                    <a class=""
                        href="/tags">TAGS</a>
                 </li>
             
@@ -149,15 +149,144 @@
             <div class="main-content">
 
                 
-                    
-    <div class="fade-in-down-animation">
-        <div class="tagcloud-container">
-            <div class="tagcloud-content">
-                <a href="/tags/anaconda/" style="font-size: 1rem;">anaconda</a> <a href="/tags/anbox/" style="font-size: 1rem;">anbox</a> <a href="/tags/ansible/" style="font-size: 1rem;">ansible</a> <a href="/tags/archlinux/" style="font-size: 1rem;">archlinux</a> <a href="/tags/boring/" style="font-size: 1rem;">boring</a> <a href="/tags/container/" style="font-size: 1rem;">container</a> <a href="/tags/cursor-theme/" style="font-size: 1rem;">cursor theme</a> <a href="/tags/ed/" style="font-size: 1rem;">ed</a> <a href="/tags/git/" style="font-size: 1rem;">git</a> <a href="/tags/go/" style="font-size: 1rem;">go</a> <a href="/tags/grub/" style="font-size: 1rem;">grub</a> <a href="/tags/haskell/" style="font-size: 1rem;">haskell</a> <a href="/tags/inject-js-css/" style="font-size: 1rem;">inject js/css</a> <a href="/tags/iptables/" style="font-size: 1rem;">iptables</a> <a href="/tags/k8s/" style="font-size: 1.6rem;">k8s</a> <a href="/tags/linux/" style="font-size: 1.3rem;">linux</a> <a href="/tags/optimized/" style="font-size: 1rem;">optimized</a> <a href="/tags/positive/" style="font-size: 1rem;">positive</a> <a href="/tags/python/" style="font-size: 1.3rem;">python</a> <a href="/tags/route/" style="font-size: 1rem;">route</a> <a href="/tags/rust/" style="font-size: 1rem;">rust</a> <a href="/tags/shell/" style="font-size: 1rem;">shell</a> <a href="/tags/shield/" style="font-size: 1rem;">shield</a> <a href="/tags/ssh/" style="font-size: 1rem;">ssh</a> <a href="/tags/tcp/" style="font-size: 1rem;">tcp</a> <a href="/tags/vbox/" style="font-size: 1rem;">vbox</a> <a href="/tags/vscode/" style="font-size: 1rem;">vscode</a> <a href="/tags/xmonad/" style="font-size: 1.3rem;">xmonad</a> <a href="/tags/zabbix/" style="font-size: 1rem;">zabbix</a> <a href="/tags/zk/" style="font-size: 1rem;">zk</a> <a href="/tags/zsh/" style="font-size: 1rem;">zsh</a> <a href="/tags/%E6%80%9D%E7%BB%AA/" style="font-size: 1.3rem;">思绪</a> <a href="/tags/%E7%A5%9E%E8%AF%9D/" style="font-size: 1rem;">神话</a> <a href="/tags/%E8%89%AF%E7%9F%A5/" style="font-size: 1rem;">良知</a>
-            </div>
-        </div>
-    </div>
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
 
+        <div class="article-title">
+            <span class="title-hover-animation">create-cursor</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/avatar.svg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">shutterbug</span>
+                        
+                            <span class="author-label">Lv4</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2022-06-24 12:31:33</span>
+        <span class="mobile">2022-06-24 12:31</span>
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/linux/">linux</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/cursor-theme/">cursor theme</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <h1 id="Self-Define-Cursor-Theme"><a href="#Self-Define-Cursor-Theme" class="headerlink" title="Self Define Cursor Theme"></a>Self Define Cursor Theme</h1><p>Because i use a pen tablet rather than a regular mouse, so i wanna to find a cursor theme suit for my need which has a circle rather than pointer, however i find no, then i decide to create myself cursor theme.</p>
+<p>Finally i find <a class="link"   target="_blank" rel="noopener" href="https://wiki.archlinux.org/title/Xcursorgen" >the method<i class="fas fa-external-link-alt"></i></a>, with the command <code>xcursorgen</code> we can easily create a cursor from a png image or a series of png images to create a animated cursor.</p>
+<h2 id="Main-Steps"><a href="#Main-Steps" class="headerlink" title="Main Steps"></a>Main Steps</h2><ol>
+<li><p>use image editor to create square png image, i choose gimp.</p>
+<p>usually use 32x32 pixels, i just choose 12x12 pixels for a little circle. save with background transparency <code>circle.png</code>.</p>
+</li>
+<li><p>find the pointer’s tip with x,y coordinate(gimp will show the x,y when hover image position).</p>
+<p>i choose <code>6 6</code> which the center of circle</p>
+</li>
+<li><p> create a configure file <code>circle.cursor</code></p>
+</li>
+</ol>
+   <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">image-size x y image-name</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">eg:</span></span><br><span class="line">12 6 6 circle.png</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li><p>product the final cursor file</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">xcursorgen configure-file final-cursor-name</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">eg:</span></span><br><span class="line">xcursorgen circle.cursor circle</span><br></pre></td></tr></table></figure></li>
+<li><p>put final cursor file to personal cursor folder</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir ~/.icons/my-cursor</span><br><span class="line">cp circle ~/.icons/my-cursor/circle</span><br></pre></td></tr></table></figure></li>
+<li><p>link to new created cursor</p>
+<p>the cursor pointer is called <code>left_ptr</code> under <code>~/.icons/Layan-cursors/cursors</code> (the folder name maybe different, it is depend on your cursor theme), which is linked to <code>default</code> by default.</p>
+<p>we need relink to our new cursor</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -sf ~/.icons/my-cursor/circle left_ptr</span><br></pre></td></tr></table></figure></li>
+<li><p>make it effect</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xsetroot -cursor_name left_ptr</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="Animate-Cursor"><a href="#Animate-Cursor" class="headerlink" title="Animate Cursor"></a>Animate Cursor</h2><p>animate cursor is also simple to create, the only difference is we need create more than one png images and give them a showing time in configure file.</p>
+<p>such as i create two png images:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">circle.png</span><br><span class="line">circle-light.png</span><br></pre></td></tr></table></figure>
+
+<p>and then in configure file</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">12 6 6 circle.png 5000</span><br><span class="line">12 6 6 circle-light.png 100</span><br></pre></td></tr></table></figure>
+
+<p>note that the showing time unit is microseconds</p>
+<p>above means showing <code>circle.png</code> 5 seconds and then <code>circle-light.png</code> 0.1 seconds, and then repeat.</p>
+
+        </div>
+
+        
+
+        
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/cursor-theme/">#cursor theme</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+            <div class="article-nav">
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2022/06/19/xmonad/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">xmonad</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
 
 
                 
@@ -188,6 +317,23 @@
         </div>
     </div>
 
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
     
 
     <div class="right-bottom-side-tools">
@@ -233,6 +379,14 @@
 
     </div>
 
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Self-Define-Cursor-Theme"><span class="nav-number">1.</span> <span class="nav-text">Self Define Cursor Theme</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Main-Steps"><span class="nav-number">1.1.</span> <span class="nav-text">Main Steps</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Animate-Cursor"><span class="nav-number">1.2.</span> <span class="nav-text">Animate Cursor</span></a></li></ol></li></ol>
+    </div>
+</div>
+        </aside>
     
 
     <div class="image-viewer-container">
@@ -286,6 +440,8 @@
 
 
 <div class="post-scripts pjax">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/toc.js"></script>
     
 </div>
 
