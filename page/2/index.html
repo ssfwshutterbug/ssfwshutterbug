@@ -1,646 +1,996 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="keywords" content="Hexo Theme Keep">
-    <meta name="description" content="Hexo Theme Keep">
-    <meta name="author" content="shutterbug">
-    
-    <title>
-        
-        Sweet Diary
-    </title>
-    
+  <meta charset="utf-8">
+  
+
+  
+  <title>shutterbug sweet diary</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="shutterbug sweet diary">
+<meta property="og:url" content="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main/page/2/index.html">
+<meta property="og:site_name" content="shutterbug sweet diary">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="shutterbug">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="shutterbug sweet diary" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+  
 <link rel="stylesheet" href="/css/style.css">
 
-    <link rel="shortcut icon" href="/images/logo.svg">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/css/font-awesome.min.css">
-    <script id="hexo-configurations">
-    let KEEP = window.KEEP || {};
-    KEEP.hexo_config = {"hostname":"raw.githubusercontent.com","root":"/","language":"en","path":"search.json"};
-    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":true},"style":{"primary_color":"#0066CC","avatar":"/images/avatar.svg","favicon":"/images/logo.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/4.jpg","description":"the world you see is not about how they act but how we respond."},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":false},"code_copy":{"enable":false,"style":"default"},"pjax":{"enable":true},"lazyload":{"enable":false},"version":"3.4.5"};
-    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
-  </script>
 <meta name="generator" content="Hexo 5.4.2"></head>
 
-
 <body>
-<div class="progress-bar-container">
-    
-
-    
-        <span class="pjax-progress-bar"></span>
-        <span class="pjax-progress-icon">
-            <i class="fas fa-circle-notch fa-spin"></i>
-        </span>
-    
-</div>
-
-
-<main class="page-container">
-
-    
-
-    <div class="page-main-content">
-
-        <div class="page-main-content-top">
-            <header class="header-wrapper">
-
-    <div class="header-content">
-        <div class="left">
-            
-            <a class="logo-title" href="/">
-                Sweet Diary
-            </a>
-        </div>
-
-        <div class="right">
-            <div class="pc">
-                <ul class="menu-list">
-                    
-                        <li class="menu-item">
-                            <a class="active"
-                               href="/"
-                            >
-                                HOME
-                            </a>
-                        </li>
-                    
-                        <li class="menu-item">
-                            <a class=""
-                               href="/archives"
-                            >
-                                ARCHIVES
-                            </a>
-                        </li>
-                    
-                        <li class="menu-item">
-                            <a class=""
-                               href="/categories"
-                            >
-                                CATEGORIES
-                            </a>
-                        </li>
-                    
-                        <li class="menu-item">
-                            <a class=""
-                               href="/tags"
-                            >
-                                TAGS
-                            </a>
-                        </li>
-                    
-                    
-                        <li class="menu-item search search-popup-trigger">
-                            <i class="fas fa-search"></i>
-                        </li>
-                    
-                </ul>
-            </div>
-            <div class="mobile">
-                
-                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
-                
-                <div class="icon-item menu-bar">
-                    <div class="menu-bar-middle"></div>
-                </div>
-            </div>
-        </div>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">shutterbug sweet diary</a>
+      </h1>
+      
     </div>
-
-    <div class="header-drawer">
-        <ul class="drawer-menu-list">
-            
-                <li class="drawer-menu-item flex-center">
-                    <a class="active"
-                       href="/">HOME</a>
-                </li>
-            
-                <li class="drawer-menu-item flex-center">
-                    <a class=""
-                       href="/archives">ARCHIVES</a>
-                </li>
-            
-                <li class="drawer-menu-item flex-center">
-                    <a class=""
-                       href="/categories">CATEGORIES</a>
-                </li>
-            
-                <li class="drawer-menu-item flex-center">
-                    <a class=""
-                       href="/tags">TAGS</a>
-                </li>
-            
-        </ul>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main"></form>
+      </div>
     </div>
-
-    <div class="window-mask"></div>
-
+  </div>
 </header>
-
-
-        </div>
-
-        <div class="page-main-content-middle">
-
-            <div class="main-content">
-
-                
-                    <div class="home-content-container fade-in-down-animation">
-    <ul class="home-article-list">
-        
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2022/06/05/20220605/">
-                        20220605
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
-                        2022-06-05
-现在已经是凌晨1点了，但是因为放假，所以就不管时间了，我发现晚上才适合学习，比较清醒和有灵感。
-之前每天早上都是8点左右到公司，有一个小时的时间拿来看王阳明的书。但是最近早上都在搞锻炼，所以没有时间去看书了。本来打算好好总结书中...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sun Jun 05 2022 03:10:28 GMT+0800">2022-06-05</span></span>
-        
-        
-    </div>
-
-    <a href="/2022/06/05/20220605/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2022/06/05/pdnsd/">
-                        pdnsd
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
-                        PdnsdToday, i find something new, a tool called pdnsd. It stands for persistent dns daemon. With the tool, we can cache norma...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sun Jun 05 2022 00:52:13 GMT+0800">2022-06-05</span></span>
-        
-        
-    </div>
-
-    <a href="/2022/06/05/pdnsd/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2022/05/29/bing%E5%A3%81%E7%BA%B8%E8%AE%BE%E7%BD%AE/">
-                        bing壁纸设置
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
-                        The way to set wallpaper with bing daily img之前写过一个shell脚本，用来设置bing的每日壁纸作为桌面壁纸，但是发现失效了，只能下载当天的，没法选择以前的。所以今天重新写一遍
-之前使用的是api链接后面...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sun May 29 2022 00:18:31 GMT+0800">2022-05-29</span></span>
-        
-        
-    </div>
-
-    <a href="/2022/05/29/bing%E5%A3%81%E7%BA%B8%E8%AE%BE%E7%BD%AE/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2022/05/26/%E4%BA%BA%E7%94%9F%E5%87%A0%E5%A4%9A%E6%84%81/">
-                        人生几多愁
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
-                        虽然标题看起来很宏伟，但是人生是我无法看破的存在。所以本文就是泛泛而谈，想到什么写什么。
-前一段时间，或者说今年，我都没怎么学习linux相关的东西，最心爱的arch也成为了看电影的工具。我想很大部分原因是这个工作不涉及这些导致的吧。很长一段时间，我...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Thu May 26 2022 23:42:21 GMT+0800">2022-05-26</span></span>
-        
-        
-    </div>
-
-    <a href="/2022/05/26/%E4%BA%BA%E7%94%9F%E5%87%A0%E5%A4%9A%E6%84%81/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2022/05/24/firefox-extension/">
-                        firefox-extension
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
-                        firefox extension
-I may never wondering there comes a day that i will learn to write a firefox extension, because all most th...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Tue May 24 2022 22:29:02 GMT+0800">2022-05-24</span></span>
-        
-        
-    </div>
-
-    <a href="/2022/05/24/firefox-extension/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2022/05/15/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%BB%AC%E9%83%BD%E6%82%A3%E4%B8%8A%E4%BA%86%E6%84%A4%E6%80%92%E8%B0%83%E8%8A%82%E9%9A%9C%E7%A2%8D/">
-                        为什么我们都患上了愤怒调节障碍
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
-                        刚毕业那年，武汉发生封城，我当然就是被封的那个，小区设置了门禁，需要检查核酸。被关了半年，头发都可以扎起来了，深刻的感受到了孤独和被抛弃的感觉，然而对待每次的检查，我都是没有任何怨言的，我觉得应该如此，没有太多的想法。
-然而今年的核酸检查，每次都让我...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sun May 15 2022 15:02:57 GMT+0800">2022-05-15</span></span>
-        
-        
-    </div>
-
-    <a href="/2022/05/15/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%BB%AC%E9%83%BD%E6%82%A3%E4%B8%8A%E4%BA%86%E6%84%A4%E6%80%92%E8%B0%83%E8%8A%82%E9%9A%9C%E7%A2%8D/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2022/05/14/%E6%88%91%E6%84%BF%E6%88%90%E9%AD%94/">
-                        我愿成魔
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
-                        今天听了《美丽的神话》这首歌，又回想起来大学看过的《神话》这个电视剧。时光匆匆，这么多年又过去了，然而看电视剧的感受还是那么 清晰。全剧最让我感动的就是赵高说他要一步一步往上爬，成为一人之下万人之上的存在。这里也是他和主角正式分道扬镳的地方，如果让我...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sat May 14 2022 16:53:09 GMT+0800">2022-05-14</span></span>
-        
-        
-    </div>
-
-    <a href="/2022/05/14/%E6%88%91%E6%84%BF%E6%88%90%E9%AD%94/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2022/04/23/zsh/">
-                        zsh
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
-                        ZSHchange default location.zshrc and .zcompdump location in $HOME directory.  and we can change it to another folder
-12# add ...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sat Apr 23 2022 23:15:44 GMT+0800">2022-04-23</span></span>
-        
-        
-    </div>
-
-    <a href="/2022/04/23/zsh/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2022/04/23/zookeeper/">
-                        zookeeper
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
-                        
-zk单机以及集群搭建（基于docker）
-
-单机创建并进入docker创建docker，并将有安装包的主机挂载到docker中
-1systemctl start docker
-
-12docker run -d -it --name zk -v /h...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sat Apr 23 2022 23:15:22 GMT+0800">2022-04-23</span></span>
-        
-        
-    </div>
-
-    <a href="/2022/04/23/zookeeper/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2022/04/23/zabbix/">
-                        zabbix
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
-                        ♥ ZABBIXarchitecture
- server: central component
- database storage: data gathered and configuration stores
- web interface: web...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sat Apr 23 2022 23:14:46 GMT+0800">2022-04-23</span></span>
-        
-        
-    </div>
-
-    <a href="/2022/04/23/zabbix/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-    </ul>
-
-    <div class="home-paginator">
-        <div class="paginator">
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-20220612-善良是如何消失的" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2022/06/12/20220612-%E5%96%84%E8%89%AF%E6%98%AF%E5%A6%82%E4%BD%95%E6%B6%88%E5%A4%B1%E7%9A%84/" class="article-date">
+  <time datetime="2022-06-12T10:12:47.000Z" itemprop="datePublished">2022-06-12</time>
+</a>
     
-        <a class="prev btn"
-           href="/"
-        >Prev</a>
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/think/">think</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
     
-
     
-        <a class="next btn"
-           href="/page/3/"
-        >Next</a>
-    
-</div>
-
-    </div>
-</div>
-
-
-                
-            </div>
-
-        </div>
-
-        <div class="page-main-content-bottom">
-            .footer {
-  font-size: 1rem;
-  color: var(--third-text-color);
-
-
-  a {
-    color: var(--third-text-color);
-
-
-    &:hover {
-      color: var(--primary-color);
-
-    }
-  }
-
-  .info-container {
-    padding-bottom: 10px;
-    text-align: center;
-  }
-
-  .info-item {
-    margin: 5px 0;
-  }
-
-  .icon-animate {
-    animation: icon-animate 1.2s ease-in-out infinite;
-  }
-
-}
-
-        </div>
-    </div>
-
-    
-
-    <div class="right-bottom-side-tools">
-        <div class="side-tools-container">
-    <ul class="side-tools-list">
-        <li class="tools-item tool-font-adjust-plus flex-center">
-            <i class="fas fa-search-plus"></i>
-        </li>
-
-        <li class="tools-item tool-font-adjust-minus flex-center">
-            <i class="fas fa-search-minus"></i>
-        </li>
-
-        <li class="tools-item tool-expand-width flex-center">
-            <i class="fas fa-arrows-alt-h"></i>
-        </li>
-
-        <li class="tools-item tool-dark-light-toggle flex-center">
-            <i class="fas fa-moon"></i>
-        </li>
-
-        <!-- rss -->
+      <header class="article-header">
         
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/06/12/20220612-%E5%96%84%E8%89%AF%E6%98%AF%E5%A6%82%E4%BD%95%E6%B6%88%E5%A4%B1%E7%9A%84/">20220612-善良是如何消失的</a>
+    </h1>
+  
 
-        
-            <li class="tools-item tool-scroll-to-top flex-center">
-                <i class="fas fa-arrow-up"></i>
-            </li>
-        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="20220612"><a href="#20220612" class="headerlink" title="20220612"></a>20220612</h1><p>yes, today is Sunday. what a pretty name: the day with sunshine in summer, i can even feel the hot and clean wind of outside which has a long way for me now. I am so sad that i live in such a society where forbid us to do almost everything such as ride road bike.</p>
+<p>忧伤像风一样拂过，在这美丽的季节，这遥远的星河。我从未觉得一个人是如此的渺小，我们属于历史，我们被命运束缚，生活在某个特定的时代，无论我们多么强大，也逃不过属于宇宙的一粒尘埃。所以是什么让生活绚烂？</p>
+<p>我相信所有的美好，是他们让生活绚烂。</p>
+<p>在大学的周末，我和芳哥一起去我哥的学校玩，回去的时候在一家饭店吃饭，虽然不记得是在哪里遇到的某个乞讨的人，但是我记得芳哥给了他十/二十块钱。我当时想得是我是不会给这些人钱的，他们明明可以自己去工作，为什么要乞讨？而且那个时候十块或者二十块钱对我来说真的很多，因为我总是要计算一天吃饭只要花十七八块钱。</p>
+<p>毕业整整三年时间里，我也遇到过乞讨的人，然而在我每次遇到的时候，我都感觉自己好慌乱，就像女生主动找我说话。来不及思考他们是骗人的还是真的需要帮助，来不及如何用对话分辨他们的真伪。去年遇到三个女生，在我下班的路上主动找到我，希望我给他们支付一个晚上酒店的钱，她们说身上没有钱了，但是我看他们的穿着打扮就是那种我高攀不起的人。而且在南山区住酒店实在是太贵了，所以我让他们去找社区寻求帮助（虽然我也不知道怎么才能找到社区服务人员，或者他们是否会搭理这几个人）。她们找了一些理由不去找社区，虽然主观上告诉我他们并不是缺钱，但是最后我还是请他们吃了一顿饭，仅仅是因为我实在找不到任何理由来推脱他们的哀求。事后我反思自己要如何在下一次遇到这种情况的时候要像福尔摩斯一样，不要像一个刷卡机器一样。</p>
+<p>前几天我有遇到了这样一种情况，一个打扮的像建筑工地的人，乞讨回家的火车费。那时候我要赶公交车，时间比较紧，所以我直接走过去没理会他，但是突然有一种同情的感觉。因为我想起我的老爸了，这个人也是某个孩子的父亲，没有足够的车票钱他一定很焦急。所以我跑回去把拿了50多块的现金（也是唯一的现金）给了他，我很欣慰有足够的现金，他可以买到票回家了。而且对于有工作的我，这个数量完全比不上大学的时候那个十块钱那么宝贵。然后那一个上午我都沉浸在自我满足的开心中。但是很快我就快乐不起来了，我开始担心这个人会不会也是骗子呢？当时完全是被同情蒙蔽了双眼，没有思考太多。我只能希望这次是真的帮助了对的人。</p>
+<p>然而，现实让一切都显得很苍白，很遗憾过了几天后我又看到他了，同样的穿着，只是稍微换了个地方。当时我觉得好悲伤，为什么我好不容易积攒的一点善良就要被如此的践踏。</p>
+<p>诚实的说，我并没有多么善良，如果需要我给的钱超过200块了，估计我就不会付出了。就像如此的我，也还是希望可以在自己的能力范围内帮助一些人，然而现实的社会显得更加可悲。</p>
+<p>我知道，社会上却是有那么有些人，他们真的需要帮助，然而更多的是骗子，正是这些骗子让人内心深处仅存的一点善良逐渐流失。我们没有精力、能力去分辨真伪。可是，在我们需要用思考来衡量他们是否是骗子的时候，我已经感受到这个社会的可悲了。因为你很难去想象一个gentleman，在英国的街头慷慨的给乞讨的人一些钱，他是需要去判断你是否是一个骗子的。善良本来就是一件不需要思考的事，它是人的天性，我很同情你，在我的能力范围内，我很乐意去帮助你，仅此而已。然而在我们国家呢？大多数人宁愿抚养一个流浪猫，也不会施舍一个乞讨的人。这就是一个社会的性格，我们被教育的不要轻易相信他人，而且被现实一遍一遍的验证这个说法的正确性，而这是一个名族的悲哀。</p>
+<p>很久没看王阳明的书了，但是依旧记得他无数次谈论起当时的社会，快要病入膏肓了。而现在的社会呢？还有好转的可能吗？</p>
+<p>最近很火的一个话题是唐山流氓欺负女生打人的事件，网上有很多人对那些坐在旁边无动于衷的人口诛笔伐。然而，我不会，如果我也在现场，那么我一定是哪个坐在角落默默干饭的人，我承认这种做法是多么的让人无耻。但是各位键盘侠总是站在上帝的角度，他们不会反思，为什么坐在那个角落的人就不能是你呢？那些冷漠的人也是和我们一样的人啊，we share the same blood. 键盘侠们只看到表面，无法深入思考，为什么我们是如此的冷漠？这就是一个社会的习性，这个社会告诉我们无法保护伸张正义的人，只要我们参与了这个事情，那么我们就会陷入危机。那么一个陌生人为什么要让我们陷入危机？我们就是如此自私的思考方式。我无法趾高气扬的指责这些人，我很同情他们，也很可悲。这就是我们生活的环境，一段让人失望的历史阶段。就像开头所说的那样，我们无法左右历史，如果无法磨练自己，那么只会被历史改变。</p>
+<p>最近，我真的很迷david goggins，他说的这句话我印象很深：life is not easy, we must stay hard. 我无法用中文翻译这句话，因为没有合适的语言可以描述他的内涵，就像我们的古诗一样，古诗就是古诗，没法翻译成白话文，如果翻译成了白话文，那就表达不出古诗的含义。是啊，纵观历史，很难说有一个好的时代，so life is not easy, from past to future. we must stay hard, train our mind, our body, make it strong, when the bad situation happened in our life, our group, our members, our family, there comes me who is strong enough to defend all of this. that’s it. stay hard is not to say we need to challenge a task which we don’t wanna to. in some of an aspect  it’s to say we get a plan, whatever something happens, i gonna not to change forever. in some of an aspect it’s to say we cannot make ourselves suitable too long, cause it will make us lazy, we need do something to remind ourselves we are so weakness in this, so never stop our steps.</p>
+<p>当我和同事说起生活不能太舒服要stay hard的时候，他说那么我为什么不跑回家，其实当时我就被他这种提问题的方式惊讶到了，事情并不是说只有正反两个方面，如果你不这样….那么就不怎么样。我只能说他没明白这句话的意义，而且他的这种思考方式也有点让我无法理解，stay hard并不是说马上就要做一个什么一般人无法做到的事情来证明，也不是说要让自己难受，而是一种思想，在心里我们要意识到stay hard，同样在我们做事的时候也要stay hard，不要让放弃这个词出现在脑海。如果某天我真的想从公司跑回家，那么stay hard就可以这么说了。</p>
 
-        <li class="tools-item tool-scroll-to-bottom flex-center">
-            <i class="fas fa-arrow-down"></i>
-        </li>
-    </ul>
-
-    <ul class="exposed-tools-list">
-        <li class="tools-item tool-toggle-show flex-center">
-            <i class="fas fa-cog fa-spin"></i>
-        </li>
-        
-    </ul>
-</div>
-
+      
     </div>
+    <footer class="article-footer">
+      <a data-url="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main/2022/06/12/20220612-%E5%96%84%E8%89%AF%E6%98%AF%E5%A6%82%E4%BD%95%E6%B6%88%E5%A4%B1%E7%9A%84/" data-id="cl9ktb7uf0003dta82hsebas9" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/boring/" rel="tag">boring</a></li></ul>
 
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-20220605" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2022/06/05/20220605/" class="article-date">
+  <time datetime="2022-06-04T19:10:28.000Z" itemprop="datePublished">2022-06-05</time>
+</a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/think/">think</a>
+  </div>
 
-    <div class="image-viewer-container">
-    <img src="">
-</div>
-
-
+  </div>
+  <div class="article-inner">
     
-        <div class="search-pop-overlay">
-    <div class="popup search-popup">
-        <div class="search-header">
-          <span class="search-input-field-pre">
-            <i class="fas fa-keyboard"></i>
-          </span>
-            <div class="search-input-container">
-                <input autocomplete="off"
-                       autocorrect="off"
-                       autocapitalize="off"
-                       placeholder="Search..."
-                       spellcheck="false"
-                       type="search"
-                       class="search-input"
-                >
-            </div>
-            <span class="popup-btn-close">
-                <i class="fas fa-times"></i>
-            </span>
-        </div>
-        <div id="search-result">
-            <div id="no-result">
-                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
-            </div>
-        </div>
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/06/05/20220605/">20220605</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>2022-06-05</p>
+<p>现在已经是凌晨1点了，但是因为放假，所以就不管时间了，我发现晚上才适合学习，比较清醒和有灵感。</p>
+<p>之前每天早上都是8点左右到公司，有一个小时的时间拿来看王阳明的书。但是最近早上都在搞锻炼，所以没有时间去看书了。本来打算好好总结书中的道理的，但是我还没有开始：）</p>
+<p>因为搞锻炼，所以认识了两个非常有名的人：大卫・戈金斯；泰森。其实泰森我初中好像就听过了只是没留意。戈金斯是美国海豹突击队的成员，创造了许多的记录，用3个月的时间减重90多斤，我在bilibili上看他的视频，首先是被他那喜欢说脏话所吸引，然后随着看得视频越多越发现他说的话真的很有道理，他是一个真正的man。</p>
+<p>他说了一个观点我是深有体会：你可能是个强者，比如你可以跑马拉松拿第一，你可以做200个俯卧撑，你可以成为一个在普通人看来很有毅力的人。但你真的是强者吗？上面所说的这些并不是真正的强者的判断标准，跑马拉松或者做200个俯卧撑，你有一个确定的目标，虽然大多数人连这个也做不到，但是真正的考验在于这些目标都失去后，前路一片黑暗的时候你是否可以坚持下去。不把希望寄托在别人身上或者别人制定的规则身上，才是强者的第一步。你能做10个俯卧撑，那是你的极限，我能做80个，那是我的极限。但是并不能说我比你强，而是说到达极限之后谁能坚持的更久谁才是强者。只有锻炼到一定程度后才发现自己是有多么的weakness，才能更加清楚的认识到自己。</p>
+<p>从上面的观点延伸，如果总是需要将自己的行动力寄托在什么身上，那么是非常容易被打败的，比如你锻炼需要音乐来刺激你，那么如果没有音乐的环境你怎么办？你早上晨跑需要寄托在天气上，如果今天下暴雨呢？你就不锻炼不跑步了吗？他说世界是残酷的，大多数时候我们都会面对不可预料的问题，而真正的强者是不需要寄托与外界。只有这样我们才可能变强。</p>
+<p>他说的这两个观点真的是直击灵魂，而且我也深有感触。不要寄托与希望，不要依靠外界的环境，才能让我们成为一个强者。太多生活中的人当然也包括我，总是在说如果…那么我就…，我们总是需要某些条件ready我们才会do it。而这样真的是一个非常非常弱的人。</p>
+<p>戈金斯的观点太多了，先就说这么两个吧。然后说说泰森，叫他拳皇是真的一点都不为过，40战39胜1败。我主要是被他的力量和灵活的躲闪所吸引，看他的比赛，真的可以看到那种原始的狂野与力量，每一拳都感觉能把一个普通人打晕过去。他的光环与天赋与坚韧不是我想说的重点，我更想说的是他的那些缺点。没错他有很多缺点，如果用我们的观点来看的话，比如随意挥霍金钱，交往20多个女人，在比赛中咬对手的耳朵。很多人因为这些鄙视他，我们其实根本没有权利去指责，因为我们总是站在一个第三者的视角去看待问题。是想一下如果他的人生换成了我们，我们就不会那么去做吗？我想大多数人只会做的更离谱。相反我觉得这样的人生才算是真正的人生，起起伏伏，有辉煌有哀伤，这样才不枉来过这个宇宙一场。</p>
+<p>其实一个人的一生真的会犯很多的错误，那个人敢说自己真的就是正义的化身呢，我们不能总是拿完美无缺的标准去看待这些不平凡的人。说白了他们也是一个普通人，只不过他们更加有机会接近那些丑陋。对于他们自己来说关键在于他们是否会改正，能否摆脱困境。对于我们来说才是体现我们的包容，我想如果我们能够理解这点，那么就能明白仁慈代表的含义是什么了。仁慈不是我们友善，不是你有多么热爱小动物，不是你有多么爱戴老人，而是在动物咬了你一口后，老人碰磁你之后你的表现。他们伤害了我们，我们还能够用平常心对待，这才是仁慈才是包容。</p>
+<p>当然看视频的时候有很多人就如果和李小龙打谁会赢而争吵起来，对于这些观点在我看来有两个问题：</p>
+<ol>
+<li>这种假设不会发生，争论真的毫无意义，觉得谁赢这完全是主观判断</li>
+<li>说这种话的人既不了解泰森，也不了解李小龙</li>
+</ol>
+<p>我就简单说说我所认识的李小龙吧，从小学开始因为开了《李小龙传奇》就非常迷，希望自己也可以有他那样的功夫。一直到今年，直到我在youtube上开了李小龙的采访，我才明白李小龙并不是我想象中的那样，他更加的伟大。而电视剧真的是误解了李小龙，看了他的采访才知道他是一个多么和蔼的人并不是电视剧中表现的那种争强好胜，也并没有那种愤世嫉俗。虽然他的功夫很强，但真正让我觉得他的伟大无法被超越的却是他的思想。没错，和想象中的不一样李小龙读的是哲学系。他的功夫中无处不蕴含着哲学思想。并没有说因为别人叫他东亚病夫，他就多么仇恨外国人，那只是拍电影，虽然那时美国的思想对他确实有很多歧视，但他在看待国家名族的这些问题上，早已超越时代了。直到今天很多人的思想都赶不上李小龙，比如现在很多人都对日本，美国怀有仇恨。什么打砸日本汽车，抵制这个抵制那个。他们始终没有超越国家的观念，没有更高的眼界，没看到我们同是地球人。而李小龙则并没有给自己贴上一个国家的标签，他所看见的是we are human.</p>
+
+      
     </div>
-</div>
+    <footer class="article-footer">
+      <a data-url="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main/2022/06/05/20220605/" data-id="cl9ktb7ub0001dta83wa1eubx" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%80%9D%E7%BB%AA/" rel="tag">思绪</a></li></ul>
 
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-pdnsd" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2022/06/05/pdnsd/" class="article-date">
+  <time datetime="2022-06-04T16:52:13.000Z" itemprop="datePublished">2022-06-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/learn/">learn</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/06/05/pdnsd/">pdnsd</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Pdnsd"><a href="#Pdnsd" class="headerlink" title="Pdnsd"></a><a target="_blank" rel="noopener" href="https://wiki.archlinux.org/title/Pdnsd">Pdnsd</a></h1><p>Today, i find something new, a tool called <code>pdnsd</code>. It stands for persistent dns daemon. With the tool, we can cache normally visit domain (dns) information in our local computer to reduce the time resolving domain name from remote server.</p>
+<h2 id="install"><a href="#install" class="headerlink" title="install"></a>install</h2><pre><code class="shell">pacman -S pdnsd
+</code></pre>
+<h2 id="configure"><a href="#configure" class="headerlink" title="configure"></a>configure</h2><pre><code class="shell">cp /usr/share/doc/pdnsd/pdnsd.conf /etc/pdnsd.conf
+</code></pre>
+<p>At first we need to know something about the format of configuration file.</p>
+<ol>
+<li> <code>#</code> and <code>/* */</code> means comment.</li>
+<li>in <code>&#123;&#125;</code> block, we write our configuration.</li>
+<li>there are several block of server, and we only need one, we need comment others.</li>
+<li>the rest of the configuration file we don’t need modify and it can work perfect.</li>
+</ol>
+<p>we need to modify server block of <strong>dial-up</strong></p>
+<ol>
+<li>change label to <code>resolvconf</code></li>
+<li>add ip with our dns</li>
+<li>change file to our <code>/etc/resolv.conf</code></li>
+</ol>
+<p>at last it looks like this:</p>
+<pre><code class="shell">global &#123;
+    perm_cache=1024;
+    cache_dir=&quot;/var/cache/pdnsd&quot;;
+#    pid_file = /var/run/pdnsd.pid;
+    run_as=&quot;pdnsd&quot;;
+    server_ip = 127.0.0.1;  # Use eth0 here if you want to allow other
+                # machines on your network to query pdnsd.
+    status_ctl = on;
+#    paranoid=on;       # This option reduces the chance of cache poisoning
+                       # but may make pdnsd less efficient, unfortunately.
+    query_method=udp_tcp;
+    min_ttl=15m;       # Retain cached entries at least 15 minutes.
+    max_ttl=1w;        # One week.
+    timeout=10;        # Global timeout option (10 seconds).
+    neg_domain_pol=on;
+    udpbufsize=1024;   # Upper limit on the size of UDP messages.
+&#125;
+
+# The following section is more appropriate for dial-up connections.
+# Read about how to use pdnsd-ctl for dynamic configuration in the documentation.
+server &#123;
+    label= resolvconf;
+    ip = 114.114.114.114;
+    file = &quot;/etc/resolv.conf&quot;;  # Preferably do not use /etc/resolv.conf
+    proxy_only=on;
+    timeout=4;
+    uptest=if;
+    interface = enp37s0;
+    interval=10;       # Check the interface every 10 seconds.
+    purge_cache=off;
+    preset=off;
+&#125;
+
+source &#123;
+    owner=localhost;
+#    serve_aliases=on;
+    file=&quot;/etc/hosts&quot;;
+&#125;
+
+/*
+include &#123;file=&quot;/etc/pdnsd.include&quot;;&#125;    # Read additional definitions from /etc/pdnsd.include.
+*/
+
+rr &#123;
+    name=localhost;
+    reverse=on;
+    a=127.0.0.1;
+    owner=localhost;
+    soa=localhost,root.localhost,42,86400,900,86400,86400;
+&#125;
+
+/*
+neg &#123;
+    name=doubleclick.net;
+    types=domain;   # This will also block xxx.doubleclick.net, etc.
+&#125;
+*/
+
+/*
+neg &#123;
+    name=bad.server.com;   # Badly behaved server you don&#39;t want to connect to.
+    types=A,AAAA;
+&#125;
+*/
+</code></pre>
+<p>And we also need to change our <code>/etc/resolv.conf</code>‘s  <code>nameserver</code> to <code>127.0.0.1</code>.</p>
+<pre><code class="shell"># cat /etc/resolv.conf
+
+nameserver 127.0.0.1
+</code></pre>
+<h2 id="enable-and-start-service"><a href="#enable-and-start-service" class="headerlink" title="enable and start service"></a>enable and start service</h2><pre><code class="shell">sudo systemctl enable pdnsd
+sudo systemctl start pdnsd
+</code></pre>
+<h2 id="check-whether-it-works"><a href="#check-whether-it-works" class="headerlink" title="check whether it works"></a>check whether it works</h2><p>we need a command called <code>nslookup</code> which belongs to a toolset <code>bind</code>.</p>
+<pre><code class="shell">sudo pacman -S bind
+</code></pre>
+<p>now check whether it works</p>
+<pre><code class="shell"># nslookup bing.com
+
+Server:         127.0.0.1
+Address:        127.0.0.1#53
+
+Non-authoritative answer:
+Name:   bing.com
+Address: 13.107.21.200
+Name:   bing.com
+Address: 204.79.197.200
+Name:   bing.com
+Address: 2620:1ec:c11::200
+
+# nslookup google.com
+Server:         127.0.0.1
+Address:        127.0.0.1#53
+
+Non-authoritative answer:
+Name:   google.com
+Address: 59.24.3.174
+</code></pre>
+<p>when the server shows <code>127.0.0.1</code> that means it works.</p>
+<p>now when we visit some websites, our computer can directly go to the stored ip address without resolve it from remote dns server. cheers!</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main/2022/06/05/pdnsd/" data-id="cl9ktb7vb001sdta8fs2v890m" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/optimized/" rel="tag">optimized</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-bing壁纸设置" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2022/05/29/bing%E5%A3%81%E7%BA%B8%E8%AE%BE%E7%BD%AE/" class="article-date">
+  <time datetime="2022-05-28T16:18:31.000Z" itemprop="datePublished">2022-05-29</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/learn/">learn</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/05/29/bing%E5%A3%81%E7%BA%B8%E8%AE%BE%E7%BD%AE/">bing壁纸设置</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="The-way-to-set-wallpaper-with-bing-daily-img"><a href="#The-way-to-set-wallpaper-with-bing-daily-img" class="headerlink" title="The way to set wallpaper with bing daily img"></a>The way to set wallpaper with bing daily img</h1><p>之前写过一个shell脚本，用来设置bing的每日壁纸作为桌面壁纸，但是发现失效了，只能下载当天的，没法选择以前的。所以今天重新写一遍</p>
+<p>之前使用的是api链接后面添加数字来表示天数，但是现在不是这样的方式了。而是用一个api获取所有数据。</p>
+<p><img src=".images/image-20220528174403813.png" alt="image-20220528174403813"></p>
+<p><img src=".images/image-20220528174436036.png" alt="image-20220528174436036"></p>
+<p>所以重新写了一遍（发现很长时间不用就有很多不熟悉的知识）</p>
+<pre><code class="shell">#!/bin/bash
+#               _ _                             
+#__      ____ _| | |_ __   __ _ _ __   ___ _ __ 
+#\ \ /\ / / _` | | | &#39;_ \ / _` | &#39;_ \ / _ \ &#39;__|
+# \ V  V / (_| | | | |_) | (_| | |_) |  __/ |   
+#  \_/\_/ \__,_|_|_| .__/ \__,_| .__/ \___|_|   
+#                  |_|         |_|              
+
+
+# specify download tmp location
+tmp_dir=&quot;/tmp&quot;
+# sepcify store location
+default_dir=&quot;$&#123;HOME&#125;/Pictures/background&quot;
+# specify default picture local dir
+default_pic=&quot;$&#123;HOME&#125;/Pictures/background/splash.png&quot;
+# specify bing image gallery api
+api=&quot;https://cn.bing.com/hp/api/v1/imagegallery?format=json&quot;
+# specify dynamic change time
+dynamic_time=&quot;600&quot;
+
+
+# save args
+method=$&#123;1:-&quot;&quot;&#125;
+location=$&#123;2:-&quot;&quot;&#125;
+download_or_not=$&#123;3:-&quot;&quot;&#125;
+
+# function for sure no backend exists
+function no_backend()&#123;
+    [[ `ps -ef | grep wallpaper | grep -v grep | wc -l` -gt 2 ]] &amp;&amp; &#123;
+        kill `ps -ef | grep wallpaper | head -1 | awk &#39;&#123;print $2&#125;&#39;`
+    &#125; 
+&#125;
+
+# function for notify
+function notify()&#123;
+    info=$@
+    notify-send &quot;$&#123;info&#125;&quot;
+&#125;
+
+# function for setting static wallpaper
+function static_bg()&#123;
+    [[ -f $&#123;location&#125; ]] &amp;&amp; feh --bg-scale $&#123;location&#125; || &#123;
+        feh --bg-scale $&#123;default_pic&#125;
+        notify &quot;wrong picture path!&quot; 
+    &#125;
+&#125;
+
+# function for setting dynamic wallpaper
+function dynamic_bg()&#123;
+    &#123;
+        while :
+        do
+            [[ -d $&#123;location&#125; ]] &amp;&amp; feh -D 1 -z --bg-scale $&#123;location&#125; || &#123;
+                static_bg $&#123;default_pic&#125;
+                notify &quot;no specify directory or wrong path!&quot;
+            &#125;
+            sleep $&#123;dynamic_time&#125;
+        done
+    &#125; &amp; 
+&#125;
+
+# function for setting bing wallpaper
+function bing_bg()&#123;
+    day=$1
+    download_or_not=$2
+    timeout 1 ping -c 1 -q www.bing.com &amp;&gt;/dev/null &amp;&amp; &#123;
+        urls=`curl -s &quot;$&#123;api&#125;&quot; |jq &#39;[.data.images[] | .imageUrls | .landscape | .wallpaper]&#39;`
+        url=`echo $urls |jq &quot;.[$&#123;day&#125;]&quot; |tr -d &#39;&quot;&#39;`
+        link=&quot;https://www.bing.com$&#123;url&#125;&quot;
+        wallpaper_name=`echo $&#123;link&#125; |cut -d. -f4 |cut -d_ -f1`
+        [[ $&#123;download_or_not&#125; == &quot;download&quot; ]] &amp;&amp; &#123;
+            &#123;
+                wget $&#123;link&#125; -P $&#123;tmp_dir&#125; &amp;&gt;/dev/null &amp;&amp; &#123;
+                    mv /tmp/*$&#123;wallpaper_name&#125;* /tmp/$&#123;wallpaper_name&#125;.jpg
+                    mv /tmp/$&#123;wallpaper_name&#125;.jpg $&#123;default_dir&#125;
+                    notify &quot;download $&#123;wallpaper_name&#125; to $&#123;default_dir&#125;&quot;
+                &#125;
+            &#125; || notify &quot;download error!&quot;
+        &#125;
+    &#125; 
+    feh --bg-scale $&#123;link&#125;
+&#125;
+
+# function for help message
+function exit_with_help()&#123;
+    echo &quot;parameter error! try:
+    wallpaper static /file/location
+    wallpaper dynamic /folder/location
+    wallpaper bing
+    wallpaper bing 0~6
+    wallpaper bing 0~6 download&quot;
+    exit 1
+&#125;
+
+# choose which methods to use
+[[ $&#123;method&#125; != &quot;&quot; ]] &amp;&amp; &#123;
+    [[ $&#123;location&#125; != &quot;&quot; ]] &amp;&amp; &#123;
+        if [ $&#123;method&#125; == &quot;static&quot; ];then
+            no_backend
+            static_bg $&#123;location&#125;
+        elif [ $&#123;method&#125; == &quot;dynamic&quot; ];then
+            no_backend
+            dynamic_bg $&#123;location&#125;
+        elif [ $&#123;method&#125; == &quot;bing&quot; ];then
+            no_backend
+            bing_bg $&#123;location&#125; $&#123;download_or_not&#125;
+        fi
+    &#125; || exit_with_help
+&#125; || exit_with_help
+</code></pre>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main/2022/05/29/bing%E5%A3%81%E7%BA%B8%E8%AE%BE%E7%BD%AE/" data-id="cl9ktb7uo000edta8a8vr7pn7" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/" rel="tag">shell</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-人生几多愁" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2022/05/26/%E4%BA%BA%E7%94%9F%E5%87%A0%E5%A4%9A%E6%84%81/" class="article-date">
+  <time datetime="2022-05-26T15:42:21.000Z" itemprop="datePublished">2022-05-26</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/think/">think</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/05/26/%E4%BA%BA%E7%94%9F%E5%87%A0%E5%A4%9A%E6%84%81/">人生几多愁</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>虽然标题看起来很宏伟，但是人生是我无法看破的存在。所以本文就是泛泛而谈，想到什么写什么。</p>
+<p>前一段时间，或者说今年，我都没怎么学习linux相关的东西，最心爱的arch也成为了看电影的工具。我想很大部分原因是这个工作不涉及这些导致的吧。很长一段时间，我都无法开心，因为核酸隔离限制了我的行动自由，我想这是我上学时候绝对想象不到的。那个时候就希望早点毕业，渴求自由，希望没人约束，但是到了社会才发现这是另外一个囚笼，几乎没人可以逃脱，所以我感觉人生被束缚住了，无论多么用力挣扎，和一个国家比起来，微不足道。我也深深体会到了先辈们在历史中的那份迫不得已，谁人不想像李白一样仰天大笑出门去呢？然而如果皇权下令不许，那么这就是一个梦。</p>
+<p>因为这一切，有那么一段时间我特别厌恶这个专制体系，希望可以逃离它。然而许久过去，我发现已经渐渐的少了些许怨愤，添了一份平和。当然这一切只是我的心境变化，环境嘛可以说更糟吧。</p>
+<p>为什么会有这些变化？我想很大一个原因是我一直记得shield中的那句话：真正重要的不是邪恶对我们做了什么，而是我们面对这些事的反馈。人或者社会无论多么邪恶，那是他们的态度，而真正决定我们的是什么呢？如果因为他们的邪恶，我们也同样没有原则的用同样的手段对付他们，那么我们与他们有和差别呢？</p>
+<p>所以我想这就是一段时间心境的一个缩影吧。小时候无忧无虑，十几岁为成绩发愁，大学追求一个女生，进入社会面对另外的困境。每个阶段都有应该要完成的事，并不是每一段时光都那么美好，都值得留恋，然而正是这些经历塑造了不同的我们。所以如果现在的环境特别差，我想说这是一个去磨练我们的机会。当然并不是说我们一定要做出什么对的选择，当然可以选择错误的做法，可以成就一段后悔的记忆。然而我们不要否定它，不要掩盖它，正是它成就了我们。</p>
+<p>今天打算买一本书《月亮与六便士》，看了百科的介绍，突然就特别想买了看，因为它讲述了一个古老的故事，让我有一种看了就会很治愈的感觉。我想生活真的需要这些讲故事的人，体验他们所描绘的人生。如果一个人的生活仅仅是可见的世界，我想那一定很无聊吧，所以为了不无聊，我想看一看。</p>
+<p>当然也是因为买这本书看到了京东上的第一个评论，他说他很爱看书，也拍照显示了他买了很多书，看过很多书。哈哈，我就看了他写的一段评论：”人需要多看书，书中自有黄金屋，书中自有颜如玉……“。然后我就突然了解到了这是一个怎样的人，我很想说他的书真的是白看了。就随随便便的几句话就可以看出一个人的庸俗，如果看书是为了这些的话，我觉得还是别看了，简直是浪费钱。读历史是读人心，读小说是体验人生。他们从来都不是为了给你带来可以炫耀的知识和可以变现的财富。深深体会到王阳明先生所主张的心既是天理，内心纯粹没有一毫私欲才是我们该有的态度。多谢王阳明先生的书，让我可以很轻易的分辨一个人的内心。</p>
+<p>我想起去年的一个老板，他说自己一年要读接近100本书。当时的我从来没有看书的兴趣，觉得太不可思议了。但是如今我却觉得真的没必要读那么多书，读的多有什么用呢，能真正体会到的其实是很少的。就像王阳明的四本书，潦草读一遍能算了解阳明吗？那可是他一生的结晶，我觉得每一个故事，每一段对话都值得好好领悟。同样的爱因斯坦的相对论，薄薄的一本书，但是就是它开启了新的物理时代，多么伟大，潦草读一遍能收获什么呢？我想书中随便一个公式都推导不出来吧。</p>
+<p>人生啊，喜怒哀乐皆具本是正常不过，不必苛责。然而我们时常会走偏，时而会无故低沉，那么这个时候就需要主动给自己添加一些目标指引。</p>
+<p>生活的绚烂不在于多么惊天动地，而在于欣赏和享受每一刻小确信。这顿饭有肉，柴米有盐，下雨有伞，烈日有云，早春有花，盛夏有风，生活有乐，有恼，有悟。都值得被珍视和留恋</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main/2022/05/26/%E4%BA%BA%E7%94%9F%E5%87%A0%E5%A4%9A%E6%84%81/" data-id="cl9ktb7vx003edta8cfi64cbe" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%80%9D%E7%BB%AA/" rel="tag">思绪</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-firefox-extension" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2022/05/24/firefox-extension/" class="article-date">
+  <time datetime="2022-05-24T14:29:02.000Z" itemprop="datePublished">2022-05-24</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/learn/">learn</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/05/24/firefox-extension/">firefox-extension</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="firefox-extension"><a href="#firefox-extension" class="headerlink" title="firefox extension"></a>firefox extension</h1><blockquote>
+<p>I may never wondering there comes a day that i will learn to write a firefox extension, because all most the time i need is to download some one for adds on. But when i get a job, and need to view one web page ten to hundred times, then i really want to do some optimize with the page just wish to improve the usability. And when i write this note, i only learned a little, however i think it is better to do rather than not.</p>
+</blockquote>
+<p>The main goals that i want to achieve are:</p>
+<ol>
+<li>edit the color style of a page</li>
+<li>automatically choose/click button</li>
+<li>intelligent filling/adjust what i typed in</li>
+</ol>
+<h2 id="the-way-to-realize"><a href="#the-way-to-realize" class="headerlink" title="the way to realize"></a>the way to realize</h2><ul>
+<li>inject css file to web page when we open one url, to customize page style </li>
+<li>inject js file to web page(we all know how powerful the js is) to do everything else</li>
+</ul>
+<h2 id="my-first-extension-with-temporary-loading"><a href="#my-first-extension-with-temporary-loading" class="headerlink" title="my first extension with temporary loading"></a><a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension">my first extension</a> with temporary loading</h2><p>at first we need a folder to store all files</p>
+<pre><code class="shell">touch chcolor
+</code></pre>
+<p>then create folder and file like this</p>
+<pre><code class="shell">── chcolor
+   ├── icons
+   │  ├── 32.png
+   │  ├── 48.png
+   ├── manifest.json
+   └── scripts
+      ├── modify.js
+      └── theme.css
+</code></pre>
+<ul>
+<li><code>manifest.json</code> is the main file to describe everything else</li>
+<li><code>icons</code> folder includes all the icons used in adds on</li>
+<li><code>scripts</code> folder store our main js and css file</li>
+</ul>
+<h3 id="mainfest-json"><a href="#mainfest-json" class="headerlink" title="mainfest.json"></a>mainfest.json</h3><p>describe which icon the extension use and which url will be match, which js and css file we use.</p>
+<pre><code class="json">&#123;
+    &quot;manifest_version&quot;: 2,
+    &quot;name&quot;: &quot;chcolor&quot;,
+    &quot;version&quot;: &quot;1.0&quot;,
+
+    &quot;description&quot;: &quot;testing and learning&quot;,
+
+    &quot;icons&quot;: &#123;
+        &quot;48&quot;: &quot;icons/48.png&quot;
+    &#125;,
+
+    &quot;content_scripts&quot;:[
+        &#123;
+            &quot;matches&quot;:[&quot;*://*.baidu.com/*&quot;],
+            &quot;js&quot;:[&quot;scripts/modify.js&quot;],
+            &quot;css&quot;:[&quot;scripts/theme.css&quot;]
+        &#125;
+    ]
+&#125;
+</code></pre>
+<h3 id="inject-css-file-to-web-page"><a href="#inject-css-file-to-web-page" class="headerlink" title="inject css file to web page"></a>inject css file to web page</h3><p>if we want to customized the style of web page, at first we need to find the css in web page and then change to what we want in our local css file. note that we only need copy the one we need, not all of them.</p>
+<p><img src=".images/get-css.gif"></p>
+<p><code>theme.css</code></p>
+<pre><code class="css">.s-top-left-new &#123;
+    display: none;
+&#125; 
+
+.s-hotsearch-wrapper &#123;
+    display: none;
+&#125;
+
+#head_wrapper #kw &#123;
+    border: 2px solid #a65d31;
+    background: #c0b29c52;
+&#125;
+
+#head_wrapper .s_btn &#123;
+    background-color: #a65d31;
+    border-radius: 0 20px 20px 0;
+&#125;
+</code></pre>
+<h3 id="inject-js-to-web-page"><a href="#inject-js-to-web-page" class="headerlink" title="inject js to web page"></a>inject js to web page</h3><p>another way hiding some elements of page is to use js’s  function <code>removeChild()</code></p>
+<p><em><strong>note that</strong></em> the parent element must be the direct father element of child, otherwise it will make no sense.</p>
+<p><code>modify.js</code></p>
+<pre><code class="js">// change whole webpage background color
+document.body.style.backgroundColor = &quot;#eef2e8&quot;;
+
+// use console.log to debug
+console.log(&quot;start&quot;);
+
+menu_father = document.getElementById(&quot;head&quot;);
+menu = document.getElementById(&quot;s-top-left&quot;);
+menu_father.removeChild(menu);
+
+hot_search = document.getElementById(&quot;s-hotsearch-wrapper&quot;);
+
+hot_search_father = document.getElementsByClassName(&quot;s_form_wrapper soutu-env-nomac soutu-env-index&quot;)[0];
+hot_father.removeChild(hot_search);
+
+console.log(&quot;done&quot;);
+</code></pre>
+<p><em>if we cannot find an element by id, we can find it by classname, and remember that we need to use index figuring out it.</em></p>
+<p>in console, we can find whether it is done.</p>
+<p><img src=".images/image-20220521180238741.png" alt="image-20220521180238741"></p>
+<h3 id="temporary-load-our-extension-to-firefox"><a href="#temporary-load-our-extension-to-firefox" class="headerlink" title="temporary load our extension to firefox"></a>temporary load our extension to firefox</h3><p>in <code>about:debugging</code> of firefox, click <strong>This Firefox</strong> to load our extension, then reload the web page, we will find it makes effect.</p>
+<p>now it will look like this:</p>
+<p><img src=".images/image-20220521175751914.png" alt="image-20220521175751914"></p>
+<h2 id="pack-file-to-an-shared-extension"><a href="#pack-file-to-an-shared-extension" class="headerlink" title="pack file to an shared extension"></a>pack file to an shared extension</h2><p>with the above method, we can only make it effect when the browser opens, once it reopens then it will not work until we add it by hand.</p>
+<p>so we need to pack it up to an <code>.xpi</code> file, one important thing is <strong>we need compress our file to a zip file first and then send it to AMO to sign</strong>. Once it be signed, we can install it like other online adds on.</p>
+<p>before compress file, we need add some info to <code>manifest.json</code></p>
+<pre><code class="json">&quot;browser_specific_settings&quot;: &#123;
+  &quot;gecko&quot;: &#123;
+    &quot;id&quot;: &quot;ssfwshutterbug@gmail.com&quot;
+  &#125;
+&#125;
+</code></pre>
+<p>compress file</p>
+<pre><code class="shell"># compress file without unnecessary file such as .git folder
+zip -r -FS ../my-extension.zip * --exclude &#39;*.git*&#39;
+</code></pre>
+<p>open <a target="_blank" rel="noopener" href="https://addons.mozilla.org/en-US/firefox/">AMO</a> web page, login our account, then click <a target="_blank" rel="noopener" href="https://addons.mozilla.org/en-US/developers/">developer hub</a>, upload our zip file. once it done, we can download it from this page.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main/2022/05/24/firefox-extension/" data-id="cl9ktb7us000ldta88frlfuxg" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/inject-js-css/" rel="tag">inject js/css</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-为什么我们都患上了愤怒调节障碍" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2022/05/15/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%BB%AC%E9%83%BD%E6%82%A3%E4%B8%8A%E4%BA%86%E6%84%A4%E6%80%92%E8%B0%83%E8%8A%82%E9%9A%9C%E7%A2%8D/" class="article-date">
+  <time datetime="2022-05-15T07:02:57.000Z" itemprop="datePublished">2022-05-15</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/think/">think</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/05/15/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%BB%AC%E9%83%BD%E6%82%A3%E4%B8%8A%E4%BA%86%E6%84%A4%E6%80%92%E8%B0%83%E8%8A%82%E9%9A%9C%E7%A2%8D/">为什么我们都患上了愤怒调节障碍</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>刚毕业那年，武汉发生封城，我当然就是被封的那个，小区设置了门禁，需要检查核酸。被关了半年，头发都可以扎起来了，深刻的感受到了孤独和被抛弃的感觉，然而对待每次的检查，我都是没有任何怨言的，我觉得应该如此，没有太多的想法。</p>
+<p>然而今年的核酸检查，每次都让我感到愤怒、可笑、可悲。</p>
+<p>有一次去小区做核酸，哪里人太多，就打算回家玩会再去，可结果是看大门的一个人拦住了我，不让我过去，然后就是直接暴力的把我往那边推，我说明了原因，但是他说他说了算，他说不让我过我就别想过。顿时我就怒了，因为这种做法直接挑战了我对现在是文明社会的认知，也挑战了我对自由的看法。我真的很想跟他打一架，但是没打起来。哈哈，我记得当时腿就不由自主的抖，我知道那不是害怕，但是我就是控制不住。后来发现仅仅是因为紧张，因为在公开场合我几乎话都没说过，就好像大一参加社团时在台上发言一样，我几乎说不出一句完整的话。尽管我已经告诉自己大丈夫屹立于天地直接，有何可俱。</p>
+<p>还有一次是因为我出去骑公路车回来，也是小区的一个看门的，拦住不让我进去。非要我给什么网格员打电话，我不知道这是什么外星术语，让他给我号码或者什么联系方式，但是他也不给。反正就是不让你过，道理什么的嘛他也不懂。这次真的真的对我影响很大，因为他让我放弃了骑行的梦想和乐趣，前几天把车也卖了。除了愤怒之外，我也深深的感到悲哀，就这样一个素质的社会，还想企及环法，环意自行车赛的边？一个把人最后梦想都扼杀的社会？痴人说梦，即便是道路状况极差，只能在颠簸的人行道上骑，我们仍在继续，仅仅是因为那一份热情。而这也被无情的抹杀，你说现在的年轻人都躺平是为什么呢？因为我们的热情，追求都被抹去，只剩下孤独的灵魂。</p>
+<p>然后就是这怪诞的核酸检测了，之前是一天一次，现在改成三天一次了。我发现渐渐的人们都已经忘记为什么要做核酸检测了，只知道不做你就上不了班，坐不了车，没有行动的自由。如果说这是一个文明社会、尊重科学的社会，会发生这种事情吗？我们都已经麻木不仁了，检测已经成为了呼吸的一部分，尽管我们知道这都是毫无意义的，这不是保护人该做的事，这已经成为一门生意，堂而皇之以一个国家的背书，靠着武力野蛮来施加无可抗拒的压力。这让我可笑，因为国家把科学常常挂在嘴边，而做出的事，毫无科学。</p>
+<p>对于这所有种种事情，我不想全部怪罪于一个国家。因为细数历史，你会发现每个朝代都是这样，由兴盛转向衰亡。个人同样是无法抗拒的，每一个人都属于时代的微不足道的一部分。然而我想说的是，正是王阳明先生提到的，从尧舜到当今，社会是每况愈下。千年前有孔孟，500年前有阳明，而当今谁也没有了。那些被先贤们珍视的文明礼仪、社会良知几乎散尽，作为人被判定为一个人该有的依据已模糊，斯人逐渐沦为禽兽而不自省。即便朝代再次更迭，我想情况并不会改善，因为人心已不在。而决定一个社会前进最为重要的是什么呢？是良知。没有了良知，俄罗斯这样拥有先进核武的国家，也只会沦为屠杀人类的机器。没有了良知，那些管理人员才会显得那么野蛮。</p>
+<p>经常看科幻片的我认为如果人类真的发明了星际穿越的方法，我也觉得目前的人类配不上，因为他们自私没有良知，所过之处只是无尽的灾难罢了。阳明说人心就是良知，需要内心纯粹无一毫私欲。试问有几人做得到呢？如今这可悲的时代。</p>
+<p>除了从本质来解读之外，还想从另一个现实解释这种现象出现的原因：1. 人们之间几乎无交集，属于陌生人范畴。2. 因为戴了口罩，遮住了它的社交信息，真实显露出它的邪恶。想象一下，如果是发生在一个乡村里面，你做出这等散尽天良的事，只怕会被所有人孤立，甚至是报复。</p>
+<p>唉，除了一声长叹，也只剩一句唏嘘。虽然整体社会的良知散失，但是并不代表我也没有，我有王阳明作为导师，足以澄其心。再者说了，不管邪恶做出什么，那是他们做的事，对于我们来说如何回应邪恶才是关键。如果用暴力来还击，那证明我们也只是他们的一部分罢了。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main/2022/05/15/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%BB%AC%E9%83%BD%E6%82%A3%E4%B8%8A%E4%BA%86%E6%84%A4%E6%80%92%E8%B0%83%E8%8A%82%E9%9A%9C%E7%A2%8D/" data-id="cl9ktb7vw003cdta8df270bh4" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%89%AF%E7%9F%A5/" rel="tag">良知</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-我愿成魔" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2022/05/14/%E6%88%91%E6%84%BF%E6%88%90%E9%AD%94/" class="article-date">
+  <time datetime="2022-05-14T08:53:09.000Z" itemprop="datePublished">2022-05-14</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%AF%BB%E5%8E%86%E5%8F%B2/">读历史</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/05/14/%E6%88%91%E6%84%BF%E6%88%90%E9%AD%94/">我愿成魔</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>今天听了《美丽的神话》这首歌，又回想起来大学看过的《神话》这个电视剧。时光匆匆，这么多年又过去了，然而看电视剧的感受还是那么 清晰。全剧最让我感动的就是赵高说他要一步一步往上爬，成为一人之下万人之上的存在。这里也是他和主角正式分道扬镳的地方，如果让我选择一个支持的人，我可能并不会那么高尚的选择主角。</p>
+<p>赵高原本是一个现代的厨师，有一些小偷小摸的习惯，但却是为了是给妹妹更好的生活。他从小把妹妹带大，相依为命，可以说妹妹就是他唯一生活的阳光。因为小川，他被无缘无故的被带入到了古代，与妹妹时空相隔，同时迎接他的命运也是极端的残酷，被拉去修长城，进宫成为了太监，这一系列的遭遇，如果唤作是我，恐怕活着的勇气都没了。然而他还是坚持了下来，因为他始终相信他还可以回去，回到现代。</p>
+<p>而小川的命运完全不一样，一帆风顺的不可想象，结识了刘邦项羽，有吕素为救自己而牺牲，后来还遇到了他的所爱，像天使一样美丽的少数名族的公主玉树，并且相恋。所以小川坚持他的人间值得，正道光明没有什么错。但是我认为他却不能将这样的要求强加给赵高。</p>
+<p>后来小川将虞姬引荐给赵高，我还记得赵高第一次遇见虞姬的那种开心，那种话都说不明白的心情，因为虞姬和他妹妹长的一模一样，他以为他又见到了自己的妹妹。那一瞬间仿佛穿越了时空，仿佛停止了时间，感动的让人落泪。我想这是那苦难的社会能唯一给他带来快乐的事情了吧。</p>
+<p>所以他说他要一步一步往上爬，即便是成为历史书中那个奸臣赵高也无妨。我可以体会到那种心情，也足够同情他，他每爬一步背后所承受的那种心酸，悲伤，无助，失望谁又能懂呢？他不是不知道他会堕落成魔，但是社会已经无可救药，为了可以见到亲妹妹，为了保护这个世界的虞姬，他必须这么做。没有多么高尚的目标，没有社会责任，没有英雄主义，却让我敬佩。这才是真正的人生，这才是勇敢的人。</p>
+<p>设想一下一个社会的小小角色，无权捍卫自己的人生安全，无法受到公平对待，没有任何自由的权利，那么我为什么还要遵守这癫狂的社会规则，遵守那些贪官污吏、昏庸无能的君主所定下的规则呢？如果成魔可以保护自己所爱的人，那么就让我成魔吧。</p>
+<p>我并不认为历史和当下有多遥远的距离，因为此刻也即是历史，那些曾经做过的错的对的事也会随风流逝，重要的是我们为自己所做的决定后悔吗？赵高不会为自己所做的事后悔，他就是一个小老百姓，不必肩负历史的命运，而能够尽自己所能保护所爱的人已足矣，心安。</p>
+<p>对与错是很难分辨的，也不应该用一个固定标准去衡量它，因为在不同的人眼中是不同的，不同的地域，不同的时空都是不同的。一千个读者就有一千个哈姆雷特；在美国拥有枪支是合法的，而在中国却是非法的；杜甫那个时代指责政府的诗可以流传千古，而八股文，文字狱却是一言足以入狱。</p>
+<p>那么如何去分辨是非曲直呢？我只能说我也不清楚，因为我自己都无法正确判断，我也在学习的路上。而行之有效的一个方式就是走进历史，走进历史所在的那个环境，用心去体会，用理智去判断。这个判断的依据从来都不是政府，因为皇权百年更迭，而人心亘古不变，人心也即是普世价值。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main/2022/05/14/%E6%88%91%E6%84%BF%E6%88%90%E9%AD%94/" data-id="cl9ktb7vy003ldta8cxwc55pu" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%A5%9E%E8%AF%9D/" rel="tag">神话</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-zsh" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2022/04/23/zsh/" class="article-date">
+  <time datetime="2022-04-23T15:15:44.000Z" itemprop="datePublished">2022-04-23</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/learn/">learn</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/04/23/zsh/">zsh</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="ZSH"><a href="#ZSH" class="headerlink" title="ZSH"></a>ZSH</h1><h2 id="change-default-location"><a href="#change-default-location" class="headerlink" title="change default location"></a>change default location</h2><p><code>.zshrc and .zcompdump</code> location in <code>$HOME</code> directory.  and we can change it to another folder</p>
+<pre><code class="shell"># add this to ~/.zprofile
+export ZDOTDIR=$HOME/.config/zsh
+</code></pre>
+<blockquote>
+<p>Note:</p>
+<p><code>.zcompdump</code> file used to speed up the zsh completion</p>
+</blockquote>
+<h2 id="change-oh-my-zsh-default-location"><a href="#change-oh-my-zsh-default-location" class="headerlink" title="change oh-my-zsh default location"></a>change oh-my-zsh default location</h2><pre><code class="shell">export ZSH=$HOME/.config/zsh/.oh-my-zsh
+</code></pre>
+<h2 id="auto-correct"><a href="#auto-correct" class="headerlink" title="auto correct"></a>auto correct</h2><p>In archlinux installer, i have ever saw auto correct effect while error typing and it is very helpful, however i cannot find the plugin which has the same effect. Today, i searched and found it finally, you know what? It is even not a plugin but a configuration in <code>.zshrc</code>.</p>
+<pre><code class="shell"># uncomment to enable it
+ENABLE_CORRECTION=&quot;true&quot;
+</code></pre>
+<p><img src=".images/zsh-correct.gif" alt="zsh-correct"></p>
+<ul>
+<li>n which means <strong>no</strong>, don’t correct my command and execute it as it is</li>
+<li>y which means <strong>yes</strong>, correct my command</li>
+<li>a which means <strong>abort</strong>, don’t execute the command and give me an empty prompt</li>
+<li>e which means <strong>edit</strong>, don’t execute the command and let me edit it again</li>
+</ul>
+<h2 id="auto-suggestion"><a href="#auto-suggestion" class="headerlink" title="auto suggestion"></a>auto suggestion</h2><p>oh-my-zsh includes this function. Add <code>zsh-autosuggestions</code> to <code>plugin&#123;&#125;</code> will okay. However, it is much more customizable, we can even define <a target="_blank" rel="noopener" href="https://github.com/zsh-users/zsh-autosuggestions#configuration">its color</a>.</p>
+<pre><code class="shell">plugins=(git
+    zsh-autosuggestions
+    )
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE=&quot;fg=#7e749d,bg=#42414d,bold,underline&quot;
+</code></pre>
+<p><img src=".images/zsh-suggest.gif" alt="zsh-suggest"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main/2022/04/23/zsh/" data-id="cl9ktb7vv0039dta83sdj3e8i" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/zsh/" rel="tag">zsh</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/">Next &amp;raquo;</a>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/learn/">learn</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/linux/">linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/think/">think</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/thinking/">thinking</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BB%E5%8E%86%E5%8F%B2/">读历史</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/anaconda/" rel="tag">anaconda</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/anbox/" rel="tag">anbox</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ansible/" rel="tag">ansible</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/archlinux/" rel="tag">archlinux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/boring/" rel="tag">boring</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/container/" rel="tag">container</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cursor-theme/" rel="tag">cursor theme</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ed/" rel="tag">ed</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/go/" rel="tag">go</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/grub/" rel="tag">grub</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/haskell/" rel="tag">haskell</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/inject-js-css/" rel="tag">inject js/css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iptables/" rel="tag">iptables</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/k8s/" rel="tag">k8s</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/life/" rel="tag">life</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mind/" rel="tag">mind</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/optimized/" rel="tag">optimized</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pentablet/" rel="tag">pentablet</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/positive/" rel="tag">positive</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/reality-is-aweful/" rel="tag">reality is aweful</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/route/" rel="tag">route</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rust/" rel="tag">rust</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shell/" rel="tag">shell</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shield/" rel="tag">shield</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ssh/" rel="tag">ssh</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tcp/" rel="tag">tcp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vbox/" rel="tag">vbox</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vscode/" rel="tag">vscode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xmonad/" rel="tag">xmonad</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/zabbix/" rel="tag">zabbix</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/zk/" rel="tag">zk</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/zsh/" rel="tag">zsh</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%80%9D%E7%BB%AA/" rel="tag">思绪</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A5%9E%E8%AF%9D/" rel="tag">神话</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%89%AF%E7%9F%A5/" rel="tag">良知</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/anaconda/" style="font-size: 10px;">anaconda</a> <a href="/tags/anbox/" style="font-size: 10px;">anbox</a> <a href="/tags/ansible/" style="font-size: 10px;">ansible</a> <a href="/tags/archlinux/" style="font-size: 10px;">archlinux</a> <a href="/tags/boring/" style="font-size: 10px;">boring</a> <a href="/tags/container/" style="font-size: 10px;">container</a> <a href="/tags/cursor-theme/" style="font-size: 10px;">cursor theme</a> <a href="/tags/ed/" style="font-size: 10px;">ed</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/go/" style="font-size: 10px;">go</a> <a href="/tags/grub/" style="font-size: 10px;">grub</a> <a href="/tags/haskell/" style="font-size: 10px;">haskell</a> <a href="/tags/inject-js-css/" style="font-size: 10px;">inject js/css</a> <a href="/tags/iptables/" style="font-size: 10px;">iptables</a> <a href="/tags/k8s/" style="font-size: 20px;">k8s</a> <a href="/tags/life/" style="font-size: 10px;">life</a> <a href="/tags/linux/" style="font-size: 15px;">linux</a> <a href="/tags/mind/" style="font-size: 10px;">mind</a> <a href="/tags/optimized/" style="font-size: 10px;">optimized</a> <a href="/tags/pentablet/" style="font-size: 10px;">pentablet</a> <a href="/tags/positive/" style="font-size: 10px;">positive</a> <a href="/tags/python/" style="font-size: 15px;">python</a> <a href="/tags/reality-is-aweful/" style="font-size: 10px;">reality is aweful</a> <a href="/tags/route/" style="font-size: 10px;">route</a> <a href="/tags/rust/" style="font-size: 10px;">rust</a> <a href="/tags/shell/" style="font-size: 10px;">shell</a> <a href="/tags/shield/" style="font-size: 10px;">shield</a> <a href="/tags/ssh/" style="font-size: 10px;">ssh</a> <a href="/tags/tcp/" style="font-size: 10px;">tcp</a> <a href="/tags/vbox/" style="font-size: 10px;">vbox</a> <a href="/tags/vscode/" style="font-size: 10px;">vscode</a> <a href="/tags/xmonad/" style="font-size: 20px;">xmonad</a> <a href="/tags/zabbix/" style="font-size: 10px;">zabbix</a> <a href="/tags/zk/" style="font-size: 10px;">zk</a> <a href="/tags/zsh/" style="font-size: 10px;">zsh</a> <a href="/tags/%E6%80%9D%E7%BB%AA/" style="font-size: 15px;">思绪</a> <a href="/tags/%E7%A5%9E%E8%AF%9D/" style="font-size: 10px;">神话</a> <a href="/tags/%E8%89%AF%E7%9F%A5/" style="font-size: 10px;">良知</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">October 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">July 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">June 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">May 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">April 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/10/23/our-body-may-cheat-ourselves-md/">our-body-may-cheat-ourselves.md</a>
+          </li>
+        
+          <li>
+            <a href="/2022/07/04/the-reality/">the-reality</a>
+          </li>
+        
+          <li>
+            <a href="/2022/06/25/%E4%BB%8E%E5%AE%B9/">从容</a>
+          </li>
+        
+          <li>
+            <a href="/2022/06/25/magic-of-xmonad/">magic-of-xmonad</a>
+          </li>
+        
+          <li>
+            <a href="/2022/06/24/xp-pentablet/">xp-pentablet</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 shutterbug<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
     
 
-</main>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
 
 
 
 
-<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/dark-light-toggle.js"></script>
-
-
-    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/local-search.js"></script>
+<script src="/js/script.js"></script>
 
 
 
 
-
-
-<div class="post-scripts pjax">
-    
-</div>
-
-
-    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/libs/pjax.min.js"></script>
-<script>
-    window.addEventListener('DOMContentLoaded', () => {
-        window.pjax = new Pjax({
-            selectors: [
-                'head title',
-                '.page-container',
-                '.pjax'
-            ],
-            history: true,
-            debug: false,
-            cacheBust: false,
-            timeout: 0,
-            analytics: false,
-            currentUrlFullReload: false,
-            scrollRestoration: false,
-            // scrollTo: true,
-        });
-
-        document.addEventListener('pjax:send', () => {
-            KEEP.utils.pjaxProgressBarStart();
-        });
-
-        document.addEventListener('pjax:complete', () => {
-            KEEP.utils.pjaxProgressBarEnd();
-            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
-            KEEP.refresh();
-        });
-    });
-</script>
-
-
-
+  </div>
 </body>
 </html>

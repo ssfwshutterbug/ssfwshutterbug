@@ -1,218 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="keywords" content="Hexo Theme Keep">
-    <meta name="description" content="Hexo Theme Keep">
-    <meta name="author" content="shutterbug">
-    
-    <title>
-        
-            k8s |
-        
-        Sweet Diary
-    </title>
-    
+  <meta charset="utf-8">
+  
+
+  
+  <title>k8s | shutterbug sweet diary</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="kubernetescore component etcd：分布式存储，保存集群状态 apiserver：api操作接口 controller manager：维护集群状态 scheduler：资源调度 kubelet：容器生命周期，volume和网络管理 container runtime：镜像管理，pod和容器管理 kube-proxy：内部服务发现和负载均衡  basic conceptco">
+<meta property="og:type" content="article">
+<meta property="og:title" content="k8s">
+<meta property="og:url" content="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main/2022/04/23/k8s/index.html">
+<meta property="og:site_name" content="shutterbug sweet diary">
+<meta property="og:description" content="kubernetescore component etcd：分布式存储，保存集群状态 apiserver：api操作接口 controller manager：维护集群状态 scheduler：资源调度 kubelet：容器生命周期，volume和网络管理 container runtime：镜像管理，pod和容器管理 kube-proxy：内部服务发现和负载均衡  basic conceptco">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-04-23T15:05:29.000Z">
+<meta property="article:modified_time" content="2022-04-23T15:06:02.310Z">
+<meta property="article:author" content="shutterbug">
+<meta property="article:tag" content="k8s">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="shutterbug sweet diary" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+  
 <link rel="stylesheet" href="/css/style.css">
 
-    <link rel="shortcut icon" href="/images/logo.svg">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/css/font-awesome.min.css">
-    <script id="hexo-configurations">
-    let KEEP = window.KEEP || {};
-    KEEP.hexo_config = {"hostname":"raw.githubusercontent.com","root":"/","language":"en","path":"search.json"};
-    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":true},"style":{"primary_color":"#0066CC","avatar":"/images/avatar.svg","favicon":"/images/logo.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/4.jpg","description":"the world you see is not about how they act but how we respond."},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":false},"code_copy":{"enable":false,"style":"default"},"pjax":{"enable":true},"lazyload":{"enable":false},"version":"3.4.5"};
-    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
-  </script>
 <meta name="generator" content="Hexo 5.4.2"></head>
 
-
 <body>
-<div class="progress-bar-container">
-    
-
-    
-        <span class="pjax-progress-bar"></span>
-        <span class="pjax-progress-icon">
-            <i class="fas fa-circle-notch fa-spin"></i>
-        </span>
-    
-</div>
-
-
-<main class="page-container">
-
-    
-
-    <div class="page-main-content">
-
-        <div class="page-main-content-top">
-            <header class="header-wrapper">
-
-    <div class="header-content">
-        <div class="left">
-            
-            <a class="logo-title" href="/">
-                Sweet Diary
-            </a>
-        </div>
-
-        <div class="right">
-            <div class="pc">
-                <ul class="menu-list">
-                    
-                        <li class="menu-item">
-                            <a class=""
-                               href="/"
-                            >
-                                HOME
-                            </a>
-                        </li>
-                    
-                        <li class="menu-item">
-                            <a class=""
-                               href="/archives"
-                            >
-                                ARCHIVES
-                            </a>
-                        </li>
-                    
-                        <li class="menu-item">
-                            <a class=""
-                               href="/categories"
-                            >
-                                CATEGORIES
-                            </a>
-                        </li>
-                    
-                        <li class="menu-item">
-                            <a class=""
-                               href="/tags"
-                            >
-                                TAGS
-                            </a>
-                        </li>
-                    
-                    
-                        <li class="menu-item search search-popup-trigger">
-                            <i class="fas fa-search"></i>
-                        </li>
-                    
-                </ul>
-            </div>
-            <div class="mobile">
-                
-                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
-                
-                <div class="icon-item menu-bar">
-                    <div class="menu-bar-middle"></div>
-                </div>
-            </div>
-        </div>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">shutterbug sweet diary</a>
+      </h1>
+      
     </div>
-
-    <div class="header-drawer">
-        <ul class="drawer-menu-list">
-            
-                <li class="drawer-menu-item flex-center">
-                    <a class=""
-                       href="/">HOME</a>
-                </li>
-            
-                <li class="drawer-menu-item flex-center">
-                    <a class=""
-                       href="/archives">ARCHIVES</a>
-                </li>
-            
-                <li class="drawer-menu-item flex-center">
-                    <a class=""
-                       href="/categories">CATEGORIES</a>
-                </li>
-            
-                <li class="drawer-menu-item flex-center">
-                    <a class=""
-                       href="/tags">TAGS</a>
-                </li>
-            
-        </ul>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main"></form>
+      </div>
     </div>
-
-    <div class="window-mask"></div>
-
+  </div>
 </header>
+      <div class="outer">
+        <section id="main"><article id="post-k8s" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2022/04/23/k8s/" class="article-date">
+  <time datetime="2022-04-23T15:05:29.000Z" itemprop="datePublished">2022-04-23</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/learn/">learn</a>
+  </div>
 
-
-        </div>
-
-        <div class="page-main-content-middle">
-
-            <div class="main-content">
-
-                
-                    <div class="fade-in-down-animation">
-    <div class="article-content-container">
-
-        <div class="article-title">
-            <span class="title-hover-animation">k8s</span>
-        </div>
-
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
         
-            <div class="article-header">
-                <div class="avatar">
-                    <img src="/images/avatar.svg">
-                </div>
-                <div class="info">
-                    <div class="author">
-                        <span class="name">shutterbug</span>
-                        
-                            <span class="author-label">Lv4</span>
-                        
-                    </div>
-                    <div class="meta-info">
-                        <div class="article-meta-info">
-    <span class="article-date article-meta-item">
-        <i class="fas fa-edit"></i>&nbsp;
-        <span class="pc">2022-04-23 23:05:29</span>
-        <span class="mobile">2022-04-23 23:05</span>
-    </span>
-    
-        <span class="article-categories article-meta-item">
-            <i class="fas fa-folder"></i>&nbsp;
-            <ul>
-                
-                    <li>
-                        <a href="/categories/learn/">learn</a>&nbsp;
-                    </li>
-                
-            </ul>
-        </span>
-    
-    
-        <span class="article-tags article-meta-item">
-            <i class="fas fa-tags"></i>&nbsp;
-            <ul>
-                
-                    <li>
-                        <a href="/tags/k8s/">k8s</a>&nbsp;
-                    </li>
-                
-            </ul>
-        </span>
-    
+  
+    <h1 class="article-title" itemprop="name">
+      k8s
+    </h1>
+  
 
+      </header>
     
-    
-    
-    
-</div>
-
-                    </div>
-                </div>
-            </div>
-        
-
-        <div class="article-content markdown-body">
-            <h1 id="kubernetes"><a href="#kubernetes" class="headerlink" title="kubernetes"></a>kubernetes</h1><h2 id="core-component"><a href="#core-component" class="headerlink" title="core component"></a>core component</h2><ul>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="kubernetes"><a href="#kubernetes" class="headerlink" title="kubernetes"></a>kubernetes</h1><h2 id="core-component"><a href="#core-component" class="headerlink" title="core component"></a>core component</h2><ul>
 <li>etcd：分布式存储，保存集群状态</li>
 <li>apiserver：api操作接口</li>
 <li>controller manager：维护集群状态</li>
@@ -234,14 +113,13 @@
 <p><em><strong>服务发现和负载均衡</strong></em></p>
 <p><strong>service</strong>提供了pod对外服务的确定ip和端口，不需要考虑pod新建和销毁所引起的ip地址变化</p>
 <p><strong>job</strong>:用来控制批处理型任务，执行一次完成后自动退出</p>
-<h2 id="commands"><a href="#commands" class="headerlink" title="commands"></a>commands</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">kubectl get				# list pods</span><br><span class="line">kubectl describe 		# detail info</span><br><span class="line">kubectl logs			# logs</span><br><span class="line">kubectl exec			# execute command in container</span><br><span class="line">kubectl run				# run a simple container</span><br><span class="line">kubectl create -f xx.yaml # run container commonly</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
+<h2 id="commands"><a href="#commands" class="headerlink" title="commands"></a>commands</h2><pre><code class="shell">kubectl get                # list pods
+kubectl describe         # detail info
+kubectl logs            # logs
+kubectl exec            # execute command in container
+kubectl run                # run a simple container
+kubectl create -f xx.yaml # run container commonly
+</code></pre>
 <h2 id="install"><a href="#install" class="headerlink" title="install"></a>install</h2><p>成功安装kubernetes的前提条件：</p>
 <ol>
 <li>安装k8s的机器保证cpu个数大于等于2</li>
@@ -261,10 +139,11 @@
 <p>​    kubeadm-1.20.0-0 </p>
 <p>​    kubectl-1.20.0-0 </p>
 </blockquote>
-<h2 id="install-1"><a href="#install-1" class="headerlink" title="install"></a>install</h2><h4 id="修改主机名"><a href="#修改主机名" class="headerlink" title="修改主机名"></a>修改主机名</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">leader</span></span><br><span class="line">hostnamectl set-hostname k8l</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">node</span></span><br><span class="line">hostnamectl set-hostname k8n1</span><br></pre></td></tr></table></figure>
-
-
-
+<h2 id="install-1"><a href="#install-1" class="headerlink" title="install"></a>install</h2><h4 id="修改主机名"><a href="#修改主机名" class="headerlink" title="修改主机名"></a>修改主机名</h4><pre><code class="shell"># leader
+hostnamectl set-hostname k8l
+# node
+hostnamectl set-hostname k8n1
+</code></pre>
 <h4 id="设置主机与ip的映射关系"><a href="#设置主机与ip的映射关系" class="headerlink" title="设置主机与ip的映射关系"></a>设置主机与ip的映射关系</h4><blockquote>
 <p>Note:</p>
 <ol>
@@ -272,371 +151,365 @@
 <li>一般多节点最好是奇数个，但这里采用2个</li>
 </ol>
 </blockquote>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">建立映射关系</span></span><br><span class="line">cat &gt;&gt; /etc/hosts &lt;&lt; EOF</span><br><span class="line">192.168.31.11 k8l</span><br><span class="line">192.168.31.12 k8n1</span><br><span class="line">EOF</span><br><span class="line"></span><br><span class="line">echo nameserver 114.114.114.114 &gt; /etc/resolv.conf</span><br></pre></td></tr></table></figure>
+<pre><code class="shell"># 建立映射关系
+cat &gt;&gt; /etc/hosts &lt;&lt; EOF
+192.168.31.11 k8l
+192.168.31.12 k8n1
+EOF
 
+echo nameserver 114.114.114.114 &gt; /etc/resolv.conf
+</code></pre>
+<h4 id="关闭防火墙-amp-swap分区"><a href="#关闭防火墙-amp-swap分区" class="headerlink" title="关闭防火墙&amp;swap分区"></a>关闭防火墙&amp;swap分区</h4><pre><code class="shell"># 关闭firewalld
+systemctl stop firewalld
+systemctl disable firewalld
 
+# 关闭selinux
+setenforce 0
+sed -i &#39;s/=enforcing/=permissive/&#39; /etc/sysconfig/selinux
 
-<h4 id="关闭防火墙-amp-swap分区"><a href="#关闭防火墙-amp-swap分区" class="headerlink" title="关闭防火墙&amp;swap分区"></a>关闭防火墙&amp;swap分区</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">关闭firewalld</span></span><br><span class="line">systemctl stop firewalld</span><br><span class="line">systemctl disable firewalld</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">关闭selinux</span></span><br><span class="line">setenforce 0</span><br><span class="line">sed -i &#x27;s/=enforcing/=permissive/&#x27; /etc/sysconfig/selinux</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">关闭swap分区</span></span><br><span class="line">swapoff -a</span><br><span class="line">sed -i &#x27;/swap/s/^/#/&#x27; /etc/fstab</span><br></pre></td></tr></table></figure>
+# 关闭swap分区
+swapoff -a
+sed -i &#39;/swap/s/^/#/&#39; /etc/fstab
+</code></pre>
+<h4 id="docker安装-amp-配置"><a href="#docker安装-amp-配置" class="headerlink" title="docker安装&amp;配置"></a>docker安装&amp;配置</h4><pre><code class="shell"># 配置docker源
+yum install -y yum-utils
+yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
 
-
-
-<h4 id="docker安装-amp-配置"><a href="#docker安装-amp-配置" class="headerlink" title="docker安装&amp;配置"></a>docker安装&amp;配置</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">配置docker源</span></span><br><span class="line">yum install -y yum-utils</span><br><span class="line">yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">安装docker</span></span><br><span class="line">yum install docker-ce-19.03.0-3.el7 docker-ce-cli-19.03.0-3.el7 containerd.io-1.4.4-3.1.el7 -y</span><br></pre></td></tr></table></figure>
-
+# 安装docker
+yum install docker-ce-19.03.0-3.el7 docker-ce-cli-19.03.0-3.el7 containerd.io-1.4.4-3.1.el7 -y
+</code></pre>
 <blockquote>
 <p>Note:</p>
 <p>查看版本：yum list containerd.io –showduplicates | sort -r</p>
 </blockquote>
 <p>修改docker<code>cgroupdriver</code>为<code>systemd</code> (默认为cgroupfs)</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">mkdir /etc/docker</span><br><span class="line">cat &gt; /etc/docker/daemon.json &lt;&lt; EOF</span><br><span class="line">&#123;</span><br><span class="line">  &quot;exec-opts&quot;: [&quot;native.cgroupdriver=systemd&quot;]</span><br><span class="line">&#125;</span><br><span class="line">EOF</span><br></pre></td></tr></table></figure>
-
+<pre><code class="shell">mkdir /etc/docker
+cat &gt; /etc/docker/daemon.json &lt;&lt; EOF
+&#123;
+  &quot;exec-opts&quot;: [&quot;native.cgroupdriver=systemd&quot;]
+&#125;
+EOF
+</code></pre>
 <p>启动docker，配置自启动</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl enable docker</span><br><span class="line">systemctl start docker</span><br></pre></td></tr></table></figure>
+<pre><code class="shell">systemctl enable docker
+systemctl start docker
+</code></pre>
+<h4 id="k8s安装-amp-配置"><a href="#k8s安装-amp-配置" class="headerlink" title="k8s安装&amp;配置"></a>k8s安装&amp;配置</h4><pre><code class="shell"># 允许k8s进行流量代理
+cat &gt; /etc/sysctl.d/k8s.conf &lt;&lt; EOF
+net.bridge.bridge-nf-call-ip6tables = 1
+net.bridge.bridge-nf-call-iptables = 1
+EOF
 
+# 添加国内k8s镜像源
+cat &gt; /etc/yum.repos.d/kubernetes.repo &lt;&lt; EOF
+[kubernetes]
+name=Kubernetes Repo
+baseurl=https://mirrors.aliyun.com/kubernetes/yum/repos/kubernetes-el7-x86_64/
+gpgcheck=0
+enabled=1
+EOF
 
-
-<h4 id="k8s安装-amp-配置"><a href="#k8s安装-amp-配置" class="headerlink" title="k8s安装&amp;配置"></a>k8s安装&amp;配置</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">允许k8s进行流量代理</span></span><br><span class="line">cat &gt; /etc/sysctl.d/k8s.conf &lt;&lt; EOF</span><br><span class="line">net.bridge.bridge-nf-call-ip6tables = 1</span><br><span class="line">net.bridge.bridge-nf-call-iptables = 1</span><br><span class="line">EOF</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">添加国内k8s镜像源</span></span><br><span class="line">cat &gt; /etc/yum.repos.d/kubernetes.repo &lt;&lt; EOF</span><br><span class="line">[kubernetes]</span><br><span class="line">name=Kubernetes Repo</span><br><span class="line">baseurl=https://mirrors.aliyun.com/kubernetes/yum/repos/kubernetes-el7-x86_64/</span><br><span class="line">gpgcheck=0</span><br><span class="line">enabled=1</span><br><span class="line">EOF</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">安装k8s</span></span><br><span class="line">yum install -y kubelet-1.20.0-0 kubeadm-1.20.0-0 kubectl-1.20.0-0 </span><br></pre></td></tr></table></figure>
-
+# 安装k8s
+yum install -y kubelet-1.20.0-0 kubeadm-1.20.0-0 kubectl-1.20.0-0 
+</code></pre>
 <p>允许k8s自启动</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl enable kubelet</span><br></pre></td></tr></table></figure>
-
+<pre><code class="shell">systemctl enable kubelet
+</code></pre>
 <blockquote>
 <p>Note:</p>
 <p>这里不需要启动k8s，现在启动会报错</p>
 </blockquote>
 <h5 id="主节点配置"><a href="#主节点配置" class="headerlink" title="主节点配置"></a>主节点配置</h5><p>主节点初始化</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">修改apiserver-advertise-address为master的ip</span></span><br><span class="line">kubeadm init --kubernetes-version=1.20.0  \</span><br><span class="line">--apiserver-advertise-address=192.168.31.11   \</span><br><span class="line">--image-repository registry.aliyuncs.com/google_containers  \</span><br><span class="line">--service-cidr=10.10.0.0/16 --pod-network-cidr=10.122.0.0/16</span><br></pre></td></tr></table></figure>
-
+<pre><code class="shell"># 修改apiserver-advertise-address为master的ip
+kubeadm init --kubernetes-version=1.20.0  \
+--apiserver-advertise-address=192.168.31.11   \
+--image-repository registry.aliyuncs.com/google_containers  \
+--service-cidr=10.10.0.0/16 --pod-network-cidr=10.122.0.0/16
+</code></pre>
 <blockquote>
 <p>Note:</p>
 <p>主节点初始化失败后可以重新初始化，不过需要先清空之前初始化的配置</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">kubeadm reset</span><br><span class="line">rm -rf /etc/cni</span><br><span class="line">rm -rf $HOME/.kube/config</span><br></pre></td></tr></table></figure>
+<pre><code class="shell">kubeadm reset
+rm -rf /etc/cni
+rm -rf $HOME/.kube/config
+</code></pre>
 </blockquote>
 <p>初始化完成后会在终端打印一些重要信息，需要记录下来。比如node接入的命令</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p $HOME/.kube</span><br><span class="line">sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config</span><br><span class="line">sudo chown $(id -u):$(id -g) $HOME/.kube/config</span><br><span class="line">export KUBECONFIG=/etc/kubernetes/admin.conf</span><br></pre></td></tr></table></figure>
-
+<pre><code class="shell"> mkdir -p $HOME/.kube
+ sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+ sudo chown $(id -u):$(id -g) $HOME/.kube/config
+ export KUBECONFIG=/etc/kubernetes/admin.conf
+</code></pre>
 <p>修改端口</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed -i &#x27;s/insecure-port=0/insecure-port=8080/&#x27; /etc/kubernetes/manifests/kube-apiserver.yaml</span><br></pre></td></tr></table></figure>
-
+<pre><code class="shell">sed -i &#39;s/insecure-port=0/insecure-port=8080/&#39; /etc/kubernetes/manifests/kube-apiserver.yaml
+</code></pre>
 <p>启动kubelet</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start kubelet</span><br></pre></td></tr></table></figure>
-
+<pre><code class="shell">systemctl start kubelet
+</code></pre>
 <p>安装网络管理插件</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml</span><br></pre></td></tr></table></figure>
-
+<pre><code class="shell">kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
+</code></pre>
 <blockquote>
 <p>Note:<br>The connection to the server 192.168.31.11:6443 was refused - did you specify the right host or port?</p>
 <p>遇到以上报错时，需要重新初始化，一般是某些k8s的docker启动失败。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop kubelet</span><br><span class="line">systemctl stop docker</span><br><span class="line"></span><br><span class="line">kubeadm reset</span><br><span class="line">rm -rf /etc/cni</span><br><span class="line">rm -rf $HOME/.kube/config</span><br><span class="line"></span><br><span class="line">systemctl start docker</span><br><span class="line">systemctl start kubelet</span><br><span class="line"></span><br><span class="line">kubeadm init --kubernetes-version=1.20.0  \</span><br><span class="line">--apiserver-advertise-address=192.168.31.11   \</span><br><span class="line">--image-repository registry.aliyuncs.com/google_containers  \</span><br><span class="line">--service-cidr=10.10.0.0/16 --pod-network-cidr=10.122.0.0/16</span><br></pre></td></tr></table></figure>
+<pre><code class="shell">systemctl stop kubelet
+systemctl stop docker
+
+kubeadm reset
+rm -rf /etc/cni
+rm -rf $HOME/.kube/config
+
+systemctl start docker
+systemctl start kubelet
+
+kubeadm init --kubernetes-version=1.20.0  \
+--apiserver-advertise-address=192.168.31.11   \
+--image-repository registry.aliyuncs.com/google_containers  \
+--service-cidr=10.10.0.0/16 --pod-network-cidr=10.122.0.0/16
+</code></pre>
 </blockquote>
-<h5 id="node接入主节点"><a href="#node接入主节点" class="headerlink" title="node接入主节点"></a>node接入主节点</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">node上运行</span></span><br><span class="line">kubeadm join 192.168.31.11:6443 --token nfb8gw.46gfska1dhfevlg9 --discovery-token-ca-cert-hash sha256:5ca678d7bcda290d7a692474711cbf1e5d5a11bc51969cbd453561e1f3186476</span><br></pre></td></tr></table></figure>
-
+<h5 id="node接入主节点"><a href="#node接入主节点" class="headerlink" title="node接入主节点"></a>node接入主节点</h5><pre><code class="shell"># node上运行
+kubeadm join 192.168.31.11:6443 --token nfb8gw.46gfska1dhfevlg9 --discovery-token-ca-cert-hash sha256:5ca678d7bcda290d7a692474711cbf1e5d5a11bc51969cbd453561e1f3186476
+</code></pre>
 <p>如果忘记了以上命令，那么需要重新获取</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看token的值</span></span><br><span class="line">kubeadm token list</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">如果过期了重新生成</span></span><br><span class="line">kubeadm token create</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">获取ca证书的sha256编码<span class="built_in">hash</span>值</span></span><br><span class="line">openssl x509 -pubkey -in /etc/kubernetes/pki/ca.crt | openssl rsa -pubin -outform der 2&gt;/dev/null | openssdgst -sha256 -hex | sed &#x27;s/^.* //&#x27;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">组装</span></span><br><span class="line">kubeadm join 192.168.31.11:6443 --token &#123;&#123;token&#125;&#125; --discovery-token-ca-cert-hash sha256:&#123;&#123;hash&#125;&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="shell"># 查看token的值
+kubeadm token list
 
+# 如果过期了重新生成
+kubeadm token create
 
+# 获取ca证书的sha256编码hash值
+openssl x509 -pubkey -in /etc/kubernetes/pki/ca.crt | openssl rsa -pubin -outform der 2&gt;/dev/null | openssdgst -sha256 -hex | sed &#39;s/^.* //&#39;
 
-
-
-<h4 id="查看状态"><a href="#查看状态" class="headerlink" title="查看状态"></a>查看状态</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">kubectl get nodes</span><br><span class="line">kubectl get pods -n kube-system</span><br><span class="line">kubectl get namespace</span><br><span class="line">kubectl get pods</span><br></pre></td></tr></table></figure>
-
+# 组装
+kubeadm join 192.168.31.11:6443 --token &#123;&#123;token&#125;&#125; --discovery-token-ca-cert-hash sha256:&#123;&#123;hash&#125;&#125;
+</code></pre>
+<h4 id="查看状态"><a href="#查看状态" class="headerlink" title="查看状态"></a>查看状态</h4><pre><code class="shell">kubectl get nodes
+kubectl get pods -n kube-system
+kubectl get namespace
+kubectl get pods
+</code></pre>
 <p>需要等待一会才是ready状态</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@k8l ~]# kubectl get nodes</span><br><span class="line">NAME   STATUS   ROLES                  AGE     VERSION</span><br><span class="line">k8l    Ready    control-plane,master   25m     v1.20.0</span><br><span class="line">k8n1   Ready    &lt;none&gt;                 8m33s   v1.20.0</span><br></pre></td></tr></table></figure>
+<pre><code class="shell">[root@k8l ~]# kubectl get nodes
+NAME   STATUS   ROLES                  AGE     VERSION
+k8l    Ready    control-plane,master   25m     v1.20.0
+k8n1   Ready    &lt;none&gt;                 8m33s   v1.20.0
+</code></pre>
+<h4 id="创建nginx"><a href="#创建nginx" class="headerlink" title="创建nginx"></a>创建nginx</h4><pre><code class="shell">kubectl create deployment nginx --image=nginx
+kubectl expose deployment nginx --port=80 --type=NodePort
+kubectl get pod,svc
 
+# 查看80映射端口
+[root@k8s-master ~]# kubectl get pod,svc
+NAME                         READY   STATUS              RESTARTS   AGE
+pod/nginx-6799fc88d8-7rgq6   0/1     ContainerCreating   0          16s
 
+NAME                 TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)        AGE
+service/kubernetes   ClusterIP   10.10.0.1      &lt;none&gt;        443/TCP        34m
+service/nginx        NodePort    10.10.78.172   &lt;none&gt;        80:31613/TCP   7s
 
-
-
-<h4 id="创建nginx"><a href="#创建nginx" class="headerlink" title="创建nginx"></a>创建nginx</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">kubectl create deployment nginx --image=nginx</span><br><span class="line">kubectl expose deployment nginx --port=80 --type=NodePort</span><br><span class="line">kubectl get pod,svc</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看80映射端口</span></span><br><span class="line">[root@k8s-master ~]# kubectl get pod,svc</span><br><span class="line">NAME                         READY   STATUS              RESTARTS   AGE</span><br><span class="line">pod/nginx-6799fc88d8-7rgq6   0/1     ContainerCreating   0          16s</span><br><span class="line"></span><br><span class="line">NAME                 TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)        AGE</span><br><span class="line">service/kubernetes   ClusterIP   10.10.0.1      &lt;none&gt;        443/TCP        34m</span><br><span class="line">service/nginx        NodePort    10.10.78.172   &lt;none&gt;        80:31613/TCP   7s</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">web界面访问</span></span><br><span class="line">http://192.168.31.111:31613</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
+# web界面访问
+http://192.168.31.111:31613
+</code></pre>
 <h2 id="daskboard"><a href="#daskboard" class="headerlink" title="daskboard"></a>daskboard</h2><p><strong>install</strong></p>
 <p>follow <a target="_blank" rel="noopener" href="https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/">this website</a>) to install dashboard</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">run this <span class="built_in">command</span></span> </span><br><span class="line">kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.2.0/aio/deploy/recommended.yaml</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">如果上面下载不下来也可以用我的gitee文件。内容和上面一样</span></span><br><span class="line">kubectl apply -f https://gitee.com/ulomo/some-config-file/raw/master/recommended.yaml</span><br></pre></td></tr></table></figure>
-
-
-
+<pre><code class="shell"># run this command 
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.2.0/aio/deploy/recommended.yaml
+</code></pre>
+<pre><code class="shell"># 如果上面下载不下来也可以用我的gitee文件。内容和上面一样
+kubectl apply -f https://gitee.com/ulomo/some-config-file/raw/master/recommended.yaml
+</code></pre>
 <p><strong>edit settting</strong></p>
 <p>in default we cannot access dashboard outsite the host machine where k8s installed. with [this method](<a target="_blank" rel="noopener" href="https://www.thegeekdiary.com/how-to-access-kubernetes-dashboard-externally/">How To Access Kubernetes Dashboard Externally – The Geek Diary</a>) we can access dashboard with host ip address </p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">change service “<span class="built_in">type</span>” from ClusterIP to NodePort</span></span><br><span class="line">kubectl -n kubernetes-dashboard edit service kubernetes-dashboard</span><br></pre></td></tr></table></figure>
-
+<pre><code class="shell"># change service “type” from ClusterIP to NodePort
+kubectl -n kubernetes-dashboard edit service kubernetes-dashboard
+</code></pre>
 <p>then find port to visit.<code> it is 31235</code></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@k8m ~]# kubectl get services --all-namespaces</span><br><span class="line">NAMESPACE              NAME                        TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)                  AGE</span><br><span class="line">default                kubernetes                  ClusterIP   10.10.0.1      &lt;none&gt;        443/TCP                  74m</span><br><span class="line">kube-system            kube-dns                    ClusterIP   10.10.0.10     &lt;none&gt;        53/UDP,53/TCP,9153/TCP   74m</span><br><span class="line">kubernetes-dashboard   dashboard-metrics-scraper   ClusterIP   10.10.27.176   &lt;none&gt;        8000/TCP                 59m</span><br><span class="line">kubernetes-dashboard   kubernetes-dashboard        NodePort    10.10.222.86   &lt;none&gt;        443:31235/TCP            59m</span><br></pre></td></tr></table></figure>
-
+<pre><code class="shell">[root@k8m ~]# kubectl get services --all-namespaces
+NAMESPACE              NAME                        TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)                  AGE
+default                kubernetes                  ClusterIP   10.10.0.1      &lt;none&gt;        443/TCP                  74m
+kube-system            kube-dns                    ClusterIP   10.10.0.10     &lt;none&gt;        53/UDP,53/TCP,9153/TCP   74m
+kubernetes-dashboard   dashboard-metrics-scraper   ClusterIP   10.10.27.176   &lt;none&gt;        8000/TCP                 59m
+kubernetes-dashboard   kubernetes-dashboard        NodePort    10.10.222.86   &lt;none&gt;        443:31235/TCP            59m
+</code></pre>
 <p><strong>create user</strong></p>
 <p>[follow this website](<a target="_blank" rel="noopener" href="https://github.com/kubernetes/dashboard/blob/master/docs/user/access-control/creating-sample-user.md">dashboard/creating-sample-user.md at master · kubernetes/dashboard · GitHub</a>) to create user</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">cat &lt;&lt;EOF | kubectl apply -f -</span><br><span class="line">apiVersion: v1</span><br><span class="line">kind: ServiceAccount</span><br><span class="line">metadata:</span><br><span class="line">  name: admin-user</span><br><span class="line">  namespace: kubernetes-dashboard</span><br><span class="line">EOF</span><br><span class="line"></span><br><span class="line">cat &lt;&lt;EOF | kubectl apply -f -</span><br><span class="line">apiVersion: rbac.authorization.k8s.io/v1</span><br><span class="line">kind: ClusterRoleBinding</span><br><span class="line">metadata:</span><br><span class="line">  name: admin-user</span><br><span class="line">roleRef:</span><br><span class="line">  apiGroup: rbac.authorization.k8s.io</span><br><span class="line">  kind: ClusterRole</span><br><span class="line">  name: cluster-admin</span><br><span class="line">subjects:</span><br><span class="line">- kind: ServiceAccount</span><br><span class="line">  name: admin-user</span><br><span class="line">  namespace: kubernetes-dashboard</span><br><span class="line">EOF</span><br></pre></td></tr></table></figure>
+<pre><code class="shell">cat &lt;&lt;EOF | kubectl apply -f -
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: admin-user
+  namespace: kubernetes-dashboard
+EOF
 
-
-
+cat &lt;&lt;EOF | kubectl apply -f -
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: admin-user
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cluster-admin
+subjects:
+- kind: ServiceAccount
+  name: admin-user
+  namespace: kubernetes-dashboard
+EOF
+</code></pre>
 <p><strong>get tocken</strong></p>
 <p>get tocken login needed</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl -n kubernetes-dashboard get secret $(kubectl -n kubernetes-dashboard get sa/admin-user -o jsonpath=&quot;&#123;.secrets[0].name&#125;&quot;) -o go-template=&quot;&#123;&#123;.data.token | base64decode&#125;&#125;&quot; |less</span><br></pre></td></tr></table></figure>
-
+<pre><code class="shell">kubectl -n kubernetes-dashboard get secret $(kubectl -n kubernetes-dashboard get sa/admin-user -o jsonpath=&quot;&#123;.secrets[0].name&#125;&quot;) -o go-template=&quot;&#123;&#123;.data.token | base64decode&#125;&#125;&quot; |less
+</code></pre>
 <p>at last, we can visit dashboard with k8s master ip address: <code>https://192.168.31.11:31235/</code></p>
 
-        </div>
-
-        
-
-        
-            <ul class="post-tags-box">
-                
-                    <li class="tag-item">
-                        <a href="/tags/k8s/">#k8s</a>&nbsp;
-                    </li>
-                
-            </ul>
-        
-
-        
-            <div class="article-nav">
-                
-                    <div class="article-prev">
-                        <a class="prev"
-                           rel="prev"
-                           href="/2022/04/23/kubernetes/"
-                        >
-                            <span class="left arrow-icon flex-center">
-                              <i class="fas fa-chevron-left"></i>
-                            </span>
-                            <span class="title flex-center">
-                                <span class="post-nav-title-item">kubernetes</span>
-                                <span class="post-nav-item">Prev posts</span>
-                            </span>
-                        </a>
-                    </div>
-                
-                
-                    <div class="article-next">
-                        <a class="next"
-                           rel="next"
-                           href="/2022/04/23/iptables/"
-                        >
-                            <span class="title flex-center">
-                                <span class="post-nav-title-item">iptables</span>
-                                <span class="post-nav-item">Next posts</span>
-                            </span>
-                            <span class="right arrow-icon flex-center">
-                              <i class="fas fa-chevron-right"></i>
-                            </span>
-                        </a>
-                    </div>
-                
-            </div>
-        
-
-        
+      
     </div>
-</div>
+    <footer class="article-footer">
+      <a data-url="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main/2022/04/23/k8s/" data-id="cl9ktb7v40018dta80685adag" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/k8s/" rel="tag">k8s</a></li></ul>
 
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2022/04/23/kubernetes/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          kubernetes
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2022/04/23/iptables/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">iptables</div>
+    </a>
+  
+</nav>
 
-                
-            </div>
+  
+</article>
 
-        </div>
-
-        <div class="page-main-content-bottom">
-            .footer {
-  font-size: 1rem;
-  color: var(--third-text-color);
-
-
-  a {
-    color: var(--third-text-color);
-
-
-    &:hover {
-      color: var(--primary-color);
-
-    }
-  }
-
-  .info-container {
-    padding-bottom: 10px;
-    text-align: center;
-  }
-
-  .info-item {
-    margin: 5px 0;
-  }
-
-  .icon-animate {
-    animation: icon-animate 1.2s ease-in-out infinite;
-  }
-
-}
-
-        </div>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/learn/">learn</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/linux/">linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/think/">think</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/thinking/">thinking</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BB%E5%8E%86%E5%8F%B2/">读历史</a></li></ul>
     </div>
+  </div>
 
+
+  
     
-        <div class="post-tools">
-            <div class="post-tools-container">
-    <ul class="tools-list">
-        <!-- TOC aside toggle -->
-        
-            <li class="tools-item page-aside-toggle">
-                <i class="fas fa-outdent"></i>
-            </li>
-        
-
-        <!-- go comment -->
-        
-    </ul>
-</div>
-
-        </div>
-    
-
-    <div class="right-bottom-side-tools">
-        <div class="side-tools-container">
-    <ul class="side-tools-list">
-        <li class="tools-item tool-font-adjust-plus flex-center">
-            <i class="fas fa-search-plus"></i>
-        </li>
-
-        <li class="tools-item tool-font-adjust-minus flex-center">
-            <i class="fas fa-search-minus"></i>
-        </li>
-
-        <li class="tools-item tool-expand-width flex-center">
-            <i class="fas fa-arrows-alt-h"></i>
-        </li>
-
-        <li class="tools-item tool-dark-light-toggle flex-center">
-            <i class="fas fa-moon"></i>
-        </li>
-
-        <!-- rss -->
-        
-
-        
-            <li class="tools-item tool-scroll-to-top flex-center">
-                <i class="fas fa-arrow-up"></i>
-            </li>
-        
-
-        <li class="tools-item tool-scroll-to-bottom flex-center">
-            <i class="fas fa-arrow-down"></i>
-        </li>
-    </ul>
-
-    <ul class="exposed-tools-list">
-        <li class="tools-item tool-toggle-show flex-center">
-            <i class="fas fa-cog fa-spin"></i>
-        </li>
-        
-    </ul>
-</div>
-
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/anaconda/" rel="tag">anaconda</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/anbox/" rel="tag">anbox</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ansible/" rel="tag">ansible</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/archlinux/" rel="tag">archlinux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/boring/" rel="tag">boring</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/container/" rel="tag">container</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cursor-theme/" rel="tag">cursor theme</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ed/" rel="tag">ed</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/go/" rel="tag">go</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/grub/" rel="tag">grub</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/haskell/" rel="tag">haskell</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/inject-js-css/" rel="tag">inject js/css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iptables/" rel="tag">iptables</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/k8s/" rel="tag">k8s</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/life/" rel="tag">life</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mind/" rel="tag">mind</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/optimized/" rel="tag">optimized</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pentablet/" rel="tag">pentablet</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/positive/" rel="tag">positive</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/reality-is-aweful/" rel="tag">reality is aweful</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/route/" rel="tag">route</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rust/" rel="tag">rust</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shell/" rel="tag">shell</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shield/" rel="tag">shield</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ssh/" rel="tag">ssh</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tcp/" rel="tag">tcp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vbox/" rel="tag">vbox</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vscode/" rel="tag">vscode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xmonad/" rel="tag">xmonad</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/zabbix/" rel="tag">zabbix</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/zk/" rel="tag">zk</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/zsh/" rel="tag">zsh</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%80%9D%E7%BB%AA/" rel="tag">思绪</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A5%9E%E8%AF%9D/" rel="tag">神话</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%89%AF%E7%9F%A5/" rel="tag">良知</a></li></ul>
     </div>
+  </div>
 
+
+  
     
-        <aside class="page-aside">
-            <div class="post-toc-wrap">
-    <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#kubernetes"><span class="nav-number">1.</span> <span class="nav-text">kubernetes</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#core-component"><span class="nav-number">1.1.</span> <span class="nav-text">core component</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#basic-concept"><span class="nav-number">1.2.</span> <span class="nav-text">basic concept</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#commands"><span class="nav-number">1.3.</span> <span class="nav-text">commands</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#install"><span class="nav-number">1.4.</span> <span class="nav-text">install</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#install-1"><span class="nav-number">1.5.</span> <span class="nav-text">install</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E4%B8%BB%E6%9C%BA%E5%90%8D"><span class="nav-number">1.5.0.1.</span> <span class="nav-text">修改主机名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E4%B8%BB%E6%9C%BA%E4%B8%8Eip%E7%9A%84%E6%98%A0%E5%B0%84%E5%85%B3%E7%B3%BB"><span class="nav-number">1.5.0.2.</span> <span class="nav-text">设置主机与ip的映射关系</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B3%E9%97%AD%E9%98%B2%E7%81%AB%E5%A2%99-amp-swap%E5%88%86%E5%8C%BA"><span class="nav-number">1.5.0.3.</span> <span class="nav-text">关闭防火墙&amp;swap分区</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#docker%E5%AE%89%E8%A3%85-amp-%E9%85%8D%E7%BD%AE"><span class="nav-number">1.5.0.4.</span> <span class="nav-text">docker安装&amp;配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#k8s%E5%AE%89%E8%A3%85-amp-%E9%85%8D%E7%BD%AE"><span class="nav-number">1.5.0.5.</span> <span class="nav-text">k8s安装&amp;配置</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%B8%BB%E8%8A%82%E7%82%B9%E9%85%8D%E7%BD%AE"><span class="nav-number">1.5.0.5.1.</span> <span class="nav-text">主节点配置</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#node%E6%8E%A5%E5%85%A5%E4%B8%BB%E8%8A%82%E7%82%B9"><span class="nav-number">1.5.0.5.2.</span> <span class="nav-text">node接入主节点</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E7%8A%B6%E6%80%81"><span class="nav-number">1.5.0.6.</span> <span class="nav-text">查看状态</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%9B%E5%BB%BAnginx"><span class="nav-number">1.5.0.7.</span> <span class="nav-text">创建nginx</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#daskboard"><span class="nav-number">1.6.</span> <span class="nav-text">daskboard</span></a></li></ol></li></ol>
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/anaconda/" style="font-size: 10px;">anaconda</a> <a href="/tags/anbox/" style="font-size: 10px;">anbox</a> <a href="/tags/ansible/" style="font-size: 10px;">ansible</a> <a href="/tags/archlinux/" style="font-size: 10px;">archlinux</a> <a href="/tags/boring/" style="font-size: 10px;">boring</a> <a href="/tags/container/" style="font-size: 10px;">container</a> <a href="/tags/cursor-theme/" style="font-size: 10px;">cursor theme</a> <a href="/tags/ed/" style="font-size: 10px;">ed</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/go/" style="font-size: 10px;">go</a> <a href="/tags/grub/" style="font-size: 10px;">grub</a> <a href="/tags/haskell/" style="font-size: 10px;">haskell</a> <a href="/tags/inject-js-css/" style="font-size: 10px;">inject js/css</a> <a href="/tags/iptables/" style="font-size: 10px;">iptables</a> <a href="/tags/k8s/" style="font-size: 20px;">k8s</a> <a href="/tags/life/" style="font-size: 10px;">life</a> <a href="/tags/linux/" style="font-size: 15px;">linux</a> <a href="/tags/mind/" style="font-size: 10px;">mind</a> <a href="/tags/optimized/" style="font-size: 10px;">optimized</a> <a href="/tags/pentablet/" style="font-size: 10px;">pentablet</a> <a href="/tags/positive/" style="font-size: 10px;">positive</a> <a href="/tags/python/" style="font-size: 15px;">python</a> <a href="/tags/reality-is-aweful/" style="font-size: 10px;">reality is aweful</a> <a href="/tags/route/" style="font-size: 10px;">route</a> <a href="/tags/rust/" style="font-size: 10px;">rust</a> <a href="/tags/shell/" style="font-size: 10px;">shell</a> <a href="/tags/shield/" style="font-size: 10px;">shield</a> <a href="/tags/ssh/" style="font-size: 10px;">ssh</a> <a href="/tags/tcp/" style="font-size: 10px;">tcp</a> <a href="/tags/vbox/" style="font-size: 10px;">vbox</a> <a href="/tags/vscode/" style="font-size: 10px;">vscode</a> <a href="/tags/xmonad/" style="font-size: 20px;">xmonad</a> <a href="/tags/zabbix/" style="font-size: 10px;">zabbix</a> <a href="/tags/zk/" style="font-size: 10px;">zk</a> <a href="/tags/zsh/" style="font-size: 10px;">zsh</a> <a href="/tags/%E6%80%9D%E7%BB%AA/" style="font-size: 15px;">思绪</a> <a href="/tags/%E7%A5%9E%E8%AF%9D/" style="font-size: 10px;">神话</a> <a href="/tags/%E8%89%AF%E7%9F%A5/" style="font-size: 10px;">良知</a>
     </div>
-</div>
-        </aside>
+  </div>
+
+  
     
-
-    <div class="image-viewer-container">
-    <img src="">
-</div>
-
-
-    
-        <div class="search-pop-overlay">
-    <div class="popup search-popup">
-        <div class="search-header">
-          <span class="search-input-field-pre">
-            <i class="fas fa-keyboard"></i>
-          </span>
-            <div class="search-input-container">
-                <input autocomplete="off"
-                       autocorrect="off"
-                       autocapitalize="off"
-                       placeholder="Search..."
-                       spellcheck="false"
-                       type="search"
-                       class="search-input"
-                >
-            </div>
-            <span class="popup-btn-close">
-                <i class="fas fa-times"></i>
-            </span>
-        </div>
-        <div id="search-result">
-            <div id="no-result">
-                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
-            </div>
-        </div>
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">October 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">July 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">June 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">May 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">April 2022</a></li></ul>
     </div>
-</div>
+  </div>
 
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/10/23/our-body-may-cheat-ourselves-md/">our-body-may-cheat-ourselves.md</a>
+          </li>
+        
+          <li>
+            <a href="/2022/07/04/the-reality/">the-reality</a>
+          </li>
+        
+          <li>
+            <a href="/2022/06/25/%E4%BB%8E%E5%AE%B9/">从容</a>
+          </li>
+        
+          <li>
+            <a href="/2022/06/25/magic-of-xmonad/">magic-of-xmonad</a>
+          </li>
+        
+          <li>
+            <a href="/2022/06/24/xp-pentablet/">xp-pentablet</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 shutterbug<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
     
 
-</main>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
 
-<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/dark-light-toggle.js"></script>
-
-
-    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/local-search.js"></script>
-
-
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
 
 
 
 
-<div class="post-scripts pjax">
-    
-        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/toc.js"></script>
-    
-</div>
-
-
-    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/libs/pjax.min.js"></script>
-<script>
-    window.addEventListener('DOMContentLoaded', () => {
-        window.pjax = new Pjax({
-            selectors: [
-                'head title',
-                '.page-container',
-                '.pjax'
-            ],
-            history: true,
-            debug: false,
-            cacheBust: false,
-            timeout: 0,
-            analytics: false,
-            currentUrlFullReload: false,
-            scrollRestoration: false,
-            // scrollTo: true,
-        });
-
-        document.addEventListener('pjax:send', () => {
-            KEEP.utils.pjaxProgressBarStart();
-        });
-
-        document.addEventListener('pjax:complete', () => {
-            KEEP.utils.pjaxProgressBarEnd();
-            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
-            KEEP.refresh();
-        });
-    });
-</script>
+<script src="/js/script.js"></script>
 
 
 
+
+  </div>
 </body>
 </html>

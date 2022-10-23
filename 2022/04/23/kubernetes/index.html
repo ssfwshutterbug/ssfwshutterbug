@@ -1,218 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="keywords" content="Hexo Theme Keep">
-    <meta name="description" content="Hexo Theme Keep">
-    <meta name="author" content="shutterbug">
-    
-    <title>
-        
-            kubernetes |
-        
-        Sweet Diary
-    </title>
-    
+  <meta charset="utf-8">
+  
+
+  
+  <title>kubernetes | shutterbug sweet diary</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="kubernetesfeature high availablity or no downtime scalability or high performance disaster recovery (backup and restore)  process of worker nodesthere are three processes in worker loads  kubectl: ope">
+<meta property="og:type" content="article">
+<meta property="og:title" content="kubernetes">
+<meta property="og:url" content="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main/2022/04/23/kubernetes/index.html">
+<meta property="og:site_name" content="shutterbug sweet diary">
+<meta property="og:description" content="kubernetesfeature high availablity or no downtime scalability or high performance disaster recovery (backup and restore)  process of worker nodesthere are three processes in worker loads  kubectl: ope">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main/2022/04/23/kubernetes/.images/kubernetes-single-netns.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main/2022/04/23/kubernetes/.images/kubernetes-bridge-net.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main/2022/04/23/kubernetes/.images/kubernetes-multi-nodes.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main/2022/04/23/kubernetes/.images/kubernetes-cni-net.png">
+<meta property="article:published_time" content="2022-04-23T15:06:20.000Z">
+<meta property="article:modified_time" content="2022-04-23T15:06:47.330Z">
+<meta property="article:author" content="shutterbug">
+<meta property="article:tag" content="k8s">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main/2022/04/23/kubernetes/.images/kubernetes-single-netns.png">
+  
+    <link rel="alternate" href="/atom.xml" title="shutterbug sweet diary" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+  
 <link rel="stylesheet" href="/css/style.css">
 
-    <link rel="shortcut icon" href="/images/logo.svg">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/css/font-awesome.min.css">
-    <script id="hexo-configurations">
-    let KEEP = window.KEEP || {};
-    KEEP.hexo_config = {"hostname":"raw.githubusercontent.com","root":"/","language":"en","path":"search.json"};
-    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":true},"style":{"primary_color":"#0066CC","avatar":"/images/avatar.svg","favicon":"/images/logo.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/4.jpg","description":"the world you see is not about how they act but how we respond."},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":false},"code_copy":{"enable":false,"style":"default"},"pjax":{"enable":true},"lazyload":{"enable":false},"version":"3.4.5"};
-    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
-  </script>
 <meta name="generator" content="Hexo 5.4.2"></head>
 
-
 <body>
-<div class="progress-bar-container">
-    
-
-    
-        <span class="pjax-progress-bar"></span>
-        <span class="pjax-progress-icon">
-            <i class="fas fa-circle-notch fa-spin"></i>
-        </span>
-    
-</div>
-
-
-<main class="page-container">
-
-    
-
-    <div class="page-main-content">
-
-        <div class="page-main-content-top">
-            <header class="header-wrapper">
-
-    <div class="header-content">
-        <div class="left">
-            
-            <a class="logo-title" href="/">
-                Sweet Diary
-            </a>
-        </div>
-
-        <div class="right">
-            <div class="pc">
-                <ul class="menu-list">
-                    
-                        <li class="menu-item">
-                            <a class=""
-                               href="/"
-                            >
-                                HOME
-                            </a>
-                        </li>
-                    
-                        <li class="menu-item">
-                            <a class=""
-                               href="/archives"
-                            >
-                                ARCHIVES
-                            </a>
-                        </li>
-                    
-                        <li class="menu-item">
-                            <a class=""
-                               href="/categories"
-                            >
-                                CATEGORIES
-                            </a>
-                        </li>
-                    
-                        <li class="menu-item">
-                            <a class=""
-                               href="/tags"
-                            >
-                                TAGS
-                            </a>
-                        </li>
-                    
-                    
-                        <li class="menu-item search search-popup-trigger">
-                            <i class="fas fa-search"></i>
-                        </li>
-                    
-                </ul>
-            </div>
-            <div class="mobile">
-                
-                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
-                
-                <div class="icon-item menu-bar">
-                    <div class="menu-bar-middle"></div>
-                </div>
-            </div>
-        </div>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">shutterbug sweet diary</a>
+      </h1>
+      
     </div>
-
-    <div class="header-drawer">
-        <ul class="drawer-menu-list">
-            
-                <li class="drawer-menu-item flex-center">
-                    <a class=""
-                       href="/">HOME</a>
-                </li>
-            
-                <li class="drawer-menu-item flex-center">
-                    <a class=""
-                       href="/archives">ARCHIVES</a>
-                </li>
-            
-                <li class="drawer-menu-item flex-center">
-                    <a class=""
-                       href="/categories">CATEGORIES</a>
-                </li>
-            
-                <li class="drawer-menu-item flex-center">
-                    <a class=""
-                       href="/tags">TAGS</a>
-                </li>
-            
-        </ul>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main"></form>
+      </div>
     </div>
-
-    <div class="window-mask"></div>
-
+  </div>
 </header>
+      <div class="outer">
+        <section id="main"><article id="post-kubernetes" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2022/04/23/kubernetes/" class="article-date">
+  <time datetime="2022-04-23T15:06:20.000Z" itemprop="datePublished">2022-04-23</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/learn/">learn</a>
+  </div>
 
-
-        </div>
-
-        <div class="page-main-content-middle">
-
-            <div class="main-content">
-
-                
-                    <div class="fade-in-down-animation">
-    <div class="article-content-container">
-
-        <div class="article-title">
-            <span class="title-hover-animation">kubernetes</span>
-        </div>
-
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
         
-            <div class="article-header">
-                <div class="avatar">
-                    <img src="/images/avatar.svg">
-                </div>
-                <div class="info">
-                    <div class="author">
-                        <span class="name">shutterbug</span>
-                        
-                            <span class="author-label">Lv4</span>
-                        
-                    </div>
-                    <div class="meta-info">
-                        <div class="article-meta-info">
-    <span class="article-date article-meta-item">
-        <i class="fas fa-edit"></i>&nbsp;
-        <span class="pc">2022-04-23 23:06:20</span>
-        <span class="mobile">2022-04-23 23:06</span>
-    </span>
-    
-        <span class="article-categories article-meta-item">
-            <i class="fas fa-folder"></i>&nbsp;
-            <ul>
-                
-                    <li>
-                        <a href="/categories/learn/">learn</a>&nbsp;
-                    </li>
-                
-            </ul>
-        </span>
-    
-    
-        <span class="article-tags article-meta-item">
-            <i class="fas fa-tags"></i>&nbsp;
-            <ul>
-                
-                    <li>
-                        <a href="/tags/k8s/">k8s</a>&nbsp;
-                    </li>
-                
-            </ul>
-        </span>
-    
+  
+    <h1 class="article-title" itemprop="name">
+      kubernetes
+    </h1>
+  
 
+      </header>
     
-    
-    
-    
-</div>
-
-                    </div>
-                </div>
-            </div>
-        
-
-        <div class="article-content markdown-body">
-            <h1 id="kubernetes"><a href="#kubernetes" class="headerlink" title="kubernetes"></a>kubernetes</h1><h2 id="feature"><a href="#feature" class="headerlink" title="feature"></a>feature</h2><ul>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="kubernetes"><a href="#kubernetes" class="headerlink" title="kubernetes"></a>kubernetes</h1><h2 id="feature"><a href="#feature" class="headerlink" title="feature"></a>feature</h2><ul>
 <li>high availablity or no downtime</li>
 <li>scalability or high performance</li>
 <li>disaster recovery (backup and restore)</li>
@@ -271,37 +155,61 @@
 </tr>
 </tbody></table>
 <h2 id="install-minikube"><a href="#install-minikube" class="headerlink" title="install minikube"></a>install minikube</h2><p><a target="_blank" rel="noopener" href="https://minikube.sigs.k8s.io/docs/start/">minikube</a> has kubernetes’s all availability but tool installed in one machine.</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">install <span class="keyword">in</span> centos with new docker version</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">don<span class="string">&#x27;t install docker with yum default repo, for the version is too old</span></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="string">follow this link :https://docs.docker.com/engine/install/centos/</span></span></span><br><span class="line">sudo yum install -y yum-utils</span><br><span class="line"></span><br><span class="line">sudo yum-config-manager \</span><br><span class="line">    --add-repo \</span><br><span class="line">    https://download.docker.com/linux/centos/docker-ce.repo</span><br><span class="line">    </span><br><span class="line">sudo yum install docker-ce docker-ce-cli containerd.io -y</span><br><span class="line">sudo systemctl enable --now docker</span><br><span class="line">  </span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="string">install minikube</span></span></span><br><span class="line">curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-latest.x86_64.rpm</span><br><span class="line">sudo rpm -Uvh minikube-latest.x86_64.rpm</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="string">start minikube with none root priviledge user</span></span></span><br><span class="line">useradd -G docker kube &amp;&amp; newgrp docker &amp;&amp; su - kube</span><br><span class="line">minikube start</span><br></pre></td></tr></table></figure>
+<pre><code class="shell"># install in centos with new docker version
+# don&#39;t install docker with yum default repo, for the version is too old
+# follow this link :https://docs.docker.com/engine/install/centos/
+sudo yum install -y yum-utils
+
+sudo yum-config-manager \
+    --add-repo \
+    https://download.docker.com/linux/centos/docker-ce.repo
+    
+sudo yum install docker-ce docker-ce-cli containerd.io -y
+sudo systemctl enable --now docker
+  
 
 
+# install minikube
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-latest.x86_64.rpm
+sudo rpm -Uvh minikube-latest.x86_64.rpm
 
+
+# start minikube with none root priviledge user
+useradd -G docker kube &amp;&amp; newgrp docker &amp;&amp; su - kube
+minikube start
+</code></pre>
 <h2 id="create-pods"><a href="#create-pods" class="headerlink" title="create pods"></a>create pods</h2><p>there are two ways to create pods:</p>
 <ul>
 <li><strong>command line</strong>: simple usage  </li>
 <li><strong>configure file</strong>: full feature</li>
 </ul>
 <h3 id="via-command-line"><a href="#via-command-line" class="headerlink" title="via command line"></a>via command line</h3><p><strong>get information</strong> of default configuration</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">alias kubectl=&quot;minikube kubectl --&quot;</span><br><span class="line">kubectl get nodes/deployment/pods/configmap/services/replicaset/all [-o wide] [--watch]</span><br></pre></td></tr></table></figure>
-
+<pre><code class="shell">alias kubectl=&quot;minikube kubectl --&quot;
+kubectl get nodes/deployment/pods/configmap/services/replicaset/all [-o wide] [--watch]
+</code></pre>
 <p><strong>create</strong> new pod</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl create deployment nginx --image=nginx</span><br></pre></td></tr></table></figure>
-
+<pre><code class="shell">kubectl create deployment nginx --image=nginx
+</code></pre>
 <blockquote>
 <p>Note:</p>
 <p>kubernetes doesn’t create pod directly, but the layer: deployment</p>
 </blockquote>
 <p>the command above creates a <strong>blueprint</strong> of nginx automatically, we can edit it</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl edit deployment nginx</span><br></pre></td></tr></table></figure>
-
+<pre><code class="shell">kubectl edit deployment nginx
+</code></pre>
 <p>check pod’s <strong>detail</strong> information</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">deploy info</span></span><br><span class="line">kubectl describe pod [pod-name]</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">running <span class="built_in">log</span></span></span><br><span class="line">kubectl logs [pod-name]</span><br></pre></td></tr></table></figure>
-
+<pre><code class="shell"># deploy info
+kubectl describe pod [pod-name]
+# running log
+kubectl logs [pod-name]
+</code></pre>
 <p><strong>login</strong> container</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl exec -it [pod-name] -- /bin/bash</span><br></pre></td></tr></table></figure>
-
+<pre><code class="shell">kubectl exec -it [pod-name] -- /bin/bash
+</code></pre>
 <p><strong>delete</strong> deployment</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">kubectl get deployment</span><br><span class="line">kubectl delete [deployment-name]</span><br></pre></td></tr></table></figure>
-
+<pre><code class="shell">kubectl get deployment
+kubectl delete [deployment-name]
+</code></pre>
 <blockquote>
 <p>Note:</p>
 <p>we can only delete pod at the deployment layer, for deployment will restart new pod if we delete the pod with <code>kubectl delete pod [pod-name]</code></p>
@@ -313,27 +221,131 @@
 <li><strong>status</strong>(kubernetes auto generate)</li>
 </ul>
 <p>if we create pod via command line deployment, we can export the configuration file created by kubernetes.</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl get deployment [deploy-name] -o yaml &gt; [deploy-name].yaml</span><br></pre></td></tr></table></figure>
-
+<pre><code class="shell">kubectl get deployment [deploy-name] -o yaml &gt; [deploy-name].yaml
+</code></pre>
 <p>create or delete deployment</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">kubectl create -f [deploy-name].yaml</span><br><span class="line">kubectl delete -f [deploy-name].yaml</span><br></pre></td></tr></table></figure>
-
+<pre><code class="shell">kubectl create -f [deploy-name].yaml
+kubectl delete -f [deploy-name].yaml
+</code></pre>
 <p>mongodb.yaml</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">apiVersion:</span> <span class="string">apps/v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">Deployment</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">mongodb-deployment</span></span><br><span class="line">  <span class="attr">labels:</span></span><br><span class="line">    <span class="attr">app:</span> <span class="string">mongodb</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line">  <span class="attr">replicas:</span> <span class="number">1</span></span><br><span class="line">  <span class="attr">selector:</span></span><br><span class="line">    <span class="attr">matchLabels:</span></span><br><span class="line">      <span class="attr">app:</span> <span class="string">mongodb</span></span><br><span class="line">  <span class="attr">template:</span></span><br><span class="line">    <span class="attr">metadata:</span></span><br><span class="line">      <span class="attr">labels:</span></span><br><span class="line">        <span class="attr">app:</span> <span class="string">mongodb</span></span><br><span class="line">    <span class="attr">spec:</span></span><br><span class="line">      <span class="attr">containers:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">mongodb</span></span><br><span class="line">        <span class="attr">image:</span> <span class="string">mongo</span></span><br><span class="line">        <span class="attr">ports:</span></span><br><span class="line">          <span class="bullet">-</span> <span class="attr">containerPort:</span> <span class="number">27017</span></span><br><span class="line">        <span class="attr">env:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">MONGO_INITDB_ROOT_USERNAME</span></span><br><span class="line">          <span class="attr">valueFrom:</span></span><br><span class="line">            <span class="attr">secretKeyRef:</span></span><br><span class="line">              <span class="attr">name:</span> <span class="string">mongodb-secret</span></span><br><span class="line">              <span class="attr">key:</span> <span class="string">root-username</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">MONGO_INITDB_ROOT_PASSWORD</span></span><br><span class="line">          <span class="attr">valueFrom:</span></span><br><span class="line">            <span class="attr">secretKeyRef:</span></span><br><span class="line">              <span class="attr">name:</span> <span class="string">mongodb-secret</span></span><br><span class="line">              <span class="attr">key:</span> <span class="string">root-password</span></span><br><span class="line"></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">apiVersion:</span> <span class="string">v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">Service</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">mongodb-service</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line">  <span class="attr">selector:</span></span><br><span class="line">    <span class="attr">app:</span> <span class="string">mongodb</span></span><br><span class="line">  <span class="attr">ports:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">protocol:</span> <span class="string">TCP</span></span><br><span class="line">      <span class="attr">port:</span> <span class="number">3306</span></span><br><span class="line">      <span class="attr">targetPort:</span> <span class="number">27017</span></span><br></pre></td></tr></table></figure>
+<pre><code class="yaml">apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mongodb-deployment
+  labels:
+    app: mongodb
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mongodb
+  template:
+    metadata:
+      labels:
+        app: mongodb
+    spec:
+      containers:
+      - name: mongodb
+        image: mongo
+        ports:
+          - containerPort: 27017
+        env:
+        - name: MONGO_INITDB_ROOT_USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: mongodb-secret
+              key: root-username
+        - name: MONGO_INITDB_ROOT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mongodb-secret
+              key: root-password
 
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mongodb-service
+spec:
+  selector:
+    app: mongodb
+  ports:
+    - protocol: TCP
+      port: 3306
+      targetPort: 27017
+</code></pre>
 <p>mongo-express.yaml</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">apiVersion:</span> <span class="string">apps/v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">Deployment</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">mongo-express</span></span><br><span class="line">  <span class="attr">labels:</span></span><br><span class="line">    <span class="attr">app:</span> <span class="string">mongo-express</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line">  <span class="attr">replicas:</span> <span class="number">1</span></span><br><span class="line">  <span class="attr">selector:</span></span><br><span class="line">    <span class="attr">matchLabels:</span></span><br><span class="line">      <span class="attr">app:</span> <span class="string">mongo-express</span></span><br><span class="line">  <span class="attr">template:</span></span><br><span class="line">    <span class="attr">metadata:</span></span><br><span class="line">      <span class="attr">labels:</span></span><br><span class="line">        <span class="attr">app:</span> <span class="string">mongo-express</span></span><br><span class="line">    <span class="attr">spec:</span></span><br><span class="line">      <span class="attr">containers:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">mongo-express</span></span><br><span class="line">        <span class="attr">image:</span> <span class="string">mongo-express</span></span><br><span class="line">        <span class="attr">ports:</span></span><br><span class="line">          <span class="bullet">-</span> <span class="attr">containerPort:</span> <span class="number">8081</span></span><br><span class="line">        <span class="attr">env:</span></span><br><span class="line">          <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">ME_CONFIG_MONGODB_ADMINUSERNAME</span></span><br><span class="line">            <span class="attr">valueFrom:</span></span><br><span class="line">              <span class="attr">secretKeyRef:</span> </span><br><span class="line">                <span class="attr">name:</span> <span class="string">mongodb-secret</span></span><br><span class="line">                <span class="attr">key:</span> <span class="string">root-username</span></span><br><span class="line">          <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">ME_CONFIG_MONGODB_ADMINPASSWORD</span></span><br><span class="line">            <span class="attr">valueFrom:</span></span><br><span class="line">              <span class="attr">secretKeyRef:</span> </span><br><span class="line">                <span class="attr">name:</span> <span class="string">mongodb-secret</span></span><br><span class="line">                <span class="attr">key:</span> <span class="string">root-username</span></span><br><span class="line">          <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">ME_CONFIG_MONGODB_SERVER</span>  </span><br><span class="line">            <span class="attr">valueFrom:</span></span><br><span class="line">              <span class="attr">configMapKeyRef:</span></span><br><span class="line">                <span class="attr">name:</span> <span class="string">mongodb-configmap</span></span><br><span class="line">                <span class="attr">key:</span> <span class="string">database_url</span></span><br><span class="line"></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">apiVersion:</span> <span class="string">v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">Service</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">mongo-express-service</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line">  <span class="attr">selector:</span></span><br><span class="line">    <span class="attr">app:</span> <span class="string">mongo-express</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">LoadBalancer</span></span><br><span class="line">  <span class="attr">ports:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">protocol:</span> <span class="string">TCP</span></span><br><span class="line">      <span class="attr">port:</span> <span class="number">8081</span></span><br><span class="line">      <span class="attr">targetPort:</span> <span class="number">8081</span></span><br><span class="line">      <span class="attr">nodePort:</span> <span class="number">30000</span></span><br></pre></td></tr></table></figure>
+<pre><code class="yaml">apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mongo-express
+  labels:
+    app: mongo-express
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mongo-express
+  template:
+    metadata:
+      labels:
+        app: mongo-express
+    spec:
+      containers:
+      - name: mongo-express
+        image: mongo-express
+        ports:
+          - containerPort: 8081
+        env:
+          - name: ME_CONFIG_MONGODB_ADMINUSERNAME
+            valueFrom:
+              secretKeyRef: 
+                name: mongodb-secret
+                key: root-username
+          - name: ME_CONFIG_MONGODB_ADMINPASSWORD
+            valueFrom:
+              secretKeyRef: 
+                name: mongodb-secret
+                key: root-username
+          - name: ME_CONFIG_MONGODB_SERVER  
+            valueFrom:
+              configMapKeyRef:
+                name: mongodb-configmap
+                key: database_url
 
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mongo-express-service
+spec:
+  selector:
+    app: mongo-express
+  type: LoadBalancer
+  ports:
+    - protocol: TCP
+      port: 8081
+      targetPort: 8081
+      nodePort: 30000
+</code></pre>
 <p>mongodb-configmap.yaml</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">apiVersion:</span> <span class="string">v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">ConfigMap</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">mongodb-configmap</span></span><br><span class="line"><span class="attr">data:</span></span><br><span class="line">  <span class="attr">database_url:</span> <span class="string">mongodb-service</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="yaml">apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mongodb-configmap
+data:
+  database_url: mongodb-service
+</code></pre>
 <p>mongodb-secret.yaml</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">apiVersion: v1</span><br><span class="line">kind: Secret</span><br><span class="line">metadata:</span><br><span class="line">  name: mongodb-secret</span><br><span class="line">type: Opaque</span><br><span class="line">data:</span><br><span class="line">  root-username: bW9uZ28=</span><br><span class="line">  root-password: bW9uZ28=</span><br></pre></td></tr></table></figure>
-
-
-
-
-
+<pre><code class="shell">apiVersion: v1
+kind: Secret
+metadata:
+  name: mongodb-secret
+type: Opaque
+data:
+  root-username: bW9uZ28=
+  root-password: bW9uZ28=
+</code></pre>
 <h2 id="network-realization"><a href="#network-realization" class="headerlink" title="network realization"></a>network realization</h2><p><strong>resource link:</strong></p>
 <p><a target="_blank" rel="noopener" href="https://github.com/kristenjacobs/container-networking">https://github.com/kristenjacobs/container-networking</a></p>
 <p><a target="_blank" rel="noopener" href="https://static.sched.com/hosted_files/kccna18/c1/slides.pdf">https://static.sched.com/hosted_files/kccna18/c1/slides.pdf</a></p>
@@ -354,10 +366,41 @@
 </ul>
 </blockquote>
 <p><img src=".images/kubernetes-single-netns.png"></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">pod_namespace=cont1</span><br><span class="line">pod_interface=eth1-1</span><br><span class="line">pod_ip=10.10.0.11</span><br><span class="line">vpair=veth1</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">create network namespace</span></span><br><span class="line">sudo ip netns add $&#123;pod_namespace&#125;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">create veth pairs <span class="keyword">in</span> host root namespace</span></span><br><span class="line">sudo ip link add $&#123;vpair&#125; type veth peer name $&#123;pod_interface&#125;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">add interface to new network namespace</span></span><br><span class="line">sudo ip link set $&#123;pod_interface&#125; netns $&#123;pod_namespace&#125;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">add ip address <span class="keyword">for</span> new interface</span></span><br><span class="line">sudo ip netns exec $&#123;pod_namespace&#125; ip addr add $&#123;pod_ip&#125;/24 dev $&#123;pod_interface&#125;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">start new namespace loopback up</span></span><br><span class="line">sudo ip netns exec $&#123;pod_namespace&#125; ip link set lo up</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">start new namespace ethernet up</span></span><br><span class="line">sudo ip netns exec $&#123;pod_namespace&#125; ip link set dev $&#123;pod_interface&#125; up</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">start root namespace vpair interface up</span></span><br><span class="line">sudo ip link set dev $&#123;vpair&#125; up</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">add default route <span class="keyword">for</span> new namespace via ethernet interface</span></span><br><span class="line">sudo ip netns exec $&#123;pod_namespace&#125; ip route add default via $&#123;pod_ip&#125; dev $&#123;pod_interface&#125;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">add route <span class="keyword">for</span> root namespace vpair interface</span></span><br><span class="line">sudo ip route add $&#123;pod_ip&#125; dev $&#123;vpair&#125;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">ping new namespace ethernet ip address <span class="keyword">in</span> host</span></span><br><span class="line">ping -c 2 $&#123;pod_ip&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="shell">pod_namespace=cont1
+pod_interface=eth1-1
+pod_ip=10.10.0.11
+vpair=veth1
 
+# create network namespace
+sudo ip netns add $&#123;pod_namespace&#125;
 
+# create veth pairs in host root namespace
+sudo ip link add $&#123;vpair&#125; type veth peer name $&#123;pod_interface&#125;
 
+# add interface to new network namespace
+sudo ip link set $&#123;pod_interface&#125; netns $&#123;pod_namespace&#125;
+
+# add ip address for new interface
+sudo ip netns exec $&#123;pod_namespace&#125; ip addr add $&#123;pod_ip&#125;/24 dev $&#123;pod_interface&#125;
+
+# start new namespace loopback up
+sudo ip netns exec $&#123;pod_namespace&#125; ip link set lo up
+
+# start new namespace ethernet up
+sudo ip netns exec $&#123;pod_namespace&#125; ip link set dev $&#123;pod_interface&#125; up
+
+# start root namespace vpair interface up
+sudo ip link set dev $&#123;vpair&#125; up
+
+# add default route for new namespace via ethernet interface
+sudo ip netns exec $&#123;pod_namespace&#125; ip route add default via $&#123;pod_ip&#125; dev $&#123;pod_interface&#125;
+
+# add route for root namespace vpair interface
+sudo ip route add $&#123;pod_ip&#125; dev $&#123;vpair&#125;
+
+# ping new namespace ethernet ip address in host
+ping -c 2 $&#123;pod_ip&#125;
+</code></pre>
 <h3 id="communication-between-pods"><a href="#communication-between-pods" class="headerlink" title="communication between pods"></a>communication between pods</h3><p>above veth pair can resolve the problem of two network namespaces communication, but not two pods, for there are lots of pods in kubernetes node, we cannot establish veth pairs for each two pods. </p>
 <p>and the bridge network device can resolve this problem, a bridge has its own ip address and route table, so pod can communication with each other once they connect to the bridge, it acts just like a router(switch). another benefit of bridge is that bridge device and the host net device are in the same root namespace, both have ip address, so they can communicate directly.</p>
 <blockquote>
@@ -368,10 +411,69 @@
 </ul>
 </blockquote>
 <p><img src=".images/kubernetes-bridge-net.png"></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line">pod1_namespace=cont1</span><br><span class="line">pod1_interface=eth1-1</span><br><span class="line">pod1_ip=10.10.0.11</span><br><span class="line">vpair1=veth1</span><br><span class="line"></span><br><span class="line">bridge_interface=br0</span><br><span class="line">bridge_ip=10.10.0.1</span><br><span class="line"></span><br><span class="line">pod2_namespace=cont2</span><br><span class="line">pod2_interface=eth2-2</span><br><span class="line">pod2_ip=10.10.0.22</span><br><span class="line">vpair2=veth2</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">create network namespace</span></span><br><span class="line">sudo ip netns add $&#123;pod1_namespace&#125;</span><br><span class="line">sudo ip netns add $&#123;pod2_namespace&#125;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">create veth pairs <span class="keyword">in</span> host root namespace</span></span><br><span class="line">sudo ip link add $&#123;vpair1&#125; type veth peer name $&#123;pod1_interface&#125;</span><br><span class="line">sudo ip link add $&#123;vpair2&#125; type veth peer name $&#123;pod2_interface&#125;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">add interface to new network namespace</span></span><br><span class="line">sudo ip link set $&#123;pod1_interface&#125; netns $&#123;pod1_namespace&#125;</span><br><span class="line">sudo ip link set $&#123;pod2_interface&#125; netns $&#123;pod2_namespace&#125;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">add ip address <span class="keyword">for</span> new interface</span></span><br><span class="line">sudo ip netns exec $&#123;pod1_namespace&#125; ip addr add $&#123;pod1_ip&#125;/24 dev $&#123;pod1_interface&#125;</span><br><span class="line">sudo ip netns exec $&#123;pod2_namespace&#125; ip addr add $&#123;pod2_ip&#125;/24 dev $&#123;pod2_interface&#125;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">start new namespace loopback up</span></span><br><span class="line">sudo ip netns exec $&#123;pod1_namespace&#125; ip link set lo up</span><br><span class="line">sudo ip netns exec $&#123;pod2_namespace&#125; ip link set lo up</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">start new namespace ethernet up</span></span><br><span class="line">sudo ip netns exec $&#123;pod1_namespace&#125; ip link set dev $&#123;pod1_interface&#125; up</span><br><span class="line">sudo ip netns exec $&#123;pod2_namespace&#125; ip link set dev $&#123;pod2_interface&#125; up</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">start root namespace vpair interface up</span></span><br><span class="line">sudo ip link set dev $&#123;vpair1&#125; up</span><br><span class="line">sudo ip link set dev $&#123;vpair2&#125; up</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">create a bridge</span></span><br><span class="line">sudo ip link add name $&#123;bridge_interface&#125; type bridge</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">assign a IP address to the bridge</span></span><br><span class="line">sudo ip addr add $&#123;bridge_ip&#125;/24 dev $&#123;bridge_interface&#125;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">add two veth pair interface to bridge</span></span><br><span class="line">sudo ip link set dev $&#123;vpair1&#125; master $&#123;bridge_interface&#125;</span><br><span class="line">sudo ip link set dev $&#123;vpair2&#125; master $&#123;bridge_interface&#125;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">start the bridge up</span></span><br><span class="line">sudo ip link set dev $&#123;bridge_interface&#125; up</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">add the default route <span class="keyword">in</span> two network namespaces</span></span><br><span class="line">sudo ip netns exec $&#123;pod1_namespace&#125; ip route add default via $&#123;bridge_ip&#125; dev $&#123;pod1_interface&#125;</span><br><span class="line">sudo ip netns exec $&#123;pod2_namespace&#125; ip route add default via $&#123;bridge_ip&#125; dev $&#123;pod2_interface&#125;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">two containers ping each other</span></span><br><span class="line">ip netns exec $&#123;pod1_namespace&#125; ping -c 3 $&#123;pod2_ip&#125;</span><br><span class="line">ip netns exec $&#123;pod2_namespace&#125; ping -c 3 $&#123;pod1_ip&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="shell">pod1_namespace=cont1
+pod1_interface=eth1-1
+pod1_ip=10.10.0.11
+vpair1=veth1
+
+bridge_interface=br0
+bridge_ip=10.10.0.1
+
+pod2_namespace=cont2
+pod2_interface=eth2-2
+pod2_ip=10.10.0.22
+vpair2=veth2
 
 
+# create network namespace
+sudo ip netns add $&#123;pod1_namespace&#125;
+sudo ip netns add $&#123;pod2_namespace&#125;
 
+# create veth pairs in host root namespace
+sudo ip link add $&#123;vpair1&#125; type veth peer name $&#123;pod1_interface&#125;
+sudo ip link add $&#123;vpair2&#125; type veth peer name $&#123;pod2_interface&#125;
+
+# add interface to new network namespace
+sudo ip link set $&#123;pod1_interface&#125; netns $&#123;pod1_namespace&#125;
+sudo ip link set $&#123;pod2_interface&#125; netns $&#123;pod2_namespace&#125;
+
+# add ip address for new interface
+sudo ip netns exec $&#123;pod1_namespace&#125; ip addr add $&#123;pod1_ip&#125;/24 dev $&#123;pod1_interface&#125;
+sudo ip netns exec $&#123;pod2_namespace&#125; ip addr add $&#123;pod2_ip&#125;/24 dev $&#123;pod2_interface&#125;
+
+# start new namespace loopback up
+sudo ip netns exec $&#123;pod1_namespace&#125; ip link set lo up
+sudo ip netns exec $&#123;pod2_namespace&#125; ip link set lo up
+
+# start new namespace ethernet up
+sudo ip netns exec $&#123;pod1_namespace&#125; ip link set dev $&#123;pod1_interface&#125; up
+sudo ip netns exec $&#123;pod2_namespace&#125; ip link set dev $&#123;pod2_interface&#125; up
+
+# start root namespace vpair interface up
+sudo ip link set dev $&#123;vpair1&#125; up
+sudo ip link set dev $&#123;vpair2&#125; up
+
+# create a bridge
+sudo ip link add name $&#123;bridge_interface&#125; type bridge
+
+# assign a IP address to the bridge
+sudo ip addr add $&#123;bridge_ip&#125;/24 dev $&#123;bridge_interface&#125;
+
+# add two veth pair interface to bridge
+sudo ip link set dev $&#123;vpair1&#125; master $&#123;bridge_interface&#125;
+sudo ip link set dev $&#123;vpair2&#125; master $&#123;bridge_interface&#125;
+
+# start the bridge up
+sudo ip link set dev $&#123;bridge_interface&#125; up
+
+# add the default route in two network namespaces
+sudo ip netns exec $&#123;pod1_namespace&#125; ip route add default via $&#123;bridge_ip&#125; dev $&#123;pod1_interface&#125;
+sudo ip netns exec $&#123;pod2_namespace&#125; ip route add default via $&#123;bridge_ip&#125; dev $&#123;pod2_interface&#125;
+
+# two containers ping each other
+ip netns exec $&#123;pod1_namespace&#125; ping -c 3 $&#123;pod2_ip&#125;
+ip netns exec $&#123;pod2_namespace&#125; ping -c 3 $&#123;pod1_ip&#125;
+</code></pre>
 <h3 id="communication-between-nodes-with-different-subnet"><a href="#communication-between-nodes-with-different-subnet" class="headerlink" title="communication between nodes with different subnet"></a>communication between nodes with different subnet</h3><p>with veth pair and bridge network technology, the container can reach host network and other pod’s network in one node. so communication in two nodes, the only thing we need to do is assigning a route table.</p>
 <p>run script in one node. node ip is <code>192.168.31.100/24</code> and ether interface is <code>eth0</code></p>
 <blockquote>
@@ -381,13 +483,149 @@
 </ul>
 </blockquote>
 <p><img src=".images/kubernetes-multi-nodes.png"></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line">pod1_namespace=cont1</span><br><span class="line">pod1_interface=eth1-1</span><br><span class="line">pod1_ip=10.10.0.11</span><br><span class="line">vpair1=veth1</span><br><span class="line"></span><br><span class="line">bridge_interface=br0</span><br><span class="line">bridge_ip=10.10.0.1</span><br><span class="line"></span><br><span class="line">pod2_namespace=cont2</span><br><span class="line">pod2_interface=eth2-2</span><br><span class="line">pod2_ip=10.10.0.22</span><br><span class="line">vpair2=veth2</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">create network namespace</span></span><br><span class="line">sudo ip netns add $&#123;pod1_namespace&#125;</span><br><span class="line">sudo ip netns add $&#123;pod2_namespace&#125;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">create veth pairs <span class="keyword">in</span> host root namespace</span></span><br><span class="line">sudo ip link add $&#123;vpair1&#125; type veth peer name $&#123;pod1_interface&#125;</span><br><span class="line">sudo ip link add $&#123;vpair2&#125; type veth peer name $&#123;pod2_interface&#125;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">add interface to new network namespace</span></span><br><span class="line">sudo ip link set $&#123;pod1_interface&#125; netns $&#123;pod1_namespace&#125;</span><br><span class="line">sudo ip link set $&#123;pod2_interface&#125; netns $&#123;pod2_namespace&#125;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">add ip address <span class="keyword">for</span> new interface</span></span><br><span class="line">sudo ip netns exec $&#123;pod1_namespace&#125; ip addr add $&#123;pod1_ip&#125;/24 dev $&#123;pod1_interface&#125;</span><br><span class="line">sudo ip netns exec $&#123;pod2_namespace&#125; ip addr add $&#123;pod2_ip&#125;/24 dev $&#123;pod2_interface&#125;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">start new namespace loopback up</span></span><br><span class="line">sudo ip netns exec $&#123;pod1_namespace&#125; ip link set lo up</span><br><span class="line">sudo ip netns exec $&#123;pod2_namespace&#125; ip link set lo up</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">start new namespace ethernet up</span></span><br><span class="line">sudo ip netns exec $&#123;pod1_namespace&#125; ip link set dev $&#123;pod1_interface&#125; up</span><br><span class="line">sudo ip netns exec $&#123;pod2_namespace&#125; ip link set dev $&#123;pod2_interface&#125; up</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">start root namespace vpair interface up</span></span><br><span class="line">sudo ip link set dev $&#123;vpair1&#125; up</span><br><span class="line">sudo ip link set dev $&#123;vpair2&#125; up</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">create a bridge</span></span><br><span class="line">sudo ip link add name $&#123;bridge_interface&#125; type bridge</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">assign a IP address to the bridge</span></span><br><span class="line">sudo ip addr add $&#123;bridge_ip&#125;/24 dev $&#123;bridge_interface&#125;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">add two veth pair interface to bridge</span></span><br><span class="line">sudo ip link set dev $&#123;vpair1&#125; master $&#123;bridge_interface&#125;</span><br><span class="line">sudo ip link set dev $&#123;vpair2&#125; master $&#123;bridge_interface&#125;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">start the bridge up</span></span><br><span class="line">sudo ip link set dev $&#123;bridge_interface&#125; up</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">add the default route <span class="keyword">in</span> two network namespaces</span></span><br><span class="line">sudo ip netns exec $&#123;pod1_namespace&#125; ip route add default via $&#123;bridge_ip&#125; dev $&#123;pod1_interface&#125;</span><br><span class="line">sudo ip netns exec $&#123;pod2_namespace&#125; ip route add default via $&#123;bridge_ip&#125; dev $&#123;pod2_interface&#125;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">two containers ping each other</span></span><br><span class="line">ip netns exec $&#123;pod1_namespace&#125; ping -c 3 $&#123;pod2_ip&#125;</span><br><span class="line">ip netns exec $&#123;pod2_namespace&#125; ping -c 3 $&#123;pod1_ip&#125;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="comment">####################################### above almost the same ############################################################</span></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">add route to another node<span class="string">&#x27;s bridge</span></span></span><br><span class="line">sudo ip route add 10.10.1.0/24 via 192.168.31.200 dev eth0</span><br><span class="line">sudo sysctl -w net.ipv4.ip_forward=1</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="string">test</span></span> </span><br><span class="line">ip netns exec $&#123;pod1_namespace&#125; ping -c 3 10.10.1.11</span><br></pre></td></tr></table></figure>
+<pre><code class="shell">pod1_namespace=cont1
+pod1_interface=eth1-1
+pod1_ip=10.10.0.11
+vpair1=veth1
 
+bridge_interface=br0
+bridge_ip=10.10.0.1
+
+pod2_namespace=cont2
+pod2_interface=eth2-2
+pod2_ip=10.10.0.22
+vpair2=veth2
+
+
+# create network namespace
+sudo ip netns add $&#123;pod1_namespace&#125;
+sudo ip netns add $&#123;pod2_namespace&#125;
+
+# create veth pairs in host root namespace
+sudo ip link add $&#123;vpair1&#125; type veth peer name $&#123;pod1_interface&#125;
+sudo ip link add $&#123;vpair2&#125; type veth peer name $&#123;pod2_interface&#125;
+
+# add interface to new network namespace
+sudo ip link set $&#123;pod1_interface&#125; netns $&#123;pod1_namespace&#125;
+sudo ip link set $&#123;pod2_interface&#125; netns $&#123;pod2_namespace&#125;
+
+# add ip address for new interface
+sudo ip netns exec $&#123;pod1_namespace&#125; ip addr add $&#123;pod1_ip&#125;/24 dev $&#123;pod1_interface&#125;
+sudo ip netns exec $&#123;pod2_namespace&#125; ip addr add $&#123;pod2_ip&#125;/24 dev $&#123;pod2_interface&#125;
+
+# start new namespace loopback up
+sudo ip netns exec $&#123;pod1_namespace&#125; ip link set lo up
+sudo ip netns exec $&#123;pod2_namespace&#125; ip link set lo up
+
+# start new namespace ethernet up
+sudo ip netns exec $&#123;pod1_namespace&#125; ip link set dev $&#123;pod1_interface&#125; up
+sudo ip netns exec $&#123;pod2_namespace&#125; ip link set dev $&#123;pod2_interface&#125; up
+
+# start root namespace vpair interface up
+sudo ip link set dev $&#123;vpair1&#125; up
+sudo ip link set dev $&#123;vpair2&#125; up
+
+# create a bridge
+sudo ip link add name $&#123;bridge_interface&#125; type bridge
+
+# assign a IP address to the bridge
+sudo ip addr add $&#123;bridge_ip&#125;/24 dev $&#123;bridge_interface&#125;
+
+# add two veth pair interface to bridge
+sudo ip link set dev $&#123;vpair1&#125; master $&#123;bridge_interface&#125;
+sudo ip link set dev $&#123;vpair2&#125; master $&#123;bridge_interface&#125;
+
+# start the bridge up
+sudo ip link set dev $&#123;bridge_interface&#125; up
+
+# add the default route in two network namespaces
+sudo ip netns exec $&#123;pod1_namespace&#125; ip route add default via $&#123;bridge_ip&#125; dev $&#123;pod1_interface&#125;
+sudo ip netns exec $&#123;pod2_namespace&#125; ip route add default via $&#123;bridge_ip&#125; dev $&#123;pod2_interface&#125;
+
+# two containers ping each other
+ip netns exec $&#123;pod1_namespace&#125; ping -c 3 $&#123;pod2_ip&#125;
+ip netns exec $&#123;pod2_namespace&#125; ping -c 3 $&#123;pod1_ip&#125;
+
+######################################## above almost the same ############################################################
+# add route to another node&#39;s bridge
+sudo ip route add 10.10.1.0/24 via 192.168.31.200 dev eth0
+sudo sysctl -w net.ipv4.ip_forward=1
+
+# test 
+ip netns exec $&#123;pod1_namespace&#125; ping -c 3 10.10.1.11
+</code></pre>
 <p>run script in another node, node ip is <code>192.168.31.200/24</code> and ether interface is <code>eth0</code></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line">pod1_namespace=cont1</span><br><span class="line">pod1_interface=eth1-1</span><br><span class="line">pod1_ip=10.10.1.11</span><br><span class="line">vpair1=veth1</span><br><span class="line"></span><br><span class="line">bridge_interface=br0</span><br><span class="line">bridge_ip=10.10.1.1</span><br><span class="line"></span><br><span class="line">pod2_namespace=cont2</span><br><span class="line">pod2_interface=eth2-2</span><br><span class="line">pod2_ip=10.10.1.22</span><br><span class="line">vpair2=veth2</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">create network namespace</span></span><br><span class="line">sudo ip netns add $&#123;pod1_namespace&#125;</span><br><span class="line">sudo ip netns add $&#123;pod2_namespace&#125;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">create veth pairs <span class="keyword">in</span> host root namespace</span></span><br><span class="line">sudo ip link add $&#123;vpair1&#125; type veth peer name $&#123;pod1_interface&#125;</span><br><span class="line">sudo ip link add $&#123;vpair2&#125; type veth peer name $&#123;pod2_interface&#125;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">add interface to new network namespace</span></span><br><span class="line">sudo ip link set $&#123;pod1_interface&#125; netns $&#123;pod1_namespace&#125;</span><br><span class="line">sudo ip link set $&#123;pod2_interface&#125; netns $&#123;pod2_namespace&#125;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">add ip address <span class="keyword">for</span> new interface</span></span><br><span class="line">sudo ip netns exec $&#123;pod1_namespace&#125; ip addr add $&#123;pod1_ip&#125;/24 dev $&#123;pod1_interface&#125;</span><br><span class="line">sudo ip netns exec $&#123;pod2_namespace&#125; ip addr add $&#123;pod2_ip&#125;/24 dev $&#123;pod2_interface&#125;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">start new namespace loopback up</span></span><br><span class="line">sudo ip netns exec $&#123;pod1_namespace&#125; ip link set lo up</span><br><span class="line">sudo ip netns exec $&#123;pod2_namespace&#125; ip link set lo up</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">start new namespace ethernet up</span></span><br><span class="line">sudo ip netns exec $&#123;pod1_namespace&#125; ip link set dev $&#123;pod1_interface&#125; up</span><br><span class="line">sudo ip netns exec $&#123;pod2_namespace&#125; ip link set dev $&#123;pod2_interface&#125; up</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">start root namespace vpair interface up</span></span><br><span class="line">sudo ip link set dev $&#123;vpair1&#125; up</span><br><span class="line">sudo ip link set dev $&#123;vpair2&#125; up</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">create a bridge</span></span><br><span class="line">sudo ip link add name $&#123;bridge_interface&#125; type bridge</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">assign a IP address to the bridge</span></span><br><span class="line">sudo ip addr add $&#123;bridge_ip&#125;/24 dev $&#123;bridge_interface&#125;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">add two veth pair interface to bridge</span></span><br><span class="line">sudo ip link set dev $&#123;vpair1&#125; master $&#123;bridge_interface&#125;</span><br><span class="line">sudo ip link set dev $&#123;vpair2&#125; master $&#123;bridge_interface&#125;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">start the bridge up</span></span><br><span class="line">sudo ip link set dev $&#123;bridge_interface&#125; up</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">add the default route <span class="keyword">in</span> two network namespaces</span></span><br><span class="line">sudo ip netns exec $&#123;pod1_namespace&#125; ip route add default via $&#123;bridge_ip&#125; dev $&#123;pod1_interface&#125;</span><br><span class="line">sudo ip netns exec $&#123;pod2_namespace&#125; ip route add default via $&#123;bridge_ip&#125; dev $&#123;pod2_interface&#125;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">two containers ping each other</span></span><br><span class="line">ip netns exec $&#123;pod1_namespace&#125; ping -c 3 $&#123;pod2_ip&#125;</span><br><span class="line">ip netns exec $&#123;pod2_namespace&#125; ping -c 3 $&#123;pod1_ip&#125;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="comment">####################################### above almost the same ############################################################</span></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">add route to another node<span class="string">&#x27;s bridge</span></span></span><br><span class="line">sudo ip route add 10.10.0.0/24 via 192.168.31.100 dev eth0</span><br><span class="line">sudo sysctl -w net.ipv4.ip_forward=1</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="string">test</span></span></span><br><span class="line">ip netns exec $&#123;pod1_namespace&#125; ping -c 3 10.10.0.11</span><br></pre></td></tr></table></figure>
+<pre><code class="shell">pod1_namespace=cont1
+pod1_interface=eth1-1
+pod1_ip=10.10.1.11
+vpair1=veth1
+
+bridge_interface=br0
+bridge_ip=10.10.1.1
+
+pod2_namespace=cont2
+pod2_interface=eth2-2
+pod2_ip=10.10.1.22
+vpair2=veth2
 
 
+# create network namespace
+sudo ip netns add $&#123;pod1_namespace&#125;
+sudo ip netns add $&#123;pod2_namespace&#125;
 
+# create veth pairs in host root namespace
+sudo ip link add $&#123;vpair1&#125; type veth peer name $&#123;pod1_interface&#125;
+sudo ip link add $&#123;vpair2&#125; type veth peer name $&#123;pod2_interface&#125;
+
+# add interface to new network namespace
+sudo ip link set $&#123;pod1_interface&#125; netns $&#123;pod1_namespace&#125;
+sudo ip link set $&#123;pod2_interface&#125; netns $&#123;pod2_namespace&#125;
+
+# add ip address for new interface
+sudo ip netns exec $&#123;pod1_namespace&#125; ip addr add $&#123;pod1_ip&#125;/24 dev $&#123;pod1_interface&#125;
+sudo ip netns exec $&#123;pod2_namespace&#125; ip addr add $&#123;pod2_ip&#125;/24 dev $&#123;pod2_interface&#125;
+
+# start new namespace loopback up
+sudo ip netns exec $&#123;pod1_namespace&#125; ip link set lo up
+sudo ip netns exec $&#123;pod2_namespace&#125; ip link set lo up
+
+# start new namespace ethernet up
+sudo ip netns exec $&#123;pod1_namespace&#125; ip link set dev $&#123;pod1_interface&#125; up
+sudo ip netns exec $&#123;pod2_namespace&#125; ip link set dev $&#123;pod2_interface&#125; up
+
+# start root namespace vpair interface up
+sudo ip link set dev $&#123;vpair1&#125; up
+sudo ip link set dev $&#123;vpair2&#125; up
+
+# create a bridge
+sudo ip link add name $&#123;bridge_interface&#125; type bridge
+
+# assign a IP address to the bridge
+sudo ip addr add $&#123;bridge_ip&#125;/24 dev $&#123;bridge_interface&#125;
+
+# add two veth pair interface to bridge
+sudo ip link set dev $&#123;vpair1&#125; master $&#123;bridge_interface&#125;
+sudo ip link set dev $&#123;vpair2&#125; master $&#123;bridge_interface&#125;
+
+# start the bridge up
+sudo ip link set dev $&#123;bridge_interface&#125; up
+
+# add the default route in two network namespaces
+sudo ip netns exec $&#123;pod1_namespace&#125; ip route add default via $&#123;bridge_ip&#125; dev $&#123;pod1_interface&#125;
+sudo ip netns exec $&#123;pod2_namespace&#125; ip route add default via $&#123;bridge_ip&#125; dev $&#123;pod2_interface&#125;
+
+# two containers ping each other
+ip netns exec $&#123;pod1_namespace&#125; ping -c 3 $&#123;pod2_ip&#125;
+ip netns exec $&#123;pod2_namespace&#125; ping -c 3 $&#123;pod1_ip&#125;
+
+######################################## above almost the same ############################################################
+# add route to another node&#39;s bridge
+sudo ip route add 10.10.0.0/24 via 192.168.31.100 dev eth0
+sudo sysctl -w net.ipv4.ip_forward=1
+
+# test
+ip netns exec $&#123;pod1_namespace&#125; ping -c 3 10.10.0.11
+</code></pre>
 <blockquote>
 <p>Note:</p>
 <ul>
@@ -396,262 +634,153 @@
 </blockquote>
 <p><img src=".images/kubernetes-cni-net.png"></p>
 
-        </div>
-
-        
-
-        
-            <ul class="post-tags-box">
-                
-                    <li class="tag-item">
-                        <a href="/tags/k8s/">#k8s</a>&nbsp;
-                    </li>
-                
-            </ul>
-        
-
-        
-            <div class="article-nav">
-                
-                    <div class="article-prev">
-                        <a class="prev"
-                           rel="prev"
-                           href="/2022/04/23/noResponseGrub/"
-                        >
-                            <span class="left arrow-icon flex-center">
-                              <i class="fas fa-chevron-left"></i>
-                            </span>
-                            <span class="title flex-center">
-                                <span class="post-nav-title-item">noResponseGrub</span>
-                                <span class="post-nav-item">Prev posts</span>
-                            </span>
-                        </a>
-                    </div>
-                
-                
-                    <div class="article-next">
-                        <a class="next"
-                           rel="next"
-                           href="/2022/04/23/k8s/"
-                        >
-                            <span class="title flex-center">
-                                <span class="post-nav-title-item">k8s</span>
-                                <span class="post-nav-item">Next posts</span>
-                            </span>
-                            <span class="right arrow-icon flex-center">
-                              <i class="fas fa-chevron-right"></i>
-                            </span>
-                        </a>
-                    </div>
-                
-            </div>
-        
-
-        
+      
     </div>
-</div>
+    <footer class="article-footer">
+      <a data-url="https://raw.githubusercontent.com/ssfwshutterbug/ssfwshutterbug.github.io/main/2022/04/23/kubernetes/" data-id="cl9ktb7v6001bdta87aopbzq7" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/k8s/" rel="tag">k8s</a></li></ul>
 
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2022/04/23/noResponseGrub/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          noResponseGrub
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2022/04/23/k8s/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">k8s</div>
+    </a>
+  
+</nav>
 
-                
-            </div>
+  
+</article>
 
-        </div>
-
-        <div class="page-main-content-bottom">
-            .footer {
-  font-size: 1rem;
-  color: var(--third-text-color);
-
-
-  a {
-    color: var(--third-text-color);
-
-
-    &:hover {
-      color: var(--primary-color);
-
-    }
-  }
-
-  .info-container {
-    padding-bottom: 10px;
-    text-align: center;
-  }
-
-  .info-item {
-    margin: 5px 0;
-  }
-
-  .icon-animate {
-    animation: icon-animate 1.2s ease-in-out infinite;
-  }
-
-}
-
-        </div>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/learn/">learn</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/linux/">linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/think/">think</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/thinking/">thinking</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BB%E5%8E%86%E5%8F%B2/">读历史</a></li></ul>
     </div>
+  </div>
 
+
+  
     
-        <div class="post-tools">
-            <div class="post-tools-container">
-    <ul class="tools-list">
-        <!-- TOC aside toggle -->
-        
-            <li class="tools-item page-aside-toggle">
-                <i class="fas fa-outdent"></i>
-            </li>
-        
-
-        <!-- go comment -->
-        
-    </ul>
-</div>
-
-        </div>
-    
-
-    <div class="right-bottom-side-tools">
-        <div class="side-tools-container">
-    <ul class="side-tools-list">
-        <li class="tools-item tool-font-adjust-plus flex-center">
-            <i class="fas fa-search-plus"></i>
-        </li>
-
-        <li class="tools-item tool-font-adjust-minus flex-center">
-            <i class="fas fa-search-minus"></i>
-        </li>
-
-        <li class="tools-item tool-expand-width flex-center">
-            <i class="fas fa-arrows-alt-h"></i>
-        </li>
-
-        <li class="tools-item tool-dark-light-toggle flex-center">
-            <i class="fas fa-moon"></i>
-        </li>
-
-        <!-- rss -->
-        
-
-        
-            <li class="tools-item tool-scroll-to-top flex-center">
-                <i class="fas fa-arrow-up"></i>
-            </li>
-        
-
-        <li class="tools-item tool-scroll-to-bottom flex-center">
-            <i class="fas fa-arrow-down"></i>
-        </li>
-    </ul>
-
-    <ul class="exposed-tools-list">
-        <li class="tools-item tool-toggle-show flex-center">
-            <i class="fas fa-cog fa-spin"></i>
-        </li>
-        
-    </ul>
-</div>
-
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/anaconda/" rel="tag">anaconda</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/anbox/" rel="tag">anbox</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ansible/" rel="tag">ansible</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/archlinux/" rel="tag">archlinux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/boring/" rel="tag">boring</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/container/" rel="tag">container</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cursor-theme/" rel="tag">cursor theme</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ed/" rel="tag">ed</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/go/" rel="tag">go</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/grub/" rel="tag">grub</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/haskell/" rel="tag">haskell</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/inject-js-css/" rel="tag">inject js/css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iptables/" rel="tag">iptables</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/k8s/" rel="tag">k8s</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/life/" rel="tag">life</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mind/" rel="tag">mind</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/optimized/" rel="tag">optimized</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pentablet/" rel="tag">pentablet</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/positive/" rel="tag">positive</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/reality-is-aweful/" rel="tag">reality is aweful</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/route/" rel="tag">route</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rust/" rel="tag">rust</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shell/" rel="tag">shell</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shield/" rel="tag">shield</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ssh/" rel="tag">ssh</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tcp/" rel="tag">tcp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vbox/" rel="tag">vbox</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vscode/" rel="tag">vscode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xmonad/" rel="tag">xmonad</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/zabbix/" rel="tag">zabbix</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/zk/" rel="tag">zk</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/zsh/" rel="tag">zsh</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%80%9D%E7%BB%AA/" rel="tag">思绪</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A5%9E%E8%AF%9D/" rel="tag">神话</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%89%AF%E7%9F%A5/" rel="tag">良知</a></li></ul>
     </div>
+  </div>
 
+
+  
     
-        <aside class="page-aside">
-            <div class="post-toc-wrap">
-    <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#kubernetes"><span class="nav-number">1.</span> <span class="nav-text">kubernetes</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#feature"><span class="nav-number">1.1.</span> <span class="nav-text">feature</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#process-of-worker-nodes"><span class="nav-number">1.2.</span> <span class="nav-text">process of worker nodes</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#process-of-main-nodes"><span class="nav-number">1.3.</span> <span class="nav-text">process of main nodes</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#main-kubernetes-components"><span class="nav-number">1.4.</span> <span class="nav-text">main kubernetes components</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#install-minikube"><span class="nav-number">1.5.</span> <span class="nav-text">install minikube</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#create-pods"><span class="nav-number">1.6.</span> <span class="nav-text">create pods</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#via-command-line"><span class="nav-number">1.6.1.</span> <span class="nav-text">via command line</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#via-configure-file"><span class="nav-number">1.6.2.</span> <span class="nav-text">via configure file</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#network-realization"><span class="nav-number">1.7.</span> <span class="nav-text">network realization</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#communication-between-network-namespaces"><span class="nav-number">1.7.1.</span> <span class="nav-text">communication between network namespaces</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#communication-between-pods"><span class="nav-number">1.7.2.</span> <span class="nav-text">communication between pods</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#communication-between-nodes-with-different-subnet"><span class="nav-number">1.7.3.</span> <span class="nav-text">communication between nodes with different subnet</span></a></li></ol></li></ol></li></ol>
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/anaconda/" style="font-size: 10px;">anaconda</a> <a href="/tags/anbox/" style="font-size: 10px;">anbox</a> <a href="/tags/ansible/" style="font-size: 10px;">ansible</a> <a href="/tags/archlinux/" style="font-size: 10px;">archlinux</a> <a href="/tags/boring/" style="font-size: 10px;">boring</a> <a href="/tags/container/" style="font-size: 10px;">container</a> <a href="/tags/cursor-theme/" style="font-size: 10px;">cursor theme</a> <a href="/tags/ed/" style="font-size: 10px;">ed</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/go/" style="font-size: 10px;">go</a> <a href="/tags/grub/" style="font-size: 10px;">grub</a> <a href="/tags/haskell/" style="font-size: 10px;">haskell</a> <a href="/tags/inject-js-css/" style="font-size: 10px;">inject js/css</a> <a href="/tags/iptables/" style="font-size: 10px;">iptables</a> <a href="/tags/k8s/" style="font-size: 20px;">k8s</a> <a href="/tags/life/" style="font-size: 10px;">life</a> <a href="/tags/linux/" style="font-size: 15px;">linux</a> <a href="/tags/mind/" style="font-size: 10px;">mind</a> <a href="/tags/optimized/" style="font-size: 10px;">optimized</a> <a href="/tags/pentablet/" style="font-size: 10px;">pentablet</a> <a href="/tags/positive/" style="font-size: 10px;">positive</a> <a href="/tags/python/" style="font-size: 15px;">python</a> <a href="/tags/reality-is-aweful/" style="font-size: 10px;">reality is aweful</a> <a href="/tags/route/" style="font-size: 10px;">route</a> <a href="/tags/rust/" style="font-size: 10px;">rust</a> <a href="/tags/shell/" style="font-size: 10px;">shell</a> <a href="/tags/shield/" style="font-size: 10px;">shield</a> <a href="/tags/ssh/" style="font-size: 10px;">ssh</a> <a href="/tags/tcp/" style="font-size: 10px;">tcp</a> <a href="/tags/vbox/" style="font-size: 10px;">vbox</a> <a href="/tags/vscode/" style="font-size: 10px;">vscode</a> <a href="/tags/xmonad/" style="font-size: 20px;">xmonad</a> <a href="/tags/zabbix/" style="font-size: 10px;">zabbix</a> <a href="/tags/zk/" style="font-size: 10px;">zk</a> <a href="/tags/zsh/" style="font-size: 10px;">zsh</a> <a href="/tags/%E6%80%9D%E7%BB%AA/" style="font-size: 15px;">思绪</a> <a href="/tags/%E7%A5%9E%E8%AF%9D/" style="font-size: 10px;">神话</a> <a href="/tags/%E8%89%AF%E7%9F%A5/" style="font-size: 10px;">良知</a>
     </div>
-</div>
-        </aside>
+  </div>
+
+  
     
-
-    <div class="image-viewer-container">
-    <img src="">
-</div>
-
-
-    
-        <div class="search-pop-overlay">
-    <div class="popup search-popup">
-        <div class="search-header">
-          <span class="search-input-field-pre">
-            <i class="fas fa-keyboard"></i>
-          </span>
-            <div class="search-input-container">
-                <input autocomplete="off"
-                       autocorrect="off"
-                       autocapitalize="off"
-                       placeholder="Search..."
-                       spellcheck="false"
-                       type="search"
-                       class="search-input"
-                >
-            </div>
-            <span class="popup-btn-close">
-                <i class="fas fa-times"></i>
-            </span>
-        </div>
-        <div id="search-result">
-            <div id="no-result">
-                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
-            </div>
-        </div>
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">October 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">July 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">June 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">May 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">April 2022</a></li></ul>
     </div>
-</div>
+  </div>
 
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/10/23/our-body-may-cheat-ourselves-md/">our-body-may-cheat-ourselves.md</a>
+          </li>
+        
+          <li>
+            <a href="/2022/07/04/the-reality/">the-reality</a>
+          </li>
+        
+          <li>
+            <a href="/2022/06/25/%E4%BB%8E%E5%AE%B9/">从容</a>
+          </li>
+        
+          <li>
+            <a href="/2022/06/25/magic-of-xmonad/">magic-of-xmonad</a>
+          </li>
+        
+          <li>
+            <a href="/2022/06/24/xp-pentablet/">xp-pentablet</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 shutterbug<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
     
 
-</main>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
 
-<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/dark-light-toggle.js"></script>
-
-
-    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/local-search.js"></script>
-
-
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
 
 
 
 
-<div class="post-scripts pjax">
-    
-        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/toc.js"></script>
-    
-</div>
-
-
-    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/libs/pjax.min.js"></script>
-<script>
-    window.addEventListener('DOMContentLoaded', () => {
-        window.pjax = new Pjax({
-            selectors: [
-                'head title',
-                '.page-container',
-                '.pjax'
-            ],
-            history: true,
-            debug: false,
-            cacheBust: false,
-            timeout: 0,
-            analytics: false,
-            currentUrlFullReload: false,
-            scrollRestoration: false,
-            // scrollTo: true,
-        });
-
-        document.addEventListener('pjax:send', () => {
-            KEEP.utils.pjaxProgressBarStart();
-        });
-
-        document.addEventListener('pjax:complete', () => {
-            KEEP.utils.pjaxProgressBarEnd();
-            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
-            KEEP.refresh();
-        });
-    });
-</script>
+<script src="/js/script.js"></script>
 
 
 
+
+  </div>
 </body>
 </html>
