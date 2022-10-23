@@ -9,7 +9,7 @@
     
     <title>
         
-            magic-of-xmonad |
+            Tag: mind |
         
         Sweet Diary
     </title>
@@ -86,7 +86,7 @@
                         </li>
                     
                         <li class="menu-item">
-                            <a class=""
+                            <a class="active"
                                href="/tags"
                             >
                                 TAGS
@@ -130,7 +130,7 @@
                 </li>
             
                 <li class="drawer-menu-item flex-center">
-                    <a class=""
+                    <a class="active"
                        href="/tags">TAGS</a>
                 </li>
             
@@ -150,134 +150,42 @@
 
                 
                     <div class="fade-in-down-animation">
-    <div class="article-content-container">
-
-        <div class="article-title">
-            <span class="title-hover-animation">magic-of-xmonad</span>
+    <div class="tag-container">
+        <div class="tag-name"><i class="fas fa-tag"></i>&nbsp;mind
         </div>
-
-        
-            <div class="article-header">
-                <div class="avatar">
-                    <img src="/images/avatar.svg">
-                </div>
-                <div class="info">
-                    <div class="author">
-                        <span class="name">shutterbug</span>
-                        
-                            <span class="author-label">Lv4</span>
-                        
-                    </div>
-                    <div class="meta-info">
-                        <div class="article-meta-info">
-    <span class="article-date article-meta-item">
-        <i class="fas fa-edit"></i>&nbsp;
-        <span class="pc">2022-06-25 11:22:52</span>
-        <span class="mobile">2022-06-25 11:22</span>
-    </span>
+        <div class="tag-post-list">
+            
+<div class="archive-list-container">
     
-        <span class="article-categories article-meta-item">
-            <i class="fas fa-folder"></i>&nbsp;
-            <ul>
+        <section class="archive-item">
+            <div class="archive-item-header">
+                <span class="archive-year">2022</span>
+                <span class="archive-year-post-count">[1]</span>
+            </div>
+            <ul class="article-list">
                 
-                    <li>
-                        <a href="/categories/linux/">linux</a>&nbsp;
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/2022/10/23/our-body-may-cheat-ourselves-md/"
+                        >our-body-may-cheat-ourselves.md</a>
+                        <span class="article-date">10-23</span>
                     </li>
                 
             </ul>
-        </span>
-    
-    
-        <span class="article-tags article-meta-item">
-            <i class="fas fa-tags"></i>&nbsp;
-            <ul>
-                
-                    <li>
-                        <a href="/tags/xmonad/">xmonad</a>&nbsp;
-                    </li>
-                
-            </ul>
-        </span>
-    
-
-    
-    
-    
+        </section>
     
 </div>
 
-                    </div>
-                </div>
-            </div>
-        
-
-        <div class="article-content markdown-body">
-            <h1 id="magic-of-xmonad"><a href="#magic-of-xmonad" class="headerlink" title="magic of xmonad"></a>magic of xmonad</h1><blockquote>
-<p>Xmonad似乎永远都能带来意想不到的惊喜，只要你不断的探索</p>
-</blockquote>
-<p>typora从1.0版本开始后就不再是免费软件了，所以曾经我卸载了他。每次打开它的时候就有一个窗口需要点击，有点烦。不过还是比其它收费软件好一些，毕竟这个也只是提示你，并没有强制不升级正版就不能用。</p>
-<p>然而我昨天发现xmonad居然可以轻松的帮我去掉点击弹框的这一步，太神奇，太惊讶了。而且非常简单。</p>
-<ol>
-<li><p>正常打开typora，并且打开终端，在终端输入<code>xprop</code>，然后点击这个弹框获取到它的<code>WM_NAME</code></p>
-</li>
-<li><p>在xmonad的manageHook中添加条件，将匹配到这个名字的窗口隐藏</p>
-<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">myManageHook</span> = composeOne </span><br><span class="line">            [ title     =? <span class="string">&quot;License Info&quot;</span>               -?&gt; doHideIgnore</span><br><span class="line">            ]</span><br></pre></td></tr></table></figure></li>
-<li><p>重新编译xmonad，启动就可以了，只能说xmonad太强了</p>
-</li>
-</ol>
-
         </div>
+    </div>
 
-        
+    <div class="tag-paginator">
+        <div class="paginator">
+    
 
-        
-            <ul class="post-tags-box">
-                
-                    <li class="tag-item">
-                        <a href="/tags/xmonad/">#xmonad</a>&nbsp;
-                    </li>
-                
-            </ul>
-        
+    
+</div>
 
-        
-            <div class="article-nav">
-                
-                    <div class="article-prev">
-                        <a class="prev"
-                           rel="prev"
-                           href="/2022/06/25/%E4%BB%8E%E5%AE%B9/"
-                        >
-                            <span class="left arrow-icon flex-center">
-                              <i class="fas fa-chevron-left"></i>
-                            </span>
-                            <span class="title flex-center">
-                                <span class="post-nav-title-item">从容</span>
-                                <span class="post-nav-item">Prev posts</span>
-                            </span>
-                        </a>
-                    </div>
-                
-                
-                    <div class="article-next">
-                        <a class="next"
-                           rel="next"
-                           href="/2022/06/24/xp-pentablet/"
-                        >
-                            <span class="title flex-center">
-                                <span class="post-nav-title-item">xp-pentablet</span>
-                                <span class="post-nav-item">Next posts</span>
-                            </span>
-                            <span class="right arrow-icon flex-center">
-                              <i class="fas fa-chevron-right"></i>
-                            </span>
-                        </a>
-                    </div>
-                
-            </div>
-        
-
-        
     </div>
 </div>
 
@@ -321,23 +229,6 @@
         </div>
     </div>
 
-    
-        <div class="post-tools">
-            <div class="post-tools-container">
-    <ul class="tools-list">
-        <!-- TOC aside toggle -->
-        
-            <li class="tools-item page-aside-toggle">
-                <i class="fas fa-outdent"></i>
-            </li>
-        
-
-        <!-- go comment -->
-        
-    </ul>
-</div>
-
-        </div>
     
 
     <div class="right-bottom-side-tools">
@@ -383,14 +274,6 @@
 
     </div>
 
-    
-        <aside class="page-aside">
-            <div class="post-toc-wrap">
-    <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#magic-of-xmonad"><span class="nav-number">1.</span> <span class="nav-text">magic of xmonad</span></a></li></ol>
-    </div>
-</div>
-        </aside>
     
 
     <div class="image-viewer-container">
@@ -444,8 +327,6 @@
 
 
 <div class="post-scripts pjax">
-    
-        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/toc.js"></script>
     
 </div>
 
