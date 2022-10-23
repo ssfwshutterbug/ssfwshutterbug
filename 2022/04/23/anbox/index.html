@@ -1,296 +1,218 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		
-<title>anbox-Quiet</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="shortcut icon" type="image/x-icon" href="/image/favicon.ico">
-
-<link rel="stylesheet" href="/css/index.css">
-
-
-
-<meta name="keywords" content="anbox,">
-<meta name="description" content="">
-
-
-<script src="/js/jquery.min.js"></script>
-
-
-<script src="/js/index.js"></script>
-
-
-<script src="/js/fancybox.umd.js"></script>
-
-
-<script src="/js/fancybox-images.js"></script>
-
-
-<script src="/js/gitalk.min.js"></script>
-
-
-<script src="/js/hljs.min.js"></script>
- 
-<script>hljs.highlightAll();</script>
-
-	<meta name="generator" content="Hexo 5.4.2"></head>
-
-	<body>
-		
-	<div class="header">
-		<div class="header-top" id="header-top">
-			<div class="h-left">
-				<a href="/">
-					<img src="/image/logo.png" alt="Quiet">
-				</a>
-			</div>
-			<div class="h-right">
-				<ul>
-					
-						
-								<li>
-									<a href="/">
-										HOME
-									</a>
-									<span class="dot"></span>
-								</li>
-								
-									
-						
-								<li>
-									<a href="/archives">
-										ARCHIVE
-									</a>
-									<span class="dot"></span>
-								</li>
-								
-									
-						
-								<li>
-									<a href="/categories">
-										CATEGORIES
-									</a>
-									<span class="dot"></span>
-								</li>
-								
-									
-						
-								<li>
-									<a href="/tags">
-										TAGS
-									</a>
-									<span class="dot"></span>
-								</li>
-								
-									
-				</ul>
-			</div>
-			<div class="h-right-close">
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-					<path fill="none" d="M0 0h24v24H0z" />
-					<path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z" fill="rgba(68,68,68,1)" />
-				</svg>
-			</div>
-		</div>
-	</div>
-	<div class="sidebar">
-    <div class="topo">
-        <h2>Joey</h2>
-    </div>
-    <ul>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="shutterbug">
+    
+    <title>
         
-        <li>
-            <a href="/">HOME</a>
-        </li>
+            anbox |
         
-        <li>
-            <a href="/archives">ARCHIVE</a>
-        </li>
-        
-        <li>
-            <a href="/categories">CATEGORIES</a>
-        </li>
-        
-        <li>
-            <a href="/tags">TAGS</a>
-        </li>
-        
-    </ul>
-    <div class="my_foot">
-        
-        <a target="_blank" rel="noopener" href="https://github.com/79E/hexo-theme-quiet">
-            <img src="https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imggithub.png" alt="Quiet主题">
-        </a>
-        
-    </div>
+        Sweet Diary
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/logo.svg">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"raw.githubusercontent.com","root":"/","language":"en","path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":true},"style":{"primary_color":"#0066CC","avatar":"/images/avatar.svg","favicon":"/images/logo.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/4.jpg","description":"the world you see is not about how they act but how we respond."},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":false},"code_copy":{"enable":false,"style":"default"},"pjax":{"enable":true},"lazyload":{"enable":false},"version":"3.4.5"};
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+  </script>
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fas fa-circle-notch fa-spin"></i>
+        </span>
+    
 </div>
-<div class='shelter'>
-</div>
-<style>
-    .shelter{
-        background-color: #333;
-        opacity:0.5;
-        cursor: pointer;
-        display: none; 
-        position: fixed;
-        left: 0;
-        top: 0; 
-        right: 0;
-        bottom: 0;
-        z-index: 1998;
-    }
-    .sidebar {
-        width: 66%;
-        height: 100%;
-        position: fixed;
-        top: 0;
-        right: -100%;
-        bottom: 0;
-        background: #fff;
-        z-index: 1999;
-        text-align: center;
-        box-shadow: -6px 0 20px rgba(98, 94, 94, .815);
-    }
 
-    .topo {
-        width: 100%;
-        height: 200px;
-        background: url(https://api.ixiaowai.cn/gqapi/gqapi.php) no-repeat;
-        background-size: 100% 100%;
-        position: relative;
-        display: flex;
-        align-items: flex-end
-    }
 
-    .topo h2 {
-        color: #fff;
-        z-index: 1;
-        position: relative;
-        margin: 0 0 10px 10px;
-        font-size: 1.2em;
-        box-sizing: border-box
-    }
+<main class="page-container">
 
-    .topo:before {
-        content: '';
-        background-image: url(/image/pattern.png);
-        background-repeat: repeat;
-        height: 100%;
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: 100%;
-        z-index: 1
-    }
+    
 
-    .sidebar ul {
-        width: 100%;
-        margin-top: 50px
-    }
+    <div class="page-main-content">
 
-    .sidebar ul li {
-        height: 50px;
-        list-style: none;
-        font-size: 1.2em;
-        text-align: right;
-        margin-right: 10px
-    }
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
 
-    .sidebar ul li a {
-        display: grid;
-        color: #5d606a;
-        text-overflow: ellipsis;
-        width: 100%;
-        text-decoration: none
-    }
-
-    .my_foot {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 10px;
-        position: absolute;
-        bottom: 0
-    }
-
-    .my_foot a {
-        text-decoration: none;
-        margin-right: 10px;
-        display: inline-block
-    }
-
-    .my_foot a img {
-        width: 30px;
-        height: 30px
-    }
-</style>
-
-<script>
-    $( function () {
-	$( '.h-right-close>svg' )
-		.click( function () {
-			$( '.sidebar' )
-				.animate( {
-					right: "0"
-				}, 500 );
-			$( '.shelter' )
-				.fadeIn( "slow" )
-		} );
-	$( '.shelter' )
-		.click( function ( e ) {
-			$( '.sidebar' )
-				.animate( {
-					right: "-100%"
-				}, 500 );
-			$( '.shelter' )
-				.fadeOut( "slow" )
-		} )
-} )
-
-</script>
-
-<div class="post">
-    <div class="post-header-background post-header-img"
-    style="background: url('https://api.ixiaowai.cn/gqapi/gqapi.php')" 
->
-    <div class="post-header-background-content">
-        <ul class="post-header-tag">
+    <div class="header-content">
+        <div class="left">
             
-            
-            <li><a href="/tags/anbox">anbox</a></li>
-            
-            
-        </ul>
-        
-        <h1>anbox</h1>
-        <div class="post-header-info">
-            <div class="post-header-info-author">
+            <a class="logo-title" href="/">
+                Sweet Diary
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                HOME
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                CATEGORIES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                TAGS
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
                 
-                    <svg t="1604839279282" class="icon" viewBox="0 0 1024 1024" version="1.1"
-                        xmlns="http://www.w3.org/2000/svg" p-id="2901" width="20" height="20">
-                        <path
-                            d="M513 956.3c-247.7 0-448-200.3-448-448S265.3 66.2 513 66.2s448 200.3 448 448-200.3 442.1-448 442.1z m0-830.9c-212.2 0-388.8 170.7-388.8 388.8C124.2 726.3 294.9 903 513 903c212.2 0 388.8-170.7 388.8-388.8S725.2 125.4 513 125.4z m0 430.2c-94.2 0-170.7-76.5-170.7-170.7S418.8 207.8 513 207.8s170.7 76.5 170.7 170.7S607.2 555.6 513 555.6z m0-289.1c-64.6 0-112 52.8-112 112s47.4 117.9 112 117.9 112-52.8 112-112-47.4-117.9-112-117.9z m0 689.8c-135.7 0-259-58.7-341.9-158.9l-11.8-17.8 11.8-17.8c76.5-117.9 206.2-188.5 347.8-188.5 135.7 0 265 64.6 341.9 182.6l11.8 17.8-11.8 17.8C778 897.1 648.7 956.3 513 956.3zM230.3 773.2C300.9 849.7 406.9 897 513 897c112 0 218.1-47.4 288.6-129.8-70.5-88.2-170.7-135.6-282.7-135.6s-218.1 53.3-288.6 141.6z"
-                            p-id="2902" fill="#ffffff"></path>
-                    </svg>
-                    
-                <span class="post-header-info-author-text"> <a href="../../about">Joey</a></span>
-                <div class="post-header-info-author-categories">
-                    
-                         <a href="../../categories/learn/" target="_blank" >learn</a>
-                    
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
                 </div>
-                <p>2022-04-23 22:58:51</p>
             </div>
         </div>
     </div>
-</div>
-    <div class="post-content" id="content">
-  
-  <div id="article" class="post-content-info">
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">HOME</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">ARCHIVES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">CATEGORIES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">TAGS</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">anbox</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/avatar.svg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">shutterbug</span>
+                        
+                            <span class="author-label">Lv4</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2022-04-23 22:58:51</span>
+        <span class="mobile">2022-04-23 22:58</span>
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/learn/">learn</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/anbox/">anbox</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
     
 
-    <h1 id="Anbox"><a href="#Anbox" class="headerlink" title="Anbox"></a>Anbox</h1><p>In this article i will show you how to install anbox with snap and compare snap with flatpak.  anbox is a container-based software for running Android in linux. be different from virtual machine, anbox uses kernel module <code>binder</code> and <code>ashmem</code> to share and devide system source, thus it starts up very quickly.</p>
+    
+    
+    
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <h1 id="Anbox"><a href="#Anbox" class="headerlink" title="Anbox"></a>Anbox</h1><p>In this article i will show you how to install anbox with snap and compare snap with flatpak.  anbox is a container-based software for running Android in linux. be different from virtual machine, anbox uses kernel module <code>binder</code> and <code>ashmem</code> to share and devide system source, thus it starts up very quickly.</p>
 <h2 id="snap-vs-flatpak"><a href="#snap-vs-flatpak" class="headerlink" title="snap vs flatpak"></a>snap vs flatpak</h2><p>snap or flatpak is a cross platform package manager in different linux OS, which stores packages in a independent environment and improves security of system. whatever to say, both of them are not perfect as what i want. why i use it? i hope to install large size software in another disk partition but not the system tree in linux, if there is a need to reinstall the system, i don’t need to reinstall the software itself, one thing i need  is installing the snap package.</p>
 <p><strong>disadvantages:</strong></p>
 <ul>
@@ -300,298 +222,319 @@
 <p>i choose snap at last, the main reason in this case is that only snap has anbox package.</p>
 <h2 id="change-kernel"><a href="#change-kernel" class="headerlink" title="change kernel"></a>change kernel</h2><p><strong>kernel module</strong></p>
 <p>default linux kernel doesn’t has anbox needed modules, a simple way is installing a <code>linux-zen</code> kernel</p>
-<pre><code class="shell">pacman -S linux-zen
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pacman -S linux-zen</span><br></pre></td></tr></table></figure>
+
 <p>then we need edit <code>/boot/grub/grub.cfg</code> file, adding a sub entry with the new kernel. once we boot in grub, we can choose the  new kernel by hand.</p>
-<pre><code class="shell">    menuentry &#39;Arch Linux, with Linux-zen linux&#39; --class arch --class gnu-linux --class gnu --class os $menuentry_id_option &#39;gnulinux-linux-advanced-20f94885-274b-4a99-b067-a0adf09a1723&#39; &#123;
-        .
-        .
-        .
-        echo    &#39;Loading Linux-zen linux ...&#39;
-        linux    /boot/vmlinuz-linux-zen root=UUID=20f94885-274b-4a99-b067-a0adf09a1723 rw  loglevel=3 quiet
-        echo    &#39;Loading initial ramdisk ...&#39;
-        initrd    /boot/initramfs-linux-zen.img
-    &#125;
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">menuentry &#x27;Arch Linux, with Linux-zen linux&#x27; --class arch --class gnu-linux --class gnu --class os $menuentry_id_option &#x27;gnulinux-linux-advanced-20f94885-274b-4a99-b067-a0adf09a1723&#x27; &#123;</span><br><span class="line">	.</span><br><span class="line">	.</span><br><span class="line">	.</span><br><span class="line">	echo	&#x27;Loading Linux-zen linux ...&#x27;</span><br><span class="line">	linux	/boot/vmlinuz-linux-zen root=UUID=20f94885-274b-4a99-b067-a0adf09a1723 rw  loglevel=3 quiet</span><br><span class="line">	echo	&#x27;Loading initial ramdisk ...&#x27;</span><br><span class="line">	initrd	/boot/initramfs-linux-zen.img</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
 <h2 id="snap-install"><a href="#snap-install" class="headerlink" title="snap install"></a>snap install</h2><p><strong>snap package location change</strong></p>
 <p>snap has no method to specify package location, but we can use mount bind to mount other location to the package folder</p>
-<pre><code class="shell"># snap package folder is  /var/lib/snapd
-# before install snap, mount folder to that folder
-mkdir /home/healer/Public/snapd
-sudo mkdir /var/lib/snapd
-sudo mount --bind /home/healer/Public/snapd /var/lib/snapd
-</code></pre>
-<p>above command will make effect until reboot, so we need write mount command to <code>/etc/fstab</code> in order to auto mount after system reboot.</p>
-<pre><code class="shell">sudo vim /etc/fstab
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">snap package folder is  /var/lib/snapd</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">before install snap, mount folder to that folder</span></span><br><span class="line">mkdir /home/healer/Public/snapd</span><br><span class="line">sudo mkdir /var/lib/snapd</span><br><span class="line">sudo mount --bind /home/healer/Public/snapd /var/lib/snapd</span><br></pre></td></tr></table></figure>
 
-/home/healer/Public/snapd    /var/lib/snapd    none    bind    0 0
-</code></pre>
+<p>above command will make effect until reboot, so we need write mount command to <code>/etc/fstab</code> in order to auto mount after system reboot.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/fstab</span><br><span class="line"></span><br><span class="line">/home/healer/Public/snapd	/var/lib/snapd	none	bind	0 0</span><br></pre></td></tr></table></figure>
+
 <p><strong>install snap</strong></p>
-<pre><code class="shell">paru -S snapd
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">paru -S snapd</span><br></pre></td></tr></table></figure>
+
 <p><strong>start snap</strong></p>
-<pre><code class="shell">sudo systemctl enable --now snapd.socket
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl enable --now snapd.socket</span><br></pre></td></tr></table></figure>
+
 <p><strong>add hosts entry</strong></p>
 <p>by default the speed snap downloads is slow, we need add dns to hosts file</p>
-<pre><code class="shell">echo &quot;151.101.62.217  fastly.cdn.snapcraft.io&quot; &gt;&gt; /etc/hosts
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;151.101.62.217  fastly.cdn.snapcraft.io&quot; &gt;&gt; /etc/hosts</span><br></pre></td></tr></table></figure>
+
 <p><strong>some snap commands</strong></p>
-<pre><code class="shell"># update
-snap refresh
-# search
-snap find package-name
-# install
-snap install package-name
-# uninstall
-snap uninstall package-name
-# list installed package 
-snap list
-</code></pre>
-<h2 id="anbox-install"><a href="#anbox-install" class="headerlink" title="anbox install"></a>anbox install</h2><p>we can find all snap packages <a target="_blank" rel="noopener" href="https://snapcraft.io/store">in this website</a></p>
-<pre><code class="shell">snap install --devmode --beta anbox
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">update</span></span><br><span class="line">snap refresh</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">search</span></span><br><span class="line">snap find package-name</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">install</span></span><br><span class="line">snap install package-name</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">uninstall</span></span><br><span class="line">snap uninstall package-name</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">list installed package</span> </span><br><span class="line">snap list</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="anbox-install"><a href="#anbox-install" class="headerlink" title="anbox install"></a>anbox install</h2><p>we can find all snap packages <a class="link"   target="_blank" rel="noopener" href="https://snapcraft.io/store" >in this website<i class="fas fa-external-link-alt"></i></a></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">snap install --devmode --beta anbox</span><br></pre></td></tr></table></figure>
+
 <p>run anbox first time</p>
-<pre><code class="shell">/var/lib/snapd/snap/bin/anbox launch --package=org.anbox.appmgr --component=org.anbox.appmgr.AppViewActivity
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/var/lib/snapd/snap/bin/anbox launch --package=org.anbox.appmgr --component=org.anbox.appmgr.AppViewActivity</span><br></pre></td></tr></table></figure>
+
 <p>after system reboot we can start anbox via system launch app or dmenu</p>
 <h2 id="install-apk-in-anbox"><a href="#install-apk-in-anbox" class="headerlink" title="install apk in anbox"></a>install apk in anbox</h2><p>by default, anbox has no app store in it, so we need install a app store to it. the method we use is adb</p>
-<pre><code class="shell"># adb is part of android-tools package
-sudo pacman -S android-tools
-</code></pre>
-<pre><code class="shell"># such as download a coolan apk from web browser and install it to anbox
-adb install Coolapk-11.4.2-2109281-coolapk-app-sign.apk
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">adb is part of android-tools package</span></span><br><span class="line">sudo pacman -S android-tools</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">such as download a coolan apk from web browser and install it to anbox</span></span><br><span class="line">adb install Coolapk-11.4.2-2109281-coolapk-app-sign.apk</span><br></pre></td></tr></table></figure>
+
+
+
+
+
 <h2 id="flatpak"><a href="#flatpak" class="headerlink" title="flatpak"></a>flatpak</h2><p><strong>install</strong></p>
 <p>at last, i want to record the flatpak installation and usage. in a fact that flatpak is really easy to install or use.</p>
-<pre><code class="shell"># install
-sudo pacman -S flatpak
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">install</span></span><br><span class="line">sudo pacman -S flatpak</span><br></pre></td></tr></table></figure>
+
 <p><strong>add repo</strong></p>
 <p>we need to know that the package store location is defined by <code>--user</code> parameter. however the parameter takes effect only when we specify the user repo before. by default our repository is system, so we need add user repository manually.</p>
-<pre><code class="shell"># system
-flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-# user
-flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-# check repo
-flatpak remotes
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">system</span></span><br><span class="line">flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">user</span></span><br><span class="line">flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">check repo</span></span><br><span class="line">flatpak remotes</span><br></pre></td></tr></table></figure>
+
 <p><strong>usage</strong></p>
-<p>find support packages and package install commands <a target="_blank" rel="noopener" href="https://flathub.org/home">in this website</a></p>
-<pre><code class="shell"># eg:
-# install firefox in user location
-flatpak install --user flathub org.mozilla.firefox
-</code></pre>
+<p>find support packages and package install commands <a class="link"   target="_blank" rel="noopener" href="https://flathub.org/home" >in this website<i class="fas fa-external-link-alt"></i></a></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">eg:</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">install firefox <span class="keyword">in</span> user location</span></span><br><span class="line">flatpak install --user flathub org.mozilla.firefox</span><br></pre></td></tr></table></figure>
+
 <p>user package location is <code>~/.local/share/flatpak</code></p>
-<pre><code class="shell"># start with command
-flatpak run org.mozilla.firefox
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">start with <span class="built_in">command</span></span></span><br><span class="line">flatpak run org.mozilla.firefox</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">or directly</span></span><br><span class="line">firefox</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">or find it <span class="keyword">in</span> package launch manager such as dmenu or rofi</span></span><br></pre></td></tr></table></figure>
 
-# or directly
-firefox
-
-# or find it in package launch manager such as dmenu or rofi
-</code></pre>
 <p>some commands</p>
-<pre><code class="shell"># update
-flaptak update
-# search 
-flatpak search package-name
-# install
-flatpak install package-name
-# uninstall
-flatpak uninstall package-name
-# list installed package
-flatpak list
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">update</span></span><br><span class="line">flaptak update</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">search</span> </span><br><span class="line">flatpak search package-name</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">install</span></span><br><span class="line">flatpak install package-name</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">uninstall</span></span><br><span class="line">flatpak uninstall package-name</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">list installed package</span></span><br><span class="line">flatpak list</span><br></pre></td></tr></table></figure>
 
-  </div>
-  <div id="gitalk-container"></div>
-</div>
 
-<script>
-  
-Fancybox.bind('[data-fancybox="fancybox-gallery-img"]', {
-  dragToClose: true,
-  Toolbar: true,
-  closeButton: "top",
-  Image: {
-    zoom: true,
-  },
-  on: {
-    initCarousel: (fancybox) => {
-      const slide = fancybox.Carousel.slides[fancybox.Carousel.page];
-      fancybox.$container.style.setProperty(
-        "--bg-image",
-        `url("${slide.$thumb.src}")`
-      );
-    },
-    "Carousel.change": (fancybox, carousel, to, from) => {
-      const slide = carousel.slides[to];
-      fancybox.$container.style.setProperty(
-        "--bg-image",
-        `url("${slide.$thumb.src}")`
-      );
-    },
-  },
-});
-</script>
 
-<style>
-    #noneimg img {
-        display: none;
-        z-index: 9999;
-        /* width: 600px !important; */
-        min-width: 0%;
-        max-width: 90%;
-        max-height: 80%;
-        border-radius: 0px;
-        position: fixed;
-        box-shadow: 0 0 0px #c3c3c300 !important;
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        margin: auto !important;
-    }
 
-    @media screen and (max-width:600px) {
-        #noneimg img {
-            max-width: 88%
-        }
-    }
-</style>
-
-    <div class="post-paging">
-    
-    <a href="/2022/04/23/ansible/">
-        <div class="post-paging-last">
-            <span>上一篇</span>
-            <p>ansible</p>
         </div>
-    </a>
-    
 
-    
-    <a href="/2022/04/23/anaconda/">
-        <div class="post-paging-next">
-            <span>下一篇</span>
-            <p>anaconda</p>
-        </div>
-    </a>
-    
-</div>
-</div>
-		
-<div class="footer">
-	<div class="Copyright">
-		©2022 By Joey. 主题：<a
-			style="text-decoration: none;display: contents; color: #898F9F;"
-			target="_blank" rel="noopener" href="https://github.com/79e/hexo-theme-quiet">Quiet</a>
-	</div>
-	<div class="contact">
-		
-		<a target="_blank" rel="noopener" href="https://github.com/79E/hexo-theme-quiet">
-			<img src="https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imggithub.png" alt="Quiet主题">
-		</a>
-		
-	</div>
-</div>
-
-<script src="/js/gotop.js"></script>
-
-
-<style type="text/css">
-    @media screen and (min-width: 600px) {
-        .goTop>span {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 10px;
-            width: 40px;
-            height: 40px;
-            cursor: pointer;
-            opacity: 0.8;
-            background: rgba(18, 24, 58, 0.06);
-            text-align: center;
-            transition: border .5s;
-            border: 1px solid rgba(18, 24, 58, 0.06);
-
-            -moz-transition: border .5s;
-            /* Firefox 4 */
-            -webkit-transition: border .5s;
-            /* Safari 和 Chrome */
-            -o-transition: border .5s;
-            /* Opera */
-        }
-
-        .goTop>span:hover {
-            border: 1px solid #6680B3;
-        }
-
-
-        .goTop {
-            position: fixed;
-            right: 30px;
-            bottom: 80px;
-        }
-
-        .goTop>span>svg {
-            width: 20px;
-            height: 20px;
-            opacity: 0.7;
-        }
-
-    }
-
-    @media screen and (max-width: 600px) {
-        .goTop {
-            display: none;
-        }
-    }
-</style>
-<div class="goTop" id="js-go_top">
-    <span>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-            <g>
-                <path d="M13 12v8h-2v-8H4l8-8 8 8z"></path>
-            </g>
-        </svg>
-    </span>
-</div>
-<script>
-    $( '#js-go_top' )
-	.gotoTop( {
-		offset: 500,
-		speed: 300,
-		animationShow: {
-			'transform': 'translate(0,0)',
-			'transition': 'transform .5s ease-in-out'
-		},
-		animationHide: {
-			'transform': 'translate(100px,0)',
-			'transition': 'transform .5s ease-in-out'
-		}
-	} );
-</script>
-
-
-    <!-- Gitalk -->
-    <script>
-        const data = '{"clientID":"02b3c","clientSecret":"adfc7b4","repo":"gimment","owner":"duneng","admin":"duneng"}'
-        const gitalk = new Gitalk({
-            ...JSON.parse( data),
-            id:location.pathname,
-            distractionFreeMode:false
-        })
         
-        if(Boolean('true')){
-            gitalk.render('gitalk-container')
-        }
-    </script>
 
+        
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/anbox/">#anbox</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2022/04/23/ansible/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">ansible</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2022/04/23/anaconda/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">anaconda</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2020</span>
+              -
+            
+            2022&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">shutterbug</a>
+        </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Anbox"><span class="nav-number">1.</span> <span class="nav-text">Anbox</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#snap-vs-flatpak"><span class="nav-number">1.1.</span> <span class="nav-text">snap vs flatpak</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#change-kernel"><span class="nav-number">1.2.</span> <span class="nav-text">change kernel</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#snap-install"><span class="nav-number">1.3.</span> <span class="nav-text">snap install</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#anbox-install"><span class="nav-number">1.4.</span> <span class="nav-text">anbox install</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#install-apk-in-anbox"><span class="nav-number">1.5.</span> <span class="nav-text">install apk in anbox</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#flatpak"><span class="nav-number">1.6.</span> <span class="nav-text">flatpak</span></a></li></ol></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/dark-light-toggle.js"></script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/local-search.js"></script>
+
+
+
+
+
+
+<div class="post-scripts pjax">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/toc.js"></script>
+    
+</div>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/libs/pjax.min.js"></script>
 <script>
-	console.log('\n %c Hexo-Quiet 主题 %c https://github.com/79e/hexo-theme-quiet \n', 'color: #fadfa3; background: #030307; padding:5px 0;', 'background: #fadfa3; padding:5px 0;')
-</script>
-	</body>
-</html>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
 
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            KEEP.refresh();
+        });
+    });
+</script>
+
+
+
+</body>
+</html>

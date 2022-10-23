@@ -1,296 +1,218 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		
-<title>anaconda-Quiet</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="shortcut icon" type="image/x-icon" href="/image/favicon.ico">
-
-<link rel="stylesheet" href="/css/index.css">
-
-
-
-<meta name="keywords" content="anaconda,">
-<meta name="description" content="">
-
-
-<script src="/js/jquery.min.js"></script>
-
-
-<script src="/js/index.js"></script>
-
-
-<script src="/js/fancybox.umd.js"></script>
-
-
-<script src="/js/fancybox-images.js"></script>
-
-
-<script src="/js/gitalk.min.js"></script>
-
-
-<script src="/js/hljs.min.js"></script>
- 
-<script>hljs.highlightAll();</script>
-
-	<meta name="generator" content="Hexo 5.4.2"></head>
-
-	<body>
-		
-	<div class="header">
-		<div class="header-top" id="header-top">
-			<div class="h-left">
-				<a href="/">
-					<img src="/image/logo.png" alt="Quiet">
-				</a>
-			</div>
-			<div class="h-right">
-				<ul>
-					
-						
-								<li>
-									<a href="/">
-										HOME
-									</a>
-									<span class="dot"></span>
-								</li>
-								
-									
-						
-								<li>
-									<a href="/archives">
-										ARCHIVE
-									</a>
-									<span class="dot"></span>
-								</li>
-								
-									
-						
-								<li>
-									<a href="/categories">
-										CATEGORIES
-									</a>
-									<span class="dot"></span>
-								</li>
-								
-									
-						
-								<li>
-									<a href="/tags">
-										TAGS
-									</a>
-									<span class="dot"></span>
-								</li>
-								
-									
-				</ul>
-			</div>
-			<div class="h-right-close">
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-					<path fill="none" d="M0 0h24v24H0z" />
-					<path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z" fill="rgba(68,68,68,1)" />
-				</svg>
-			</div>
-		</div>
-	</div>
-	<div class="sidebar">
-    <div class="topo">
-        <h2>Joey</h2>
-    </div>
-    <ul>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="shutterbug">
+    
+    <title>
         
-        <li>
-            <a href="/">HOME</a>
-        </li>
+            anaconda |
         
-        <li>
-            <a href="/archives">ARCHIVE</a>
-        </li>
-        
-        <li>
-            <a href="/categories">CATEGORIES</a>
-        </li>
-        
-        <li>
-            <a href="/tags">TAGS</a>
-        </li>
-        
-    </ul>
-    <div class="my_foot">
-        
-        <a target="_blank" rel="noopener" href="https://github.com/79E/hexo-theme-quiet">
-            <img src="https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imggithub.png" alt="Quiet主题">
-        </a>
-        
-    </div>
+        Sweet Diary
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/logo.svg">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"raw.githubusercontent.com","root":"/","language":"en","path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":true},"style":{"primary_color":"#0066CC","avatar":"/images/avatar.svg","favicon":"/images/logo.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/4.jpg","description":"the world you see is not about how they act but how we respond."},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":false},"code_copy":{"enable":false,"style":"default"},"pjax":{"enable":true},"lazyload":{"enable":false},"version":"3.4.5"};
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+  </script>
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fas fa-circle-notch fa-spin"></i>
+        </span>
+    
 </div>
-<div class='shelter'>
-</div>
-<style>
-    .shelter{
-        background-color: #333;
-        opacity:0.5;
-        cursor: pointer;
-        display: none; 
-        position: fixed;
-        left: 0;
-        top: 0; 
-        right: 0;
-        bottom: 0;
-        z-index: 1998;
-    }
-    .sidebar {
-        width: 66%;
-        height: 100%;
-        position: fixed;
-        top: 0;
-        right: -100%;
-        bottom: 0;
-        background: #fff;
-        z-index: 1999;
-        text-align: center;
-        box-shadow: -6px 0 20px rgba(98, 94, 94, .815);
-    }
 
-    .topo {
-        width: 100%;
-        height: 200px;
-        background: url(https://api.ixiaowai.cn/gqapi/gqapi.php) no-repeat;
-        background-size: 100% 100%;
-        position: relative;
-        display: flex;
-        align-items: flex-end
-    }
 
-    .topo h2 {
-        color: #fff;
-        z-index: 1;
-        position: relative;
-        margin: 0 0 10px 10px;
-        font-size: 1.2em;
-        box-sizing: border-box
-    }
+<main class="page-container">
 
-    .topo:before {
-        content: '';
-        background-image: url(/image/pattern.png);
-        background-repeat: repeat;
-        height: 100%;
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: 100%;
-        z-index: 1
-    }
+    
 
-    .sidebar ul {
-        width: 100%;
-        margin-top: 50px
-    }
+    <div class="page-main-content">
 
-    .sidebar ul li {
-        height: 50px;
-        list-style: none;
-        font-size: 1.2em;
-        text-align: right;
-        margin-right: 10px
-    }
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
 
-    .sidebar ul li a {
-        display: grid;
-        color: #5d606a;
-        text-overflow: ellipsis;
-        width: 100%;
-        text-decoration: none
-    }
-
-    .my_foot {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 10px;
-        position: absolute;
-        bottom: 0
-    }
-
-    .my_foot a {
-        text-decoration: none;
-        margin-right: 10px;
-        display: inline-block
-    }
-
-    .my_foot a img {
-        width: 30px;
-        height: 30px
-    }
-</style>
-
-<script>
-    $( function () {
-	$( '.h-right-close>svg' )
-		.click( function () {
-			$( '.sidebar' )
-				.animate( {
-					right: "0"
-				}, 500 );
-			$( '.shelter' )
-				.fadeIn( "slow" )
-		} );
-	$( '.shelter' )
-		.click( function ( e ) {
-			$( '.sidebar' )
-				.animate( {
-					right: "-100%"
-				}, 500 );
-			$( '.shelter' )
-				.fadeOut( "slow" )
-		} )
-} )
-
-</script>
-
-<div class="post">
-    <div class="post-header-background post-header-img"
-    style="background: url('https://api.ixiaowai.cn/gqapi/gqapi.php')" 
->
-    <div class="post-header-background-content">
-        <ul class="post-header-tag">
+    <div class="header-content">
+        <div class="left">
             
-            
-            <li><a href="/tags/anaconda">anaconda</a></li>
-            
-            
-        </ul>
-        
-        <h1>anaconda</h1>
-        <div class="post-header-info">
-            <div class="post-header-info-author">
+            <a class="logo-title" href="/">
+                Sweet Diary
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                HOME
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                CATEGORIES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                TAGS
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
                 
-                    <svg t="1604839279282" class="icon" viewBox="0 0 1024 1024" version="1.1"
-                        xmlns="http://www.w3.org/2000/svg" p-id="2901" width="20" height="20">
-                        <path
-                            d="M513 956.3c-247.7 0-448-200.3-448-448S265.3 66.2 513 66.2s448 200.3 448 448-200.3 442.1-448 442.1z m0-830.9c-212.2 0-388.8 170.7-388.8 388.8C124.2 726.3 294.9 903 513 903c212.2 0 388.8-170.7 388.8-388.8S725.2 125.4 513 125.4z m0 430.2c-94.2 0-170.7-76.5-170.7-170.7S418.8 207.8 513 207.8s170.7 76.5 170.7 170.7S607.2 555.6 513 555.6z m0-289.1c-64.6 0-112 52.8-112 112s47.4 117.9 112 117.9 112-52.8 112-112-47.4-117.9-112-117.9z m0 689.8c-135.7 0-259-58.7-341.9-158.9l-11.8-17.8 11.8-17.8c76.5-117.9 206.2-188.5 347.8-188.5 135.7 0 265 64.6 341.9 182.6l11.8 17.8-11.8 17.8C778 897.1 648.7 956.3 513 956.3zM230.3 773.2C300.9 849.7 406.9 897 513 897c112 0 218.1-47.4 288.6-129.8-70.5-88.2-170.7-135.6-282.7-135.6s-218.1 53.3-288.6 141.6z"
-                            p-id="2902" fill="#ffffff"></path>
-                    </svg>
-                    
-                <span class="post-header-info-author-text"> <a href="../../about">Joey</a></span>
-                <div class="post-header-info-author-categories">
-                    
-                         <a href="../../categories/learn/" target="_blank" >learn</a>
-                    
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
                 </div>
-                <p>2022-04-23 22:57:59</p>
             </div>
         </div>
     </div>
-</div>
-    <div class="post-content" id="content">
-  
-  <div id="article" class="post-content-info">
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">HOME</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">ARCHIVES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">CATEGORIES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">TAGS</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">anaconda</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/avatar.svg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">shutterbug</span>
+                        
+                            <span class="author-label">Lv4</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2022-04-23 22:57:59</span>
+        <span class="mobile">2022-04-23 22:57</span>
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/learn/">learn</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/anaconda/">anaconda</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
     
 
-    <h1 id="Anaconda"><a href="#Anaconda" class="headerlink" title="Anaconda"></a>Anaconda</h1><p>one year ago, i heared anaconda when i learned python in oneline video tutorial. and how, what is anaconda, it is just a virtual environment of python. why i need it? i have python in my local machine! seems useless</p>
+    
+    
+    
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <h1 id="Anaconda"><a href="#Anaconda" class="headerlink" title="Anaconda"></a>Anaconda</h1><p>one year ago, i heared anaconda when i learned python in oneline video tutorial. and how, what is anaconda, it is just a virtual environment of python. why i need it? i have python in my local machine! seems useless</p>
 <p>today, i finally realized that it is a amazing tool. since i wrote a python script with python3, it runs perfect locally. however in the real environment(remote machine), i cannot run it. because remote machine is python2.6 and also cannot install modules oneline. i tried several ways: such as packing modules, compiling python3 from source. all failed!</p>
 <p>finally, i remember it, yeah, anaconda! and it is really so good, it can be installed in different os without dependent error and includes all modules which i need. amazing!</p>
 <h2 id="features"><a href="#features" class="headerlink" title="features"></a>features</h2><ul>
@@ -305,7 +227,7 @@
 <li><p>without any affect to local environment</p>
 </li>
 </ul>
-<h2 id="install"><a href="#install" class="headerlink" title="install"></a>install</h2><p><a target="_blank" rel="noopener" href="https://www.anaconda.com/products/individual#Downloads">download from website</a>, it has two choice:</p>
+<h2 id="install"><a href="#install" class="headerlink" title="install"></a>install</h2><p><a class="link"   target="_blank" rel="noopener" href="https://www.anaconda.com/products/individual#Downloads" >download from website<i class="fas fa-external-link-alt"></i></a>, it has two choice:</p>
 <ol>
 <li>anaconda: include 1500+ modules, especially scientific packages and 3 GB storage disk needed </li>
 <li>minianaconda: without scientific packages, but enough for daily usage and 400Mib storage disk needed</li>
@@ -316,117 +238,71 @@
 <li><p>download package</p>
 </li>
 <li><p>grant priviledge and execute</p>
-<pre><code class="shell">chmod u+x Miniconda3-py39_4.9.2-Linux-x86_64.sh
-./Miniconda3-py39_4.9.2-Linux-x86_64.sh
-</code></pre>
-</li>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chmod u+x Miniconda3-py39_4.9.2-Linux-x86_64.sh</span><br><span class="line">./Miniconda3-py39_4.9.2-Linux-x86_64.sh</span><br></pre></td></tr></table></figure></li>
 <li><p>step by step</p>
 <blockquote>
 <p>note: </p>
 <p>   the place anaconda installed should be a folder that doesn’t exist</p>
 </blockquote>
-<pre><code class="shell">Do you accept the license terms? [yes|no]
-[no] &gt;&gt;&gt; yes
-
-Miniconda3 will now be installed into this location:
-/home/blueocean/miniconda3
-
-  - Press ENTER to confirm the location
-  - Press CTRL-C to abort the installation
-  - Or specify a different location below
-
-[/home/blueocean/miniconda3] &gt;&gt;&gt; /home/blueocean/.local/apps/minicanda
-
-Do you wish the installer to initialize Miniconda3
-by running conda init? [yes|no]
-[no] &gt;&gt;&gt; yes
-
-modified      `/home/blueocean/.zshrc`
-</code></pre>
-</li>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">Do you accept the license terms? [yes|no]</span><br><span class="line">[no] &gt;&gt;&gt; yes</span><br><span class="line"></span><br><span class="line">Miniconda3 will now be installed into this location:</span><br><span class="line">/home/blueocean/miniconda3</span><br><span class="line"></span><br><span class="line">  - Press ENTER to confirm the location</span><br><span class="line">  - Press CTRL-C to abort the installation</span><br><span class="line">  - Or specify a different location below</span><br><span class="line"></span><br><span class="line">[/home/blueocean/miniconda3] &gt;&gt;&gt; /home/blueocean/.local/apps/minicanda</span><br><span class="line"></span><br><span class="line">Do you wish the installer to initialize Miniconda3</span><br><span class="line">by running conda init? [yes|no]</span><br><span class="line">[no] &gt;&gt;&gt; yes</span><br><span class="line"></span><br><span class="line">modified      `/home/blueocean/.zshrc`</span><br></pre></td></tr></table></figure></li>
 <li><p>reopen terminal or source the environment variables where conda’s config stores, in my case it is in <code>~/.zshrc</code> </p>
 </li>
 <li><p>disable auto enter conda base environment</p>
 <p>in default conda will auto active when we start up a terminal. that’s not i want, so change it.</p>
-<pre><code class="shell">conda config --set auto_activate_base false
-# and check
-conda config --show|grep base
-</code></pre>
-</li>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">conda config --set auto_activate_base false</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">and check</span></span><br><span class="line">conda config --show|grep base</span><br></pre></td></tr></table></figure></li>
 </ul>
-<h2 id="usage"><a href="#usage" class="headerlink" title="usage"></a>usage</h2><p>full document follow <a target="_blank" rel="noopener" href="https://conda.io/projects/conda/en/latest/user-guide/getting-started.html#managing-envs">this page</a></p>
+<h2 id="usage"><a href="#usage" class="headerlink" title="usage"></a>usage</h2><p>full document follow <a class="link"   target="_blank" rel="noopener" href="https://conda.io/projects/conda/en/latest/user-guide/getting-started.html#managing-envs" >this page<i class="fas fa-external-link-alt"></i></a></p>
 <h3 id="login-logout-environment"><a href="#login-logout-environment" class="headerlink" title="login/logout environment"></a>login/logout environment</h3><p>after installation completes without error, we can reopen terminal or source the file where installation modified with <code>source ~/.zshrc</code></p>
-<pre><code class="shell">~ » source .zshrc                                                                         
-(base) ~ »         
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">~ » source .zshrc                                                                         </span><br><span class="line">(base) ~ »         </span><br></pre></td></tr></table></figure>
+
 <p>it is obviously that the promt changed, we can also modify prompt with <code>--set env_prompt</code></p>
-<pre><code class="shell">conda config --set env_prompt &#39;(&#123;conda&#125;)&#39;
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda config --set env_prompt &#x27;(&#123;conda&#125;)&#x27;</span><br></pre></td></tr></table></figure>
+
 <p>after source file, we enter the default <code>base</code> environment which was created while installing. we can list the environment that we have created with <code>conda env list</code></p>
-<pre><code class="shell">(base) ~ » conda env list                                                                 
-# conda environments:
-#
-base                  *  /home/blueocean/.local/apps/minicanda
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">(base) ~ » conda env list                                                                 </span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">conda environments:</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash"></span></span><br><span class="line"><span class="language-bash">base                  *  /home/blueocean/.local/apps/minicanda</span></span><br></pre></td></tr></table></figure>
+
 <p><strong>check conda version</strong></p>
-<pre><code class="shell">(base) ~ » conda --version                                                               
-conda 4.9.2
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(base) ~ » conda --version                                                               </span><br><span class="line">conda 4.9.2</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li><p>if versions prior to 4.6</p>
 <ul>
 <li><p><strong>enter environment</strong></p>
-<pre><code class="shell">source activate conda_env_name
-</code></pre>
-</li>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source activate conda_env_name</span><br></pre></td></tr></table></figure></li>
 <li><p><strong>exit environment</strong></p>
-<pre><code class="shell">source deactivate
-</code></pre>
-</li>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source deactivate</span><br></pre></td></tr></table></figure></li>
 </ul>
 </li>
 <li><p>if versions higher than 4.6</p>
 <ul>
 <li><p><strong>enter environment</strong></p>
-<pre><code class="shell">conda activate conda_env_name
-</code></pre>
-</li>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda activate conda_env_name</span><br></pre></td></tr></table></figure></li>
 <li><p><strong>exit environment</strong></p>
-<pre><code class="shell">conda deactivate
-</code></pre>
-</li>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda deactivate</span><br></pre></td></tr></table></figure></li>
 </ul>
 </li>
 </ul>
 <h3 id="create-new-environment"><a href="#create-new-environment" class="headerlink" title="create new environment"></a>create new environment</h3><p>before we install packages, we need config download mirrors, without configure will lead to installation failed for slowly download speed.</p>
-<pre><code class="shell">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
-conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
-conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r
-conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/pro
-conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main</span><br><span class="line">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free</span><br><span class="line">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r</span><br><span class="line">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/pro</span><br><span class="line">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2</span><br></pre></td></tr></table></figure>
+
 <p>if the channel added is wrong, we can remove it by</p>
-<pre><code class="shell">conda config --remove channels mirrors_url
-# such as
-conda config --remove channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">conda config --remove channels mirrors_url</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">such as</span></span><br><span class="line">conda config --remove channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r</span><br></pre></td></tr></table></figure>
+
 <p>check channels config now</p>
-<pre><code class="shell">conda config --show channels
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda config --show channels</span><br></pre></td></tr></table></figure>
+
 <p>create environment </p>
-<pre><code class="shell"># syntax
-conda create --name conda_env_name install_module_name
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">syntax</span></span><br><span class="line">conda create --name conda_env_name install_module_name</span><br></pre></td></tr></table></figure>
+
 <p>when we don’t specify python version, conda will install the newest python version. if we want to use a different versin of python, for example python 2.6, simply create a new environment and specify the version of Python that you want.</p>
-<pre><code class="shell">conda create --name snowflakes python2.6
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create --name snowflakes python2.6</span><br></pre></td></tr></table></figure>
+
 <p>if we have multi modules need to be installed, we should write in one line to avoid depences missing.</p>
-<pre><code class="shell"># such as install pandas xlwt pathlib module
-conda create --name sky pandas xlwt pathlib
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">such as install pandas xlwt pathlib module</span></span><br><span class="line">conda create --name sky pandas xlwt pathlib</span><br></pre></td></tr></table></figure>
+
 <p>check new environment</p>
-<pre><code class="shell">conda env list
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda env list</span><br></pre></td></tr></table></figure>
+
 <h2 id="pack-environment"><a href="#pack-environment" class="headerlink" title="pack environment"></a>pack environment</h2><p>with conda-pack, we can pack environment to any other location and any other os.</p>
 <blockquote>
 <p>note:</p>
@@ -434,18 +310,11 @@ conda create --name sky pandas xlwt pathlib
 </blockquote>
 <p><strong>install conda-pack with conda</strong></p>
 <p>it is recommended to install conda-pack into <code>base</code> environment, since it can be used in all other sub environment</p>
-<pre><code class="shell">conda install conda-pack
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install conda-pack</span><br></pre></td></tr></table></figure>
+
 <p><strong>pack environment</strong></p>
-<pre><code class="shell"># pack into ./env_name.tar.gz
-conda pack --name env_name
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">pack into ./env_name.tar.gz</span></span><br><span class="line">conda pack --name env_name</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">pack into /specified/location/path/env_name.tar.gz</span></span><br><span class="line">conda pack --prefix /store/location/path</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">change out name</span></span><br><span class="line">conda pack --output my_env_name.tar.gz</span><br></pre></td></tr></table></figure>
 
-# pack into /specified/location/path/env_name.tar.gz
-conda pack --prefix /store/location/path
-
-# change out name
-conda pack --output my_env_name.tar.gz
-</code></pre>
 <p><strong>unpack environment</strong></p>
 <p>the condition we can use conda-pack is that there has a conda installed on the target machine.</p>
 <blockquote>
@@ -455,217 +324,253 @@ conda pack --output my_env_name.tar.gz
 2. any other folder
 </code></pre>
 </blockquote>
-<pre><code class="shell"># create a folder named the same as package
-mkdir /environment/stored/env_name
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">create a folder named the same as package</span></span><br><span class="line">mkdir /environment/stored/env_name</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">or store it <span class="keyword">in</span> default base envs</span></span><br><span class="line">mkdir /path/to/base/envs</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">extract package</span></span><br><span class="line">tar -xzf env_name.tar.gz -C /path/to/create/folder</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="keyword">if</span> not <span class="keyword">in</span> base envs, activate environment, this will add env_name/bin to your path</span></span><br><span class="line">source env_name/bin/activate</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="keyword">if</span> <span class="keyword">in</span> base envs, activate environment with conda directory</span></span><br><span class="line">conda activate env_name</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">unpack</span> </span><br><span class="line">conda-unpack</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">deactivate <span class="keyword">if</span> not <span class="keyword">in</span> default base envs, this will remove it from you path</span></span><br><span class="line">source env_name/bin/deactivate</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="keyword">if</span> <span class="keyword">in</span> base envs, activate environment with conda directory</span></span><br><span class="line">conda deactivate</span><br></pre></td></tr></table></figure>
 
-# or store it in default base envs
-mkdir /path/to/base/envs
-
-# extract package
-tar -xzf env_name.tar.gz -C /path/to/create/folder
-
-# if not in base envs, activate environment, this will add env_name/bin to your path
-source env_name/bin/activate
-# if in base envs, activate environment with conda directory
-conda activate env_name
-
-# unpack 
-conda-unpack
-
-# deactivate if not in default base envs, this will remove it from you path
-source env_name/bin/deactivate
-# if in base envs, activate environment with conda directory
-conda deactivate
-</code></pre>
-
-  </div>
-  <div id="gitalk-container"></div>
-</div>
-
-<script>
-  
-Fancybox.bind('[data-fancybox="fancybox-gallery-img"]', {
-  dragToClose: true,
-  Toolbar: true,
-  closeButton: "top",
-  Image: {
-    zoom: true,
-  },
-  on: {
-    initCarousel: (fancybox) => {
-      const slide = fancybox.Carousel.slides[fancybox.Carousel.page];
-      fancybox.$container.style.setProperty(
-        "--bg-image",
-        `url("${slide.$thumb.src}")`
-      );
-    },
-    "Carousel.change": (fancybox, carousel, to, from) => {
-      const slide = carousel.slides[to];
-      fancybox.$container.style.setProperty(
-        "--bg-image",
-        `url("${slide.$thumb.src}")`
-      );
-    },
-  },
-});
-</script>
-
-<style>
-    #noneimg img {
-        display: none;
-        z-index: 9999;
-        /* width: 600px !important; */
-        min-width: 0%;
-        max-width: 90%;
-        max-height: 80%;
-        border-radius: 0px;
-        position: fixed;
-        box-shadow: 0 0 0px #c3c3c300 !important;
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        margin: auto !important;
-    }
-
-    @media screen and (max-width:600px) {
-        #noneimg img {
-            max-width: 88%
-        }
-    }
-</style>
-
-    <div class="post-paging">
-    
-    <a href="/2022/04/23/anbox/">
-        <div class="post-paging-last">
-            <span>上一篇</span>
-            <p>anbox</p>
         </div>
-    </a>
-    
 
-    
-    <a href="/2022/04/23/learn-from-shield/">
-        <div class="post-paging-next">
-            <span>下一篇</span>
-            <p>learn_from_shield</p>
-        </div>
-    </a>
-    
-</div>
-</div>
-		
-<div class="footer">
-	<div class="Copyright">
-		©2022 By Joey. 主题：<a
-			style="text-decoration: none;display: contents; color: #898F9F;"
-			target="_blank" rel="noopener" href="https://github.com/79e/hexo-theme-quiet">Quiet</a>
-	</div>
-	<div class="contact">
-		
-		<a target="_blank" rel="noopener" href="https://github.com/79E/hexo-theme-quiet">
-			<img src="https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imggithub.png" alt="Quiet主题">
-		</a>
-		
-	</div>
-</div>
-
-<script src="/js/gotop.js"></script>
-
-
-<style type="text/css">
-    @media screen and (min-width: 600px) {
-        .goTop>span {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 10px;
-            width: 40px;
-            height: 40px;
-            cursor: pointer;
-            opacity: 0.8;
-            background: rgba(18, 24, 58, 0.06);
-            text-align: center;
-            transition: border .5s;
-            border: 1px solid rgba(18, 24, 58, 0.06);
-
-            -moz-transition: border .5s;
-            /* Firefox 4 */
-            -webkit-transition: border .5s;
-            /* Safari 和 Chrome */
-            -o-transition: border .5s;
-            /* Opera */
-        }
-
-        .goTop>span:hover {
-            border: 1px solid #6680B3;
-        }
-
-
-        .goTop {
-            position: fixed;
-            right: 30px;
-            bottom: 80px;
-        }
-
-        .goTop>span>svg {
-            width: 20px;
-            height: 20px;
-            opacity: 0.7;
-        }
-
-    }
-
-    @media screen and (max-width: 600px) {
-        .goTop {
-            display: none;
-        }
-    }
-</style>
-<div class="goTop" id="js-go_top">
-    <span>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-            <g>
-                <path d="M13 12v8h-2v-8H4l8-8 8 8z"></path>
-            </g>
-        </svg>
-    </span>
-</div>
-<script>
-    $( '#js-go_top' )
-	.gotoTop( {
-		offset: 500,
-		speed: 300,
-		animationShow: {
-			'transform': 'translate(0,0)',
-			'transition': 'transform .5s ease-in-out'
-		},
-		animationHide: {
-			'transform': 'translate(100px,0)',
-			'transition': 'transform .5s ease-in-out'
-		}
-	} );
-</script>
-
-
-    <!-- Gitalk -->
-    <script>
-        const data = '{"clientID":"02b3c","clientSecret":"adfc7b4","repo":"gimment","owner":"duneng","admin":"duneng"}'
-        const gitalk = new Gitalk({
-            ...JSON.parse( data),
-            id:location.pathname,
-            distractionFreeMode:false
-        })
         
-        if(Boolean('true')){
-            gitalk.render('gitalk-container')
-        }
-    </script>
 
+        
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/anaconda/">#anaconda</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2022/04/23/anbox/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">anbox</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2022/04/23/learn-from-shield/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">learn_from_shield</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2020</span>
+              -
+            
+            2022&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">shutterbug</a>
+        </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Anaconda"><span class="nav-number">1.</span> <span class="nav-text">Anaconda</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#features"><span class="nav-number">1.1.</span> <span class="nav-text">features</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#install"><span class="nav-number">1.2.</span> <span class="nav-text">install</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#usage"><span class="nav-number">1.3.</span> <span class="nav-text">usage</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#login-logout-environment"><span class="nav-number">1.3.1.</span> <span class="nav-text">login&#x2F;logout environment</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#create-new-environment"><span class="nav-number">1.3.2.</span> <span class="nav-text">create new environment</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pack-environment"><span class="nav-number">1.4.</span> <span class="nav-text">pack environment</span></a></li></ol></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/dark-light-toggle.js"></script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/local-search.js"></script>
+
+
+
+
+
+
+<div class="post-scripts pjax">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/toc.js"></script>
+    
+</div>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/libs/pjax.min.js"></script>
 <script>
-	console.log('\n %c Hexo-Quiet 主题 %c https://github.com/79e/hexo-theme-quiet \n', 'color: #fadfa3; background: #030307; padding:5px 0;', 'background: #fadfa3; padding:5px 0;')
-</script>
-	</body>
-</html>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
 
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            KEEP.refresh();
+        });
+    });
+</script>
+
+
+
+</body>
+</html>

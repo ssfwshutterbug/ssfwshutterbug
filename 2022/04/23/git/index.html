@@ -1,326 +1,234 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		
-<title>git-Quiet</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="shortcut icon" type="image/x-icon" href="/image/favicon.ico">
-
-<link rel="stylesheet" href="/css/index.css">
-
-
-
-<meta name="keywords" content="git,">
-<meta name="description" content="">
-
-
-<script src="/js/jquery.min.js"></script>
-
-
-<script src="/js/index.js"></script>
-
-
-<script src="/js/fancybox.umd.js"></script>
-
-
-<script src="/js/fancybox-images.js"></script>
-
-
-<script src="/js/gitalk.min.js"></script>
-
-
-<script src="/js/hljs.min.js"></script>
- 
-<script>hljs.highlightAll();</script>
-
-	<meta name="generator" content="Hexo 5.4.2"></head>
-
-	<body>
-		
-	<div class="header">
-		<div class="header-top" id="header-top">
-			<div class="h-left">
-				<a href="/">
-					<img src="/image/logo.png" alt="Quiet">
-				</a>
-			</div>
-			<div class="h-right">
-				<ul>
-					
-						
-								<li>
-									<a href="/">
-										HOME
-									</a>
-									<span class="dot"></span>
-								</li>
-								
-									
-						
-								<li>
-									<a href="/archives">
-										ARCHIVE
-									</a>
-									<span class="dot"></span>
-								</li>
-								
-									
-						
-								<li>
-									<a href="/categories">
-										CATEGORIES
-									</a>
-									<span class="dot"></span>
-								</li>
-								
-									
-						
-								<li>
-									<a href="/tags">
-										TAGS
-									</a>
-									<span class="dot"></span>
-								</li>
-								
-									
-				</ul>
-			</div>
-			<div class="h-right-close">
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-					<path fill="none" d="M0 0h24v24H0z" />
-					<path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z" fill="rgba(68,68,68,1)" />
-				</svg>
-			</div>
-		</div>
-	</div>
-	<div class="sidebar">
-    <div class="topo">
-        <h2>Joey</h2>
-    </div>
-    <ul>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="shutterbug">
+    
+    <title>
         
-        <li>
-            <a href="/">HOME</a>
-        </li>
+            git |
         
-        <li>
-            <a href="/archives">ARCHIVE</a>
-        </li>
-        
-        <li>
-            <a href="/categories">CATEGORIES</a>
-        </li>
-        
-        <li>
-            <a href="/tags">TAGS</a>
-        </li>
-        
-    </ul>
-    <div class="my_foot">
-        
-        <a target="_blank" rel="noopener" href="https://github.com/79E/hexo-theme-quiet">
-            <img src="https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imggithub.png" alt="Quiet主题">
-        </a>
-        
-    </div>
+        Sweet Diary
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/logo.svg">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"raw.githubusercontent.com","root":"/","language":"en","path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":true},"style":{"primary_color":"#0066CC","avatar":"/images/avatar.svg","favicon":"/images/logo.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/4.jpg","description":"the world you see is not about how they act but how we respond."},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":false},"code_copy":{"enable":false,"style":"default"},"pjax":{"enable":true},"lazyload":{"enable":false},"version":"3.4.5"};
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+  </script>
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fas fa-circle-notch fa-spin"></i>
+        </span>
+    
 </div>
-<div class='shelter'>
-</div>
-<style>
-    .shelter{
-        background-color: #333;
-        opacity:0.5;
-        cursor: pointer;
-        display: none; 
-        position: fixed;
-        left: 0;
-        top: 0; 
-        right: 0;
-        bottom: 0;
-        z-index: 1998;
-    }
-    .sidebar {
-        width: 66%;
-        height: 100%;
-        position: fixed;
-        top: 0;
-        right: -100%;
-        bottom: 0;
-        background: #fff;
-        z-index: 1999;
-        text-align: center;
-        box-shadow: -6px 0 20px rgba(98, 94, 94, .815);
-    }
 
-    .topo {
-        width: 100%;
-        height: 200px;
-        background: url(https://api.ixiaowai.cn/gqapi/gqapi.php) no-repeat;
-        background-size: 100% 100%;
-        position: relative;
-        display: flex;
-        align-items: flex-end
-    }
 
-    .topo h2 {
-        color: #fff;
-        z-index: 1;
-        position: relative;
-        margin: 0 0 10px 10px;
-        font-size: 1.2em;
-        box-sizing: border-box
-    }
+<main class="page-container">
 
-    .topo:before {
-        content: '';
-        background-image: url(/image/pattern.png);
-        background-repeat: repeat;
-        height: 100%;
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: 100%;
-        z-index: 1
-    }
+    
 
-    .sidebar ul {
-        width: 100%;
-        margin-top: 50px
-    }
+    <div class="page-main-content">
 
-    .sidebar ul li {
-        height: 50px;
-        list-style: none;
-        font-size: 1.2em;
-        text-align: right;
-        margin-right: 10px
-    }
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
 
-    .sidebar ul li a {
-        display: grid;
-        color: #5d606a;
-        text-overflow: ellipsis;
-        width: 100%;
-        text-decoration: none
-    }
-
-    .my_foot {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 10px;
-        position: absolute;
-        bottom: 0
-    }
-
-    .my_foot a {
-        text-decoration: none;
-        margin-right: 10px;
-        display: inline-block
-    }
-
-    .my_foot a img {
-        width: 30px;
-        height: 30px
-    }
-</style>
-
-<script>
-    $( function () {
-	$( '.h-right-close>svg' )
-		.click( function () {
-			$( '.sidebar' )
-				.animate( {
-					right: "0"
-				}, 500 );
-			$( '.shelter' )
-				.fadeIn( "slow" )
-		} );
-	$( '.shelter' )
-		.click( function ( e ) {
-			$( '.sidebar' )
-				.animate( {
-					right: "-100%"
-				}, 500 );
-			$( '.shelter' )
-				.fadeOut( "slow" )
-		} )
-} )
-
-</script>
-
-<div class="post">
-    <div class="post-header-background post-header-img"
-    style="background: url('https://api.ixiaowai.cn/gqapi/gqapi.php')" 
->
-    <div class="post-header-background-content">
-        <ul class="post-header-tag">
+    <div class="header-content">
+        <div class="left">
             
-            
-            <li><a href="/tags/git">git</a></li>
-            
-            
-        </ul>
-        
-        <h1>git</h1>
-        <div class="post-header-info">
-            <div class="post-header-info-author">
+            <a class="logo-title" href="/">
+                Sweet Diary
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                HOME
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                CATEGORIES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                TAGS
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
                 
-                    <svg t="1604839279282" class="icon" viewBox="0 0 1024 1024" version="1.1"
-                        xmlns="http://www.w3.org/2000/svg" p-id="2901" width="20" height="20">
-                        <path
-                            d="M513 956.3c-247.7 0-448-200.3-448-448S265.3 66.2 513 66.2s448 200.3 448 448-200.3 442.1-448 442.1z m0-830.9c-212.2 0-388.8 170.7-388.8 388.8C124.2 726.3 294.9 903 513 903c212.2 0 388.8-170.7 388.8-388.8S725.2 125.4 513 125.4z m0 430.2c-94.2 0-170.7-76.5-170.7-170.7S418.8 207.8 513 207.8s170.7 76.5 170.7 170.7S607.2 555.6 513 555.6z m0-289.1c-64.6 0-112 52.8-112 112s47.4 117.9 112 117.9 112-52.8 112-112-47.4-117.9-112-117.9z m0 689.8c-135.7 0-259-58.7-341.9-158.9l-11.8-17.8 11.8-17.8c76.5-117.9 206.2-188.5 347.8-188.5 135.7 0 265 64.6 341.9 182.6l11.8 17.8-11.8 17.8C778 897.1 648.7 956.3 513 956.3zM230.3 773.2C300.9 849.7 406.9 897 513 897c112 0 218.1-47.4 288.6-129.8-70.5-88.2-170.7-135.6-282.7-135.6s-218.1 53.3-288.6 141.6z"
-                            p-id="2902" fill="#ffffff"></path>
-                    </svg>
-                    
-                <span class="post-header-info-author-text"> <a href="../../about">Joey</a></span>
-                <div class="post-header-info-author-categories">
-                    
-                         <a href="../../categories/learn/" target="_blank" >learn</a>
-                    
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
                 </div>
-                <p>2022-04-23 23:01:38</p>
             </div>
         </div>
     </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">HOME</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">ARCHIVES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">CATEGORIES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">TAGS</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">git</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/avatar.svg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">shutterbug</span>
+                        
+                            <span class="author-label">Lv4</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2022-04-23 23:01:38</span>
+        <span class="mobile">2022-04-23 23:01</span>
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/learn/">learn</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/git/">git</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
 </div>
-    <div class="post-content" id="content">
-  
-  <div id="article" class="post-content-info">
-    
 
-    <h1 id="git"><a href="#git" class="headerlink" title="git"></a>git</h1><p>git是一个版本控制软件，可以仅仅在本地进行版本管理，也可以连接github进行多终端访问协作</p>
-<h2 id="common-command-quick-look"><a href="#common-command-quick-look" class="headerlink" title="common command quick look"></a>common command quick look</h2><pre><code class="shell">git init                    #initialize a new repo
-git status                    #check modified/stage area status
-    git checkout &lt;file&gt;        #reverse modified
-git add                     #add changes to stage area
-    git reset HEAD &lt;file&gt;    #reverse changes out of stage area
-git commit                    #commit as a check point
-git log                        #check commit info
-    git reset                #reverse to a specified commit(check point)
-    
-git branch --list            #show all branchs
-git branch &lt;branchname&gt;        #create new branch
-git checkout &lt;branchname&gt;    #change to new branch
-git checkout -b &lt;branchname&gt;#easily create new branch and change to it
-git merge &lt;branchname&gt;        #merge from branch
-git branch -d &lt;branchname&gt;    #delete a branch
+                    </div>
+                </div>
+            </div>
+        
 
-git tag                        #show tag
-git tag &lt;tagname&gt;            #create tag
-git tag -d &lt;tagname&gt;        #delete tag
-</code></pre>
+        <div class="article-content markdown-body">
+            <h1 id="git"><a href="#git" class="headerlink" title="git"></a>git</h1><p>git是一个版本控制软件，可以仅仅在本地进行版本管理，也可以连接github进行多终端访问协作</p>
+<h2 id="common-command-quick-look"><a href="#common-command-quick-look" class="headerlink" title="common command quick look"></a>common command quick look</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">git init					#initialize a new repo</span><br><span class="line">git status					#check modified/stage area status</span><br><span class="line">	git checkout &lt;file&gt;		#reverse modified</span><br><span class="line">git add 					#add changes to stage area</span><br><span class="line">	git reset HEAD &lt;file&gt;	#reverse changes out of stage area</span><br><span class="line">git commit					#commit as a check point</span><br><span class="line">git log						#check commit info</span><br><span class="line">	git reset				#reverse to a specified commit(check point)</span><br><span class="line">	</span><br><span class="line">git branch --list			#show all branchs</span><br><span class="line">git branch &lt;branchname&gt;		#create new branch</span><br><span class="line">git checkout &lt;branchname&gt;	#change to new branch</span><br><span class="line">git checkout -b &lt;branchname&gt;#easily create new branch and change to it</span><br><span class="line">git merge &lt;branchname&gt;		#merge from branch</span><br><span class="line">git branch -d &lt;branchname&gt;	#delete a branch</span><br><span class="line"></span><br><span class="line">git tag						#show tag</span><br><span class="line">git tag &lt;tagname&gt;			#create tag</span><br><span class="line">git tag -d &lt;tagname&gt;		#delete tag</span><br></pre></td></tr></table></figure>
+
+
+
 <h2 id="change-defalut-branch-name"><a href="#change-defalut-branch-name" class="headerlink" title="change defalut branch name"></a>change defalut branch name</h2><p>在使用git之前，非常值得做的一件事就是修改默认branch的名字，如你所知的一些事，master通常是一个不能体现平等的词，所以github上可以看见创建的默认repo也是main。但是git命令在本地创建仓库的时候还是master，所以为了避免这些麻烦，需要手动修改一下配置</p>
-<pre><code class="shell"># change default branch name from master to main
-git config --global init.defaultBranch main
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">change default branch name from master to main</span></span><br><span class="line">git config --global init.defaultBranch main</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="keyword">if</span> you already have a branch named master, it<span class="string">&#x27;s easy to change it to main</span></span></span><br><span class="line">git branch -m main</span><br></pre></td></tr></table></figure>
 
-# if you already have a branch named master, it&#39;s easy to change it to main
-git branch -m main
-</code></pre>
+
+
+
+
 <h2 id="initialize"><a href="#initialize" class="headerlink" title="initialize"></a>initialize</h2><p>git仓库的初始化，可以是一个空的文件夹，或者是有文件的文件夹，git的初始化仅仅在在当前目录下创建一个<code>.git</code>目录</p>
-<pre><code class="shell">git init
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
+
+
+
 <h2 id="configuration"><a href="#configuration" class="headerlink" title="configuration"></a>configuration</h2><ul>
 <li>configuration level</li>
 <li>createing your identity includes username and email</li>
@@ -333,24 +241,16 @@ git branch -m main
 <li>system：配置对操作系统的所有用户起作用，配置写入<code>/etc/gitconfig</code></li>
 </ul>
 <p>git config的用户和邮件地址的作用仅仅是在git commit时作为一个用户标识，是必须设置的，但是并不需要和github上的一致</p>
-<pre><code class="shell"># this only need to be configured once
-git config --global user.name &quot;your_user_name&quot;
-git config --global user.email &quot;your_email_addr&quot;
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">this only need to be configured once</span></span><br><span class="line">git config --global user.name &quot;your_user_name&quot;</span><br><span class="line">git config --global user.email &quot;your_email_addr&quot;</span><br></pre></td></tr></table></figure>
+
 <p>git config可设置默认的编辑器，因为在使用某些命令时会调用编辑器（比如运行<code>git commit</code>时）</p>
-<pre><code class="shell"># this is optional but suggests to config
-git config --global core.editor &quot;vim&quot;
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">this is optional but suggests to config</span></span><br><span class="line">git config --global core.editor &quot;vim&quot;</span><br></pre></td></tr></table></figure>
+
 <p>查看所有的配置</p>
-<pre><code class="shell"># show all config
-git config --list
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">show all config</span></span><br><span class="line">git config --list</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">or only show the one you wanna to see: eg. user.name</span></span><br><span class="line">git config user.name</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">or we can directly <span class="built_in">cat</span> the config file</span></span><br><span class="line">cat ~/.gitconfig</span><br></pre></td></tr></table></figure>
 
-# or only show the one you wanna to see: eg. user.name
-git config user.name
 
-# or we can directly cat the config file
-cat ~/.gitconfig
-</code></pre>
+
 <h2 id="add-to-git"><a href="#add-to-git" class="headerlink" title="add to git"></a>add to git</h2><p>包含两个方面：</p>
 <ul>
 <li><p>初始化将目录或文件加入git track，可以是整个目录，或者是一部分</p>
@@ -358,61 +258,30 @@ cat ~/.gitconfig
 <li><p>将修改过的文件加入stage area</p>
 </li>
 </ul>
-<pre><code class="shell"># added file will be put in a stage area, waitting for commit
-git add .
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">added file will be put <span class="keyword">in</span> a stage area, waitting <span class="keyword">for</span> commit</span></span><br><span class="line">git add .</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">or only one specified file</span></span><br><span class="line">git add readme.md</span><br></pre></td></tr></table></figure>
 
-# or only one specified file
-git add readme.md
-</code></pre>
 <p>当add之后，可以回退</p>
-<pre><code class="shell">git reset HEAD &lt;file_name&gt;
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset HEAD &lt;file_name&gt;</span><br></pre></td></tr></table></figure>
+
+
+
 <h2 id="ignore-some-dir-file"><a href="#ignore-some-dir-file" class="headerlink" title="ignore some dir/file"></a>ignore some dir/file</h2><p>如果某些文件或者目录是我们不想通过git进行管理的，可以进行设置</p>
-<pre><code class="shell"># create a new file named .gitignore where .git directory exists
-touch .gitignore
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">create a new file named .gitignore <span class="built_in">where</span> .git directory exists</span></span><br><span class="line">touch .gitignore</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="keyword">then</span> add file name or directory name to .gitignore, cannot write <span class="keyword">in</span> one line</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">each line only one file name or directory</span></span><br></pre></td></tr></table></figure>
 
-# then add file name or directory name to .gitignore, cannot write in one line
-# each line only one file name or directory
-</code></pre>
+
+
 <h2 id="commit-changes"><a href="#commit-changes" class="headerlink" title="commit changes"></a>commit changes</h2><p>通常我们的修改不会进行提交，提交的目的是作为一个check point，方便我们回退。只有在加入一个新的特性或者整体作为一个备份点，这时才有必要提交</p>
-<pre><code class="shell"># without any argument will open a text editor for writing comments
-git commit
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">without any argument will open a text editor <span class="keyword">for</span> writing comments</span></span><br><span class="line">git commit</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">sure can write comment directly</span></span><br><span class="line">git commit . -m &quot;your comments&quot;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">before we commit, we can checkout what is the differenct between now and last time before we change</span></span><br><span class="line">git diff</span><br></pre></td></tr></table></figure>
 
-# sure can write comment directly
-git commit . -m &quot;your comments&quot;
 
-# before we commit, we can checkout what is the differenct between now and last time before we change
-git diff
-</code></pre>
+
 <h2 id="reverse-changes"><a href="#reverse-changes" class="headerlink" title="reverse changes"></a>reverse changes</h2><p>每次提交都会被git记录，uuid作为唯一标识符，可以通过查看log找到回退的点</p>
-<pre><code class="shell"># show all the message we commit
-git log
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">show all the message we commit</span></span><br><span class="line">git log</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">or only show simple <span class="built_in">nice</span> oneline</span></span><br><span class="line">git log --pretty=oneline</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">reverse with the uuid before we find</span></span><br><span class="line">git reset --hard &lt;uuid&gt;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">a simple way to reverse one version before without check uuid</span></span><br><span class="line">git reset --hard HEAD^</span><br></pre></td></tr></table></figure>
 
-# or only show simple nice oneline
-git log --pretty=oneline
-
-# reverse with the uuid before we find
-git reset --hard &lt;uuid&gt;
-
-# a simple way to reverse one version before without check uuid
-git reset --hard HEAD^
-</code></pre>
 <p>通过上面的方式回到了某个之前的版本，但所有的这些修改并不会被git删除，所以在回退之后还可以前进到最新的版本，方式同上，只需找到对应的uuid即可</p>
 <h2 id="use-github-as-remote-repo"><a href="#use-github-as-remote-repo" class="headerlink" title="use github as remote repo"></a>use github as remote repo</h2><p>本地使用git可以满足一个人的需求，如果在多个终端/多个人协作就需要一个公共访问的远端仓库，github就满足这个要求</p>
-<pre><code class="shell"># at first create a empty repository in github , such as named test
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">at first create a empty repository <span class="keyword">in</span> github , such as named <span class="built_in">test</span></span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">second make sure locally has created a <span class="built_in">local</span> repo and commited all the changes</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">checkout whether exists remote configure</span></span><br><span class="line">git remote --verbose</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="keyword">then</span> config remote repo<span class="string">&#x27;s info，where the url link finds will be described below</span></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="string">now we can use origin instead of the long url link</span></span></span><br><span class="line">git remote add origin &lt;https://github.com/your_github_username/test.git&gt;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="string">push local to remote repo&#x27;</span>s(origin) main branch</span></span><br><span class="line">git push -u origin main</span><br></pre></td></tr></table></figure>
 
-# second make sure locally has created a local repo and commited all the changes
-
-# checkout whether exists remote configure
-git remote --verbose
-
-# then config remote repo&#39;s info，where the url link finds will be described below
-# now we can use origin instead of the long url link
-git remote add origin &lt;https://github.com/your_github_username/test.git&gt;
-
-# push local to remote repo&#39;s(origin) main branch
-git push -u origin main
-</code></pre>
 <p>github仓库的链接地址可以通过点击code找到</p>
 <p><img src=".images/image-20210729150458342.png" alt="image-20210729150458342"></p>
 <p>或者直接在web的url后面添加<code>.git</code>即可</p>
@@ -422,79 +291,48 @@ git push -u origin main
 <li>本地生成id_rsa.pub公钥并上传到github指定repo的配置中或者github的配置（适用于所有的repo）</li>
 <li>修改git remove中origin的url链接方式为ssh</li>
 </ul>
-<pre><code class="shell"># first, create a ssh public key locally in ~/.ssh/id_rsa.pub
-ssh-keygen
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">first, create a ssh public key locally <span class="keyword">in</span> ~/.ssh/id_rsa.pub</span></span><br><span class="line">ssh-keygen</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="keyword">then</span> add the content of ~/.ssh/id_rsa.pub to github config</span></span><br></pre></td></tr></table></figure>
 
-# then add the content of ~/.ssh/id_rsa.pub to github config
-</code></pre>
 <p><img src=".images/image-20210729171000037.png" alt="image-20210729171000037"></p>
 <p>选择ssh方式</p>
 <p><img src=".images/image-20210729175340540.png" alt="image-20210729175340540"></p>
 <p>修改本地remote link配置</p>
-<pre><code class="shell"># first remove exist config
-git remote remove origin
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">first remove exist config</span></span><br><span class="line">git remote remove origin</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">add ssh <span class="built_in">link</span> to configuration</span></span><br><span class="line">git remote add origin &lt;git@github.com:ssfwshutterbug/note.git&gt;</span><br></pre></td></tr></table></figure>
 
-# add ssh link to configuration
-git remote add origin &lt;git@github.com:ssfwshutterbug/note.git&gt;
-</code></pre>
 <p>然后就不需要输入username和password了</p>
 <h2 id="clone-from-github-existing-repo"><a href="#clone-from-github-existing-repo" class="headerlink" title="clone from github existing repo"></a>clone from github existing repo</h2><p>前面是本地仓库同步到github，如果github仓库已有内容，那么只需要clone下来即可</p>
-<pre><code class="shell"># the github repo link described above, use https
-git clone &lt;https://github.com/your_github_username/test.git&gt;
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">the github repo <span class="built_in">link</span> described above, use https</span></span><br><span class="line">git clone &lt;https://github.com/your_github_username/test.git&gt;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">use ssh <span class="built_in">link</span> without username and password needed</span></span><br><span class="line">git clone &lt;git@github.com:ssfwshutterbug/note.git&gt;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">clone</span> a specified branch</span></span><br><span class="line">git clone --single-branch --branch &lt;main&gt; &lt;git@github.com:ssfwshutterbug/note.git&gt;</span><br></pre></td></tr></table></figure>
 
-# use ssh link without username and password needed
-git clone &lt;git@github.com:ssfwshutterbug/note.git&gt;
 
-# clone a specified branch
-git clone --single-branch --branch &lt;main&gt; &lt;git@github.com:ssfwshutterbug/note.git&gt;
-</code></pre>
+
 <h2 id="create-delete-branch"><a href="#create-delete-branch" class="headerlink" title="create/delete branch"></a>create/delete branch</h2><p>分支通常作为beta测试，稳定后会融入stable版本main</p>
-<pre><code class="shell"># create branch
-git branch &lt;branch_name&gt;
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">create branch</span></span><br><span class="line">git branch &lt;branch_name&gt;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">display all the branch</span></span><br><span class="line">git branch --list</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">change to specified branch</span></span><br><span class="line">git checkout &lt;branch_name&gt;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">delete a specified branch</span></span><br><span class="line">git branch --delete &lt;branch_name&gt;</span><br></pre></td></tr></table></figure>
 
-# display all the branch
-git branch --list
-
-# change to specified branch
-git checkout &lt;branch_name&gt;
-
-# delete a specified branch
-git branch --delete &lt;branch_name&gt;
-</code></pre>
 <p>删除github上的分支</p>
-<pre><code class="shell"># locally delete github branch
-git push origin --delete &lt;branch_name&gt;
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">locally delete github branch</span></span><br><span class="line">git push origin --delete &lt;branch_name&gt;</span><br></pre></td></tr></table></figure>
+
+
+
 <h2 id="merge-branch"><a href="#merge-branch" class="headerlink" title="merge branch"></a>merge branch</h2><p>切换到分支对其它的分支进行合并：只需记住从别的分支融合到当前分支（merge from）</p>
-<pre><code class="shell"># merge to main and auto create a commit, has the ability to reverse
-git merge --no-ff -m &quot;your comments&quot;
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">merge to main and auto create a commit, has the ability to reverse</span></span><br><span class="line">git merge --no-ff -m &quot;your comments&quot;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">simple merge without commit, cannot reverse, not suggest</span></span><br><span class="line">git merge &lt;branch_name&gt;</span><br></pre></td></tr></table></figure>
 
-# simple merge without commit, cannot reverse, not suggest
-git merge &lt;branch_name&gt;
-</code></pre>
+
+
 <h2 id="show-difference"><a href="#show-difference" class="headerlink" title="show difference"></a>show difference</h2><p>我们可以通过对比两个分支，两个commit，当前修改与最后一次修改的不同……</p>
-<pre><code class="shell"># shou difference between now with last commit
-git diff
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">shou difference between now with last commit</span></span><br><span class="line">git diff</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">or specified a file to compare</span></span><br><span class="line">git diff &lt;file_name&gt;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">show difference between two commits</span></span><br><span class="line">git diff &lt;uuid1&gt; &lt;uuid2&gt;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">show difference between two branchs</span></span><br><span class="line">git diff &lt;branch1&gt; &lt;branch2&gt;</span><br></pre></td></tr></table></figure>
 
-# or specified a file to compare
-git diff &lt;file_name&gt;
 
-# show difference between two commits
-git diff &lt;uuid1&gt; &lt;uuid2&gt;
 
-# show difference between two branchs
-git diff &lt;branch1&gt; &lt;branch2&gt;
-</code></pre>
+
+
 <h2 id="discuss"><a href="#discuss" class="headerlink" title="discuss"></a>discuss</h2><p>while pull main branch to local, show this error message:</p>
-<pre><code class="shell">git pull origin main    
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git pull origin main    </span><br><span class="line"></span><br><span class="line">From github.com:ssfwshutterbug/note</span><br><span class="line"> * branch            main       -&gt; FETCH_HEAD</span><br><span class="line">fatal: refusing to merge unrelated histories</span><br></pre></td></tr></table></figure>
 
-From github.com:ssfwshutterbug/note
- * branch            main       -&gt; FETCH_HEAD
-fatal: refusing to merge unrelated histories
-</code></pre>
 <p>fixed with below</p>
-<pre><code class="shell">git pull origin main --allow-unrelated-histories
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull origin main --allow-unrelated-histories</span><br></pre></td></tr></table></figure>
+
+
+
 <h2 id="credential"><a href="#credential" class="headerlink" title="credential"></a>credential</h2><p>I am in a work with azure devops platform. And sometimes some users ask for my help of git authorized issues.</p>
 <p>There are two ways that a user can be used to authorize:</p>
 <ul>
@@ -522,228 +360,258 @@ fatal: refusing to merge unrelated histories
 </ul>
 <p>the low level can override the above level, for example: if we write a configre in local repo, then user local configure instead of system’s.</p>
 <p>and if no low level setting, the above level can be used by whole system.</p>
-<pre><code class="shell"># list all system config
-git config --system --list
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">list all system config</span></span><br><span class="line">git config --system --list</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">list all global config</span></span><br><span class="line">git config --global --list</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">list all <span class="built_in">local</span> config</span></span><br><span class="line">git config --local --list</span><br><span class="line">git config --list</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">set</span> win10 credential helper to manager</span></span><br><span class="line">git config --system credential.helper manager</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">set</span> win11 credential helper to manager-core</span></span><br><span class="line">git config --system credential.helper manager-core</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">and <span class="keyword">then</span> we can find stored info <span class="keyword">in</span> contrl pannel<span class="string">&#x27;s windows credental</span></span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="string">set local credential helper to cache(default 900 seconds)</span></span></span><br><span class="line">git config credential.helper &quot;cache --timeout 900&quot;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="string">clean cached username and password</span></span></span><br><span class="line">git config --unset credential.helper</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="string">then reset to cache</span></span></span><br><span class="line">git config credential.helper cache</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="string">or kill the process</span></span></span><br><span class="line">pkill git-credential-helper</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="string">if we set several method credential helper and want to clean</span></span></span><br><span class="line">git config --unset-all credential.helper</span><br></pre></td></tr></table></figure>
 
-# list all global config
-git config --global --list
-
-# list all local config
-git config --local --list
-git config --list
-
-# set win10 credential helper to manager
-git config --system credential.helper manager
-# set win11 credential helper to manager-core
-git config --system credential.helper manager-core
-# and then we can find stored info in contrl pannel&#39;s windows credental
-
-# set local credential helper to cache(default 900 seconds)
-git config credential.helper &quot;cache --timeout 900&quot;
-
-# clean cached username and password
-git config --unset credential.helper
-# then reset to cache
-git config credential.helper cache
-# or kill the process
-pkill git-credential-helper
-
-# if we set several method credential helper and want to clean
-git config --unset-all credential.helper
-</code></pre>
 <blockquote>
 <p>why we use git bash without configure and it used windows credential in default?</p>
 <p>because when we install git bash, there comes a config setting in default</p>
 </blockquote>
 
-  </div>
-  <div id="gitalk-container"></div>
-</div>
-
-<script>
-  
-Fancybox.bind('[data-fancybox="fancybox-gallery-img"]', {
-  dragToClose: true,
-  Toolbar: true,
-  closeButton: "top",
-  Image: {
-    zoom: true,
-  },
-  on: {
-    initCarousel: (fancybox) => {
-      const slide = fancybox.Carousel.slides[fancybox.Carousel.page];
-      fancybox.$container.style.setProperty(
-        "--bg-image",
-        `url("${slide.$thumb.src}")`
-      );
-    },
-    "Carousel.change": (fancybox, carousel, to, from) => {
-      const slide = carousel.slides[to];
-      fancybox.$container.style.setProperty(
-        "--bg-image",
-        `url("${slide.$thumb.src}")`
-      );
-    },
-  },
-});
-</script>
-
-<style>
-    #noneimg img {
-        display: none;
-        z-index: 9999;
-        /* width: 600px !important; */
-        min-width: 0%;
-        max-width: 90%;
-        max-height: 80%;
-        border-radius: 0px;
-        position: fixed;
-        box-shadow: 0 0 0px #c3c3c300 !important;
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        margin: auto !important;
-    }
-
-    @media screen and (max-width:600px) {
-        #noneimg img {
-            max-width: 88%
-        }
-    }
-</style>
-
-    <div class="post-paging">
-    
-    <a href="/2022/04/23/go/">
-        <div class="post-paging-last">
-            <span>上一篇</span>
-            <p>go</p>
         </div>
-    </a>
-    
 
-    
-    <a href="/2022/04/23/ed/">
-        <div class="post-paging-next">
-            <span>下一篇</span>
-            <p>ed</p>
-        </div>
-    </a>
-    
-</div>
-</div>
-		
-<div class="footer">
-	<div class="Copyright">
-		©2022 By Joey. 主题：<a
-			style="text-decoration: none;display: contents; color: #898F9F;"
-			target="_blank" rel="noopener" href="https://github.com/79e/hexo-theme-quiet">Quiet</a>
-	</div>
-	<div class="contact">
-		
-		<a target="_blank" rel="noopener" href="https://github.com/79E/hexo-theme-quiet">
-			<img src="https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imggithub.png" alt="Quiet主题">
-		</a>
-		
-	</div>
-</div>
-
-<script src="/js/gotop.js"></script>
-
-
-<style type="text/css">
-    @media screen and (min-width: 600px) {
-        .goTop>span {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 10px;
-            width: 40px;
-            height: 40px;
-            cursor: pointer;
-            opacity: 0.8;
-            background: rgba(18, 24, 58, 0.06);
-            text-align: center;
-            transition: border .5s;
-            border: 1px solid rgba(18, 24, 58, 0.06);
-
-            -moz-transition: border .5s;
-            /* Firefox 4 */
-            -webkit-transition: border .5s;
-            /* Safari 和 Chrome */
-            -o-transition: border .5s;
-            /* Opera */
-        }
-
-        .goTop>span:hover {
-            border: 1px solid #6680B3;
-        }
-
-
-        .goTop {
-            position: fixed;
-            right: 30px;
-            bottom: 80px;
-        }
-
-        .goTop>span>svg {
-            width: 20px;
-            height: 20px;
-            opacity: 0.7;
-        }
-
-    }
-
-    @media screen and (max-width: 600px) {
-        .goTop {
-            display: none;
-        }
-    }
-</style>
-<div class="goTop" id="js-go_top">
-    <span>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-            <g>
-                <path d="M13 12v8h-2v-8H4l8-8 8 8z"></path>
-            </g>
-        </svg>
-    </span>
-</div>
-<script>
-    $( '#js-go_top' )
-	.gotoTop( {
-		offset: 500,
-		speed: 300,
-		animationShow: {
-			'transform': 'translate(0,0)',
-			'transition': 'transform .5s ease-in-out'
-		},
-		animationHide: {
-			'transform': 'translate(100px,0)',
-			'transition': 'transform .5s ease-in-out'
-		}
-	} );
-</script>
-
-
-    <!-- Gitalk -->
-    <script>
-        const data = '{"clientID":"02b3c","clientSecret":"adfc7b4","repo":"gimment","owner":"duneng","admin":"duneng"}'
-        const gitalk = new Gitalk({
-            ...JSON.parse( data),
-            id:location.pathname,
-            distractionFreeMode:false
-        })
         
-        if(Boolean('true')){
-            gitalk.render('gitalk-container')
-        }
-    </script>
 
+        
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/git/">#git</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2022/04/23/go/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">go</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2022/04/23/ed/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">ed</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2020</span>
+              -
+            
+            2022&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">shutterbug</a>
+        </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#git"><span class="nav-number">1.</span> <span class="nav-text">git</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#common-command-quick-look"><span class="nav-number">1.1.</span> <span class="nav-text">common command quick look</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#change-defalut-branch-name"><span class="nav-number">1.2.</span> <span class="nav-text">change defalut branch name</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#initialize"><span class="nav-number">1.3.</span> <span class="nav-text">initialize</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#configuration"><span class="nav-number">1.4.</span> <span class="nav-text">configuration</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#add-to-git"><span class="nav-number">1.5.</span> <span class="nav-text">add to git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ignore-some-dir-file"><span class="nav-number">1.6.</span> <span class="nav-text">ignore some dir&#x2F;file</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#commit-changes"><span class="nav-number">1.7.</span> <span class="nav-text">commit changes</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#reverse-changes"><span class="nav-number">1.8.</span> <span class="nav-text">reverse changes</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#use-github-as-remote-repo"><span class="nav-number">1.9.</span> <span class="nav-text">use github as remote repo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#clone-from-github-existing-repo"><span class="nav-number">1.10.</span> <span class="nav-text">clone from github existing repo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#create-delete-branch"><span class="nav-number">1.11.</span> <span class="nav-text">create&#x2F;delete branch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#merge-branch"><span class="nav-number">1.12.</span> <span class="nav-text">merge branch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#show-difference"><span class="nav-number">1.13.</span> <span class="nav-text">show difference</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#discuss"><span class="nav-number">1.14.</span> <span class="nav-text">discuss</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#credential"><span class="nav-number">1.15.</span> <span class="nav-text">credential</span></a></li></ol></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/dark-light-toggle.js"></script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/local-search.js"></script>
+
+
+
+
+
+
+<div class="post-scripts pjax">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/toc.js"></script>
+    
+</div>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/libs/pjax.min.js"></script>
 <script>
-	console.log('\n %c Hexo-Quiet 主题 %c https://github.com/79e/hexo-theme-quiet \n', 'color: #fadfa3; background: #030307; padding:5px 0;', 'background: #fadfa3; padding:5px 0;')
-</script>
-	</body>
-</html>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
 
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            KEEP.refresh();
+        });
+    });
+</script>
+
+
+
+</body>
+</html>

@@ -1,296 +1,218 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		
-<title>iptables-Quiet</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="shortcut icon" type="image/x-icon" href="/image/favicon.ico">
-
-<link rel="stylesheet" href="/css/index.css">
-
-
-
-<meta name="keywords" content="iptables,">
-<meta name="description" content="">
-
-
-<script src="/js/jquery.min.js"></script>
-
-
-<script src="/js/index.js"></script>
-
-
-<script src="/js/fancybox.umd.js"></script>
-
-
-<script src="/js/fancybox-images.js"></script>
-
-
-<script src="/js/gitalk.min.js"></script>
-
-
-<script src="/js/hljs.min.js"></script>
- 
-<script>hljs.highlightAll();</script>
-
-	<meta name="generator" content="Hexo 5.4.2"></head>
-
-	<body>
-		
-	<div class="header">
-		<div class="header-top" id="header-top">
-			<div class="h-left">
-				<a href="/">
-					<img src="/image/logo.png" alt="Quiet">
-				</a>
-			</div>
-			<div class="h-right">
-				<ul>
-					
-						
-								<li>
-									<a href="/">
-										HOME
-									</a>
-									<span class="dot"></span>
-								</li>
-								
-									
-						
-								<li>
-									<a href="/archives">
-										ARCHIVE
-									</a>
-									<span class="dot"></span>
-								</li>
-								
-									
-						
-								<li>
-									<a href="/categories">
-										CATEGORIES
-									</a>
-									<span class="dot"></span>
-								</li>
-								
-									
-						
-								<li>
-									<a href="/tags">
-										TAGS
-									</a>
-									<span class="dot"></span>
-								</li>
-								
-									
-				</ul>
-			</div>
-			<div class="h-right-close">
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-					<path fill="none" d="M0 0h24v24H0z" />
-					<path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z" fill="rgba(68,68,68,1)" />
-				</svg>
-			</div>
-		</div>
-	</div>
-	<div class="sidebar">
-    <div class="topo">
-        <h2>Joey</h2>
-    </div>
-    <ul>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="shutterbug">
+    
+    <title>
         
-        <li>
-            <a href="/">HOME</a>
-        </li>
+            iptables |
         
-        <li>
-            <a href="/archives">ARCHIVE</a>
-        </li>
-        
-        <li>
-            <a href="/categories">CATEGORIES</a>
-        </li>
-        
-        <li>
-            <a href="/tags">TAGS</a>
-        </li>
-        
-    </ul>
-    <div class="my_foot">
-        
-        <a target="_blank" rel="noopener" href="https://github.com/79E/hexo-theme-quiet">
-            <img src="https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imggithub.png" alt="Quiet主题">
-        </a>
-        
-    </div>
+        Sweet Diary
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/logo.svg">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"raw.githubusercontent.com","root":"/","language":"en","path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":true},"style":{"primary_color":"#0066CC","avatar":"/images/avatar.svg","favicon":"/images/logo.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/4.jpg","description":"the world you see is not about how they act but how we respond."},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":false},"code_copy":{"enable":false,"style":"default"},"pjax":{"enable":true},"lazyload":{"enable":false},"version":"3.4.5"};
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+  </script>
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fas fa-circle-notch fa-spin"></i>
+        </span>
+    
 </div>
-<div class='shelter'>
-</div>
-<style>
-    .shelter{
-        background-color: #333;
-        opacity:0.5;
-        cursor: pointer;
-        display: none; 
-        position: fixed;
-        left: 0;
-        top: 0; 
-        right: 0;
-        bottom: 0;
-        z-index: 1998;
-    }
-    .sidebar {
-        width: 66%;
-        height: 100%;
-        position: fixed;
-        top: 0;
-        right: -100%;
-        bottom: 0;
-        background: #fff;
-        z-index: 1999;
-        text-align: center;
-        box-shadow: -6px 0 20px rgba(98, 94, 94, .815);
-    }
 
-    .topo {
-        width: 100%;
-        height: 200px;
-        background: url(https://api.ixiaowai.cn/gqapi/gqapi.php) no-repeat;
-        background-size: 100% 100%;
-        position: relative;
-        display: flex;
-        align-items: flex-end
-    }
 
-    .topo h2 {
-        color: #fff;
-        z-index: 1;
-        position: relative;
-        margin: 0 0 10px 10px;
-        font-size: 1.2em;
-        box-sizing: border-box
-    }
+<main class="page-container">
 
-    .topo:before {
-        content: '';
-        background-image: url(/image/pattern.png);
-        background-repeat: repeat;
-        height: 100%;
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: 100%;
-        z-index: 1
-    }
+    
 
-    .sidebar ul {
-        width: 100%;
-        margin-top: 50px
-    }
+    <div class="page-main-content">
 
-    .sidebar ul li {
-        height: 50px;
-        list-style: none;
-        font-size: 1.2em;
-        text-align: right;
-        margin-right: 10px
-    }
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
 
-    .sidebar ul li a {
-        display: grid;
-        color: #5d606a;
-        text-overflow: ellipsis;
-        width: 100%;
-        text-decoration: none
-    }
-
-    .my_foot {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 10px;
-        position: absolute;
-        bottom: 0
-    }
-
-    .my_foot a {
-        text-decoration: none;
-        margin-right: 10px;
-        display: inline-block
-    }
-
-    .my_foot a img {
-        width: 30px;
-        height: 30px
-    }
-</style>
-
-<script>
-    $( function () {
-	$( '.h-right-close>svg' )
-		.click( function () {
-			$( '.sidebar' )
-				.animate( {
-					right: "0"
-				}, 500 );
-			$( '.shelter' )
-				.fadeIn( "slow" )
-		} );
-	$( '.shelter' )
-		.click( function ( e ) {
-			$( '.sidebar' )
-				.animate( {
-					right: "-100%"
-				}, 500 );
-			$( '.shelter' )
-				.fadeOut( "slow" )
-		} )
-} )
-
-</script>
-
-<div class="post">
-    <div class="post-header-background post-header-img"
-    style="background: url('https://api.ixiaowai.cn/gqapi/gqapi.php')" 
->
-    <div class="post-header-background-content">
-        <ul class="post-header-tag">
+    <div class="header-content">
+        <div class="left">
             
-            
-            <li><a href="/tags/iptables">iptables</a></li>
-            
-            
-        </ul>
-        
-        <h1>iptables</h1>
-        <div class="post-header-info">
-            <div class="post-header-info-author">
+            <a class="logo-title" href="/">
+                Sweet Diary
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                HOME
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                CATEGORIES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                TAGS
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
                 
-                    <svg t="1604839279282" class="icon" viewBox="0 0 1024 1024" version="1.1"
-                        xmlns="http://www.w3.org/2000/svg" p-id="2901" width="20" height="20">
-                        <path
-                            d="M513 956.3c-247.7 0-448-200.3-448-448S265.3 66.2 513 66.2s448 200.3 448 448-200.3 442.1-448 442.1z m0-830.9c-212.2 0-388.8 170.7-388.8 388.8C124.2 726.3 294.9 903 513 903c212.2 0 388.8-170.7 388.8-388.8S725.2 125.4 513 125.4z m0 430.2c-94.2 0-170.7-76.5-170.7-170.7S418.8 207.8 513 207.8s170.7 76.5 170.7 170.7S607.2 555.6 513 555.6z m0-289.1c-64.6 0-112 52.8-112 112s47.4 117.9 112 117.9 112-52.8 112-112-47.4-117.9-112-117.9z m0 689.8c-135.7 0-259-58.7-341.9-158.9l-11.8-17.8 11.8-17.8c76.5-117.9 206.2-188.5 347.8-188.5 135.7 0 265 64.6 341.9 182.6l11.8 17.8-11.8 17.8C778 897.1 648.7 956.3 513 956.3zM230.3 773.2C300.9 849.7 406.9 897 513 897c112 0 218.1-47.4 288.6-129.8-70.5-88.2-170.7-135.6-282.7-135.6s-218.1 53.3-288.6 141.6z"
-                            p-id="2902" fill="#ffffff"></path>
-                    </svg>
-                    
-                <span class="post-header-info-author-text"> <a href="../../about">Joey</a></span>
-                <div class="post-header-info-author-categories">
-                    
-                         <a href="../../categories/learn/" target="_blank" >learn</a>
-                    
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
                 </div>
-                <p>2022-04-23 23:04:53</p>
             </div>
         </div>
     </div>
-</div>
-    <div class="post-content" id="content">
-  
-  <div id="article" class="post-content-info">
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">HOME</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">ARCHIVES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">CATEGORIES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">TAGS</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">iptables</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/avatar.svg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">shutterbug</span>
+                        
+                            <span class="author-label">Lv4</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2022-04-23 23:04:53</span>
+        <span class="mobile">2022-04-23 23:04</span>
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/learn/">learn</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/iptables/">iptables</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
     
 
-    <h1 id="IPTABLES"><a href="#IPTABLES" class="headerlink" title="IPTABLES"></a>IPTABLES</h1><p>iptables is a powerful tool(front of kernel netfilter module) to manually change the way that network connection of our computer. we can do everything with the network connection such as port forward, nat network transfer, load balancer and etc.</p>
+    
+    
+    
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <h1 id="IPTABLES"><a href="#IPTABLES" class="headerlink" title="IPTABLES"></a>IPTABLES</h1><p>iptables is a powerful tool(front of kernel netfilter module) to manually change the way that network connection of our computer. we can do everything with the network connection such as port forward, nat network transfer, load balancer and etc.</p>
 <h2 id="tables"><a href="#tables" class="headerlink" title="tables"></a>tables</h2><p>as first we need to know that there are 5 tables for us to store our ip table rules:</p>
 <table>
 <thead>
@@ -322,284 +244,322 @@
 </tbody></table>
 <p>the most important thing is that the life of packet working though isn’t from one table to another table, so, table is just a group of rules that have the same effective function. in order to make the configuration much easier, there comes <code>chain</code> concept. each table has different chains.</p>
 <h2 id="startup-and-save"><a href="#startup-and-save" class="headerlink" title="startup and save"></a>startup and save</h2><p>in my archlinux, it isn’t enabled by default.</p>
-<pre><code class="shell"># enable iptables and start
-sudo systemctl enable --now iptables
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">enable</span> iptables and start</span></span><br><span class="line">sudo systemctl enable --now iptables</span><br></pre></td></tr></table></figure>
+
 <p>terminal setting of iptables will not store in disk, in order to make it effect after reboot we need to save it.</p>
-<pre><code class="shell">sudo iptables-save -f /etc/iptables/iptables.rules
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo iptables-save -f /etc/iptables/iptables.rules</span><br></pre></td></tr></table></figure>
+
 <p>in general, we don’t modify this file directly. however if we do that a reload is needed.</p>
-<pre><code class="shell">sudo iptables-restart /etc/iptables/iptables.rules
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo iptables-restart /etc/iptables/iptables.rules</span><br></pre></td></tr></table></figure>
+
+
+
 <h2 id="list-rules"><a href="#list-rules" class="headerlink" title="list rules"></a>list rules</h2><p><code>--list</code>: list all rules with DNS resolve, don’t use this along since it will display for a long time.</p>
 <p><code>--numeric</code>: don’t resolve DNS, display ip directly.</p>
 <p><code>--list-rules</code>: list all origin commands.</p>
 <p><code>--line-number</code>: list rules with line number.</p>
 <p><code>--verbose</code>: show packet account.</p>
-<pre><code class="shell">sudo iptables --table filter --list --numeric
-sudo iptables --table nat --list --numeric --line-number
-sudo iptables --table mangle --list-rules
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo iptables --table filter --list --numeric</span><br><span class="line">sudo iptables --table nat --list --numeric --line-number</span><br><span class="line">sudo iptables --table mangle --list-rules</span><br></pre></td></tr></table></figure>
+
 <blockquote>
 <p>Note:</p>
-<p>use <code>list</code> with <code>numeric</code> together, or it will <a target="_blank" rel="noopener" href="https://serverfault.com/questions/85602/iptables-l-pretty-slow-is-this-normal">spend lots of time</a> to reverse ip address to DNS/hostname</p>
+<p>use <code>list</code> with <code>numeric</code> together, or it will <a class="link"   target="_blank" rel="noopener" href="https://serverfault.com/questions/85602/iptables-l-pretty-slow-is-this-normal" >spend lots of time<i class="fas fa-external-link-alt"></i></a> to reverse ip address to DNS/hostname</p>
 </blockquote>
 <h2 id="import-modules"><a href="#import-modules" class="headerlink" title="import modules"></a>import modules</h2><p>In iptables, there are lots of modules we can use. For example <code>--protocol tcp</code> will import a module named tcp in backend. If we want to use other modules, we can use <code>--module module_name</code> to import.</p>
 <p>Module <code>comment</code> is very useful for us to add a comment to a rule in case of forgotten.</p>
-<pre><code class="shell">sudo iptables --table filter --append FORWARD --jump DROP --module comment --comment &quot;disable all forward traffice by default&quot;
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo iptables --table filter --append FORWARD --jump DROP --module comment --comment &quot;disable all forward traffice by default&quot;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
 <h2 id="disable-input-request"><a href="#disable-input-request" class="headerlink" title="disable input request"></a>disable input request</h2><p>in order to enhance personal PC security, i want to disable all request to my PC but only allow local area ssh connect.</p>
 <p>if i disable all input traffic, though all output traffic is allowed i cannot access any web site via browser. The reason is that when i send a request to remote web server, the remote server need reply the information that i need, but i already disabled all input traffic, so i cannot visit any web site. Since all connection have a state, if the connection is established, the state will be changed. So i can use this feature.</p>
-<pre><code class="shell"># disable all input traffic by default
-sudo iptables --table filter --policy INPUT DROP
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">disable</span> all input traffic by default</span></span><br><span class="line">sudo iptables --table filter --policy INPUT DROP</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">allow established connection</span></span><br><span class="line">sudo iptables --table filter --append INPUT --module state --state ESTABLISHED --jump ACCEPT --module comment --comment &quot;allow established connection&quot;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">allow <span class="built_in">local</span> area network ssh connectin</span></span><br><span class="line">sudo iptables --table filter --append INPUT --protocol tcp --dport 22 --jump ACCEPT --module comment --comment &quot;allow local area network ssh connection&quot;</span><br></pre></td></tr></table></figure>
 
-# allow established connection
-sudo iptables --table filter --append INPUT --module state --state ESTABLISHED --jump ACCEPT --module comment --comment &quot;allow established connection&quot;
 
-# allow local area network ssh connectin
-sudo iptables --table filter --append INPUT --protocol tcp --dport 22 --jump ACCEPT --module comment --comment &quot;allow local area network ssh connection&quot;
-</code></pre>
+
+
+
 <h2 id="flush-old-rule-and-modify-default-chain-policy"><a href="#flush-old-rule-and-modify-default-chain-policy" class="headerlink" title="flush old rule and modify default chain policy"></a>flush old rule and modify default chain policy</h2><p>we can choose which one to flush, all table/ one table/ a chain?</p>
-<pre><code class="shell"># flush all table
-sudo iptables --flush
-# flush specified table
-sudo iptables --table [table_name] --flush
-# flush specified table&#39;s chain
-sudo iptables --table [table_name] --flush [chain_name]
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">flush all table</span></span><br><span class="line">sudo iptables --flush</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">flush specified table</span></span><br><span class="line">sudo iptables --table [table_name] --flush</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">flush specified table<span class="string">&#x27;s chain</span></span></span><br><span class="line">sudo iptables --table [table_name] --flush [chain_name]</span><br></pre></td></tr></table></figure>
+
 <p>there are two ways to change the default chain policy:</p>
 <ol>
 <li>directly change chain policy</li>
 <li>add a global policy at the end of one chain</li>
 </ol>
-<pre><code class="shell"># eg: change default ACCEPT to DROP of filter table INPUT chain
-sudo iptables --table filter --policy INPUT DROP
-sudo iptables --table filter --append INPUT --jump DROP
-</code></pre>
-<h2 id="NAT-table"><a href="#NAT-table" class="headerlink" title="NAT table"></a>NAT table</h2><p>learn from <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=NAdJojxENEU">youtube video</a>. net table is used to forward packet, much powerful in port forward, ip forward, even load balance.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">eg: change default ACCEPT to DROP of filter table INPUT chain</span></span><br><span class="line">sudo iptables --table filter --policy INPUT DROP</span><br><span class="line">sudo iptables --table filter --append INPUT --jump DROP</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="NAT-table"><a href="#NAT-table" class="headerlink" title="NAT table"></a>NAT table</h2><p>learn from <a class="link"   target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=NAdJojxENEU" >youtube video<i class="fas fa-external-link-alt"></i></a>. net table is used to forward packet, much powerful in port forward, ip forward, even load balance.</p>
 <h3 id="port-forward"><a href="#port-forward" class="headerlink" title="port forward"></a>port forward</h3><p>all traffic coming to local network will work though nat’s <code>PREROUTING</code> chain. in this chain, we can modify access port to other port realizing port forward.</p>
 <p>for example i want other people access my PC’s 8080 port to really visit 80  port.</p>
-<pre><code class="shell">sudo iptables --table nat --append PREROUTING --protocol tcp --dport 8080 --jump REDIRECT --to 80 --module comment --comment &quot;redirect 8080 to 80 port&quot;
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo iptables --table nat --append PREROUTING --protocol tcp --dport 8080 --jump REDIRECT --to 80 --module comment --comment &quot;redirect 8080 to 80 port&quot;</span><br></pre></td></tr></table></figure>
+
 <p>now other people visit my PC’s 8080 port will redirect to 80 port.</p>
 <p>it is very useful, yeah? one hand, we can enhance security, on the other hand, we can start several same applications with different ports in one machine.</p>
 <h3 id="ip-forward"><a href="#ip-forward" class="headerlink" title="ip forward"></a>ip forward</h3><p><img src=".images/image-20210313153205046.png" alt="ip forward"></p>
 <p>环境：192.168.31.235主机安装了nginx服务，可以进行web页面80端口访问。现在需要在192.168.31.31（本机）访问192.168.31.114的80端口来间接访问192.168.31.235的nginx服务</p>
 <p><code>所有iptables策略在转发192.168.31.114主机上进行配置</code></p>
-<pre><code class="shell"># 将来自114：80端口的请求转发到235:80端口
-iptables --table nat \
---append PREROUTING \
---protocol tcp \
---dport 80 \
---destination 192.168.31.114 \
---jump DNAT \
---to-destination 192.168.31.235:80
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">将来自114：80端口的请求转发到235:80端口</span></span><br><span class="line">iptables --table nat \</span><br><span class="line">--append PREROUTING \</span><br><span class="line">--protocol tcp \</span><br><span class="line">--dport 80 \</span><br><span class="line">--destination 192.168.31.114 \</span><br><span class="line">--jump DNAT \</span><br><span class="line">--to-destination 192.168.31.235:80</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">将转发到235:80端口的数据源地址31（本机）地址修改为114</span></span><br><span class="line">iptables --table nat \</span><br><span class="line">--append POSTROUTING \</span><br><span class="line">--protocol tcp \</span><br><span class="line">--dport 80 \</span><br><span class="line">--destination 192.168.31.235 \</span><br><span class="line">--jump SNAT \</span><br><span class="line">--to-source 192.168.31.114</span><br></pre></td></tr></table></figure>
 
-# 将转发到235:80端口的数据源地址31（本机）地址修改为114
-iptables --table nat \
---append POSTROUTING \
---protocol tcp \
---dport 80 \
---destination 192.168.31.235 \
---jump SNAT \
---to-source 192.168.31.114
-</code></pre>
 <blockquote>
 <p>Note: </p>
 <p>默认主机的ip转发是关闭的，需要手动开启。如果需要永久开启需要在/etc/sysctl.conf中添加</p>
 <p>net.ipv4.ip_forward=1</p>
 </blockquote>
-<pre><code class="shell">echo 1 &gt; /proc/sys/net/ipv4/ip_forward
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo 1 &gt; /proc/sys/net/ipv4/ip_forward</span><br></pre></td></tr></table></figure>
 
-  </div>
-  <div id="gitalk-container"></div>
-</div>
 
-<script>
-  
-Fancybox.bind('[data-fancybox="fancybox-gallery-img"]', {
-  dragToClose: true,
-  Toolbar: true,
-  closeButton: "top",
-  Image: {
-    zoom: true,
-  },
-  on: {
-    initCarousel: (fancybox) => {
-      const slide = fancybox.Carousel.slides[fancybox.Carousel.page];
-      fancybox.$container.style.setProperty(
-        "--bg-image",
-        `url("${slide.$thumb.src}")`
-      );
-    },
-    "Carousel.change": (fancybox, carousel, to, from) => {
-      const slide = carousel.slides[to];
-      fancybox.$container.style.setProperty(
-        "--bg-image",
-        `url("${slide.$thumb.src}")`
-      );
-    },
-  },
-});
-</script>
 
-<style>
-    #noneimg img {
-        display: none;
-        z-index: 9999;
-        /* width: 600px !important; */
-        min-width: 0%;
-        max-width: 90%;
-        max-height: 80%;
-        border-radius: 0px;
-        position: fixed;
-        box-shadow: 0 0 0px #c3c3c300 !important;
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        margin: auto !important;
-    }
 
-    @media screen and (max-width:600px) {
-        #noneimg img {
-            max-width: 88%
-        }
-    }
-</style>
-
-    <div class="post-paging">
-    
-    <a href="/2022/04/23/k8s/">
-        <div class="post-paging-last">
-            <span>上一篇</span>
-            <p>k8s</p>
         </div>
-    </a>
-    
 
-    
-    <a href="/2022/04/23/ip-route/">
-        <div class="post-paging-next">
-            <span>下一篇</span>
-            <p>ip_route</p>
-        </div>
-    </a>
-    
-</div>
-</div>
-		
-<div class="footer">
-	<div class="Copyright">
-		©2022 By Joey. 主题：<a
-			style="text-decoration: none;display: contents; color: #898F9F;"
-			target="_blank" rel="noopener" href="https://github.com/79e/hexo-theme-quiet">Quiet</a>
-	</div>
-	<div class="contact">
-		
-		<a target="_blank" rel="noopener" href="https://github.com/79E/hexo-theme-quiet">
-			<img src="https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imggithub.png" alt="Quiet主题">
-		</a>
-		
-	</div>
-</div>
-
-<script src="/js/gotop.js"></script>
-
-
-<style type="text/css">
-    @media screen and (min-width: 600px) {
-        .goTop>span {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 10px;
-            width: 40px;
-            height: 40px;
-            cursor: pointer;
-            opacity: 0.8;
-            background: rgba(18, 24, 58, 0.06);
-            text-align: center;
-            transition: border .5s;
-            border: 1px solid rgba(18, 24, 58, 0.06);
-
-            -moz-transition: border .5s;
-            /* Firefox 4 */
-            -webkit-transition: border .5s;
-            /* Safari 和 Chrome */
-            -o-transition: border .5s;
-            /* Opera */
-        }
-
-        .goTop>span:hover {
-            border: 1px solid #6680B3;
-        }
-
-
-        .goTop {
-            position: fixed;
-            right: 30px;
-            bottom: 80px;
-        }
-
-        .goTop>span>svg {
-            width: 20px;
-            height: 20px;
-            opacity: 0.7;
-        }
-
-    }
-
-    @media screen and (max-width: 600px) {
-        .goTop {
-            display: none;
-        }
-    }
-</style>
-<div class="goTop" id="js-go_top">
-    <span>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-            <g>
-                <path d="M13 12v8h-2v-8H4l8-8 8 8z"></path>
-            </g>
-        </svg>
-    </span>
-</div>
-<script>
-    $( '#js-go_top' )
-	.gotoTop( {
-		offset: 500,
-		speed: 300,
-		animationShow: {
-			'transform': 'translate(0,0)',
-			'transition': 'transform .5s ease-in-out'
-		},
-		animationHide: {
-			'transform': 'translate(100px,0)',
-			'transition': 'transform .5s ease-in-out'
-		}
-	} );
-</script>
-
-
-    <!-- Gitalk -->
-    <script>
-        const data = '{"clientID":"02b3c","clientSecret":"adfc7b4","repo":"gimment","owner":"duneng","admin":"duneng"}'
-        const gitalk = new Gitalk({
-            ...JSON.parse( data),
-            id:location.pathname,
-            distractionFreeMode:false
-        })
         
-        if(Boolean('true')){
-            gitalk.render('gitalk-container')
-        }
-    </script>
 
+        
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/iptables/">#iptables</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2022/04/23/k8s/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">k8s</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2022/04/23/ip-route/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">ip_route</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2020</span>
+              -
+            
+            2022&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">shutterbug</a>
+        </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#IPTABLES"><span class="nav-number">1.</span> <span class="nav-text">IPTABLES</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#tables"><span class="nav-number">1.1.</span> <span class="nav-text">tables</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#startup-and-save"><span class="nav-number">1.2.</span> <span class="nav-text">startup and save</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#list-rules"><span class="nav-number">1.3.</span> <span class="nav-text">list rules</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#import-modules"><span class="nav-number">1.4.</span> <span class="nav-text">import modules</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#disable-input-request"><span class="nav-number">1.5.</span> <span class="nav-text">disable input request</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#flush-old-rule-and-modify-default-chain-policy"><span class="nav-number">1.6.</span> <span class="nav-text">flush old rule and modify default chain policy</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NAT-table"><span class="nav-number">1.7.</span> <span class="nav-text">NAT table</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#port-forward"><span class="nav-number">1.7.1.</span> <span class="nav-text">port forward</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ip-forward"><span class="nav-number">1.7.2.</span> <span class="nav-text">ip forward</span></a></li></ol></li></ol></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/dark-light-toggle.js"></script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/local-search.js"></script>
+
+
+
+
+
+
+<div class="post-scripts pjax">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/toc.js"></script>
+    
+</div>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/libs/pjax.min.js"></script>
 <script>
-	console.log('\n %c Hexo-Quiet 主题 %c https://github.com/79e/hexo-theme-quiet \n', 'color: #fadfa3; background: #030307; padding:5px 0;', 'background: #fadfa3; padding:5px 0;')
-</script>
-	</body>
-</html>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
 
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            KEEP.refresh();
+        });
+    });
+</script>
+
+
+
+</body>
+</html>

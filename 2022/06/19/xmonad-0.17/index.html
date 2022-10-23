@@ -1,578 +1,544 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		
-<title>xmonad-Quiet</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="shortcut icon" type="image/x-icon" href="/image/favicon.ico">
-
-<link rel="stylesheet" href="/css/index.css">
-
-
-
-<meta name="keywords" content="xmonad,">
-<meta name="description" content="">
-
-
-<script src="/js/jquery.min.js"></script>
-
-
-<script src="/js/index.js"></script>
-
-
-<script src="/js/fancybox.umd.js"></script>
-
-
-<script src="/js/fancybox-images.js"></script>
-
-
-<script src="/js/gitalk.min.js"></script>
-
-
-<script src="/js/hljs.min.js"></script>
- 
-<script>hljs.highlightAll();</script>
-
-	<meta name="generator" content="Hexo 5.4.2"></head>
-
-	<body>
-		
-	<div class="header">
-		<div class="header-top" id="header-top">
-			<div class="h-left">
-				<a href="/">
-					<img src="/image/logo.png" alt="Quiet">
-				</a>
-			</div>
-			<div class="h-right">
-				<ul>
-					
-						
-								<li>
-									<a href="/">
-										HOME
-									</a>
-									<span class="dot"></span>
-								</li>
-								
-									
-						
-								<li>
-									<a href="/archives">
-										ARCHIVE
-									</a>
-									<span class="dot"></span>
-								</li>
-								
-									
-						
-								<li>
-									<a href="/categories">
-										CATEGORIES
-									</a>
-									<span class="dot"></span>
-								</li>
-								
-									
-						
-								<li>
-									<a href="/tags">
-										TAGS
-									</a>
-									<span class="dot"></span>
-								</li>
-								
-									
-				</ul>
-			</div>
-			<div class="h-right-close">
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-					<path fill="none" d="M0 0h24v24H0z" />
-					<path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z" fill="rgba(68,68,68,1)" />
-				</svg>
-			</div>
-		</div>
-	</div>
-	<div class="sidebar">
-    <div class="topo">
-        <h2>Joey</h2>
-    </div>
-    <ul>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="shutterbug">
+    
+    <title>
         
-        <li>
-            <a href="/">HOME</a>
-        </li>
+            xmonad |
         
-        <li>
-            <a href="/archives">ARCHIVE</a>
-        </li>
-        
-        <li>
-            <a href="/categories">CATEGORIES</a>
-        </li>
-        
-        <li>
-            <a href="/tags">TAGS</a>
-        </li>
-        
-    </ul>
-    <div class="my_foot">
-        
-        <a target="_blank" rel="noopener" href="https://github.com/79E/hexo-theme-quiet">
-            <img src="https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imggithub.png" alt="Quiet主题">
-        </a>
-        
-    </div>
+        Sweet Diary
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/logo.svg">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"raw.githubusercontent.com","root":"/","language":"en","path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":true},"style":{"primary_color":"#0066CC","avatar":"/images/avatar.svg","favicon":"/images/logo.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/4.jpg","description":"the world you see is not about how they act but how we respond."},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":false},"code_copy":{"enable":false,"style":"default"},"pjax":{"enable":true},"lazyload":{"enable":false},"version":"3.4.5"};
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+  </script>
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fas fa-circle-notch fa-spin"></i>
+        </span>
+    
 </div>
-<div class='shelter'>
-</div>
-<style>
-    .shelter{
-        background-color: #333;
-        opacity:0.5;
-        cursor: pointer;
-        display: none; 
-        position: fixed;
-        left: 0;
-        top: 0; 
-        right: 0;
-        bottom: 0;
-        z-index: 1998;
-    }
-    .sidebar {
-        width: 66%;
-        height: 100%;
-        position: fixed;
-        top: 0;
-        right: -100%;
-        bottom: 0;
-        background: #fff;
-        z-index: 1999;
-        text-align: center;
-        box-shadow: -6px 0 20px rgba(98, 94, 94, .815);
-    }
 
-    .topo {
-        width: 100%;
-        height: 200px;
-        background: url(https://api.ixiaowai.cn/gqapi/gqapi.php) no-repeat;
-        background-size: 100% 100%;
-        position: relative;
-        display: flex;
-        align-items: flex-end
-    }
 
-    .topo h2 {
-        color: #fff;
-        z-index: 1;
-        position: relative;
-        margin: 0 0 10px 10px;
-        font-size: 1.2em;
-        box-sizing: border-box
-    }
+<main class="page-container">
 
-    .topo:before {
-        content: '';
-        background-image: url(/image/pattern.png);
-        background-repeat: repeat;
-        height: 100%;
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: 100%;
-        z-index: 1
-    }
+    
 
-    .sidebar ul {
-        width: 100%;
-        margin-top: 50px
-    }
+    <div class="page-main-content">
 
-    .sidebar ul li {
-        height: 50px;
-        list-style: none;
-        font-size: 1.2em;
-        text-align: right;
-        margin-right: 10px
-    }
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
 
-    .sidebar ul li a {
-        display: grid;
-        color: #5d606a;
-        text-overflow: ellipsis;
-        width: 100%;
-        text-decoration: none
-    }
-
-    .my_foot {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 10px;
-        position: absolute;
-        bottom: 0
-    }
-
-    .my_foot a {
-        text-decoration: none;
-        margin-right: 10px;
-        display: inline-block
-    }
-
-    .my_foot a img {
-        width: 30px;
-        height: 30px
-    }
-</style>
-
-<script>
-    $( function () {
-	$( '.h-right-close>svg' )
-		.click( function () {
-			$( '.sidebar' )
-				.animate( {
-					right: "0"
-				}, 500 );
-			$( '.shelter' )
-				.fadeIn( "slow" )
-		} );
-	$( '.shelter' )
-		.click( function ( e ) {
-			$( '.sidebar' )
-				.animate( {
-					right: "-100%"
-				}, 500 );
-			$( '.shelter' )
-				.fadeOut( "slow" )
-		} )
-} )
-
-</script>
-
-<div class="post">
-    <div class="post-header-background post-header-img"
-    style="background: url('https://api.ixiaowai.cn/gqapi/gqapi.php')" 
->
-    <div class="post-header-background-content">
-        <ul class="post-header-tag">
+    <div class="header-content">
+        <div class="left">
             
-            
-            <li><a href="/tags/xmonad">xmonad</a></li>
-            
-            
-        </ul>
-        
-        <h1>xmonad</h1>
-        <div class="post-header-info">
-            <div class="post-header-info-author">
+            <a class="logo-title" href="/">
+                Sweet Diary
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                HOME
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                CATEGORIES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                TAGS
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
                 
-                    <svg t="1604839279282" class="icon" viewBox="0 0 1024 1024" version="1.1"
-                        xmlns="http://www.w3.org/2000/svg" p-id="2901" width="20" height="20">
-                        <path
-                            d="M513 956.3c-247.7 0-448-200.3-448-448S265.3 66.2 513 66.2s448 200.3 448 448-200.3 442.1-448 442.1z m0-830.9c-212.2 0-388.8 170.7-388.8 388.8C124.2 726.3 294.9 903 513 903c212.2 0 388.8-170.7 388.8-388.8S725.2 125.4 513 125.4z m0 430.2c-94.2 0-170.7-76.5-170.7-170.7S418.8 207.8 513 207.8s170.7 76.5 170.7 170.7S607.2 555.6 513 555.6z m0-289.1c-64.6 0-112 52.8-112 112s47.4 117.9 112 117.9 112-52.8 112-112-47.4-117.9-112-117.9z m0 689.8c-135.7 0-259-58.7-341.9-158.9l-11.8-17.8 11.8-17.8c76.5-117.9 206.2-188.5 347.8-188.5 135.7 0 265 64.6 341.9 182.6l11.8 17.8-11.8 17.8C778 897.1 648.7 956.3 513 956.3zM230.3 773.2C300.9 849.7 406.9 897 513 897c112 0 218.1-47.4 288.6-129.8-70.5-88.2-170.7-135.6-282.7-135.6s-218.1 53.3-288.6 141.6z"
-                            p-id="2902" fill="#ffffff"></path>
-                    </svg>
-                    
-                <span class="post-header-info-author-text"> <a href="../../about">Joey</a></span>
-                <div class="post-header-info-author-categories">
-                    
-                         <a href="../../categories/linux/" target="_blank" >linux</a>
-                    
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
                 </div>
-                <p>2022-06-19 00:58:16</p>
             </div>
         </div>
     </div>
-</div>
-    <div class="post-content" id="content">
-  
-  <div id="article" class="post-content-info">
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">HOME</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">ARCHIVES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">CATEGORIES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">TAGS</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">xmonad</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/avatar.svg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">shutterbug</span>
+                        
+                            <span class="author-label">Lv4</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2022-06-19 00:58:16</span>
+        <span class="mobile">2022-06-19 00:58</span>
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/linux/">linux</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/xmonad/">xmonad</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
     
 
-    <h1 id="XMONAD"><a href="#XMONAD" class="headerlink" title="XMONAD"></a>XMONAD</h1><p>上大学的时候就开始用xmonad了，过段时间可能就要重新配置一下xmonad，这也成为了一种乐趣。曾经尝试过很多的WE，DE，最终还是最喜欢xmonad。xmonad的版本也从0.15变成了现在的0.17，logo也换了，everything is changed。有一种沧桑的感觉</p>
+    
+    
+    
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <h1 id="XMONAD"><a href="#XMONAD" class="headerlink" title="XMONAD"></a>XMONAD</h1><p>上大学的时候就开始用xmonad了，过段时间可能就要重新配置一下xmonad，这也成为了一种乐趣。曾经尝试过很多的WE，DE，最终还是最喜欢xmonad。xmonad的版本也从0.15变成了现在的0.17，logo也换了，everything is changed。有一种沧桑的感觉</p>
 <p>最近又在配置xmonad，想要实现用快捷键切换窗口的布局。然后发现了一些其它比较好的功能，但是我的archlinux上的版本不支持，所以考虑下载最新的版本使用。</p>
-<p>跟着<a target="_blank" rel="noopener" href="https://xmonad.org/INSTALL.html">教程</a>一步一步配置，这种方式就不是用pacman上的安装包，而是从github克隆源码下来，用stack来编译安装。</p>
+<p>跟着<a class="link"   target="_blank" rel="noopener" href="https://xmonad.org/INSTALL.html" >教程<i class="fas fa-external-link-alt"></i></a>一步一步配置，这种方式就不是用pacman上的安装包，而是从github克隆源码下来，用stack来编译安装。</p>
 <p>而且使用这种方式安装有一个附加的好处是系统升级不需要重新编译它，因为它不是用pacman来安装的，非常好。以前更新之后必须要编译不然重启后就会报错。</p>
 <p>以前一直以为配置文件只能放家目录下，现在发现可以放<code>~/.config/xmonad</code>下了，又是一个惊喜。</p>
 <h2 id="install-new-0-17"><a href="#install-new-0-17" class="headerlink" title="install new 0.17"></a>install new 0.17</h2><ul>
 <li>进入配置目录</li>
 </ul>
-<pre><code class="shell">mkdir ~/.config/xmonad
-cd ~/.config/xmonad
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir ~/.config/xmonad</span><br><span class="line">cd ~/.config/xmonad</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>复制之前的配置文件</li>
 </ul>
-<pre><code class="shell">cp ~/.xmonad/xmonad.hs ~/.config/xmonad/
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp ~/.xmonad/xmonad.hs ~/.config/xmonad/</span><br></pre></td></tr></table></figure>
+
+
+
 <ul>
 <li>克隆源码</li>
 </ul>
-<pre><code class="shell">git clone https://github.com/xmonad/xmonad
-git clone https://github.com/xmonad/xmonad-contrib
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/xmonad/xmonad</span><br><span class="line">git clone https://github.com/xmonad/xmonad-contrib</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>下载编译工具</li>
 </ul>
-<pre><code class="shell">pacman -S stack
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pacman -S stack</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>创建stack project</li>
 </ul>
-<pre><code class="shell">stack init
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">stack init</span><br></pre></td></tr></table></figure>
+
 <p>从这一步开始就报错了，还是老问题，国内访问不到，只能开vpn下载了</p>
 <ul>
 <li>安装编译</li>
 </ul>
-<pre><code class="shell">stack install
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">stack install</span><br></pre></td></tr></table></figure>
+
 <p>这一步会下载ghc，并且自动编译<code>stack build</code>，然后自动把<code>xmonad</code>命令移动到<code>~/.local/bin</code>下。</p>
 <p>现在准备工作已经完毕，只需要编译配置文件就行。因为用pacman安装的有xmonad，所以现在运行<code>xmonad --recompile</code>还是用的之前的版本，所以我们必须指定路径来编译配置。</p>
-<pre><code class="shell">~/.local/bin/xmonad --recompile
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~/.local/bin/xmonad --recompile</span><br></pre></td></tr></table></figure>
+
 <blockquote>
 <p>Note: 为什么不先卸载系统的xmonad呢？因为我们不能确定编译没有问题，所以需要先保证编译没问题后再卸载。</p>
 </blockquote>
 <p>编译过程自然是会报错，问题就是0.15版本的一些语法在0.17不兼容了。包括两个地方：</p>
-<pre><code class="shell">1. 
-XMonad.Hooks.StatusBar.PP 取代 XMonad.Hooks.DynamicLog
-2. 
-XMonad.Actions.CycleWS 用emptyWS取代EmptyWS
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1. </span><br><span class="line">XMonad.Hooks.StatusBar.PP 取代 XMonad.Hooks.DynamicLog</span><br><span class="line">2. </span><br><span class="line">XMonad.Actions.CycleWS 用emptyWS取代EmptyWS</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>编译没问题之后卸载系统xmonad</li>
 </ul>
-<pre><code class="shell">pacman -Rns xmonad xmonad-contrib
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pacman -Rns xmonad xmonad-contrib</span><br></pre></td></tr></table></figure>
+
+
+
+
+
 <h2 id="new-feature"><a href="#new-feature" class="headerlink" title="new feature"></a>new feature</h2><h3 id="keybinding-to-toggle-layout"><a href="#keybinding-to-toggle-layout" class="headerlink" title="keybinding to toggle layout"></a>keybinding to toggle layout</h3><p>这个功能在0.15版本就是可以实现的，只不过之前不知道怎么配置，因为自带的配置没有对应的layout调用，需要自己写数据结构</p>
-<pre><code class="haskell"> -- self define toggle layout transformer
- data ACCORDION = ACCORDION deriving (Read, Show, Eq)
- instance Transformer ACCORDION Window where
-     transform _ x k = k Accordion (const x)
- data CROSS = CROSS deriving (Read, Show, Eq)
- instance Transformer CROSS Window where
-     transform _ x k = k simpleCross (const x)
- data PST = PST deriving (Read, Show, Eq)
- instance Transformer PST Window where
-     transform _ x k = k positionStoreFloat (const x)
- data THREE = THREE deriving (Read, Show, Eq)
- instance Transformer THREE Window where
-     transform _ x k = k (ThreeColMid 1 (3/100) (1/2)) (const x)
-</code></pre>
+<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- self define toggle layout transformer</span></span><br><span class="line"><span class="class"><span class="keyword">data</span> <span class="type">ACCORDION</span> = <span class="type">ACCORDION</span> <span class="keyword">deriving</span> (<span class="type">Read</span>, <span class="type">Show</span>, <span class="type">Eq</span>)</span></span><br><span class="line"><span class="class"><span class="keyword">instance</span> <span class="type">Transformer</span> <span class="type">ACCORDION</span> <span class="type">Window</span> <span class="keyword">where</span></span></span><br><span class="line">    transform _ x k = k <span class="type">Accordion</span> (const x)</span><br><span class="line"><span class="class"><span class="keyword">data</span> <span class="type">CROSS</span> = <span class="type">CROSS</span> <span class="keyword">deriving</span> (<span class="type">Read</span>, <span class="type">Show</span>, <span class="type">Eq</span>)</span></span><br><span class="line"><span class="class"><span class="keyword">instance</span> <span class="type">Transformer</span> <span class="type">CROSS</span> <span class="type">Window</span> <span class="keyword">where</span></span></span><br><span class="line">    transform _ x k = k simpleCross (const x)</span><br><span class="line"><span class="class"><span class="keyword">data</span> <span class="type">PST</span> = <span class="type">PST</span> <span class="keyword">deriving</span> (<span class="type">Read</span>, <span class="type">Show</span>, <span class="type">Eq</span>)</span></span><br><span class="line"><span class="class"><span class="keyword">instance</span> <span class="type">Transformer</span> <span class="type">PST</span> <span class="type">Window</span> <span class="keyword">where</span></span></span><br><span class="line">    transform _ x k = k positionStoreFloat (const x)</span><br><span class="line"><span class="class"><span class="keyword">data</span> <span class="type">THREE</span> = <span class="type">THREE</span> <span class="keyword">deriving</span> (<span class="type">Read</span>, <span class="type">Show</span>, <span class="type">Eq</span>)</span></span><br><span class="line"><span class="class"><span class="keyword">instance</span> <span class="type">Transformer</span> <span class="type">THREE</span> <span class="type">Window</span> <span class="keyword">where</span></span></span><br><span class="line">    transform _ x k = k (<span class="type">ThreeColMid</span> <span class="number">1</span> (<span class="number">3</span>/<span class="number">100</span>) (<span class="number">1</span>/<span class="number">2</span>)) (const x)</span><br></pre></td></tr></table></figure>
+
 <p>然后调用</p>
-<pre><code class="haskell">$  mkToggle (single MIRROR)
-$  mkToggle (single ACCORDION)
-$  mkToggle (single CROSS)
-$  mkToggle (single PST)
-$  mkToggle (single THREE)
-</code></pre>
+<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$  mkToggle (single <span class="type">MIRROR</span>)</span><br><span class="line">$  mkToggle (single <span class="type">ACCORDION</span>)</span><br><span class="line">$  mkToggle (single <span class="type">CROSS</span>)</span><br><span class="line">$  mkToggle (single <span class="type">PST</span>)</span><br><span class="line">$  mkToggle (single <span class="type">THREE</span>)</span><br></pre></td></tr></table></figure>
+
 <p>设置快捷键</p>
-<pre><code class="haskell">, ((_M , xK_apostrophe), submap . M.fromList $
-   [ ((0 , xK_m), sendMessage $ Toggle MIRROR)
-   , ((0 , xK_a), sendMessage $ Toggle ACCORDION)
-   , ((0 , xK_c), sendMessage $ Toggle CROSS)
-   , ((0 , xK_p), sendMessage $ Toggle PST)
-   , ((0 , xK_t), sendMessage $ Toggle THREE)
-   ])
-</code></pre>
+<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">, ((_M , xK_apostrophe), submap . <span class="type">M</span>.fromList $</span><br><span class="line">   [ ((<span class="number">0</span> , xK_m), sendMessage $ <span class="type">Toggle</span> <span class="type">MIRROR</span>)</span><br><span class="line">   , ((<span class="number">0</span> , xK_a), sendMessage $ <span class="type">Toggle</span> <span class="type">ACCORDION</span>)</span><br><span class="line">   , ((<span class="number">0</span> , xK_c), sendMessage $ <span class="type">Toggle</span> <span class="type">CROSS</span>)</span><br><span class="line">   , ((<span class="number">0</span> , xK_p), sendMessage $ <span class="type">Toggle</span> <span class="type">PST</span>)</span><br><span class="line">   , ((<span class="number">0</span> , xK_t), sendMessage $ <span class="type">Toggle</span> <span class="type">THREE</span>)</span><br><span class="line">   ])</span><br></pre></td></tr></table></figure>
+
+
+
 <h3 id="swallow-parent-while-child-GUI-open"><a href="#swallow-parent-while-child-GUI-open" class="headerlink" title="swallow parent while child GUI open"></a>swallow parent while child GUI open</h3><p>这个功能只有0.17才支持，非常适合在terminal中打开图形程序。设置之后，如果在terminal中打开GUI程序，那么terminal会被隐藏直到GUI被关闭。例如用feh打开图片后就不会开一个新的窗口，而是隐藏终端，非常nice</p>
 <p>导入模块</p>
-<pre><code class="haskell">import XMonad.Hooks.WindowSwallowing
-</code></pre>
+<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> XMonad.Hooks.WindowSwallowing</span><br></pre></td></tr></table></figure>
+
 <p>配置</p>
-<pre><code class="haskell">, handleEventHook       = swallowEventHook (className =? &quot;XTerm&quot;) (return True) 
-</code></pre>
+<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">, handleEventHook       = swallowEventHook (className =? <span class="string">&quot;XTerm&quot;</span>) (return <span class="type">True</span>) </span><br></pre></td></tr></table></figure>
 
-  </div>
-  <div id="gitalk-container"></div>
-</div>
 
-<script>
-  
-Fancybox.bind('[data-fancybox="fancybox-gallery-img"]', {
-  dragToClose: true,
-  Toolbar: true,
-  closeButton: "top",
-  Image: {
-    zoom: true,
-  },
-  on: {
-    initCarousel: (fancybox) => {
-      const slide = fancybox.Carousel.slides[fancybox.Carousel.page];
-      fancybox.$container.style.setProperty(
-        "--bg-image",
-        `url("${slide.$thumb.src}")`
-      );
-    },
-    "Carousel.change": (fancybox, carousel, to, from) => {
-      const slide = carousel.slides[to];
-      fancybox.$container.style.setProperty(
-        "--bg-image",
-        `url("${slide.$thumb.src}")`
-      );
-    },
-  },
-});
-</script>
 
-<style>
-    #noneimg img {
-        display: none;
-        z-index: 9999;
-        /* width: 600px !important; */
-        min-width: 0%;
-        max-width: 90%;
-        max-height: 80%;
-        border-radius: 0px;
-        position: fixed;
-        box-shadow: 0 0 0px #c3c3c300 !important;
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        margin: auto !important;
-    }
 
-    @media screen and (max-width:600px) {
-        #noneimg img {
-            max-width: 88%
-        }
-    }
-</style>
 
-    <div class="post-paging">
-    
-    <a href="/2022/06/19/to-be-gentle/">
-        <div class="post-paging-last">
-            <span>上一篇</span>
-            <p>to-be-gentle</p>
+
+
+
         </div>
-    </a>
-    
 
-    
-    <a href="/2022/06/12/20220612-%E5%96%84%E8%89%AF%E6%98%AF%E5%A6%82%E4%BD%95%E6%B6%88%E5%A4%B1%E7%9A%84/">
-        <div class="post-paging-next">
-            <span>下一篇</span>
-            <p>20220612-善良是如何消失的</p>
-        </div>
-    </a>
-    
-</div>
-</div>
-		
-<div class="footer">
-	<div class="Copyright">
-		©2022 By Joey. 主题：<a
-			style="text-decoration: none;display: contents; color: #898F9F;"
-			target="_blank" rel="noopener" href="https://github.com/79e/hexo-theme-quiet">Quiet</a>
-	</div>
-	<div class="contact">
-		
-		<a target="_blank" rel="noopener" href="https://github.com/79E/hexo-theme-quiet">
-			<img src="https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imggithub.png" alt="Quiet主题">
-		</a>
-		
-	</div>
-</div>
-
-<script src="/js/gotop.js"></script>
-
-
-<style type="text/css">
-    @media screen and (min-width: 600px) {
-        .goTop>span {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 10px;
-            width: 40px;
-            height: 40px;
-            cursor: pointer;
-            opacity: 0.8;
-            background: rgba(18, 24, 58, 0.06);
-            text-align: center;
-            transition: border .5s;
-            border: 1px solid rgba(18, 24, 58, 0.06);
-
-            -moz-transition: border .5s;
-            /* Firefox 4 */
-            -webkit-transition: border .5s;
-            /* Safari 和 Chrome */
-            -o-transition: border .5s;
-            /* Opera */
-        }
-
-        .goTop>span:hover {
-            border: 1px solid #6680B3;
-        }
-
-
-        .goTop {
-            position: fixed;
-            right: 30px;
-            bottom: 80px;
-        }
-
-        .goTop>span>svg {
-            width: 20px;
-            height: 20px;
-            opacity: 0.7;
-        }
-
-    }
-
-    @media screen and (max-width: 600px) {
-        .goTop {
-            display: none;
-        }
-    }
-</style>
-<div class="goTop" id="js-go_top">
-    <span>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-            <g>
-                <path d="M13 12v8h-2v-8H4l8-8 8 8z"></path>
-            </g>
-        </svg>
-    </span>
-</div>
-<script>
-    $( '#js-go_top' )
-	.gotoTop( {
-		offset: 500,
-		speed: 300,
-		animationShow: {
-			'transform': 'translate(0,0)',
-			'transition': 'transform .5s ease-in-out'
-		},
-		animationHide: {
-			'transform': 'translate(100px,0)',
-			'transition': 'transform .5s ease-in-out'
-		}
-	} );
-</script>
-
-
-    <!-- Gitalk -->
-    <script>
-        const data = '{"clientID":"02b3c","clientSecret":"adfc7b4","repo":"gimment","owner":"duneng","admin":"duneng"}'
-        const gitalk = new Gitalk({
-            ...JSON.parse( data),
-            id:location.pathname,
-            distractionFreeMode:false
-        })
         
-        if(Boolean('true')){
-            gitalk.render('gitalk-container')
-        }
-    </script>
 
+        
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/xmonad/">#xmonad</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2022/06/19/to-be-gentle/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">to-be-gentle</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2022/06/12/20220612-%E5%96%84%E8%89%AF%E6%98%AF%E5%A6%82%E4%BD%95%E6%B6%88%E5%A4%B1%E7%9A%84/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">20220612-善良是如何消失的</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2020</span>
+              -
+            
+            2022&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">shutterbug</a>
+        </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#XMONAD"><span class="nav-number">1.</span> <span class="nav-text">XMONAD</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#install-new-0-17"><span class="nav-number">1.1.</span> <span class="nav-text">install new 0.17</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#new-feature"><span class="nav-number">1.2.</span> <span class="nav-text">new feature</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#keybinding-to-toggle-layout"><span class="nav-number">1.2.1.</span> <span class="nav-text">keybinding to toggle layout</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#swallow-parent-while-child-GUI-open"><span class="nav-number">1.2.2.</span> <span class="nav-text">swallow parent while child GUI open</span></a></li></ol></li></ol></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/dark-light-toggle.js"></script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/local-search.js"></script>
+
+
+
+
+
+
+<div class="post-scripts pjax">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/toc.js"></script>
+    
+</div>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/libs/pjax.min.js"></script>
 <script>
-	console.log('\n %c Hexo-Quiet 主题 %c https://github.com/79e/hexo-theme-quiet \n', 'color: #fadfa3; background: #030307; padding:5px 0;', 'background: #fadfa3; padding:5px 0;')
-</script>
-	</body>
-</html>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
 
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            KEEP.refresh();
+        });
+    });
+</script>
+
+
+
+</body>
+</html>
