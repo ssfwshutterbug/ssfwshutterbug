@@ -9,7 +9,7 @@
     
     <title>
         
-            xp-pentablet |
+            markdown-syntax |
         
         Deal is Made
     </title>
@@ -153,7 +153,7 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <span class="title-hover-animation">xp-pentablet</span>
+            <span class="title-hover-animation">markdown-syntax</span>
         </div>
 
         
@@ -235,25 +235,41 @@
         
 
         <div class="article-content markdown-body">
-            <h1 id="XP-Pentablet"><a href="#XP-Pentablet" class="headerlink" title="XP-Pentablet"></a>XP-Pentablet</h1><p>I brought a xp-pentablet almost one year, and i like it very much for daily use instead of mouse. I remember the first time i install it’s driver, i got a problem every time i restart the computer, all of my configuration was gone. I request for Sells client, but they also don’t know how, at last i know it’s just because the default xp-driver not starts in background which they should be in DE, but in my WM, it’s just not working.</p>
-<p>But if i run the driver program it will turn up a gui app every time i restart computer, i finally find a solution with <code>xvfb</code> by sending it to virtual display. And it goes so far so good.</p>
-<p>However today when i try to search how to use pen pressure in normal usage, i find an open source driver which suits for tens of pentablets, and i wanna to have a try.</p>
-<h2 id="opentabletdriver"><a href="#opentabletdriver" class="headerlink" title="opentabletdriver"></a><a class="link"   target="_blank" rel="noopener" href="https://github.com/OpenTabletDriver/OpenTabletDriver" >opentabletdriver<i class="fas fa-external-link-alt"></i></a></h2><p>the main reason i wanna to use this is because it has a system service run in backend, so there is no need for me to send a gui app to virtual display. That sounds better.</p>
-<p>follow <a class="link"   target="_blank" rel="noopener" href="https://opentabletdriver.net/Wiki/Install/Linux" >this guide<i class="fas fa-external-link-alt"></i></a> i can install it from AUR.</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">install</span></span><br><span class="line">paru -S opentabletdriver-git</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">Reload the systemd user unit daemon</span></span><br><span class="line">systemctl --user daemon-reload</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">Enable and start the user service</span></span><br><span class="line">systemctl --user enable opentabletdriver --now</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>Note: it is a user service</p>
+            <h1 id="MARKDOWN-SYNTAX"><a href="#MARKDOWN-SYNTAX" class="headerlink" title="MARKDOWN SYNTAX"></a>MARKDOWN SYNTAX</h1><blockquote>
+<p>There is no rules about how many lines we should put between paragraph, but basically we need 1, if we put more than 1, it is just for good view.</p>
 </blockquote>
-<p>then in rofi typing <code>opentabletdriver</code> to open it’s gui configure some key bindings</p>
-<p>at last stop using old xp-pentable</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">comment this <span class="keyword">in</span> xmonad.hs</span></span><br><span class="line">--spawnOnce &quot;startPentablet&quot;</span><br></pre></td></tr></table></figure>
-
-
-
-<blockquote>
-<p>PS: opentabletdriver has lots of drivers, but i find it cannot installed successfully, which makes me a little disappointed.</p>
-</blockquote>
+<ul>
+<li><p>syntax character has a space with normal document.</p>
+  <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">## HEAD1</span></span><br><span class="line"><span class="bullet">-</span> list</span><br></pre></td></tr></table></figure></li>
+<li><p>use one or more lines create paragraphs.</p>
+  <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">paragraph1</span><br><span class="line"></span><br><span class="line">paragraph2</span><br></pre></td></tr></table></figure></li>
+<li><p>use 2 or more spaces break a line</p>
+  <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">line1  </span><br><span class="line">line2  </span><br></pre></td></tr></table></figure></li>
+<li><p>use 1 * to italicize text</p>
+  <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="emphasis">*this is some italic text*</span></span><br></pre></td></tr></table></figure></li>
+<li><p>use 2 * to bold text</p>
+  <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="strong">**this is some bold text**</span></span><br></pre></td></tr></table></figure></li>
+<li><p>use &gt; to create blockquotes</p>
+  <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="quote">&gt; this is a blockquote</span></span><br><span class="line"><span class="quote">&gt;</span></span><br><span class="line"><span class="quote">&gt; this is another blockquote paragraph</span></span><br></pre></td></tr></table></figure></li>
+<li><p>use number followd by period to create orderd list</p>
+  <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">1.</span> list1</span><br><span class="line"><span class="bullet">2.</span> list2</span><br></pre></td></tr></table></figure></li>
+<li><p>use - to create unorderd list</p>
+  <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> unorder list1</span><br><span class="line"><span class="bullet">-</span> unorder list2</span><br></pre></td></tr></table></figure></li>
+<li><p>add elements in lists with 4 or a tab space in the beginning of line</p>
+  <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">1.</span> list1</span><br><span class="line"><span class="bullet">    -</span> unsorted list1</span><br><span class="line"><span class="bullet">    -</span> unsorted list2</span><br><span class="line"><span class="bullet">2.</span> list2</span><br></pre></td></tr></table></figure></li>
+<li><p>use ` to denote a word</p>
+  <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">this is a <span class="code">`denote`</span> word</span><br></pre></td></tr></table></figure></li>
+<li><p>use 4 spaces or a tab to create code blocks</p>
+  <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span></span><br><span class="line"><span class="code">    some kind of words</span></span><br><span class="line"><span class="code">&lt;/html&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li><p>use 3 or more - create a line</p>
+  <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">---</span><br></pre></td></tr></table></figure></li>
+<li><p>use <a href=""></a> to create a link</p>
+  <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">this is a bing site link</span>](<span class="link">https://bing.com</span>)</span><br></pre></td></tr></table></figure></li>
+<li><p>use <img src=""> to create a image</p>
+  <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">image-name</span>](<span class="link">image-link</span>)</span><br></pre></td></tr></table></figure></li>
+<li><p>reference-style links</p>
+  <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">this is a bing site</span>][<span class="symbol">1</span>]</span><br><span class="line">[<span class="string">this is a google site</span>][<span class="symbol">2</span>]</span><br><span class="line"></span><br><span class="line">[<span class="symbol">1</span>]: <span class="link">https://www.bing.com</span></span><br><span class="line">[<span class="symbol">2</span>]: <span class="link">&lt;https://www.google.com&gt; &quot;google site&quot;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
 
         </div>
 
@@ -263,7 +279,7 @@
             <ul class="post-tags-box">
                 
                     <li class="tag-item">
-                        <a href="/tags/pentablet/">#pentablet</a>&nbsp;
+                        <a href="/tags/markdown/">#markdown</a>&nbsp;
                     </li>
                 
             </ul>
@@ -272,29 +288,14 @@
         
             <div class="article-nav">
                 
-                    <div class="article-prev">
-                        <a class="prev"
-                           rel="prev"
-                           href="/2022/06/25/magic-of-xmonad/"
-                        >
-                            <span class="left arrow-icon flex-center">
-                              <i class="fas fa-chevron-left"></i>
-                            </span>
-                            <span class="title flex-center">
-                                <span class="post-nav-title-item">magic-of-xmonad</span>
-                                <span class="post-nav-item">Prev posts</span>
-                            </span>
-                        </a>
-                    </div>
-                
                 
                     <div class="article-next">
                         <a class="next"
                            rel="next"
-                           href="/2022/06/24/create-cursor/"
+                           href="/2022/10/23/our-body-may-cheat-ourselves-md/"
                         >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">create-cursor</span>
+                                <span class="post-nav-title-item">our-body-may-cheat-ourselves.md</span>
                                 <span class="post-nav-item">Next posts</span>
                             </span>
                             <span class="right arrow-icon flex-center">
@@ -405,7 +406,7 @@
         <aside class="page-aside">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#XP-Pentablet"><span class="nav-number">1.</span> <span class="nav-text">XP-Pentablet</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#opentabletdriver"><span class="nav-number">1.1.</span> <span class="nav-text">opentabletdriver</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#MARKDOWN-SYNTAX"><span class="nav-number">1.</span> <span class="nav-text">MARKDOWN SYNTAX</span></a></li></ol>
     </div>
 </div>
         </aside>
