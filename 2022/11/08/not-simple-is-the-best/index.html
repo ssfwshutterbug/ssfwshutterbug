@@ -9,7 +9,7 @@
     
     <title>
         
-            Categories |
+            not-simple-is-the-best |
         
         Deal is Made
     </title>
@@ -78,7 +78,7 @@
                         </li>
                     
                         <li class="menu-item">
-                            <a class="active"
+                            <a class=""
                                href="/categories"
                             >
                                 CATEGORIES
@@ -125,7 +125,7 @@
                 </li>
             
                 <li class="drawer-menu-item flex-center">
-                    <a class="active"
+                    <a class=""
                        href="/categories">CATEGORIES</a>
                 </li>
             
@@ -150,13 +150,120 @@
 
                 
                     <div class="fade-in-down-animation">
-    <div class="category-list-container">
-        <div class="category-list-content">
-            <ul class="all-category-list"><li class="all-category-list-item"><a class="all-category-list-link" href="/categories/learn/">learn</a><span class="all-category-list-count">31</span></li><li class="all-category-list-item"><a class="all-category-list-link" href="/categories/linux/">linux</a><span class="all-category-list-count">5</span></li><li class="all-category-list-item"><a class="all-category-list-link" href="/categories/think/">think</a><span class="all-category-list-count">12</span></li><li class="all-category-list-item"><a class="all-category-list-link" href="/categories/uncle-talk/">uncle talk</a><span class="all-category-list-count">1</span></li></ul>
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">not-simple-is-the-best</span>
         </div>
-        <div class="category-comments">
-            
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/avatar.svg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">shutterbug</span>
+                        
+                            <span class="author-label">Lv4</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2022-11-08 22:44:04</span>
+        <span class="mobile">2022-11-08 22:44</span>
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/think/">think</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/mindset/">mindset</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <h1 id="Simple-is-the-best-really"><a href="#Simple-is-the-best-really" class="headerlink" title="Simple is the best, really?"></a>Simple is the best, really?</h1><p>I get to say most of time it is true. Simple is best, it stands a life style. We hope things goes straightly, without some big boy’s game.</p>
+<p>However, not everything goes like this. And we’d better not get used to it. Since it will comes to a mindset. We need think things in different ways.</p>
+<p>Sometimes, making things complicated is not totally a bad idea. For example, recently i write a shell script to access all history data, i need all history command only show once, including duplicate commands.</p>
+<p>We know <code>uniq -u</code> command can help us to show the command which only used once, that fits our needs. <code>uniq -d</code> command can merge duplicate commands into one, it also fits our needs.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sig=$(cat .zsh_history |uniq -u)</span><br><span class="line">dup=$(cat .zsh_histroy |uniq -d)</span><br><span class="line">commands=$(echo $sig $dup)</span><br></pre></td></tr></table></figure>
+
+<p>However i need to combine the two results into one to get my final result, and use above method cannot realize it in a single line. All my mind is thinking how to minus the duplicate commands into one without filter out the one only used once.</p>
+<p>I cannot find a prefect solution. Today, when i take a bus to my working place, i suddenly realized the problem that i got. Why all my thought is how to minus? Why not plus.</p>
+<p>Yes, that’s the trick, if i duplicate the history file, then use <code>uniq -d</code> to merge all the commands, the result is what i want. Since all command that only used once now become twice.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat .zsh_histroy .zsh_history |uniq -d</span><br></pre></td></tr></table></figure>
+
+<p>That’s the simplest answer but build behind the reverse thought. Expand data first then shrink it. And that’s inspires me a lot. We need to think in multiple ways.</p>
+<p>This is the real script:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/usr/bin/dash</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">                                                                  _</span> </span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"> _ __ _   _ _ __     ___ ___  _ __ ___  _ __ ___   __ _ _ __   __| |</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">| <span class="string">&#x27;__| | | | &#x27;</span>_ \   / __/ _ \| <span class="string">&#x27;_ ` _ \| &#x27;</span>_ ` _ \ / _` | <span class="string">&#x27;_ \ / _` |</span></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="string">| |  | |_| | | | | | (_| (_) | | | | | | | | | | | (_| | | | | (_| |</span></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="string">|_|   \__,_|_| |_|  \___\___/|_| |_| |_|_| |_| |_|\__,_|_| |_|\__,_|</span></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="string"></span></span></span><br><span class="line"><span class="string"><span class="language-bash"># this script uses dmenu to show history commands</span></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="string">pick one or new command to execute</span></span></span><br><span class="line"></span><br><span class="line">ZSH_HISTORY=&quot;$HOME/.config/zsh/.zsh_history&quot;</span><br><span class="line">FONT=&quot;CaskaydiaCove Nerd FONT Mono:pixelsize=22&quot;</span><br><span class="line">PROMPT=&quot;execute:&quot;</span><br><span class="line">LINE=&quot;15&quot;</span><br><span class="line"></span><br><span class="line">command=$(cut -d&#x27;;&#x27; -f2- $ZSH_HISTORY $ZSH_HISTORY \</span><br><span class="line">    | sort -r \</span><br><span class="line">    | uniq -d \</span><br><span class="line">    | dmenu -i -l &quot;$LINE&quot; -fn &quot;$FONT&quot; -p &quot;$PROMPT&quot;</span><br><span class="line">    )</span><br><span class="line">[ -z $command ] &amp;&amp; exit 0</span><br><span class="line">cd $HOME &amp;&amp; echo $command |sh</span><br></pre></td></tr></table></figure>
+
         </div>
+
+        
+
+        
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/mindset/">#mindset</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+            <div class="article-nav">
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2022/11/01/even-firefox-vim-extension/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">even-firefox-vim-extension</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
     </div>
 </div>
 
@@ -189,6 +296,23 @@
         </div>
     </div>
 
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
     
 
     <div class="right-bottom-side-tools">
@@ -234,6 +358,14 @@
 
     </div>
 
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Simple-is-the-best-really"><span class="nav-number">1.</span> <span class="nav-text">Simple is the best, really?</span></a></li></ol>
+    </div>
+</div>
+        </aside>
     
 
     <div class="image-viewer-container">
@@ -287,6 +419,8 @@
 
 
 <div class="post-scripts pjax">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/toc.js"></script>
     
 </div>
 
