@@ -214,7 +214,7 @@
         <div class="article-content markdown-body">
             <h1 id="CONVERT-MARKDOWN-TO-PDF"><a href="#CONVERT-MARKDOWN-TO-PDF" class="headerlink" title="CONVERT MARKDOWN TO PDF"></a>CONVERT MARKDOWN TO PDF</h1><p>Today, i want to upload a video to bilibili for recording a problem recently met: i cannot typing Chinese in terminal, but browser is fine.</p>
 <p>So i need a PPT to show some information, but how to do that? I remember vim can do the thing, but for a long time searching, i find no way to realize that.</p>
-<p>Then i remember Luke used pandoc to convert markdown file to pdf, and it is perfect. So i tried to use pandoc to convert, but it shows an error: leak of pdflatex engine.</p>
+<p>Then i remember Luke used pandoc to convert markdown file to pdf, and it is perfect. So i tried to use pandoc to convert, but it shows an error: lack of pdflatex engine.</p>
 <p>I use <code>pacman -Si pandoc</code> to find the missing software: <code>texlive-core</code>. After installing, use the command to convert.</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pandoc myfile.md -t beamer -o myfile.pdf</span><br></pre></td></tr></table></figure>
 
