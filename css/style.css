@@ -646,7 +646,7 @@ button {
 :root {
   --code-foreground: #535360;
   --code-background: #9bbeff;
-  --highlight-background: #cfd313;
+  --highlight-background: #d1d4e3;
   --highlight-foreground: #535360;
   --highlight-comment: #8e908c;
   --highlight-red: #c82829;
@@ -663,7 +663,7 @@ button {
   :root {
     --code-foreground: #535360;
     --code-background: #9bbeff;
-    --highlight-background: #cfd313;
+    --highlight-background: #d1d4e3;
     --highlight-foreground: #535360;
     --highlight-comment: #8e908c;
     --highlight-red: #c82829;
@@ -698,7 +698,7 @@ button {
 .light-mode {
   --code-foreground: #535360;
   --code-background: #9bbeff;
-  --highlight-background: #cfd313;
+  --highlight-background: #d1d4e3;
   --highlight-foreground: #535360;
   --highlight-comment: #8e908c;
   --highlight-red: #c82829;
@@ -1030,7 +1030,7 @@ pre .javascript .function {
 :root {
   --code-foreground: #535360;
   --code-background: #9bbeff;
-  --highlight-background: #cfd313;
+  --highlight-background: #d1d4e3;
   --highlight-foreground: #535360;
   --highlight-comment: #8e908c;
   --highlight-red: #c82829;
@@ -1047,7 +1047,7 @@ pre .javascript .function {
   :root {
     --code-foreground: #535360;
     --code-background: #9bbeff;
-    --highlight-background: #cfd313;
+    --highlight-background: #d1d4e3;
     --highlight-foreground: #535360;
     --highlight-comment: #8e908c;
     --highlight-red: #c82829;
@@ -1082,7 +1082,7 @@ pre .javascript .function {
 .light-mode {
   --code-foreground: #535360;
   --code-background: #9bbeff;
-  --highlight-background: #cfd313;
+  --highlight-background: #d1d4e3;
   --highlight-foreground: #535360;
   --highlight-comment: #8e908c;
   --highlight-red: #c82829;

@@ -105,7 +105,7 @@
 :root {
   --code-foreground: #535360;
   --code-background: #9bbeff;
-  --highlight-background: #cfd313;
+  --highlight-background: #d1d4e3;
   --highlight-foreground: #535360;
   --highlight-comment: #8e908c;
   --highlight-red: #c82829;
@@ -122,7 +122,7 @@
   :root {
     --code-foreground: #535360;
     --code-background: #9bbeff;
-    --highlight-background: #cfd313;
+    --highlight-background: #d1d4e3;
     --highlight-foreground: #535360;
     --highlight-comment: #8e908c;
     --highlight-red: #c82829;
@@ -157,7 +157,7 @@
 .light-mode {
   --code-foreground: #535360;
   --code-background: #9bbeff;
-  --highlight-background: #cfd313;
+  --highlight-background: #d1d4e3;
   --highlight-foreground: #535360;
   --highlight-comment: #8e908c;
   --highlight-red: #c82829;
