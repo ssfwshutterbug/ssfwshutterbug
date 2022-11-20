@@ -1,18 +1,18 @@
 :root {
-  --background-color: #fff;
-  --second-background-color: #f7f7f7;
+  --background-color: #e2e0de;
+  --second-background-color: #dcd9d7;
   --primary-color: #06c;
   --first-text-color: #484853;
   --second-text-color: #4c4c57;
   --third-text-color: #808091;
   --fourth-text-color: #ededef;
   --default-text-color: #50505c;
-  --border-color: #b3b3b3;
+  --border-color: #a39d96;
   --selection-color: #0075eb;
   --shadow-color: rgba(0,0,0,0.2);
   --shadow-hover-color: rgba(0,0,0,0.28);
   --scrollbar-color: #595967;
-  --scroll-bar-bg-color: #e6e6e6;
+  --scroll-bar-bg-color: #cdcac6;
   --link-color: #484853;
   --copyright-info-color: #c03;
   --avatar-background-color: #06c;
@@ -20,20 +20,20 @@
 }
 @media (prefers-color-scheme: light) {
   :root {
-    --background-color: #fff;
-    --second-background-color: #f7f7f7;
+    --background-color: #e2e0de;
+    --second-background-color: #dcd9d7;
     --primary-color: #06c;
     --first-text-color: #484853;
     --second-text-color: #4c4c57;
     --third-text-color: #808091;
     --fourth-text-color: #ededef;
     --default-text-color: #50505c;
-    --border-color: #b3b3b3;
+    --border-color: #a39d96;
     --selection-color: #0075eb;
     --shadow-color: rgba(0,0,0,0.2);
     --shadow-hover-color: rgba(0,0,0,0.28);
     --scrollbar-color: #595967;
-    --scroll-bar-bg-color: #e6e6e6;
+    --scroll-bar-bg-color: #cdcac6;
     --link-color: #484853;
     --copyright-info-color: #c03;
     --avatar-background-color: #06c;
@@ -63,20 +63,20 @@
   }
 }
 .light-mode {
-  --background-color: #fff;
-  --second-background-color: #f7f7f7;
+  --background-color: #e2e0de;
+  --second-background-color: #dcd9d7;
   --primary-color: #06c;
   --first-text-color: #484853;
   --second-text-color: #4c4c57;
   --third-text-color: #808091;
   --fourth-text-color: #ededef;
   --default-text-color: #50505c;
-  --border-color: #b3b3b3;
+  --border-color: #a39d96;
   --selection-color: #0075eb;
   --shadow-color: rgba(0,0,0,0.2);
   --shadow-hover-color: rgba(0,0,0,0.28);
   --scrollbar-color: #595967;
-  --scroll-bar-bg-color: #e6e6e6;
+  --scroll-bar-bg-color: #cdcac6;
   --link-color: #484853;
   --copyright-info-color: #c03;
   --avatar-background-color: #06c;
