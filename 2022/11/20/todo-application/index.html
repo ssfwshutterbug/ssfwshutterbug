@@ -9,7 +9,7 @@
     
     <title>
         
-            weakness-is-our-nature |
+            todo-application |
         
         Deal is Made
     </title>
@@ -153,7 +153,7 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <span class="title-hover-animation">weakness-is-our-nature</span>
+            <span class="title-hover-animation">todo-application</span>
         </div>
 
         
@@ -172,8 +172,8 @@
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fas fa-edit"></i>&nbsp;
-        <span class="pc">2022-11-16 21:31:16</span>
-        <span class="mobile">2022-11-16 21:31</span>
+        <span class="pc">2022-11-20 10:47:19</span>
+        <span class="mobile">2022-11-20 10:47</span>
     </span>
     
         <span class="article-categories article-meta-item">
@@ -181,7 +181,7 @@
             <ul>
                 
                     <li>
-                        <a href="/categories/think/">think</a>&nbsp;
+                        <a href="/categories/linux/">linux</a>&nbsp;
                     </li>
                 
             </ul>
@@ -193,7 +193,7 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/realize/">realize</a>&nbsp;
+                        <a href="/tags/todo/">todo</a>&nbsp;
                     </li>
                 
             </ul>
@@ -212,15 +212,54 @@
         
 
         <div class="article-content markdown-body">
-            <h1 id="WEAKNESS-IS-OUR-NATURE"><a href="#WEAKNESS-IS-OUR-NATURE" class="headerlink" title="WEAKNESS IS OUR NATURE"></a>WEAKNESS IS OUR NATURE</h1><p>Finally, i realized that i am weakness.</p>
-<p>Since this summer i knew about Goggins, i inspired a lot by him and decided to do exercise every day. And i truly kept that state a long time, every morning every evening, i do regular exercise. But month later, the thought i need to do this every day met challenge by myself. Sometimes i just get a thought why don’t have a break? I am tired, a little break doesn’t means a lot. And several months later, my training time shrunk to 1/4 of starting. Last two weeks, i totally did zero training.</p>
-<p>Sometimes, my emotion went to a low level, i don’t want fight, i feel tired in my mind. The inspiration i got when i started just gone. I am missing, i am confused.</p>
-<p>And i finally have to confirm that we humans are weakness. We can’t struggle from beginning to the ending. We always get a thought which told us to break, to give up. And most of time, most of us really will give up and take a break. I don’t want to judge that, because that is some part of our nature.</p>
-<p>However, should we just obey our nature?</p>
-<p>You can or you cannot, both are okay. As for me, i was can, but not the future. I know there are some parts of us in our mind are weak, and i think i know how to fight against it.</p>
-<p>The method is making myself get inspired by other things or people regularly, always remind myself why i decide to start, and what am i fighting for. I am not strong enough to be a hero of myself, i need to learn from the other people that i admire how they live the regular life, what’s going on with them.</p>
-<p>I should feel lucky enough, all the time after work belongs to myself, i have the ability to decide the way i spend them. I have a dream in my childhood, to be a man that has strong body, hides in the hood and protects the one i love. So regular training is my basic life, i need to keep sharp every second and prepare for the coming.</p>
-<p>It is my fighting time.</p>
+            <h1 id="FIND-A-TODO-APPLICATION"><a href="#FIND-A-TODO-APPLICATION" class="headerlink" title="FIND A TODO APPLICATION"></a>FIND A TODO APPLICATION</h1><p>Last Friday, i notice how important of taking note, so i plan to find a todo application. Today, i am glade to say i get the one and make it a little clearly of how to use it.</p>
+<p>The one todo application is called <code>task</code>. It is really small, only nearly 900 Kb downloading size. Let’s take a look of how to use it.</p>
+<h2 id="SETUP"><a href="#SETUP" class="headerlink" title="SETUP"></a>SETUP</h2><p>First time we run, it will creates a <code>.taskrc</code> configuration file in home directory. Obviously, i will not let that’s happening. Fortunately, it can be set in another location with modifying its configuration.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">data.location=~/.local/share/task</span><br><span class="line">hooks.location=~/.config/task/hooks</span><br></pre></td></tr></table></figure>
+
+<p>Then move <code>~/.taskrc</code> to <code>~/.config/task/taskrc</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv ~/.taskrc ~/.config/task/taskrc</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="USAGE"><a href="#USAGE" class="headerlink" title="USAGE"></a>USAGE</h2><p>Create a context and give it a project name, the project name can be used to filter.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">task context define work project:Work</span><br><span class="line">task context define life project:Life</span><br></pre></td></tr></table></figure>
+
+<p>Check in/out created context</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">task context list</span><br></pre></td></tr></table></figure>
+
+<p>Context just likes workspace, so usually before we add task, we need to choose the context which a task will be wrote.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">login</span></span><br><span class="line">task context work</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="built_in">logout</span></span></span><br><span class="line">task context none</span><br></pre></td></tr></table></figure>
+
+<p>Filter</p>
+<p>If we login one context, we can add/delete a task directly. But if we don’t login a context, we can also add/delete, only when we specify a filter.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">task project:[projectname] ...</span><br></pre></td></tr></table></figure>
+
+<p>Add task</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">task add [&quot;the task content&quot;] due:[time]</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">time can be specified time: today, 2week, month, year and etc</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">or schedule time: daily, weekly and etc</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="keyword">for</span> example</span></span><br><span class="line"></span><br><span class="line">task add &quot;watch a movie&quot; due:today</span><br><span class="line">task add &quot;do exercise&quot; due:tomorrow</span><br></pre></td></tr></table></figure>
+
+<p>Completed task</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">task [id] done</span><br><span class="line">task project:[projectname] [id] done</span><br></pre></td></tr></table></figure>
+
+<p>Delete task</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">task delete [id]</span><br><span class="line">task project:[projectname] delete [id]</span><br></pre></td></tr></table></figure>
+
+<p>Modify task</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">task modify /from/to/</span><br><span class="line">task project:[projectname] modify /from/to/</span><br></pre></td></tr></table></figure>
+
+<p>Show task</p>
+<ul>
+<li><p>burndown</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">task burndown weekly</span><br></pre></td></tr></table></figure></li>
+<li><p>calendar</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">task calendar</span><br><span class="line">task calendar 2022</span><br></pre></td></tr></table></figure></li>
+<li><p>plain text</p>
+<ol>
+<li>show all scheduled task <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">task list</span><br><span class="line">task project:[projectname] list</span><br></pre></td></tr></table></figure></li>
+<li>show all complete task<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">task completed</span><br></pre></td></tr></table></figure></li>
+<li>show today scheduled task<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">task overdue</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+</ul>
 
         </div>
 
@@ -230,7 +269,7 @@
             <ul class="post-tags-box">
                 
                     <li class="tag-item">
-                        <a href="/tags/realize/">#realize</a>&nbsp;
+                        <a href="/tags/todo/">#todo</a>&nbsp;
                     </li>
                 
             </ul>
@@ -239,29 +278,14 @@
         
             <div class="article-nav">
                 
-                    <div class="article-prev">
-                        <a class="prev"
-                           rel="prev"
-                           href="/2022/11/20/todo-application/"
-                        >
-                            <span class="left arrow-icon flex-center">
-                              <i class="fas fa-chevron-left"></i>
-                            </span>
-                            <span class="title flex-center">
-                                <span class="post-nav-title-item">todo-application</span>
-                                <span class="post-nav-item">Prev posts</span>
-                            </span>
-                        </a>
-                    </div>
-                
                 
                     <div class="article-next">
                         <a class="next"
                            rel="next"
-                           href="/2022/11/13/convert-md-to-pdf/"
+                           href="/2022/11/16/weakness-is-our-nature/"
                         >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">convert-md-to-pdf</span>
+                                <span class="post-nav-title-item">weakness-is-our-nature</span>
                                 <span class="post-nav-item">Next posts</span>
                             </span>
                             <span class="right arrow-icon flex-center">
@@ -372,7 +396,7 @@
         <aside class="page-aside">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#WEAKNESS-IS-OUR-NATURE"><span class="nav-number">1.</span> <span class="nav-text">WEAKNESS IS OUR NATURE</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#FIND-A-TODO-APPLICATION"><span class="nav-number">1.</span> <span class="nav-text">FIND A TODO APPLICATION</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#SETUP"><span class="nav-number">1.1.</span> <span class="nav-text">SETUP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#USAGE"><span class="nav-number">1.2.</span> <span class="nav-text">USAGE</span></a></li></ol></li></ol>
     </div>
 </div>
         </aside>
