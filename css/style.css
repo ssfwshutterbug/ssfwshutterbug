@@ -645,7 +645,7 @@ button {
 }
 :root {
   --code-foreground: #535360;
-  --code-background: #7290c5;
+  --code-background: #eac6c4;
   --highlight-background: #d1d4e3;
   --highlight-foreground: #535360;
   --highlight-comment: #8e908c;
@@ -662,7 +662,7 @@ button {
 @media (prefers-color-scheme: light) {
   :root {
     --code-foreground: #535360;
-    --code-background: #7290c5;
+    --code-background: #eac6c4;
     --highlight-background: #d1d4e3;
     --highlight-foreground: #535360;
     --highlight-comment: #8e908c;
@@ -697,7 +697,7 @@ button {
 }
 .light-mode {
   --code-foreground: #535360;
-  --code-background: #7290c5;
+  --code-background: #eac6c4;
   --highlight-background: #d1d4e3;
   --highlight-foreground: #535360;
   --highlight-comment: #8e908c;
@@ -1029,7 +1029,7 @@ pre .javascript .function {
 }
 :root {
   --code-foreground: #535360;
-  --code-background: #7290c5;
+  --code-background: #eac6c4;
   --highlight-background: #d1d4e3;
   --highlight-foreground: #535360;
   --highlight-comment: #8e908c;
@@ -1046,7 +1046,7 @@ pre .javascript .function {
 @media (prefers-color-scheme: light) {
   :root {
     --code-foreground: #535360;
-    --code-background: #7290c5;
+    --code-background: #eac6c4;
     --highlight-background: #d1d4e3;
     --highlight-foreground: #535360;
     --highlight-comment: #8e908c;
@@ -1081,7 +1081,7 @@ pre .javascript .function {
 }
 .light-mode {
   --code-foreground: #535360;
-  --code-background: #7290c5;
+  --code-background: #eac6c4;
   --highlight-background: #d1d4e3;
   --highlight-foreground: #535360;
   --highlight-comment: #8e908c;
