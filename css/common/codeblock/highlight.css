@@ -104,7 +104,7 @@
 }
 :root {
   --code-foreground: #535360;
-  --code-background: #9bbeff;
+  --code-background: #7290c5;
   --highlight-background: #d1d4e3;
   --highlight-foreground: #535360;
   --highlight-comment: #8e908c;
@@ -116,12 +116,12 @@
   --highlight-blue: #4271ae;
   --highlight-purple: #8959a8;
   --highlight-gutter-color: #585865;
-  --highlight-gutter-bg-color: #9bbeff;
+  --highlight-gutter-bg-color: #7e99ca;
 }
 @media (prefers-color-scheme: light) {
   :root {
     --code-foreground: #535360;
-    --code-background: #9bbeff;
+    --code-background: #7290c5;
     --highlight-background: #d1d4e3;
     --highlight-foreground: #535360;
     --highlight-comment: #8e908c;
@@ -133,7 +133,7 @@
     --highlight-blue: #4271ae;
     --highlight-purple: #8959a8;
     --highlight-gutter-color: #585865;
-    --highlight-gutter-bg-color: #9bbeff;
+    --highlight-gutter-bg-color: #7e99ca;
   }
 }
 @media (prefers-color-scheme: dark) {
@@ -156,7 +156,7 @@
 }
 .light-mode {
   --code-foreground: #535360;
-  --code-background: #9bbeff;
+  --code-background: #7290c5;
   --highlight-background: #d1d4e3;
   --highlight-foreground: #535360;
   --highlight-comment: #8e908c;
@@ -168,7 +168,7 @@
   --highlight-blue: #4271ae;
   --highlight-purple: #8959a8;
   --highlight-gutter-color: #585865;
-  --highlight-gutter-bg-color: #9bbeff;
+  --highlight-gutter-bg-color: #7e99ca;
 }
 .dark-mode {
   --code-foreground: #bfbfc7;

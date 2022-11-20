@@ -645,7 +645,7 @@ button {
 }
 :root {
   --code-foreground: #535360;
-  --code-background: #9bbeff;
+  --code-background: #7290c5;
   --highlight-background: #d1d4e3;
   --highlight-foreground: #535360;
   --highlight-comment: #8e908c;
@@ -657,12 +657,12 @@ button {
   --highlight-blue: #4271ae;
   --highlight-purple: #8959a8;
   --highlight-gutter-color: #585865;
-  --highlight-gutter-bg-color: #9bbeff;
+  --highlight-gutter-bg-color: #7e99ca;
 }
 @media (prefers-color-scheme: light) {
   :root {
     --code-foreground: #535360;
-    --code-background: #9bbeff;
+    --code-background: #7290c5;
     --highlight-background: #d1d4e3;
     --highlight-foreground: #535360;
     --highlight-comment: #8e908c;
@@ -674,7 +674,7 @@ button {
     --highlight-blue: #4271ae;
     --highlight-purple: #8959a8;
     --highlight-gutter-color: #585865;
-    --highlight-gutter-bg-color: #9bbeff;
+    --highlight-gutter-bg-color: #7e99ca;
   }
 }
 @media (prefers-color-scheme: dark) {
@@ -697,7 +697,7 @@ button {
 }
 .light-mode {
   --code-foreground: #535360;
-  --code-background: #9bbeff;
+  --code-background: #7290c5;
   --highlight-background: #d1d4e3;
   --highlight-foreground: #535360;
   --highlight-comment: #8e908c;
@@ -709,7 +709,7 @@ button {
   --highlight-blue: #4271ae;
   --highlight-purple: #8959a8;
   --highlight-gutter-color: #585865;
-  --highlight-gutter-bg-color: #9bbeff;
+  --highlight-gutter-bg-color: #7e99ca;
 }
 .dark-mode {
   --code-foreground: #bfbfc7;
@@ -1029,7 +1029,7 @@ pre .javascript .function {
 }
 :root {
   --code-foreground: #535360;
-  --code-background: #9bbeff;
+  --code-background: #7290c5;
   --highlight-background: #d1d4e3;
   --highlight-foreground: #535360;
   --highlight-comment: #8e908c;
@@ -1041,12 +1041,12 @@ pre .javascript .function {
   --highlight-blue: #4271ae;
   --highlight-purple: #8959a8;
   --highlight-gutter-color: #585865;
-  --highlight-gutter-bg-color: #9bbeff;
+  --highlight-gutter-bg-color: #7e99ca;
 }
 @media (prefers-color-scheme: light) {
   :root {
     --code-foreground: #535360;
-    --code-background: #9bbeff;
+    --code-background: #7290c5;
     --highlight-background: #d1d4e3;
     --highlight-foreground: #535360;
     --highlight-comment: #8e908c;
@@ -1058,7 +1058,7 @@ pre .javascript .function {
     --highlight-blue: #4271ae;
     --highlight-purple: #8959a8;
     --highlight-gutter-color: #585865;
-    --highlight-gutter-bg-color: #9bbeff;
+    --highlight-gutter-bg-color: #7e99ca;
   }
 }
 @media (prefers-color-scheme: dark) {
@@ -1081,7 +1081,7 @@ pre .javascript .function {
 }
 .light-mode {
   --code-foreground: #535360;
-  --code-background: #9bbeff;
+  --code-background: #7290c5;
   --highlight-background: #d1d4e3;
   --highlight-foreground: #535360;
   --highlight-comment: #8e908c;
@@ -1093,7 +1093,7 @@ pre .javascript .function {
   --highlight-blue: #4271ae;
   --highlight-purple: #8959a8;
   --highlight-gutter-color: #585865;
-  --highlight-gutter-bg-color: #9bbeff;
+  --highlight-gutter-bg-color: #7e99ca;
 }
 .dark-mode {
   --code-foreground: #bfbfc7;
