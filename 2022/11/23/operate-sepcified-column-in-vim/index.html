@@ -9,7 +9,7 @@
     
     <title>
         
-            Categories |
+            operate-sepcified-column-in-vim |
         
         Deal is Made
     </title>
@@ -78,7 +78,7 @@
                         </li>
                     
                         <li class="menu-item">
-                            <a class="active"
+                            <a class=""
                                href="/categories"
                             >
                                 CATEGORIES
@@ -125,7 +125,7 @@
                 </li>
             
                 <li class="drawer-menu-item flex-center">
-                    <a class="active"
+                    <a class=""
                        href="/categories">CATEGORIES</a>
                 </li>
             
@@ -150,13 +150,137 @@
 
                 
                     <div class="fade-in-down-animation">
-    <div class="category-list-container">
-        <div class="category-list-content">
-            <ul class="all-category-list"><li class="all-category-list-item"><a class="all-category-list-link" href="/categories/learn/">learn</a><span class="all-category-list-count">31</span></li><li class="all-category-list-item"><a class="all-category-list-link" href="/categories/linux/">linux</a><span class="all-category-list-count">9</span></li><li class="all-category-list-item"><a class="all-category-list-link" href="/categories/think/">think</a><span class="all-category-list-count">13</span></li><li class="all-category-list-item"><a class="all-category-list-link" href="/categories/uncle-talk/">uncle talk</a><span class="all-category-list-count">1</span></li><li class="all-category-list-item"><a class="all-category-list-link" href="/categories/vim/">vim</a><span class="all-category-list-count">2</span></li></ul>
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">operate-sepcified-column-in-vim</span>
         </div>
-        <div class="category-comments">
-            
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/avatar.svg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">shutterbug</span>
+                        
+                            <span class="author-label">Lv4</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2022-11-23 23:31:29</span>
+        <span class="mobile">2022-11-23 23:31</span>
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/vim/">vim</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/excommand/">excommand</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <h1 id="OPERATE-SPECIFIED-COLUMN-IN-VIM"><a href="#OPERATE-SPECIFIED-COLUMN-IN-VIM" class="headerlink" title="OPERATE SPECIFIED COLUMN IN VIM"></a>OPERATE SPECIFIED COLUMN IN VIM</h1><p>I got a task which one people asks my help to clean up some text in a csv file. But it seems not an easy work, i mean in vim. Because vim doesn’t has the ability to operate on some specified columns, which <code>awk</code> or <code>pandas</code> can do it better.</p>
+<p>Example: the column separates by <code>&quot;,&quot;</code>, i need to change column two’s text between <code>&#123;&#125;</code> to <code>===</code>, and change column three’s text between <code>&#123;&#125;</code> to <code>+++</code>.</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">map&quot;,&quot;&#123;lhs&#125;&quot;,&quot;&#123;rhs&#125;&quot;,&quot;|mapmode-nvo|&quot;,&quot;map</span><br><span class="line">nm[ap]&quot;,&quot;&#123;lhs&#125;&quot;,&quot;&#123;rhs&#125;&quot;,&quot;|mapmode-n|&quot;,&quot;nm&quot;,&quot;nmap</span><br><span class="line">vm[ap]&quot;,&quot;&#123;lhs&#125;&quot;,&quot;&#123;rhs&#125;&quot;,&quot;|mapmode-v|&quot;,&quot;vm&quot;,&quot;vmap</span><br><span class="line">xm[ap]&quot;,&quot;&#123;lhs&#125;&quot;,&quot;&#123;rhs&#125;&quot;,&quot;|mapmode-x|&quot;,&quot;xm&quot;,&quot;xmap</span><br><span class="line">smap&quot;,&quot;&#123;lhs&#125;&quot;,&quot;&#123;rhs&#125;&quot;,&quot;|mapmode-s|&quot;,&quot;smap</span><br><span class="line">om[ap]&quot;,&quot;&#123;lhs&#125;&quot;,&quot;&#123;rhs&#125;&quot;,&quot;|mapmode-o|&quot;,&quot;om&quot;,&quot;omap</span><br><span class="line">map!&quot;,&quot;&#123;lhs&#125;&quot;,&quot;&#123;rhs&#125;&quot;,&quot;|mapmode-ic|&quot;,&quot;map!</span><br><span class="line">im[ap]&quot;,&quot;&#123;lhs&#125;&quot;,&quot;&#123;rhs&#125;&quot;,&quot;|mapmode-i|&quot;,&quot;im&quot;,&quot;imap</span><br></pre></td></tr></table></figure>
+
+<p>At first, i tried use vim autocmd to do that work, but i failed and then i tried to use <code>awk</code> and <code>sed</code> and <code>paste</code>. However in the real text, i need use none greedy regex to match, and <code>sed</code> doesn’t has the ability. So i completely failed.</p>
+<p>And then i tried vim again. I wonder whether vim has the ability allows me to match <code>&quot;,&quot;</code>, then just like in normal mode presses <code>vn</code> to select the second column, and then types <code>:s/&#123;\a*&#125;/&#123;===&#125;</code> to replace the text.</p>
+<p>I tried use global search plus norm command:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:g/&quot;,&quot;/ norm vn</span><br></pre></td></tr></table></figure>
+
+<p>But i just can not like manual operation to visual select those text.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:g/&quot;,&quot;/ norm vn</span><br></pre></td></tr></table></figure>
+
+<p>I need to replace selected text, i get another problem: every time i replace text, i can only replace one character. I cannot reselect those text. After googleing, i know the solution: we need to use <code>\%V</code> to stand for visual selected text.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:s/\V%&#123;\a*&#125;/&#123;===&#125;/g</span><br></pre></td></tr></table></figure>
+
+<p>But it is just not working properly, After <a class="link"   target="_blank" rel="noopener" href="https://stackoverflow.com/questions/13798693/how-to-escape-in-g-commands-norm-mode-of-vim" >googleing<i class="fas fa-external-link-alt"></i></a>, i finally know the solution.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:exe &#x27;norm /&quot;,&quot;/(press ctrl+v ctrl+return)vn(press ctrl+v ctrl+escape)&#x27; | s/\%V&#123;\a*&#125;//&#123;===&#125;/g</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>use <code>exe</code> at the beginning.</li>
+<li>we can combine ex command with norm command, but need to wrap norm command in <code>&#39;&#39;</code> to be string.</li>
+<li>in norm command, we need to press return and escape just like manual type, so we need use <code>ctrl+v</code> to help us to input those symbol.</li>
+<li>after execute norm command, if we need to execute ex command, we need to use <code>|</code> to separate them.</li>
+</ol>
+<h2 id="CONCLUSION"><a href="#CONCLUSION" class="headerlink" title="CONCLUSION"></a>CONCLUSION</h2><ol>
+<li>use <code>exe</code> to start ex command.</li>
+<li>wrap norm command in <code>&#39;&#39;</code> to be string with ex command.</li>
+<li>norm command cannot followed by ex command except add a <code>|</code> at the ex command begin.</li>
+<li>reselect visual selected area, we need use <code>\%V</code>.</li>
+<li>we can write special character such as escape, return with <code>ctrl+v</code> pressed.</li>
+</ol>
+
         </div>
+
+        
+
+        
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/excommand/">#excommand</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+            <div class="article-nav">
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2022/11/22/clean-html-tag-in-csv-with-vim/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">clean-html-tag-in-csv-with-vim</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
     </div>
 </div>
 
@@ -189,6 +313,23 @@
         </div>
     </div>
 
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
     
 
     <div class="right-bottom-side-tools">
@@ -234,6 +375,14 @@
 
     </div>
 
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#OPERATE-SPECIFIED-COLUMN-IN-VIM"><span class="nav-number">1.</span> <span class="nav-text">OPERATE SPECIFIED COLUMN IN VIM</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#CONCLUSION"><span class="nav-number">1.1.</span> <span class="nav-text">CONCLUSION</span></a></li></ol></li></ol>
+    </div>
+</div>
+        </aside>
     
 
     <div class="image-viewer-container">
@@ -287,6 +436,8 @@
 
 
 <div class="post-scripts pjax">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/toc.js"></script>
     
 </div>
 
