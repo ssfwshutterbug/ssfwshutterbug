@@ -193,7 +193,7 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/excommand/">excommand</a>&nbsp;
+                        <a href="/tags/macro-and-ex/">macro and ex</a>&nbsp;
                     </li>
                 
             </ul>
@@ -212,37 +212,69 @@
         
 
         <div class="article-content markdown-body">
-            <h1 id="OPERATE-SPECIFIED-COLUMN-IN-VIM"><a href="#OPERATE-SPECIFIED-COLUMN-IN-VIM" class="headerlink" title="OPERATE SPECIFIED COLUMN IN VIM"></a>OPERATE SPECIFIED COLUMN IN VIM</h1><p>I got a task which one people asks my help to clean up some text in a csv file. But it seems not an easy work, i mean in vim. Because vim doesn’t has the ability to operate on some specified columns, which <code>awk</code> or <code>pandas</code> can do it better.</p>
-<p>Example: the column separates by <code>&quot;,&quot;</code>, i need to change column two’s text between <code>&#123;&#125;</code> to <code>===</code>, and change column three’s text between <code>&#123;&#125;</code> to <code>+++</code>.</p>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">map&quot;,&quot;&#123;lhs&#125;&quot;,&quot;&#123;rhs&#125;&quot;,&quot;|mapmode-nvo|&quot;,&quot;map</span><br><span class="line">nm[ap]&quot;,&quot;&#123;lhs&#125;&quot;,&quot;&#123;rhs&#125;&quot;,&quot;|mapmode-n|&quot;,&quot;nm&quot;,&quot;nmap</span><br><span class="line">vm[ap]&quot;,&quot;&#123;lhs&#125;&quot;,&quot;&#123;rhs&#125;&quot;,&quot;|mapmode-v|&quot;,&quot;vm&quot;,&quot;vmap</span><br><span class="line">xm[ap]&quot;,&quot;&#123;lhs&#125;&quot;,&quot;&#123;rhs&#125;&quot;,&quot;|mapmode-x|&quot;,&quot;xm&quot;,&quot;xmap</span><br><span class="line">smap&quot;,&quot;&#123;lhs&#125;&quot;,&quot;&#123;rhs&#125;&quot;,&quot;|mapmode-s|&quot;,&quot;smap</span><br><span class="line">om[ap]&quot;,&quot;&#123;lhs&#125;&quot;,&quot;&#123;rhs&#125;&quot;,&quot;|mapmode-o|&quot;,&quot;om&quot;,&quot;omap</span><br><span class="line">map!&quot;,&quot;&#123;lhs&#125;&quot;,&quot;&#123;rhs&#125;&quot;,&quot;|mapmode-ic|&quot;,&quot;map!</span><br><span class="line">im[ap]&quot;,&quot;&#123;lhs&#125;&quot;,&quot;&#123;rhs&#125;&quot;,&quot;|mapmode-i|&quot;,&quot;im&quot;,&quot;imap</span><br></pre></td></tr></table></figure>
+            <h1 id="OPERATE-SPECIFIED-COLUMN-IN-VIM"><a href="#OPERATE-SPECIFIED-COLUMN-IN-VIM" class="headerlink" title="OPERATE SPECIFIED COLUMN IN VIM"></a>OPERATE SPECIFIED COLUMN IN VIM</h1><p>I got a task which one person asks my help to clean up some text in a csv file. But it seems not an easy work, i mean in vim. Because vim doesn’t has the ability to operate on some specified columns, which <code>awk</code> or <code>python with pandas</code> can do it better.</p>
+<p>Example: the column separates by <code>&quot;,&quot;</code>, i need to clear column two’s text between <code>[]</code>.</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">The options are           &quot;,&quot; [set] like with :setlocal The new value .&quot;,&quot;</span><br><span class="line">buffer [and] window       &quot;,&quot; [that] contain file.  [Although]&quot;,&quot; it&#x27;s possible .&quot;,&quot;</span><br><span class="line">[options] from a modeline &quot;,&quot; this is[ unusual]  If you have&quot;.&quot;,&quot;</span><br><span class="line">the files                 &quot; ,&quot; in [it] set [the] same global option &quot;,&quot;</span><br><span class="line">depends on which          &quot;,&quot; one was [opened] .&quot;,&quot;</span><br></pre></td></tr></table></figure>
 
-<p>At first, i tried use vim autocmd to do that work, but i failed and then i tried to use <code>awk</code> and <code>sed</code> and <code>paste</code>. However in the real text, i need use none greedy regex to match, and <code>sed</code> doesn’t has the ability. So i completely failed.</p>
-<p>And then i tried vim again. I wonder whether vim has the ability allows me to match <code>&quot;,&quot;</code>, then just like in normal mode presses <code>vn</code> to select the second column, and then types <code>:s/&#123;\a*&#125;/&#123;===&#125;</code> to replace the text.</p>
-<p>I tried use global search plus norm command:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:g/&quot;,&quot;/ norm vn</span><br></pre></td></tr></table></figure>
 
-<p>But i just can not like manual operation to visual select those text.</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:g/&quot;,&quot;/ norm vn</span><br></pre></td></tr></table></figure>
-
-<p>I need to replace selected text, i get another problem: every time i replace text, i can only replace one character. I cannot reselect those text. After googleing, i know the solution: we need to use <code>\%V</code> to stand for visual selected text.</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:s/\V%&#123;\a*&#125;/&#123;===&#125;/g</span><br></pre></td></tr></table></figure>
-
-<p>But it is just not working properly, After <a class="link"   target="_blank" rel="noopener" href="https://stackoverflow.com/questions/13798693/how-to-escape-in-g-commands-norm-mode-of-vim" >googleing<i class="fas fa-external-link-alt"></i></a>, i finally know the solution.</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:exe &#x27;norm /&quot;,&quot;/(press ctrl+v ctrl+return)vn(press ctrl+v ctrl+escape)&#x27; | s/\%V&#123;\a*&#125;//&#123;===&#125;/g</span><br></pre></td></tr></table></figure>
-
+<h2 id="TRY-SHELL-SCRIPT-FAILED"><a href="#TRY-SHELL-SCRIPT-FAILED" class="headerlink" title="TRY SHELL SCRIPT FAILED"></a>TRY SHELL SCRIPT FAILED</h2><p>I tried to use <code>awk</code>(select each column) and <code>sed</code>(regex match and replace) and <code>paste</code>(join each column). However i failed in none greedy match, cause i only need to clean text in <code>[]</code>, but Sed’s <code>\[.*\]</code> will match the beginning of <code>[</code> till the latest <code>]</code>.</p>
+<h2 id="TRY-VIM-AGAIN"><a href="#TRY-VIM-AGAIN" class="headerlink" title="TRY VIM AGAIN"></a>TRY VIM AGAIN</h2><p>If i can use vim to do the stuff, i need to match separator <code>&quot;,&quot;</code>, and use normal command moving(<code>n</code>) and visual selecting(<code>v</code>) those text, then use ex command <code>:s/xx/xx/g</code> to replace it.</p>
+<h3 id="COMBINE-EX-WITH-NORM-OR-NORM-WITH-EX"><a href="#COMBINE-EX-WITH-NORM-OR-NORM-WITH-EX" class="headerlink" title="COMBINE EX WITH NORM OR NORM WITH EX"></a>COMBINE EX WITH NORM OR NORM WITH EX</h3><p>Is there a way to combine: normal command + ex command or ex command + normal command?</p>
+<p>The answer is “Yes”, we can do that.</p>
 <ol>
-<li>use <code>exe</code> at the beginning.</li>
-<li>we can combine ex command with norm command, but need to wrap norm command in <code>&#39;&#39;</code> to be string.</li>
-<li>in norm command, we need to press return and escape just like manual type, so we need use <code>ctrl+v</code> to help us to input those symbol.</li>
-<li>after execute norm command, if we need to execute ex command, we need to use <code>|</code> to separate them.</li>
+<li><p>way to combine ex command with normal command:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">:ex normal ...</span><br><span class="line"></span><br><span class="line">&quot;Example</span><br><span class="line">:g/&quot;,&quot;/ normal I--</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Notice:<br>global match <code>:g</code> should be used carefully, it means match something in the current buffer and do something to all lines that matched.</p>
+</blockquote>
+</li>
+<li><p>way to combine <a class="link"   target="_blank" rel="noopener" href="https://vi.stackexchange.com/questions/6736/continue-an-ex-mode-command-after-norm" >normal + ex command<i class="fas fa-external-link-alt"></i></a> or <a class="link"   target="_blank" rel="noopener" href="https://stackoverflow.com/questions/13798693/how-to-escape-in-g-commands-norm-mode-of-vim" >normal + normal<i class="fas fa-external-link-alt"></i></a>:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">:exe &#x27;normal ...&#x27; | ex</span><br><span class="line">:exe &#x27;normal ...&#x27; | normal ...</span><br><span class="line"></span><br><span class="line">&quot;Example</span><br><span class="line">:exe &#x27;normal /&quot;,&quot;/(prsses ctrl+v+enter)vn(press ctrl+v+esc)&#x27; | s/\%V\[.\&#123;-&#125;\]//g </span><br><span class="line">:exe &quot;normal /\&quot;,\&quot;\&lt;CR&gt;vn\&lt;Esc&gt;&quot; | s/\%V\[.\&#123;-&#125;\]//g</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Notice:</p>
+<p>execute should be followed by a string type of normal command, so in the string of normal command we need type the return or esc and other control character.</p>
+<p>there are two ways to fill in those none visible control characters:</p>
+<ol>
+<li>Surrounds normal command with <code>&#39; &#39;</code> and press ctrl+v+control character.</li>
+<li>Surrounds normal command with <code>&quot; &quot;</code> and type control characters but begin with a <code>\</code>. If there are <code>&quot; &quot;</code> in command, we also need to <code>\</code> to convert. </li>
 </ol>
-<h2 id="CONCLUSION"><a href="#CONCLUSION" class="headerlink" title="CONCLUSION"></a>CONCLUSION</h2><ol>
-<li>use <code>exe</code> to start ex command.</li>
-<li>wrap norm command in <code>&#39;&#39;</code> to be string with ex command.</li>
-<li>norm command cannot followed by ex command except add a <code>|</code> at the ex command begin.</li>
-<li>reselect visual selected area, we need use <code>\%V</code>.</li>
-<li>we can write special character such as escape, return with <code>ctrl+v</code> pressed.</li>
+</blockquote>
+</li>
 </ol>
+<h2 id="REPLACE-ONLY-VISUAL-SELECTED-AREA"><a href="#REPLACE-ONLY-VISUAL-SELECTED-AREA" class="headerlink" title="REPLACE ONLY VISUAL SELECTED AREA"></a>REPLACE ONLY VISUAL SELECTED AREA</h2><p>The command above, i use <code>\%V</code> to reselect the selected area, the meaning of use this is if we don’t use that, we change the whole line instead of some visual selected area.</p>
+<p>For example:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">I like apple and orange.</span><br><span class="line"></span><br><span class="line">&quot;i want to change apple&#x27;s a to A, and i visual select &quot;apple&quot;</span><br><span class="line">&quot;if i just type </span><br><span class="line">:s/a/A/g</span><br><span class="line">&quot;all a in the line will be uppercased</span><br><span class="line">&quot;only when i specify the visual select area with \%V, i can realized the effect</span><br><span class="line">:s/\%Va/A/g</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="POWER-MACRO-RECORD"><a href="#POWER-MACRO-RECORD" class="headerlink" title="POWER MACRO RECORD"></a>POWER MACRO RECORD</h2><p>The method above seems very well, but only good for a single line, if i want to do this action to whole file, i will get a failure. Because i need to write this command tens/hundreds times to make sure it execute in every line, or write a loop condition.</p>
+<p>That’s kind of weird and difficult. I only want to write a autocmd and itself will do this action to each and every line automatically.</p>
+<p>So, with this mind set, i remembered macro record. Yes, one of the most powerful tool.</p>
+<p>The problem is can i report those macro record? How can i call it in autocmd?</p>
+<p>And the answer “Yes” again, i can export and call it in autocmd.</p>
+<p>Less needs to say how to record a macro(<code>q register ...some action...q to quik</code>), but export is the thing i don’t remember. After search, i get it.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&quot;if we have a macro record to register f, we can print it with</span><br><span class="line">&quot;fp</span><br></pre></td></tr></table></figure>
+
+<p>Then we can save the output to our vim configuration for example <code>~/.vimrc</code>.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">let @f = &#x27;macro record content&#x27;</span><br><span class="line">&quot;or</span><br><span class="line">let @f = &quot;macro record content&quot;</span><br><span class="line"></span><br><span class="line">&quot;Example</span><br><span class="line">let @f = &quot;I[\&lt;Esc&gt;lx$pa(\&lt;Esc&gt;j&quot;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Notice:<br>The choose of <code>&#39; &#39;</code> or <code>&quot; &quot;</code> is if we use <code>&#39;&#39;</code>: the none visible control character should be type with <code>ctrl+v</code>.<br>if we use <code>&quot;&quot;</code>, we can use <code>\+&lt;Esc&gt;</code> or any control characters, and i find this way much more useful if we want to copy the macro record to other people, since it will not expand a new line if there is a return control character.</p>
+</blockquote>
+<p>At last, we can recall it with autocmd.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">augroup macro</span><br><span class="line">	autocmd!</span><br><span class="line">	autocmd BufRead *.txt normal 100@f</span><br><span class="line">augroup end</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Notice:</p>
+<p>macro record should be execute in normal mode, but autocmd execute ex command, so we need to write <code>normal command...</code>.</p>
+</blockquote>
+<p>Just imagine how powerful it is to combine macro record with autocmd. It can do anything.</p>
+<p>Oh, one last thing, because i really use those method to help one person formatting a mess csv file, the only thing she needs to do is open a csv file and save it. But she knows nothing about vim, even open and close vim as she thinks is a bit of confusion, so there comes a way to execute vim command without open.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">vim -c :wq some.csv</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">and also i can write a <span class="built_in">alias</span> to .bashrc or .zshrc</span></span><br><span class="line">alias fmt=&quot;vim -c :wq&quot;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">she only needs is <span class="built_in">type</span></span></span><br><span class="line">fmt some.csv</span><br></pre></td></tr></table></figure>
+
+
 
         </div>
 
@@ -252,7 +284,7 @@
             <ul class="post-tags-box">
                 
                     <li class="tag-item">
-                        <a href="/tags/excommand/">#excommand</a>&nbsp;
+                        <a href="/tags/macro-and-ex/">#macro and ex</a>&nbsp;
                     </li>
                 
             </ul>
@@ -379,7 +411,7 @@
         <aside class="page-aside">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#OPERATE-SPECIFIED-COLUMN-IN-VIM"><span class="nav-number">1.</span> <span class="nav-text">OPERATE SPECIFIED COLUMN IN VIM</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#CONCLUSION"><span class="nav-number">1.1.</span> <span class="nav-text">CONCLUSION</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#OPERATE-SPECIFIED-COLUMN-IN-VIM"><span class="nav-number">1.</span> <span class="nav-text">OPERATE SPECIFIED COLUMN IN VIM</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#TRY-SHELL-SCRIPT-FAILED"><span class="nav-number">1.1.</span> <span class="nav-text">TRY SHELL SCRIPT FAILED</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TRY-VIM-AGAIN"><span class="nav-number">1.2.</span> <span class="nav-text">TRY VIM AGAIN</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#COMBINE-EX-WITH-NORM-OR-NORM-WITH-EX"><span class="nav-number">1.2.1.</span> <span class="nav-text">COMBINE EX WITH NORM OR NORM WITH EX</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#REPLACE-ONLY-VISUAL-SELECTED-AREA"><span class="nav-number">1.3.</span> <span class="nav-text">REPLACE ONLY VISUAL SELECTED AREA</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#POWER-MACRO-RECORD"><span class="nav-number">1.4.</span> <span class="nav-text">POWER MACRO RECORD</span></a></li></ol></li></ol>
     </div>
 </div>
         </aside>
