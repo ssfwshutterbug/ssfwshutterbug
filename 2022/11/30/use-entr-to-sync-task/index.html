@@ -9,7 +9,7 @@
     
     <title>
         
-            dunst-status-bar |
+            use-entr-to-sync-task |
         
         Deal is Made
     </title>
@@ -153,7 +153,7 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <span class="title-hover-animation">dunst-status-bar</span>
+            <span class="title-hover-animation">use-entr-to-sync-task</span>
         </div>
 
         
@@ -172,8 +172,8 @@
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fas fa-edit"></i>&nbsp;
-        <span class="pc">2022-11-28 22:28:23</span>
-        <span class="mobile">2022-11-28 22:28</span>
+        <span class="pc">2022-11-30 22:14:40</span>
+        <span class="mobile">2022-11-30 22:14</span>
     </span>
     
         <span class="article-categories article-meta-item">
@@ -193,7 +193,7 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/dunst/">dunst</a>&nbsp;
+                        <a href="/tags/entr/">entr</a>&nbsp;
                     </li>
                 
             </ul>
@@ -212,18 +212,41 @@
         
 
         <div class="article-content markdown-body">
-            <h1 id="DUNST-STATUS-BAR"><a href="#DUNST-STATUS-BAR" class="headerlink" title="DUNST STATUS BAR"></a>DUNST STATUS BAR</h1><p>Recently, i changed my xmonad configuration with removing xmobar. My mind just changed, i think a status bar is not necessary in most of time, since i find i nearly don’t see the information in status bar, only the workspace info.</p>
-<p>And i remember xmonad itself can provide a workspace tree for me to display choose the workspace, that’s enough. But some information such as brightness and volume should be display when i change them. So i try to use dunst to show this, and i have ever saw that dunst can configured to display a nice bar.</p>
-<p>This is my script:</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/dash</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"> _          _       _     _</span>                       </span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">| |__  _ __(_) __ _| |__ | |_ _ __   ___  ___ ___</span> </span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">| <span class="string">&#x27;_ \| &#x27;</span>__| |/ _` | <span class="string">&#x27;_ \| __| &#x27;</span>_ \ / _ \/ __/ __|</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">| |_) | |  | | (_| | | | | |_| | | |  __/\__ \__ \</span></span><br><span class="line"><span class="language-bash"><span class="comment"># |_.__/|_|  |_|\__, |_| |_|\__|_| |_|\___||___/___/</span></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">              |___/</span>                               </span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">define variables, <span class="variable">$0</span> stands <span class="keyword">for</span> current filename <span class="built_in">which</span> will be used</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">by sed.</span></span><br><span class="line">OPERATE=$1</span><br><span class="line">VOLUME=$2</span><br><span class="line">FILENAME=$0</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">use sed change and store current brightness value instead</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">of each time to query current brightness with `sudo ddcutil getvcp 10`</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">the benefit of doing this is that query brightness needs lots of time</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">which</span> will leads to the notify shows delayed.</span></span><br><span class="line">current=5</span><br><span class="line">brightness=$(expr $current $OPERATE $VOLUME)</span><br><span class="line">[ $brightness -ge 0 ] &amp;&amp; sed -i &quot;/^current/c current=$&#123;brightness&#125;&quot; $FILENAME</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">use dunst to show a status bar of brightness.</span></span><br><span class="line">notify-send &quot;brightness : $&#123;brightness&#125;%&quot; \</span><br><span class="line">	-h string:frcolor:#000000 \</span><br><span class="line">	-h int:value:$&#123;brightness&#125; \</span><br><span class="line">	-h string:x-dunst-stack-tag:brightness \</span><br><span class="line">	-t 800</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">change brightness</span></span><br><span class="line">sudo ddcutil setvcp 10 $OPERATE $VOLUME</span><br></pre></td></tr></table></figure>
+            <h1 id="USE-ENTR-TO-SYNC-TASK"><a href="#USE-ENTR-TO-SYNC-TASK" class="headerlink" title="USE ENTR TO SYNC TASK"></a>USE ENTR TO SYNC TASK</h1><p>Since last time i heard <code>entr</code> command from Luke, i tried to wonder how to use this command is a proper way. And in recent, i find its purpose.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">entr — run arbitrary commands when files change</span><br><span class="line"></span><br><span class="line">ls /path/to/dir/* |entr [command]</span><br></pre></td></tr></table></figure>
 
-<p>It is normal, but have something need to be marked.</p>
-<ol>
-<li><code>-h int:value:...</code> used to show a status bar.</li>
-<li><code>-t string:frcolor:...</code> used to show the status bar’s frame color.</li>
-<li><code>-h string:x-dunst-stack-tag:...</code> use a tag to mark notification is the same, can help notify to show info with replacement instead of a list of notifications.</li>
-<li>use <code>sed</code> to directly change and store current brightness can help to speed up showing, shrink the time of querying.</li>
-</ol>
+<p><code>entr</code> can receive input file and monitor them, when file changes it will execute the command after entr.</p>
+<blockquote>
+<p>Notice:</p>
+<p>entr can only receive one command, not a pipe chain, not a function, only one command. So if we want to do some more complicated work, we need write a script and pass to it.</p>
+</blockquote>
+<p>Background: I recently start to use a todo list command line tool called <code>task</code>, there is no doubt that it works perfect. But if it only works in local without multi devices, it may less of its ability. So i want to use github and git to sync in different platforms. The problem is i don’t want to do the work manually, i hope it can auto sync when i change something.</p>
+<p>Task stores its content in <code>~/.local/share/task/</code> directory, each time i change something, the file in it will change. So i can use <code>entr</code> to monitor those files. Sounds good, but i find that even a check command <code>task overdue</code> will leads to the file change and entr will react. So it is necessary to filter out those checking commands.</p>
+<p>Initialize task content directory:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd ~/.local/share/task</span><br><span class="line">git init </span><br><span class="line">git add .</span><br><span class="line">git commit -m &quot;init&quot;</span><br></pre></td></tr></table></figure>
+
+<p>Configure remote github info:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git config --local user.name ...</span><br><span class="line">git config --local user.email ...</span><br><span class="line">...bla bla followed by github</span><br></pre></td></tr></table></figure>
+
+<p>The sync-task script:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/dash</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">                       _ _               _            _</span>    </span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"> _ __ ___   ___  _ __ (_) |_ ___  _ __  | |_ __ _ ___| | __</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">| <span class="string">&#x27;_ ` _ \ / _ \| &#x27;</span>_ \| | __/ _ \| <span class="string">&#x27;__| | __/ _` / __| |/ /</span></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="string">| | | | | | (_) | | | | | || (_) | |    | || (_| \__ \   &lt;</span></span> </span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="string">|_| |_| |_|\___/|_| |_|_|\__\___/|_|     \__\__,_|___/_|\_\</span></span></span><br><span class="line"><span class="string"><span class="language-bash"></span></span>                                                           </span><br><span class="line">TASKFILE=$HOME/.local/share/task/</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="string">monitor task file, if any changes, commit this change and sync to github repo.</span></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="string">auto-git-comit is a local shell script writed to commit this change.</span></span></span><br><span class="line">ls $TASKFILE/* |entr -p -n auto-git-commit</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Notice:</p>
+<p><code>-p</code> allow command after entr to execute when receive modification, without <code>-p</code> the command will execute immediately at first time.</p>
+<p><code>-n</code> allow us to send those command or script to background, without <code>-n</code> we cannot write like this <code>sync-task &amp;</code>, because entr will not work in background by default.</p>
+</blockquote>
+<p>The auto-git-comit script:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/dash</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">             _                                      _ _</span>   </span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">  __ _ _   _| |_ ___   ___ ___  _ __ ___  _ __ ___ (_) |_</span> </span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"> / _` | | | | __/ _ \ / __/ _ \| <span class="string">&#x27;_ ` _ \| &#x27;</span>_ ` _ \| | __|</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">| (_| | |_| | || (_) | (_| (_) | | | | | | | | | | | | |_</span> </span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"> \__,_|\__,_|\__\___/ \___\___/|_| |_| |_|_| |_| |_|_|\__|</span></span><br><span class="line">                                                          </span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">get last task modify info</span></span><br><span class="line">command=$(tail -n1 $HOME/.config/zsh/.zsh_history | awk -F&#x27;;&#x27; &#x27;&#123;print $2&#125;&#x27;)</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">commit this change <span class="keyword">while</span> real change happend</span></span><br><span class="line">cd $HOME/.local/share/task</span><br><span class="line">echo $command |rg -e done -e start -e delete -e add -e modify &gt;/dev/null</span><br><span class="line">[ $? = 0 ] &amp;&amp; \</span><br><span class="line">	git commit -a -m &quot;$command&quot; &amp;&amp; \</span><br><span class="line">	git push -u origin main &amp;&amp; \</span><br><span class="line">	notify-send --expire-time=1000 &quot;task sync......&quot;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Notice:</p>
+<p>I tried to use last command task use as a commit message.</p>
+</blockquote>
+<p>At last, start this command in background with xmonad:</p>
+<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">spawnOnce</span> <span class="string">&quot;sync-task &amp;&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>All done, now when we add or modify some task, it will auto commit those changes and sync to github, perfect!</p>
 
         </div>
 
@@ -233,7 +256,7 @@
             <ul class="post-tags-box">
                 
                     <li class="tag-item">
-                        <a href="/tags/dunst/">#dunst</a>&nbsp;
+                        <a href="/tags/entr/">#entr</a>&nbsp;
                     </li>
                 
             </ul>
@@ -242,29 +265,14 @@
         
             <div class="article-nav">
                 
-                    <div class="article-prev">
-                        <a class="prev"
-                           rel="prev"
-                           href="/2022/11/30/use-entr-to-sync-task/"
-                        >
-                            <span class="left arrow-icon flex-center">
-                              <i class="fas fa-chevron-left"></i>
-                            </span>
-                            <span class="title flex-center">
-                                <span class="post-nav-title-item">use-entr-to-sync-task</span>
-                                <span class="post-nav-item">Prev posts</span>
-                            </span>
-                        </a>
-                    </div>
-                
                 
                     <div class="article-next">
                         <a class="next"
                            rel="next"
-                           href="/2022/11/23/operate-sepcified-column-in-vim/"
+                           href="/2022/11/28/dunst-status-bar/"
                         >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">operate-sepcified-column-in-vim</span>
+                                <span class="post-nav-title-item">dunst-status-bar</span>
                                 <span class="post-nav-item">Next posts</span>
                             </span>
                             <span class="right arrow-icon flex-center">
@@ -375,7 +383,7 @@
         <aside class="page-aside">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#DUNST-STATUS-BAR"><span class="nav-number">1.</span> <span class="nav-text">DUNST STATUS BAR</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#USE-ENTR-TO-SYNC-TASK"><span class="nav-number">1.</span> <span class="nav-text">USE ENTR TO SYNC TASK</span></a></li></ol>
     </div>
 </div>
         </aside>
