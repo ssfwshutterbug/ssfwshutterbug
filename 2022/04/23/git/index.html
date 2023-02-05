@@ -212,73 +212,137 @@
         
 
         <div class="article-content markdown-body">
-            <h1 id="git"><a href="#git" class="headerlink" title="git"></a>git</h1><p>git是一个版本控制软件，可以仅仅在本地进行版本管理，也可以连接github进行多终端访问协作</p>
-<h2 id="common-command-quick-look"><a href="#common-command-quick-look" class="headerlink" title="common command quick look"></a>common command quick look</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">git init					#initialize a new repo</span><br><span class="line">git status					#check modified/stage area status</span><br><span class="line">	git checkout &lt;file&gt;		#reverse modified</span><br><span class="line">git add 					#add changes to stage area</span><br><span class="line">	git reset HEAD &lt;file&gt;	#reverse changes out of stage area</span><br><span class="line">git commit					#commit as a check point</span><br><span class="line">git log						#check commit info</span><br><span class="line">	git reset				#reverse to a specified commit(check point)</span><br><span class="line">	</span><br><span class="line">git branch --list			#show all branchs</span><br><span class="line">git branch &lt;branchname&gt;		#create new branch</span><br><span class="line">git checkout &lt;branchname&gt;	#change to new branch</span><br><span class="line">git checkout -b &lt;branchname&gt;#easily create new branch and change to it</span><br><span class="line">git merge &lt;branchname&gt;		#merge from branch</span><br><span class="line">git branch -d &lt;branchname&gt;	#delete a branch</span><br><span class="line"></span><br><span class="line">git tag						#show tag</span><br><span class="line">git tag &lt;tagname&gt;			#create tag</span><br><span class="line">git tag -d &lt;tagname&gt;		#delete tag</span><br></pre></td></tr></table></figure>
+            <h1 id="git"><a href="#git" class="headerlink" title="git"></a>git</h1><p>I learned git long time ago, but don’t use it very often, recently i write a script to sync my task todo list with github, need some git skills, so i tried to cleanup my note and learn again.</p>
+<h2 id="BASIC-CONFIGURATION"><a href="#BASIC-CONFIGURATION" class="headerlink" title="BASIC CONFIGURATION"></a>BASIC CONFIGURATION</h2><p>There are three kind of configuration files:</p>
+<ul>
+<li>system：write file: <code>/etc/gitconfig</code></li>
+<li>global：write file: <code>~/.gitconfig</code></li>
+<li>local：write file: <code>.git/config</code></li>
+</ul>
+<p>Personally, i will use local configuration file, because it will not create file in home directory which makes home a less  mess folder.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">user name and email only used <span class="keyword">for</span> identity.</span></span><br><span class="line">git config --local user.name &quot;your_user_name&quot;</span><br><span class="line">git config --local user.email &quot;your_email_addr&quot;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">change default branch name from master to main.</span></span><br><span class="line">git config --local init.defaultBranch main</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">use nvim as commit editor.</span></span><br><span class="line">git config --local core.editor nvim</span><br><span class="line">git config --local merge.tool nvim -d</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="built_in">enable</span> color.</span></span><br><span class="line">git config --local color.ui true</span><br><span class="line">git config --local color.status auto</span><br><span class="line">git config --local color.branch auto</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Tip:</p>
+<p>change an exist repo default name: <code>git branch -m main</code></p>
+</blockquote>
+<p>Show all configuration:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">show all configuration(global + <span class="built_in">local</span>)</span></span><br><span class="line">git config --list</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">show only <span class="built_in">local</span></span></span><br><span class="line">git config --local --list</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">show only the one i wanna to see</span></span><br><span class="line">git config user.name</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">or we can directly <span class="built_in">cat</span> the configuration file</span></span><br><span class="line">cat ~/.gitconfig</span><br></pre></td></tr></table></figure>
 
 
 
-<h2 id="change-defalut-branch-name"><a href="#change-defalut-branch-name" class="headerlink" title="change defalut branch name"></a>change defalut branch name</h2><p>在使用git之前，非常值得做的一件事就是修改默认branch的名字，如你所知的一些事，master通常是一个不能体现平等的词，所以github上可以看见创建的默认repo也是main。但是git命令在本地创建仓库的时候还是master，所以为了避免这些麻烦，需要手动修改一下配置</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">change default branch name from master to main</span></span><br><span class="line">git config --global init.defaultBranch main</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="keyword">if</span> you already have a branch named master, it<span class="string">&#x27;s easy to change it to main</span></span></span><br><span class="line">git branch -m main</span><br></pre></td></tr></table></figure>
 
-
-
-
-
-<h2 id="initialize"><a href="#initialize" class="headerlink" title="initialize"></a>initialize</h2><p>git仓库的初始化，可以是一个空的文件夹，或者是有文件的文件夹，git的初始化仅仅在在当前目录下创建一个<code>.git</code>目录</p>
+<h2 id="COMMON-COMMAND-QUICK-LOOK"><a href="#COMMON-COMMAND-QUICK-LOOK" class="headerlink" title="COMMON COMMAND QUICK LOOK"></a>COMMON COMMAND QUICK LOOK</h2><table>
+<thead>
+<tr>
+<th>command</th>
+<th>usage</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>git init</td>
+<td>initialize a new repo git status</td>
+</tr>
+<tr>
+<td>git checkout [file]</td>
+<td>reverse modified</td>
+</tr>
+<tr>
+<td>git add</td>
+<td>add changes to stage area</td>
+</tr>
+<tr>
+<td>git reset HEAD [file]</td>
+<td>reverse changes out of stage area</td>
+</tr>
+<tr>
+<td>git commit</td>
+<td>commit as a check point</td>
+</tr>
+<tr>
+<td>git log</td>
+<td>check commit info</td>
+</tr>
+<tr>
+<td>git reset</td>
+<td>reverse to a specified commit(check point)</td>
+</tr>
+<tr>
+<td>git branch –list</td>
+<td>show all branchs</td>
+</tr>
+<tr>
+<td>git branch [branchname]</td>
+<td>create new branch</td>
+</tr>
+<tr>
+<td>git checkout [branchname]</td>
+<td>change to new branch</td>
+</tr>
+<tr>
+<td>git checkout -b [branchname]</td>
+<td>easily create new branch and change to it</td>
+</tr>
+<tr>
+<td>git merge [branchname]</td>
+<td>merge from branch</td>
+</tr>
+<tr>
+<td>git branch -d [branchname]</td>
+<td>delete a branch</td>
+</tr>
+<tr>
+<td>git tag</td>
+<td>show tag</td>
+</tr>
+<tr>
+<td>git tag [tagname]</td>
+<td>create tag</td>
+</tr>
+<tr>
+<td>git tag -d [tagname]</td>
+<td>delete tag</td>
+</tr>
+<tr>
+<td>command</td>
+<td>usage</td>
+</tr>
+</tbody></table>
+<h2 id="USE-GIT-TO-MANAGE-REPO"><a href="#USE-GIT-TO-MANAGE-REPO" class="headerlink" title="USE GIT TO MANAGE REPO"></a>USE GIT TO MANAGE REPO</h2><p>No matter what the directory is empty or full of folders or files, we can change directory to it and initialize it to a git repo.</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
 
+<p>After run this command, there comes a <code>.git</code> directory in current folder, nothing else. Yeah, git don’t track any file or fold, we need to specify which to track.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git add [file name or folder]</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">or track all</span></span><br><span class="line">git add .</span><br></pre></td></tr></table></figure>
 
+<p>Once we run this command, git will track them the one we specified. What if some files or folders that we don’t track? We can create a file named <code>.gitignore</code> to note. Each line allows one file or folder.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">touch .gitignore</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">we can track this file</span></span><br><span class="line">git add .gitignore</span><br></pre></td></tr></table></figure>
 
-<h2 id="configuration"><a href="#configuration" class="headerlink" title="configuration"></a>configuration</h2><ul>
-<li>configuration level</li>
-<li>createing your identity includes username and email</li>
-<li>setting up default editor</li>
-</ul>
-<p>git config分为三个等级，而通常使用global就可以了</p>
-<ul>
-<li>local：配置仅仅对当前的目录起作用，配置写入<code>.git/config</code></li>
-<li>global：配置对一个系统的当前用户起作用，配置写入<code>~/.gitconfig</code></li>
-<li>system：配置对操作系统的所有用户起作用，配置写入<code>/etc/gitconfig</code></li>
-</ul>
-<p>git config的用户和邮件地址的作用仅仅是在git commit时作为一个用户标识，是必须设置的，但是并不需要和github上的一致</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">this only need to be configured once</span></span><br><span class="line">git config --global user.name &quot;your_user_name&quot;</span><br><span class="line">git config --global user.email &quot;your_email_addr&quot;</span><br></pre></td></tr></table></figure>
+<p>Every file we added will store in a stage area. When we finish a big change or feature, we can take a snapshot with <code>git commit</code>.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">before commit, we can check the difference with last time commit</span></span><br><span class="line">git diff</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">commit</span></span><br><span class="line">git commit -m &quot;some commit message&quot;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">we can write a simple commit msg like above, but a better way is</span> </span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">write more info about this commit <span class="keyword">for</span> us or other to understand.</span></span><br><span class="line">git commit</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">without any <span class="built_in">command</span> will raise a text editor <span class="keyword">for</span> us to write commit</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">message, the recommand form is:</span></span><br><span class="line">summary info</span><br><span class="line"></span><br><span class="line">title of this change</span><br><span class="line">- why change</span><br><span class="line">- other affect or notice</span><br></pre></td></tr></table></figure>
 
-<p>git config可设置默认的编辑器，因为在使用某些命令时会调用编辑器（比如运行<code>git commit</code>时）</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">this is optional but suggests to config</span></span><br><span class="line">git config --global core.editor &quot;vim&quot;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Notice:</p>
+<p>We can escape add step, combine add and commit with one command: <code>git commit -a -m &quot;commit msg&quot;</code></p>
+</blockquote>
+<h2 id="SPECIFY-WHICH-SSH-KEY-PAIR-SHOULD-BE-USED"><a href="#SPECIFY-WHICH-SSH-KEY-PAIR-SHOULD-BE-USED" class="headerlink" title="SPECIFY WHICH SSH KEY PAIR SHOULD BE USED"></a>SPECIFY WHICH SSH KEY PAIR SHOULD BE USED</h2><p>If we have more than one repo in github and need to sync to local, we will get a problem: each repo needs different ssh keys, but usually we run <code>ssh-keygen</code> only create one key. So how can we produce different keys and let local git repo knows which key should be used?</p>
+<p>The method is <a class="link"   target="_blank" rel="noopener" href="https://medium.com/sunstack/use-different-ssh-keys-for-different-git-repositories-68cdcc9129b6" >specify the key should be used in git config<i class="fas fa-external-link-alt"></i></a></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">generate ssh key pair <span class="keyword">in</span> different name</span></span><br><span class="line">ssh-keygen </span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="keyword">in</span> our git repo run this <span class="built_in">command</span></span></span><br><span class="line">git config --local core.sshCommand &quot;ssh -i /path/to/private_key&quot;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">or edit git configure file <span class="keyword">in</span> git repo</span></span><br><span class="line">nvim .git/config</span><br><span class="line"></span><br><span class="line">sshCommand = &quot;ssh -i /path/to/private_key</span><br></pre></td></tr></table></figure>
 
-<p>查看所有的配置</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">show all config</span></span><br><span class="line">git config --list</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">or only show the one you wanna to see: eg. user.name</span></span><br><span class="line">git config user.name</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">or we can directly <span class="built_in">cat</span> the config file</span></span><br><span class="line">cat ~/.gitconfig</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Tip: in this way, we can put ssh key pair in local git directory <code>.ssh</code> instead of home directory <code>~/.ssh</code>. If we do it like this, we need add <code>.ssh</code> directory in <code>.gitignore</code> file, otherwise our key pair will shows in public, and it is a risk.</p>
+</blockquote>
+<h2 id="ROLLBACK-CHANGES"><a href="#ROLLBACK-CHANGES" class="headerlink" title="ROLLBACK CHANGES"></a>ROLLBACK CHANGES</h2><p>There is always a way for us to rollback once we use git to track files.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">rollback modified but not added to stage area</span></span><br><span class="line">git restore [filename]</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">rollback file <span class="keyword">in</span> stage area</span></span><br><span class="line">git restore --staged [filename]</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">rollback stage area and modified at once to commit</span></span><br><span class="line">git reset --hard</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">rollback last commit but keep all changes</span></span><br><span class="line">git reset --soft HEAD^</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">rollback one version before</span></span><br><span class="line">git reset --hard HEAD^</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">rollback to sepecified commit</span></span><br><span class="line">git reset --hard [hash id]</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">what <span class="keyword">if</span> we did a wrong rollback, we just want recover to the newest commit?</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">we can also use <span class="built_in">hash</span> <span class="built_in">id</span> to recover <span class="keyword">if</span> we remember, because git doesn<span class="string">&#x27;t delete it yet</span></span></span><br><span class="line">git reset --hard [hash id]</span><br></pre></td></tr></table></figure>
 
-
-
-<h2 id="add-to-git"><a href="#add-to-git" class="headerlink" title="add to git"></a>add to git</h2><p>包含两个方面：</p>
-<ul>
-<li><p>初始化将目录或文件加入git track，可以是整个目录，或者是一部分</p>
-</li>
-<li><p>将修改过的文件加入stage area</p>
-</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">added file will be put <span class="keyword">in</span> a stage area, waitting <span class="keyword">for</span> commit</span></span><br><span class="line">git add .</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">or only one specified file</span></span><br><span class="line">git add readme.md</span><br></pre></td></tr></table></figure>
-
-<p>当add之后，可以回退</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset HEAD &lt;file_name&gt;</span><br></pre></td></tr></table></figure>
+<p><img src="../.images/rollback.jpg" alt="rollback"></p>
+<blockquote>
+<p>Notice:</p>
+<p>We can get hash id with <code>git log</code></p>
+</blockquote>
+<h2 id="GET-INFORMATION"><a href="#GET-INFORMATION" class="headerlink" title="GET INFORMATION"></a>GET INFORMATION</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">show all the message we commit</span></span><br><span class="line">git log</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">or only show simple <span class="built_in">nice</span> oneline</span></span><br><span class="line">git log --pretty=oneline</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 
 
-<h2 id="ignore-some-dir-file"><a href="#ignore-some-dir-file" class="headerlink" title="ignore some dir/file"></a>ignore some dir/file</h2><p>如果某些文件或者目录是我们不想通过git进行管理的，可以进行设置</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">create a new file named .gitignore <span class="built_in">where</span> .git directory exists</span></span><br><span class="line">touch .gitignore</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="keyword">then</span> add file name or directory name to .gitignore, cannot write <span class="keyword">in</span> one line</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">each line only one file name or directory</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="commit-changes"><a href="#commit-changes" class="headerlink" title="commit changes"></a>commit changes</h2><p>通常我们的修改不会进行提交，提交的目的是作为一个check point，方便我们回退。只有在加入一个新的特性或者整体作为一个备份点，这时才有必要提交</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">without any argument will open a text editor <span class="keyword">for</span> writing comments</span></span><br><span class="line">git commit</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">sure can write comment directly</span></span><br><span class="line">git commit . -m &quot;your comments&quot;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">before we commit, we can checkout what is the differenct between now and last time before we change</span></span><br><span class="line">git diff</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="reverse-changes"><a href="#reverse-changes" class="headerlink" title="reverse changes"></a>reverse changes</h2><p>每次提交都会被git记录，uuid作为唯一标识符，可以通过查看log找到回退的点</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">show all the message we commit</span></span><br><span class="line">git log</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">or only show simple <span class="built_in">nice</span> oneline</span></span><br><span class="line">git log --pretty=oneline</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">reverse with the uuid before we find</span></span><br><span class="line">git reset --hard &lt;uuid&gt;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">a simple way to reverse one version before without check uuid</span></span><br><span class="line">git reset --hard HEAD^</span><br></pre></td></tr></table></figure>
-
-<p>通过上面的方式回到了某个之前的版本，但所有的这些修改并不会被git删除，所以在回退之后还可以前进到最新的版本，方式同上，只需找到对应的uuid即可</p>
 <h2 id="use-github-as-remote-repo"><a href="#use-github-as-remote-repo" class="headerlink" title="use github as remote repo"></a>use github as remote repo</h2><p>本地使用git可以满足一个人的需求，如果在多个终端/多个人协作就需要一个公共访问的远端仓库，github就满足这个要求</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">at first create a empty repository <span class="keyword">in</span> github , such as named <span class="built_in">test</span></span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">second make sure locally has created a <span class="built_in">local</span> repo and commited all the changes</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">checkout whether exists remote configure</span></span><br><span class="line">git remote --verbose</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="keyword">then</span> config remote repo<span class="string">&#x27;s info，where the url link finds will be described below</span></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="string">now we can use origin instead of the long url link</span></span></span><br><span class="line">git remote add origin &lt;https://github.com/your_github_username/test.git&gt;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="string">push local to remote repo&#x27;</span>s(origin) main branch</span></span><br><span class="line">git push -u origin main</span><br></pre></td></tr></table></figure>
 
@@ -366,6 +430,13 @@
 <p>why we use git bash without configure and it used windows credential in default?</p>
 <p>because when we install git bash, there comes a config setting in default</p>
 </blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">➜  task git:(main) ✗ git push -u origin main</span><br><span class="line">To github.com:ssfwshutterbug/task.git</span><br><span class="line"> ! [rejected]        main -&gt; main (non-fast-forward)</span><br><span class="line">error: failed to push some refs to &#x27;github.com:ssfwshutterbug/task.git&#x27;</span><br><span class="line">hint: Updates were rejected because the tip of your current branch is behind</span><br><span class="line">hint: its remote counterpart. Integrate the remote changes (e.g.</span><br><span class="line">hint: &#x27;git pull ...&#x27;) before pushing again.</span><br><span class="line">hint: See the &#x27;Note about fast-forwards&#x27; in &#x27;git push --help&#x27; for details.</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">➜  task git:(main) ✗ git push --prune --force -u origin main</span><br><span class="line">Enumerating objects: 71, done.</span><br><span class="line">Counting objects: 100% (71/71), done.</span><br><span class="line">Delta compression using up to 4 threads</span><br><span class="line">Compressing objects: 100% (66/66), done.</span><br><span class="line">Writing objects: 100% (66/66), 7.14 KiB | 1.78 MiB/s, done.</span><br><span class="line">Total 66 (delta 43), reused 0 (delta 0), pack-reused 0</span><br><span class="line">remote: Resolving deltas: 100% (43/43), completed with 4 local objects.</span><br><span class="line">To github.com:ssfwshutterbug/task.git</span><br><span class="line"> + 8650aae...a134be4 main -&gt; main (forced update)</span><br></pre></td></tr></table></figure>
+
+
+
+
 
         </div>
 
@@ -517,7 +588,7 @@
         <aside class="page-aside">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#git"><span class="nav-number">1.</span> <span class="nav-text">git</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#common-command-quick-look"><span class="nav-number">1.1.</span> <span class="nav-text">common command quick look</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#change-defalut-branch-name"><span class="nav-number">1.2.</span> <span class="nav-text">change defalut branch name</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#initialize"><span class="nav-number">1.3.</span> <span class="nav-text">initialize</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#configuration"><span class="nav-number">1.4.</span> <span class="nav-text">configuration</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#add-to-git"><span class="nav-number">1.5.</span> <span class="nav-text">add to git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ignore-some-dir-file"><span class="nav-number">1.6.</span> <span class="nav-text">ignore some dir&#x2F;file</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#commit-changes"><span class="nav-number">1.7.</span> <span class="nav-text">commit changes</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#reverse-changes"><span class="nav-number">1.8.</span> <span class="nav-text">reverse changes</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#use-github-as-remote-repo"><span class="nav-number">1.9.</span> <span class="nav-text">use github as remote repo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#clone-from-github-existing-repo"><span class="nav-number">1.10.</span> <span class="nav-text">clone from github existing repo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#create-delete-branch"><span class="nav-number">1.11.</span> <span class="nav-text">create&#x2F;delete branch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#merge-branch"><span class="nav-number">1.12.</span> <span class="nav-text">merge branch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#show-difference"><span class="nav-number">1.13.</span> <span class="nav-text">show difference</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#discuss"><span class="nav-number">1.14.</span> <span class="nav-text">discuss</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#credential"><span class="nav-number">1.15.</span> <span class="nav-text">credential</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#git"><span class="nav-number">1.</span> <span class="nav-text">git</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#BASIC-CONFIGURATION"><span class="nav-number">1.1.</span> <span class="nav-text">BASIC CONFIGURATION</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#COMMON-COMMAND-QUICK-LOOK"><span class="nav-number">1.2.</span> <span class="nav-text">COMMON COMMAND QUICK LOOK</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#USE-GIT-TO-MANAGE-REPO"><span class="nav-number">1.3.</span> <span class="nav-text">USE GIT TO MANAGE REPO</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SPECIFY-WHICH-SSH-KEY-PAIR-SHOULD-BE-USED"><span class="nav-number">1.4.</span> <span class="nav-text">SPECIFY WHICH SSH KEY PAIR SHOULD BE USED</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ROLLBACK-CHANGES"><span class="nav-number">1.5.</span> <span class="nav-text">ROLLBACK CHANGES</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GET-INFORMATION"><span class="nav-number">1.6.</span> <span class="nav-text">GET INFORMATION</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#use-github-as-remote-repo"><span class="nav-number">1.7.</span> <span class="nav-text">use github as remote repo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#clone-from-github-existing-repo"><span class="nav-number">1.8.</span> <span class="nav-text">clone from github existing repo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#create-delete-branch"><span class="nav-number">1.9.</span> <span class="nav-text">create&#x2F;delete branch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#merge-branch"><span class="nav-number">1.10.</span> <span class="nav-text">merge branch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#show-difference"><span class="nav-number">1.11.</span> <span class="nav-text">show difference</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#discuss"><span class="nav-number">1.12.</span> <span class="nav-text">discuss</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#credential"><span class="nav-number">1.13.</span> <span class="nav-text">credential</span></a></li></ol></li></ol>
     </div>
 </div>
         </aside>
