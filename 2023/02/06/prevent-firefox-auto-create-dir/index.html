@@ -9,7 +9,7 @@
     
     <title>
         
-            weechat |
+            prevent-firefox-auto-create-dir |
         
         Screw it!
     </title>
@@ -153,7 +153,7 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <span class="title-hover-animation">weechat</span>
+            <span class="title-hover-animation">prevent-firefox-auto-create-dir</span>
         </div>
 
         
@@ -172,8 +172,8 @@
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fas fa-edit"></i>&nbsp;
-        <span class="pc">2023-02-06 22:39:09</span>
-        <span class="mobile">2023-02-06 22:39</span>
+        <span class="pc">2023-02-06 23:23:16</span>
+        <span class="mobile">2023-02-06 23:23</span>
     </span>
     
         <span class="article-categories article-meta-item">
@@ -181,7 +181,7 @@
             <ul>
                 
                     <li>
-                        <a href="/categories/linux/">linux</a>&nbsp;
+                        <a href="/categories/browser/">browser</a>&nbsp;
                     </li>
                 
             </ul>
@@ -193,7 +193,7 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/weechat/">weechat</a>&nbsp;
+                        <a href="/tags/firefox/">firefox</a>&nbsp;
                     </li>
                 
             </ul>
@@ -212,67 +212,10 @@
         
 
         <div class="article-content markdown-body">
-            <h1 id="WEECHAT"><a href="#WEECHAT" class="headerlink" title="WEECHAT"></a>WEECHAT</h1><p><a class="link"   target="_blank" rel="noopener" href="https://weechat.org/" >Weechat<i class="fas fa-external-link-alt"></i></a> is a text-mode IRC client, we can talk to people through channel and people where they come from the whole world, it is amazing!</p>
-<p>A few years ago, i have used weechat, and now i want to use it again. But i almost forget how to use it, so this article is mainly focus on how to get things done.</p>
-<h2 id="install-weechat-in-gentoo"><a href="#install-weechat-in-gentoo" class="headerlink" title="install weechat in gentoo"></a><a class="link"   target="_blank" rel="noopener" href="https://wiki.gentoo.org/wiki/WeeChat" >install<i class="fas fa-external-link-alt"></i></a> weechat in gentoo</h2>   <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">user$ </span><span class="language-bash">doas emerge --ask net-irc/weechat</span> </span><br></pre></td></tr></table></figure>
+            <h1 id="PREVENT-FIREFOX-CREATE-DIR"><a href="#PREVENT-FIREFOX-CREATE-DIR" class="headerlink" title="PREVENT FIREFOX CREATE DIR"></a>PREVENT FIREFOX CREATE DIR</h1><p>Every time i launch firefox’s setting, firefox will create a <code>Desktop</code> directory under home directory, it is so annoying. And i find <a class="link"   target="_blank" rel="noopener" href="https://elementaryos.stackexchange.com/questions/6796/why-does-firefox-keep-creating-a-desktop-folder" >a way<i class="fas fa-external-link-alt"></i></a> to fix this problem.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">user$ </span><span class="language-bash">~/.config/user-dirs.dirs</span> </span><br><span class="line">nvim ~/.config/user-dirs.dirs </span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">add this line to the file</span></span><br><span class="line">XDG_DESKTOP_DIR=&quot;$HOME/&quot;</span><br></pre></td></tr></table></figure>
 
-<h2 id="basic-configure-weechat"><a href="#basic-configure-weechat" class="headerlink" title="basic configure weechat"></a>basic configure weechat</h2><p>With the <a class="link"   target="_blank" rel="noopener" href="https://weechat.org/files/doc/stable/weechat_quickstart.en.html#irc_server_options" >following steps<i class="fas fa-external-link-alt"></i></a>, we can simply configure weechat, and join some channels.</p>
-<ol>
-<li><p>start weechat</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">user$ </span><span class="language-bash">weechat</span></span><br></pre></td></tr></table></figure></li>
-<li><p>add irc server </p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/server add libera irc.libera.chat/6697 -ssl</span><br></pre></td></tr></table></figure></li>
-<li><p>set nickname</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/set irc.server.libera.nicks &quot;shutterbug&quot;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>Note: </p>
-<p>After this step, we can connect to libera server and join free channel.</p>
-<p>Next time we start weechat, we only need to follow steps showing below.</p>
-</blockquote>
-</li>
-<li><p>connect to server</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/connect libera</span><br></pre></td></tr></table></figure></li>
-<li><p>join channel</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/join #gentoo</span><br></pre></td></tr></table></figure></li>
-<li><p>close channel</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/close</span><br></pre></td></tr></table></figure></li>
-<li><p>quit weechat</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/quit</span><br></pre></td></tr></table></figure></li>
-</ol>
-<h2 id="registering-account-on-the-Libera-Chat-IRC-network"><a href="#registering-account-on-the-Libera-Chat-IRC-network" class="headerlink" title="registering account on the Libera.Chat IRC network"></a><a class="link"   target="_blank" rel="noopener" href="https://superuser.com/questions/106965/how-do-i-identify-with-services-on-irc#322897" >registering account on the Libera.Chat IRC network<i class="fas fa-external-link-alt"></i></a></h2><p>If we only do the configuration above, we may failed to join some channel such as <code>#archlinux-aur</code>, cause it needs a registered NickServ account logged in.</p>
-<p><img src="../.images/weechat-regist-nickname.png" alt="failed to login some channel"></p>
-<p>So we need to register an account on Libra.Chat, it can be done through command(make sure we connect to libera server and then type the command).</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/msg nickserv register [password] [email]</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>Note:</p>
-<p>password is the one we need to remember for the next time to login account</p>
-<p>email should be a in use email account, cause we will receive an email include the information about how to finish the register process.</p>
-</blockquote>
-<p>Now we need to open our email web or app to open the new email which is sent from Libera.Chat Network Services, find the command which tell us how to run this in weechat, we need to copy this command and run in weechat to finish register.</p>
-<p><img src="../.images/weechat-register-email.png" alt="receive email"></p>
-<p>Run this in weechat, this command is random, so don’t use this one next time.</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/msg NickServ VERIFY REGISTER shutterbug 3kKcJyDVgG5aCdna</span><br></pre></td></tr></table></figure>
-
-<p><img src="../.images/weechat-complete-register.png" alt="vertify"></p>
-<p>Now we get a registered NickServ account, we can join <code>#archlinux-aur</code> channel, before join, we need to vertify.</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/msg nickserv identify [password]</span><br></pre></td></tr></table></figure>
-
-<p>And we are allowed to join.</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/join #archlinux-aur</span><br></pre></td></tr></table></figure>
-
-
-<h2 id="enable-auto-connect"><a href="#enable-auto-connect" class="headerlink" title="enable auto connect"></a>enable auto connect</h2><p>Although we can connect to libera server by hand, there is a convenient way to auto connect.</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/set irc.server.libera.autoconnect on</span><br></pre></td></tr></table></figure>
-
-<p>Yeah, there is also a way to auto join channels, but so far, i don’t like to auto join channel, may be in the future i will use this.</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/set irc.server.libera.autojoin &quot;#gentoo,#gentoo-chat&quot;</span><br></pre></td></tr></table></figure>
-
-<h2 id="shortcut"><a href="#shortcut" class="headerlink" title="shortcut"></a>shortcut</h2><p>Alt+1 switch to channel 1<br>Alt+2 switch to channel 2<br>…</p>
-<h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips:"></a>Tips:</h2><ol>
-<li>We can type command in every channel, the weechat will recognize it as command but not sending message. So no need to worry about where to type command.</li>
-</ol>
+<p>It is a trick to tell firefox there is already a desktop directory, but its name just <code>$HOME</code>.</p>
 
         </div>
 
@@ -282,7 +225,7 @@
             <ul class="post-tags-box">
                 
                     <li class="tag-item">
-                        <a href="/tags/weechat/">#weechat</a>&nbsp;
+                        <a href="/tags/firefox/">#firefox</a>&nbsp;
                     </li>
                 
             </ul>
@@ -291,29 +234,14 @@
         
             <div class="article-nav">
                 
-                    <div class="article-prev">
-                        <a class="prev"
-                           rel="prev"
-                           href="/2023/02/06/prevent-firefox-auto-create-dir/"
-                        >
-                            <span class="left arrow-icon flex-center">
-                              <i class="fas fa-chevron-left"></i>
-                            </span>
-                            <span class="title flex-center">
-                                <span class="post-nav-title-item">prevent-firefox-auto-create-dir</span>
-                                <span class="post-nav-item">Prev posts</span>
-                            </span>
-                        </a>
-                    </div>
-                
                 
                     <div class="article-next">
                         <a class="next"
                            rel="next"
-                           href="/2023/02/02/gentoo/"
+                           href="/2023/02/06/weechat/"
                         >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">gentoo</span>
+                                <span class="post-nav-title-item">weechat</span>
                                 <span class="post-nav-item">Next posts</span>
                             </span>
                             <span class="right arrow-icon flex-center">
@@ -424,7 +352,7 @@
         <aside class="page-aside">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#WEECHAT"><span class="nav-number">1.</span> <span class="nav-text">WEECHAT</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#install-weechat-in-gentoo"><span class="nav-number">1.1.</span> <span class="nav-text">install weechat in gentoo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#basic-configure-weechat"><span class="nav-number">1.2.</span> <span class="nav-text">basic configure weechat</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#registering-account-on-the-Libera-Chat-IRC-network"><span class="nav-number">1.3.</span> <span class="nav-text">registering account on the Libera.Chat IRC network</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#enable-auto-connect"><span class="nav-number">1.4.</span> <span class="nav-text">enable auto connect</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#shortcut"><span class="nav-number">1.5.</span> <span class="nav-text">shortcut</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tips"><span class="nav-number">1.6.</span> <span class="nav-text">Tips:</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#PREVENT-FIREFOX-CREATE-DIR"><span class="nav-number">1.</span> <span class="nav-text">PREVENT FIREFOX CREATE DIR</span></a></li></ol>
     </div>
 </div>
         </aside>
