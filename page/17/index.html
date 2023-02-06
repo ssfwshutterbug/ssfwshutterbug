@@ -155,6 +155,39 @@
                 
 
                 <h3 class="home-article-title">
+                    <a href="/2022/04/23/k8s/">
+                        k8s
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        kubernetescore component
+etcd：分布式存储，保存集群状态
+apiserver：api操作接口
+controller manager：维护集群状态
+scheduler：资源调度
+kubelet：容器生命周期，volume和网...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sat Apr 23 2022 23:05:29 GMT+0800">2022-04-23</span></span>
+        
+        
+    </div>
+
+    <a href="/2022/04/23/k8s/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
                     <a href="/2022/04/23/iptables/">
                         iptables
                     </a>
@@ -206,34 +239,6 @@
 
             </li>
         
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2022/04/23/haskell/">
-                        haskell
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
-                        HASKELLwhat is haskell?Haskell is a purely functional programming language. don’t tell the computer what to do as such but ra...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sat Apr 23 2022 23:02:39 GMT+0800">2022-04-23</span></span>
-        
-        
-    </div>
-
-    <a href="/2022/04/23/haskell/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
     </ul>
 
     <div class="home-paginator">
@@ -261,24 +266,35 @@
         </div>
 
         <div class="page-main-content-bottom">
-            <footer class="footer">
-    <div class="info-container">
-        <div class="copyright-info info-item">
-            &copy;
-            
-              <span>2020</span>
-              -
-            
-            2023&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">shutterbug</a>
-        </div>
-        
-        <div class="theme-info info-item">
-            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
-        </div>
-        
-        
-    </div>
-</footer>
+            .footer {
+  font-size: 1rem;
+  color: var(--third-text-color);
+
+
+  a {
+    color: var(--third-text-color);
+
+
+    &:hover {
+      color: var(--primary-color);
+
+    }
+  }
+
+  .info-container {
+    padding-bottom: 10px;
+    text-align: center;
+  }
+
+  .info-item {
+    margin: 5px 0;
+  }
+
+  .icon-animate {
+    animation: icon-animate 1.2s ease-in-out infinite;
+  }
+
+}
 
         </div>
     </div>

@@ -155,6 +155,34 @@
                 
 
                 <h3 class="home-article-title">
+                    <a href="/2022/06/12/20220612-%E5%96%84%E8%89%AF%E6%98%AF%E5%A6%82%E4%BD%95%E6%B6%88%E5%A4%B1%E7%9A%84/">
+                        20220612-善良是如何消失的
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        20220612yes, today is Sunday. what a pretty name: the day with sunshine in summer, i can even feel the hot and clean wind of ...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sun Jun 12 2022 18:12:47 GMT+0800">2022-06-12</span></span>
+        
+        
+    </div>
+
+    <a href="/2022/06/12/20220612-%E5%96%84%E8%89%AF%E6%98%AF%E5%A6%82%E4%BD%95%E6%B6%88%E5%A4%B1%E7%9A%84/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
                     <a href="/2022/06/05/20220605/">
                         20220605
                     </a>
@@ -208,35 +236,6 @@
 
             </li>
         
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2022/05/29/bing%E5%A3%81%E7%BA%B8%E8%AE%BE%E7%BD%AE/">
-                        bing壁纸设置
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
-                        The way to set wallpaper with bing daily img之前写过一个shell脚本，用来设置bing的每日壁纸作为桌面壁纸，但是发现失效了，只能下载当天的，没法选择以前的。所以今天重新写一遍
-之前使用的是api链接后面...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sun May 29 2022 00:18:31 GMT+0800">2022-05-29</span></span>
-        
-        
-    </div>
-
-    <a href="/2022/05/29/bing%E5%A3%81%E7%BA%B8%E8%AE%BE%E7%BD%AE/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
     </ul>
 
     <div class="home-paginator">
@@ -264,24 +263,35 @@
         </div>
 
         <div class="page-main-content-bottom">
-            <footer class="footer">
-    <div class="info-container">
-        <div class="copyright-info info-item">
-            &copy;
-            
-              <span>2020</span>
-              -
-            
-            2023&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">shutterbug</a>
-        </div>
-        
-        <div class="theme-info info-item">
-            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
-        </div>
-        
-        
-    </div>
-</footer>
+            .footer {
+  font-size: 1rem;
+  color: var(--third-text-color);
+
+
+  a {
+    color: var(--third-text-color);
+
+
+    &:hover {
+      color: var(--primary-color);
+
+    }
+  }
+
+  .info-container {
+    padding-bottom: 10px;
+    text-align: center;
+  }
+
+  .info-item {
+    margin: 5px 0;
+  }
+
+  .icon-animate {
+    animation: icon-animate 1.2s ease-in-out infinite;
+  }
+
+}
 
         </div>
     </div>
