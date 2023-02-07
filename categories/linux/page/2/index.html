@@ -167,6 +167,13 @@
                 
                     <li class="article-item">
                         <a class="article-title"
+                           href="/2022/11/20/todo-application/"
+                        >todo-application</a>
+                        <span class="article-date">11-20</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
                            href="/2022/11/13/convert-md-to-pdf/"
                         >convert-md-to-pdf</a>
                         <span class="article-date">11-13</span>
@@ -198,13 +205,6 @@
                            href="/2022/06/24/create-cursor/"
                         >create-cursor</a>
                         <span class="article-date">06-24</span>
-                    </li>
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/2022/06/19/xmonad/"
-                        >xmonad</a>
-                        <span class="article-date">06-19</span>
                     </li>
                 
             </ul>
@@ -239,24 +239,35 @@
         </div>
 
         <div class="page-main-content-bottom">
-            <footer class="footer">
-    <div class="info-container">
-        <div class="copyright-info info-item">
-            &copy;
-            
-              <span>2020</span>
-              -
-            
-            2023&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">shutterbug</a>
-        </div>
-        
-        <div class="theme-info info-item">
-            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
-        </div>
-        
-        
-    </div>
-</footer>
+            .footer {
+  font-size: 1rem;
+  color: var(--third-text-color);
+
+
+  a {
+    color: var(--third-text-color);
+
+
+    &:hover {
+      color: var(--primary-color);
+
+    }
+  }
+
+  .info-container {
+    padding-bottom: 10px;
+    text-align: center;
+  }
+
+  .info-item {
+    margin: 5px 0;
+  }
+
+  .icon-animate {
+    animation: icon-animate 1.2s ease-in-out infinite;
+  }
+
+}
 
         </div>
     </div>

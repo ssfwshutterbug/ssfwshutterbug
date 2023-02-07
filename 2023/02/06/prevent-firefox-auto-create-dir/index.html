@@ -213,7 +213,7 @@
 
         <div class="article-content markdown-body">
             <h1 id="PREVENT-FIREFOX-CREATE-DIR"><a href="#PREVENT-FIREFOX-CREATE-DIR" class="headerlink" title="PREVENT FIREFOX CREATE DIR"></a>PREVENT FIREFOX CREATE DIR</h1><p>Every time i launch firefox’s setting, firefox will create a <code>Desktop</code> directory under home directory, it is so annoying. And i find <a class="link"   target="_blank" rel="noopener" href="https://elementaryos.stackexchange.com/questions/6796/why-does-firefox-keep-creating-a-desktop-folder" >a way<i class="fas fa-external-link-alt"></i></a> to fix this problem.</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">user$ </span><span class="language-bash">~/.config/user-dirs.dirs</span> </span><br><span class="line">nvim ~/.config/user-dirs.dirs </span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">add this line to the file</span></span><br><span class="line">XDG_DESKTOP_DIR=&quot;$HOME/&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">user$ </span><span class="language-bash"><span class="built_in">touch</span> ~/.config/user-dirs.dirs</span> </span><br><span class="line"><span class="meta prompt_">user$ </span><span class="language-bash">nvim ~/.config/user-dirs.dirs</span> </span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">add this line to the file</span></span><br><span class="line">XDG_DESKTOP_DIR=&quot;$HOME/&quot;</span><br></pre></td></tr></table></figure>
 
 <p>It is a trick to tell firefox there is already a desktop directory, but its name just <code>$HOME</code>.</p>
 
@@ -279,24 +279,35 @@
         </div>
 
         <div class="page-main-content-bottom">
-            <footer class="footer">
-    <div class="info-container">
-        <div class="copyright-info info-item">
-            &copy;
-            
-              <span>2020</span>
-              -
-            
-            2023&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">shutterbug</a>
-        </div>
-        
-        <div class="theme-info info-item">
-            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
-        </div>
-        
-        
-    </div>
-</footer>
+            .footer {
+  font-size: 1rem;
+  color: var(--third-text-color);
+
+
+  a {
+    color: var(--third-text-color);
+
+
+    &:hover {
+      color: var(--primary-color);
+
+    }
+  }
+
+  .info-container {
+    padding-bottom: 10px;
+    text-align: center;
+  }
+
+  .info-item {
+    margin: 5px 0;
+  }
+
+  .icon-animate {
+    animation: icon-animate 1.2s ease-in-out infinite;
+  }
+
+}
 
         </div>
     </div>

@@ -155,6 +155,34 @@
                 
 
                 <h3 class="home-article-title">
+                    <a href="/2022/11/28/dunst-status-bar/">
+                        dunst-status-bar
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        DUNST STATUS BARRecently, i changed my xmonad configuration with removing xmobar. My mind just changed, i think a status bar ...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Mon Nov 28 2022 22:28:23 GMT+0800">2022-11-28</span></span>
+        
+        
+    </div>
+
+    <a href="/2022/11/28/dunst-status-bar/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
                     <a href="/2022/11/23/operate-sepcified-column-in-vim/">
                         operate-sepcified-column-in-vim
                     </a>
@@ -206,34 +234,6 @@
 
             </li>
         
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2022/11/20/cleanup-home-dir/">
-                        cleanup-home-dir
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
-                        CLEANUP MY HOME DIRECTORYA long time ago, i realized my home directory has so many files and folders, and i want to cleanup t...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sun Nov 20 2022 20:33:05 GMT+0800">2022-11-20</span></span>
-        
-        
-    </div>
-
-    <a href="/2022/11/20/cleanup-home-dir/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
     </ul>
 
     <div class="home-paginator">
@@ -261,24 +261,35 @@
         </div>
 
         <div class="page-main-content-bottom">
-            <footer class="footer">
-    <div class="info-container">
-        <div class="copyright-info info-item">
-            &copy;
-            
-              <span>2020</span>
-              -
-            
-            2023&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">shutterbug</a>
-        </div>
-        
-        <div class="theme-info info-item">
-            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
-        </div>
-        
-        
-    </div>
-</footer>
+            .footer {
+  font-size: 1rem;
+  color: var(--third-text-color);
+
+
+  a {
+    color: var(--third-text-color);
+
+
+    &:hover {
+      color: var(--primary-color);
+
+    }
+  }
+
+  .info-container {
+    padding-bottom: 10px;
+    text-align: center;
+  }
+
+  .info-item {
+    margin: 5px 0;
+  }
+
+  .icon-animate {
+    animation: icon-animate 1.2s ease-in-out infinite;
+  }
+
+}
 
         </div>
     </div>
