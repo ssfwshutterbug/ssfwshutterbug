@@ -216,6 +216,15 @@
 <p>There is no rules about how many lines we should put between paragraph, but basically we need 1, if we put more than 1, it is just for good view.</p>
 </blockquote>
 <ul>
+<li><p>create a table</p>
+<p>  rules:</p>
+<ol>
+<li>use <code>|</code> to split content </li>
+<li>second line use <code>|</code> and <code>-</code> to specify column’s number</li>
+<li>line one is table header, default bold text</li>
+<li>no need to align all columns, if do, only for good view</li>
+</ol>
+  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">| head1 | head2 |</span><br><span class="line">|-------|-------|</span><br><span class="line">| content | content |</span><br><span class="line">| content | content |</span><br></pre></td></tr></table></figure></li>
 <li><p>syntax character has a space with normal document.</p>
   <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">## HEAD1</span></span><br><span class="line"><span class="bullet">-</span> list</span><br></pre></td></tr></table></figure></li>
 <li><p>use one or more lines create paragraphs.</p>

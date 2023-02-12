@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="shutterbug">
+    
+    <title>
+        
+            rancher-k8s |
+        
+        Screw it!
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/logo.svg">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"raw.githubusercontent.com","root":"/","language":"en","path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":true},"style":{"primary_color":"#0066CC","avatar":"/images/avatar.svg","favicon":"/images/logo.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/4.jpg","description":"the world you see is not about how they act but how we respond."},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":false},"code_copy":{"enable":false,"style":"default"},"pjax":{"enable":true},"lazyload":{"enable":false},"version":"3.4.5"};
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+  </script>
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fas fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                Screw it!
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                HOME
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                CATEGORIES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                TAGS
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">HOME</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">ARCHIVES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">CATEGORIES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">TAGS</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">rancher-k8s</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/avatar.svg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">shutterbug</span>
+                        
+                            <span class="author-label">Lv5</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2023-02-12 17:20:40</span>
+        <span class="mobile">2023-02-12 17:20</span>
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/linux/">linux</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/k8s/">k8s</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <blockquote>
+<p>rancher + k8s</p>
+</blockquote>
+<h1 id="ubuntu"><a href="#ubuntu" class="headerlink" title="ubuntu"></a>ubuntu</h1><h2 id="rancher"><a href="#rancher" class="headerlink" title="rancher"></a>rancher</h2><p>rancher是用来简化k8s集群管理的图形化web工具，它是运行在docker容器中的一个软件，所以安装rancher需要主机安装了docker，然后简单的通过一个命令将容器跑起来就可以了</p>
+<h3 id="安装运行"><a href="#安装运行" class="headerlink" title="安装运行"></a>安装运行</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">下面这种方式，即使添加了国内源下载速度依然很慢</span></span><br><span class="line">docker pull rancher/server</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">使用下面的命令下载很快</span></span><br><span class="line">docker run -d -p 443:443 --name rancher --restart=unless-stopped \</span><br><span class="line">    -e CATTLE_AGENT_IMAGE=&quot;registry.cn-hangzhou.aliyuncs.com/rancher/rancher-agent:v2.4.2&quot; \</span><br><span class="line">    registry.cn-hangzhou.aliyuncs.com/rancher/rancher:v2.4.2</span><br></pre></td></tr></table></figure>
+
+<p>运行上面的命令后会进行镜像下载及运行。然后查看容器的ip，即可进行rancher的网页访问</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看ipaddress</span></span><br><span class="line">docker inspect rancher</span><br></pre></td></tr></table></figure>
+
+<p>访问rancher页面<code>https://localhost:443</code>或者<code>https://172.17.0.2</code>。首次运行需要设置admin用户密码，设置为admin</p>
+<p><img src=".images/image-20201229161332693.png" alt="rancher"><br><img src=".images/image-20201229161332693.png" alt="rancher"></p>
+<p>主界面</p>
+<p><img src=".images/image-20201229161641760.png" alt="主界面"></p>
+<p>设置默认镜像源为<code>registry.cn-hangzhou.aliyuncs.com</code></p>
+<p><img src=".images/image-20201229171113848.png" alt="image-20201229171113848"></p>
+<h2 id="k8s"><a href="#k8s" class="headerlink" title="k8s"></a>k8s</h2><p>k8s是用来集群化管理docker容器的一个工具，它直接安装在物理机中，依赖docker运行，所以如果要安装k8s首先是安装并配置好docker（docker还需进行一些特殊化配置）</p>
+<h3 id="docker安装"><a href="#docker安装" class="headerlink" title="docker安装"></a>docker安装</h3><p>以ubuntu下的安装举例</p>
+<p>安装docker</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt install docker.io</span><br></pre></td></tr></table></figure>
+
+<p>修改cgroups，同时添加国内源</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">k8s使用的是systemd来进行进程隔离的，但docker默认使用cgroups，所以需要修改docker的进程隔离为systemd</span></span><br><span class="line"></span><br><span class="line">vi /etc/docker/daemon.json</span><br><span class="line">&#123;</span><br><span class="line">  &quot;registry-mirrors&quot;: [</span><br><span class="line">    &quot;https://dockerhub.azk8s.cn&quot;,</span><br><span class="line">    &quot;https://reg-mirror.qiniu.com&quot;,</span><br><span class="line">    &quot;https://quay-mirror.qiniu.com&quot;</span><br><span class="line">  ],</span><br><span class="line">  &quot;exec-opts&quot;: [ &quot;native.cgroupdriver=systemd&quot; ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>重启docker</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">systemctl daemon-reload</span><br><span class="line">systemctl enable docker</span><br><span class="line">systemctl start docker</span><br></pre></td></tr></table></figure>
+
+<p>检查是否修改成功</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker info | grep -i cgroups</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="k8s安装"><a href="#k8s安装" class="headerlink" title="k8s安装"></a>k8s安装</h3><h4 id="主要组件"><a href="#主要组件" class="headerlink" title="主要组件"></a>主要组件</h4><ul>
+<li>kubelet 后台服务</li>
+<li>kubeadm 集群部署操作</li>
+<li>kubectl 普通用户操作</li>
+</ul>
+<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>k8s不能使用swap分区，需要提前关闭</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">手动关闭开启的swap分区</span></span><br><span class="line">swapoff -a</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">注释/etc/fstab中swap分区的信息</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p><code>*</code>ubuntu的相关配置</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">使得 apt 支持 ssl 传输</span></span><br><span class="line">apt-get update &amp;&amp; apt-get install -y apt-transport-https</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">下载 gpg 密钥</span></span><br><span class="line">curl https://mirrors.aliyun.com/kubernetes/apt/doc/apt-key.gpg | apt-key add - </span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">添加 k8s 镜像源</span></span><br><span class="line">cat &lt;&lt;EOF &gt;/etc/apt/sources.list.d/kubernetes.list</span><br><span class="line">deb https://mirrors.aliyun.com/kubernetes/apt/ kubernetes-xenial main</span><br><span class="line">EOF</span><br><span class="line"></span><br><span class="line">apt-get update</span><br><span class="line">apt-get install -y kubelet kubeadm kubectl</span><br></pre></td></tr></table></figure>
+
+
+
+<p>查看版本会报错，是因为还没有配置网络，可以忽略</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">kubectl version</span><br><span class="line"></span><br><span class="line">The connection to the server localhost:8080 was refused - did you specify the right host or port?</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="k8s配置"><a href="#k8s配置" class="headerlink" title="k8s配置"></a>k8s配置</h3><p>master节点安装：</p>
+<ul>
+<li>初始化master节点</li>
+<li>部署flannel网络</li>
+<li>配置kubectl工具</li>
+</ul>
+<h4 id="初始化节点"><a href="#初始化节点" class="headerlink" title="初始化节点"></a>初始化节点</h4><p>使用init进行初始化，其它参数如下：</p>
+<p><code>apiserver-advertise-address</code>为apiserver的ip，填写本机ip</p>
+<p><code>image-repository</code>指定docker的源，初始化时需要进行在线docker镜像源的下载，如果不配置则会下载失败</p>
+<p><code>pod-network-cidr</code>指定k8s的节点网络，k8s集群之间使用此网段进行通信，默认为10.244.0.0/16</p>
+<p><code>ignore-preflight-errors</code>如果出现报错时，可以进行忽略，例如虚拟机中的cpu个数为1时会报错</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">kubeadm init \</span><br><span class="line">--apiserver-advertise-address=192.168.1.10 \</span><br><span class="line">--image-repository registry.aliyuncs.com/google_containers \</span><br><span class="line">--pod-network-cidr=10.244.0.0/16 \</span><br><span class="line">--ignore-preflight-errors=CpuNum</span><br></pre></td></tr></table></figure>
+
+<p>运行成功后输出，最后的join语句为其它集群加入k8smaster节点需要运行的命令，如果丢失可在master节点使用<code>kubeadm token create --print-join-command</code>重新生成。如果过程中断可以使用<code>kubeadm reset</code>重置后再次初始化</p>
+<p><img src=".images/image-20201229211643671.png" alt="image-20201229211643671"><br><img src=".images/image-20201229211643671.png" alt="image-20201229211643671"></p>
+<h4 id="配置kubectl"><a href="#配置kubectl" class="headerlink" title="配置kubectl"></a>配置kubectl</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p $HOME/.kube</span><br><span class="line">sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config</span><br><span class="line">sudo chown $(id -u):$(id -g) $HOME/.kube/config</span><br></pre></td></tr></table></figure>
+
+<p>然后查看是否可用kuberctl</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看已加入的节点</span></span><br><span class="line">kubectl get nodes</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看集群状态</span></span><br><span class="line">kubectl get cs</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="配置flannel网络"><a href="#配置flannel网络" class="headerlink" title="配置flannel网络"></a>配置flannel网络</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/a70459be0084506e4ec919aa1c114638878db11b/Documentation/kube-flannel.yml</span><br></pre></td></tr></table></figure>
+
+<p>使用这个命令运行之后会报错<code>Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|0.0.0.0|:443... failed: Connection refused.</code>。百度上说是因为域名污染，在<code>/etc/hosts</code>文件中添加对应的ip</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">199.232.28.133  raw.githubusercontent.com</span><br></pre></td></tr></table></figure>
+
+<p>之后再使用，依旧会报错，错误为<code>199.232.28.133  raw.githubusercontent.com</code></p>
+<p>使用wget下载文件报ssl错误，不过在archlinux上可以使用wget下载一个yml文件，然后将此文件通过ssh传到ubuntu上</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml</span><br></pre></td></tr></table></figure>
+
+<p>手动加载此配置文件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl apply -f kube-flannel.yml</span><br></pre></td></tr></table></figure>
+
+<p><img src=".images/image-20201229223918885.png" alt="image-20201229223918885"><br><img src=".images/image-20201229223918885.png" alt="image-20201229223918885"></p>
+<p>然后查看集群状态就ok了</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl get nodes</span><br></pre></td></tr></table></figure>
+
+<p><img src=".images/image-20201229224015244.png" alt="image-20201229224015244"><br><img src=".images/image-20201229224015244.png" alt="image-20201229224015244"></p>
+<hr>
+<h1 id="centos"><a href="#centos" class="headerlink" title="centos"></a>centos</h1><p>centos下的docker安装就比较麻烦，首先是docker安装需要三个软件:<code>docker-ce,docker-ce-cli,containerd.io</code>，同时在centos8上的docker-ce要求container版本大于1.4，然而仓库中的版本为1.3，所以需要手动在网上下载container1.4的版本并安装，然后使用yum命令在线安装docker-ce和docker-ce-cli</p>
+<h2 id="docker"><a href="#docker" class="headerlink" title="docker"></a>docker</h2><h3 id="更新源"><a href="#更新源" class="headerlink" title="更新源"></a>更新源</h3><p>系统的镜像源没有提供docker的安装包，需要自己添加。命令yum-config-manager命令来进行添加源，此命令需要先安装yum-utils，device-mapper-persistent-data ，lvm2</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y  yum-utils device-mapper-persistent-data lvm2</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</span><br></pre></td></tr></table></figure>
+
+<h3 id="下载container"><a href="#下载container" class="headerlink" title="下载container"></a>下载container</h3><p>在<a class="link"   target="_blank" rel="noopener" href="https://download.docker.com/linux/centos/8/x86_64/stable/Packages/" >官网链接<i class="fas fa-external-link-alt"></i></a>下载container1.4版本，并进行安装</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget https://download.docker.com/linux/centos/8/x86_64/stable/Packages/containerd.io-1.4.3-3.1.el8.x86_64.rpm</span><br><span class="line"></span><br><span class="line">yum install -y ./containerd.io-1.4.3-3.1.el8.x86_64.rpm</span><br></pre></td></tr></table></figure>
+
+<h3 id="安装docker"><a href="#安装docker" class="headerlink" title="安装docker"></a>安装docker</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y docker-ce docker-cli</span><br></pre></td></tr></table></figure>
+
+<h3 id="修改cgroup"><a href="#修改cgroup" class="headerlink" title="修改cgroup"></a>修改cgroup</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/docker/daemon.json</span><br><span class="line">&#123;</span><br><span class="line">  &quot;exec-opts&quot;: [ &quot;native.cgroupdriver=systemd&quot; ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="启动docker"><a href="#启动docker" class="headerlink" title="启动docker"></a>启动docker</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl enable docker</span><br><span class="line">systemctl start docker</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="rancher-1"><a href="#rancher-1" class="headerlink" title="rancher"></a>rancher</h2><p>下载rancher的docker镜像并启动</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -p 443:443 --name rancher --restart=unless-stopped \</span><br><span class="line">    -e CATTLE_AGENT_IMAGE=&quot;registry.cn-hangzhou.aliyuncs.com/rancher/rancher-agent:v2.4.2&quot; \</span><br><span class="line">    registry.cn-hangzhou.aliyuncs.com/rancher/rancher:v2.4.2</span><br></pre></td></tr></table></figure>
+
+<p>rancher使用443端口，经过端口映射，可在centos上使用centos的ip进行访问。同时由于centos虚拟机与宿主机archlinux在同一网段，所以可在archlinux上使用浏览器输入centos的ip:port直接访问rancher<code>https://192.168.1.111:443</code></p>
+<h2 id="k8s-1"><a href="#k8s-1" class="headerlink" title="k8s"></a>k8s</h2><p><em><strong>需要内存大于1.7G</strong></em></p>
+<p>关闭swap分区</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">swapoff -a</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">同时需要在/etc/fstab里面对swap分区进行注释</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>镜像配置</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">cat &lt;&lt;EOF &gt; /etc/yum.repos.d/kubernetes.repo</span><br><span class="line">[kubernetes]</span><br><span class="line">name=Kubernetes</span><br><span class="line">baseurl=https://mirrors.aliyun.com/kubernetes/yum/repos/kubernetes-el7-x86_64/</span><br><span class="line">enabled=1</span><br><span class="line">gpgcheck=1</span><br><span class="line">repo_gpgcheck=1</span><br><span class="line">gpgkey=https://mirrors.aliyun.com/kubernetes/yum/doc/yum-key.gpg https://mirrors.aliyun.com/kubernetes/yum/doc/rpm-package-key.gpg</span><br><span class="line">EOF</span><br></pre></td></tr></table></figure>
+
+<p>禁止防火墙（docker中不需要）</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">docker中不需要</span></span><br><span class="line">setenforce 0</span><br><span class="line"></span><br><span class="line">systemctl disable firewalld</span><br><span class="line">systemctl stop firewalld</span><br></pre></td></tr></table></figure>
+
+<p>安装并启动kubenetes</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yum install -y kubelet kubeadm kubectl</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">docker中没有systemctl，直接使用命令kubelet启动即可</span></span><br><span class="line">systemctl enable kubelet &amp;&amp; systemctl start kubelet</span><br></pre></td></tr></table></figure>
+
+
+
+<p>初始化节点</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">kubeadm init \</span><br><span class="line">--apiserver-advertise-address=192.168.1.111 \</span><br><span class="line">--image-repository registry.aliyuncs.com/google_containers \</span><br><span class="line">--pod-network-cidr=10.244.0.0/16 \</span><br><span class="line">--ignore-preflight-errors=CpuNum \</span><br><span class="line">--apiserver-cert-extra-sans=192.168.1.111</span><br><span class="line"></span><br><span class="line">kubeadm init \</span><br><span class="line">--image-repository registry.aliyuncs.com/google_containers \</span><br><span class="line">--pod-network-cidr=10.244.0.0/16 \</span><br><span class="line">--ignore-preflight-errors=CpuNum \</span><br><span class="line">--apiserver-cert-extra-sans=192.168.1.111</span><br></pre></td></tr></table></figure>
+
+<p>报错：</p>
+<ul>
+<li>docker版本太高，只支持到19.03</li>
+<li>需要修改docker的cgroup为systemd</li>
+<li>ram需要大于1.7G</li>
+<li>需要enable kubelet</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">下载对应版本docker</span></span><br><span class="line"> wget https://download.docker.com/linux/centos/8/x86_64/edge/Packages/docker-ce-19.03.13-3.el8.x86_64.rpm</span><br><span class="line"> </span><br><span class="line"> wget https://download.docker.com/linux/centos/8/x86_64/edge/Packages/docker-ce-cli-19.03.13-3.el8.x86_64.rpm</span><br></pre></td></tr></table></figure>
+
+<p>卸载之前的docker</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum remove docker-ce</span><br></pre></td></tr></table></figure>
+
+<p>安装下载的docker</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum install -y ./docker-ce-19.03.13-3.el8.x86_64.rpm</span><br><span class="line">yum install -y ./docker-ce-cli-19.03.13-3.el8.x86_64.rpm</span><br></pre></td></tr></table></figure>
+
+<p>修改cgroup</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/docker/daemon.json</span><br><span class="line">&#123;</span><br><span class="line">  &quot;exec-opts&quot;: [ &quot;native.cgroupdriver=systemd&quot; ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>重新启动docker</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl enable docker</span><br><span class="line">systemctl start docker</span><br></pre></td></tr></table></figure>
+
+<p>重启机器增加内存为3G</p>
+<p>重新初始化节点，需要5分钟左右下载，成功输出为：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">Your Kubernetes control-plane has initialized successfully!</span><br><span class="line"></span><br><span class="line">To start using your cluster, you need to run the following as a regular user:</span><br><span class="line"></span><br><span class="line">  mkdir -p $HOME/.kube</span><br><span class="line">  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config</span><br><span class="line">  sudo chown $(id -u):$(id -g) $HOME/.kube/config</span><br><span class="line"></span><br><span class="line">Alternatively, if you are the root user, you can run:</span><br><span class="line"></span><br><span class="line">  export KUBECONFIG=/etc/kubernetes/admin.conf</span><br><span class="line"></span><br><span class="line">You should now deploy a pod network to the cluster.</span><br><span class="line">Run &quot;kubectl apply -f [podnetwork].yaml&quot; with one of the options listed at:</span><br><span class="line">  https://kubernetes.io/docs/concepts/cluster-administration/addons/</span><br><span class="line"></span><br><span class="line">Then you can join any number of worker nodes by running the following on each as root:</span><br><span class="line"></span><br><span class="line">kubeadm join 192.168.1.111:6443 --token hzy655.b3l3x68qsyv0np8w \</span><br><span class="line">    --discovery-token-ca-cert-hash sha256:89a0c3f88db476588e90109b56468f966b88be00139062f82359ef0b63f059ee </span><br></pre></td></tr></table></figure>
+
+
+
+<p>根据输出进行配置</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p $HOME/.kube</span><br><span class="line">sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config</span><br><span class="line">sudo chown $(id -u):$(id -g) $HOME/.kube/config</span><br><span class="line"></span><br><span class="line">export KUBECONFIG=/etc/kubernetes/admin.conf</span><br></pre></td></tr></table></figure>
+
+<p>此时查看节点状态为notready，配置网络后就ok了</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# kubectl get nodes</span><br><span class="line">NAME                    STATUS     ROLES                  AGE     VERSION</span><br><span class="line">localhost.localdomain   NotReady   control-plane,master   2m50s   v1.20.1</span><br></pre></td></tr></table></figure>
+
+
+
+<p>配置flannel网络</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">下载配置文件</span></span><br><span class="line">wget https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">用配置文件配置网络</span></span><br><span class="line">kubectl apply -f kube-flannel.yml</span><br></pre></td></tr></table></figure>
+
+<p>输出为下面即为配置成功</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">podsecuritypolicy.policy/psp.flannel.unprivileged created</span><br><span class="line">clusterrole.rbac.authorization.k8s.io/flannel configured</span><br><span class="line">clusterrolebinding.rbac.authorization.k8s.io/flannel configured</span><br><span class="line">serviceaccount/flannel unchanged</span><br><span class="line">configmap/kube-flannel-cfg configured</span><br><span class="line">daemonset.apps/kube-flannel-ds created</span><br></pre></td></tr></table></figure>
+
+<p>再次查看状态就为ready</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# kubectl get nodes</span><br><span class="line">NAME                    STATUS   ROLES                  AGE     VERSION</span><br><span class="line">localhost.localdomain   Ready    control-plane,master   9m46s   v1.20.1</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="k8s加入rancher"><a href="#k8s加入rancher" class="headerlink" title="k8s加入rancher"></a>k8s加入rancher</h2><p><img src=".images/image-20201231212113859.png" alt="image-20201231212113859"><br><img src=".images/image-20201231212113859.png" alt="image-20201231212113859"></p>
+<p><img src=".images/image-20201231212149814.png" alt="image-20201231212149814"><br><img src=".images/image-20201231212149814.png" alt="image-20201231212149814"></p>
+<p><img src=".images/image-20201231212220563.png" alt="image-20201231212220563"><br><img src=".images/image-20201231212220563.png" alt="image-20201231212220563"></p>
+<p>在centos上运行上面的命令将k8s加入rancher，其中USER_ACCOUNT通过查看配置文件获取</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat .kube/config</span><br></pre></td></tr></table></figure>
+
+<p><img src=".images/image-20201231212602316.png" alt="image-20201231212602316"><br><img src=".images/image-20201231212602316.png" alt="image-20201231212602316"></p>
+
+        </div>
+
+        
+
+        
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/k8s/">#k8s</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+            <div class="article-nav">
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2023/02/12/html5-css/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">html5-css</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2020</span>
+              -
+            
+            2023&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">shutterbug</a>
+        </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ubuntu"><span class="nav-number">1.</span> <span class="nav-text">ubuntu</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#rancher"><span class="nav-number">1.1.</span> <span class="nav-text">rancher</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E8%BF%90%E8%A1%8C"><span class="nav-number">1.1.1.</span> <span class="nav-text">安装运行</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#k8s"><span class="nav-number">1.2.</span> <span class="nav-text">k8s</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#docker%E5%AE%89%E8%A3%85"><span class="nav-number">1.2.1.</span> <span class="nav-text">docker安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#k8s%E5%AE%89%E8%A3%85"><span class="nav-number">1.2.2.</span> <span class="nav-text">k8s安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%BB%E8%A6%81%E7%BB%84%E4%BB%B6"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">主要组件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">安装</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#k8s%E9%85%8D%E7%BD%AE"><span class="nav-number">1.2.3.</span> <span class="nav-text">k8s配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E8%8A%82%E7%82%B9"><span class="nav-number">1.2.3.1.</span> <span class="nav-text">初始化节点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%85%8D%E7%BD%AEkubectl"><span class="nav-number">1.2.3.2.</span> <span class="nav-text">配置kubectl</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%85%8D%E7%BD%AEflannel%E7%BD%91%E7%BB%9C"><span class="nav-number">1.2.3.3.</span> <span class="nav-text">配置flannel网络</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#centos"><span class="nav-number">2.</span> <span class="nav-text">centos</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#docker"><span class="nav-number">2.1.</span> <span class="nav-text">docker</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9B%B4%E6%96%B0%E6%BA%90"><span class="nav-number">2.1.1.</span> <span class="nav-text">更新源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BDcontainer"><span class="nav-number">2.1.2.</span> <span class="nav-text">下载container</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85docker"><span class="nav-number">2.1.3.</span> <span class="nav-text">安装docker</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9cgroup"><span class="nav-number">2.1.4.</span> <span class="nav-text">修改cgroup</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8docker"><span class="nav-number">2.1.5.</span> <span class="nav-text">启动docker</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#rancher-1"><span class="nav-number">2.2.</span> <span class="nav-text">rancher</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#k8s-1"><span class="nav-number">2.3.</span> <span class="nav-text">k8s</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#k8s%E5%8A%A0%E5%85%A5rancher"><span class="nav-number">2.4.</span> <span class="nav-text">k8s加入rancher</span></a></li></ol></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/dark-light-toggle.js"></script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/local-search.js"></script>
+
+
+
+
+
+
+<div class="post-scripts pjax">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/toc.js"></script>
+    
+</div>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            KEEP.refresh();
+        });
+    });
+</script>
+
+
+
+</body>
+</html>

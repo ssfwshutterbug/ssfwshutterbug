@@ -229,7 +229,7 @@
 </li>
 </ul>
 </blockquote>
-<h2 id="Install-Stack"><a href="#Install-Stack" class="headerlink" title="Install Stack"></a>Install Stack</h2><p>Open up <a class="link"   target="_blank" rel="noopener" href="https://docs.haskellstack.org/en/stable/README/" >official website<i class="fas fa-external-link-alt"></i></a>, we can find the full introduction. what i <a class="link"   target="_blank" rel="noopener" href="https://docs.haskellstack.org/en/stable/install_and_upgrade/" >recommend<i class="fas fa-external-link-alt"></i></a> is to download the binary file of stack(manual style).</p>
+<h2 id="INSTALL-STACK"><a href="#INSTALL-STACK" class="headerlink" title="INSTALL STACK"></a>INSTALL STACK</h2><p>Open up <a class="link"   target="_blank" rel="noopener" href="https://docs.haskellstack.org/en/stable/README/" >official website<i class="fas fa-external-link-alt"></i></a>, we can find the full introduction. what i <a class="link"   target="_blank" rel="noopener" href="https://docs.haskellstack.org/en/stable/install_and_upgrade/" >recommend<i class="fas fa-external-link-alt"></i></a> is to download the binary file of stack(manual style).</p>
 <p><em>uncompress to local path</em></p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -xzf stack-2.7.5-linux-x86_64.tar.gz -C ~/.local/share/bin</span><br></pre></td></tr></table></figure>
 
@@ -240,12 +240,12 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="comment">##ADD THIS IF YOU LIVE IN CHINA</span></span></span><br><span class="line">setup-info-locations: </span><br><span class="line">- &quot;http://mirrors.tuna.tsinghua.edu.cn/stackage/stack-setup.yaml&quot;</span><br><span class="line">urls:</span><br><span class="line">  latest-snapshot: http://mirrors.tuna.tsinghua.edu.cn/stackage/snapshots.json</span><br><span class="line"></span><br><span class="line">package-indices:</span><br><span class="line">  - download-prefix: http://mirrors.tuna.tsinghua.edu.cn/hackage/</span><br><span class="line">    hackage-security:</span><br><span class="line">        keyids:</span><br><span class="line">        - 0a5c7ea47cd1b15f01f5f51a33adda7e655bc0f0b0615baa8e271f4c3351e21d</span><br><span class="line">        - 1ea9ba32c526d1cc91ab5e5bd364ec5e9e8cb67179a471872f6e26f0ae773d42</span><br><span class="line">        - 280b10153a522681163658cb49f632cde3f38d768b736ddbc901d99a1a772833</span><br><span class="line">        - 2a96b1889dc221c17296fcc2bb34b908ca9734376f0f361660200935916ef201</span><br><span class="line">        - 2c6c3627bd6c982990239487f1abd02e08a02e6cf16edb105a8012d444d870c3</span><br><span class="line">        - 51f0161b906011b52c6613376b1ae937670da69322113a246a09f807c62f6921</span><br><span class="line">        - 772e9f4c7db33d251d5c6e357199c819e569d130857dc225549b40845ff0890d</span><br><span class="line">        - aa315286e6ad281ad61182235533c41e806e5a787e0b6d1e7eef3f09d137d2e9</span><br><span class="line">        - fe331502606802feac15e514d9b9ea83fee8b6ffef71335479a2e68d84adc6b0</span><br><span class="line">        key-threshold: 3</span><br><span class="line">        ignore-expiry: no</span><br></pre></td></tr></table></figure>
 
 <p>and that is all we need do for installation</p>
-<h2 id="Install-Needed-Dependences"><a href="#Install-Needed-Dependences" class="headerlink" title="Install Needed Dependences"></a>Install Needed Dependences</h2><p>in archlinux, we need download below dependences:</p>
+<h2 id="INSTALL-NEEDED-DEPENDENCES"><a href="#INSTALL-NEEDED-DEPENDENCES" class="headerlink" title="INSTALL NEEDED DEPENDENCES"></a>INSTALL NEEDED DEPENDENCES</h2><p>in archlinux, we need download below dependences:</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S \</span><br><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash">git \</span></span><br><span class="line"><span class="language-bash">&gt; xorg-server xorg-apps xorg-xinit xorg-xmessage \</span></span><br><span class="line"><span class="language-bash">&gt; libx11 libxft libxinerama libxrandr libxss \</span></span><br><span class="line"><span class="language-bash">&gt; pkgconf</span></span><br></pre></td></tr></table></figure>
 
 
 
-<h2 id="Install-Xmonad"><a href="#Install-Xmonad" class="headerlink" title="Install Xmonad"></a>Install Xmonad</h2><ul>
+<h2 id="INSTALL-XMONAD"><a href="#INSTALL-XMONAD" class="headerlink" title="INSTALL XMONAD"></a>INSTALL XMONAD</h2><ul>
 <li>create xmonad configure directory and change to it.</li>
 </ul>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir ~/.config/xmonad</span><br><span class="line">cd ~/.config/xmonad</span><br></pre></td></tr></table></figure>
@@ -280,7 +280,7 @@
 <blockquote>
 <p>Tips: it is better to exec the cached binary of xmonad (<code>~/.cache/xmonad/xmonad-x86_64-linux</code>) than xmonad itself. because sometimes <code>exec xmonad</code> will lead to recompile xmonad.</p>
 </blockquote>
-<h2 id="Stack-simple-usage"><a href="#Stack-simple-usage" class="headerlink" title="Stack simple usage"></a>Stack simple usage</h2><p>ghci command</p>
+<h2 id="STACK-SIMPLE-USAGE"><a href="#STACK-SIMPLE-USAGE" class="headerlink" title="STACK SIMPLE USAGE"></a>STACK SIMPLE USAGE</h2><p>ghci command</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">stack ghci --no-build --no-load</span><br></pre></td></tr></table></figure>
 
 <p>runhaskell command which used in vscodium</p>
@@ -291,7 +291,7 @@
 
 
 
-<h2 id="Uninstall-system-xmonad"><a href="#Uninstall-system-xmonad" class="headerlink" title="Uninstall system xmonad"></a>Uninstall system xmonad</h2><p>if we use xmonad by pacman in the past, now we can uninstall it.</p>
+<h2 id="UNINSTALL-SYSTEM-XMONAD"><a href="#UNINSTALL-SYSTEM-XMONAD" class="headerlink" title="UNINSTALL SYSTEM XMONAD"></a>UNINSTALL SYSTEM XMONAD</h2><p>if we use xmonad by pacman in the past, now we can uninstall it.</p>
 <p>uninstall xmonad which is installed by system package manger pacman</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -Rns xmonad xmonad-contrib</span><br></pre></td></tr></table></figure>
 
@@ -300,7 +300,7 @@
 
 
 
-<h2 id="Also-change-xmobar"><a href="#Also-change-xmobar" class="headerlink" title="Also change xmobar"></a>Also change xmobar</h2><p>so it’s recommend to install xmobar with stack.</p>
+<h2 id="ALSO-CHANGE-XMOBAR"><a href="#ALSO-CHANGE-XMOBAR" class="headerlink" title="ALSO CHANGE XMOBAR"></a>ALSO CHANGE XMOBAR</h2><p>so it’s recommend to install xmobar with stack.</p>
 <p>from <a class="link"   target="_blank" rel="noopener" href="https://github.com/jaor/xmobar/releases/tag/0.43" >this page<i class="fas fa-external-link-alt"></i></a> download xmobar then uncompress to <code>~/.config/xmobar</code></p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">it already has a yaml file, so just install</span></span><br><span class="line">cd ~/.config/xmobar/xmobar-0.43</span><br><span class="line">stack install</span><br></pre></td></tr></table></figure>
 
@@ -310,7 +310,7 @@
 <blockquote>
 <p>Note: because xmobar’s yaml file has another version of ghc, so need download ghc8.10, and it compiles much longer than xmonad, also larger size dependences.</p>
 </blockquote>
-<h2 id="Upgrade-xmonad-amp-xmonad-contrib"><a href="#Upgrade-xmonad-amp-xmonad-contrib" class="headerlink" title="Upgrade xmonad &amp; xmonad-contrib"></a>Upgrade xmonad &amp; xmonad-contrib</h2><p>one more thing is to upgrade xmonad and xmonad-contrib when new version is available.</p>
+<h2 id="UPGRADE-XMONAD-amp-XMONAD-CONTRIB"><a href="#UPGRADE-XMONAD-amp-XMONAD-CONTRIB" class="headerlink" title="UPGRADE XMONAD &amp; XMONAD-CONTRIB"></a>UPGRADE XMONAD &amp; XMONAD-CONTRIB</h2><p>one more thing is to upgrade xmonad and xmonad-contrib when new version is available.</p>
 <p>there are two steps:</p>
 <ol>
 <li>pull the latest version from github</li>
@@ -322,7 +322,12 @@
 <li><p>build new added xmonad &amp; xmonad-contrib libraries (and rebuild xmonad binary)</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd ~/.config/xmonad</span><br><span class="line">stack install</span><br></pre></td></tr></table></figure></li>
 </ul>
-<h2 id="At-last"><a href="#At-last" class="headerlink" title="At last"></a>At last</h2><p>and now we have an inpendent, clean xmonad.</p>
+<h2 id="AT-LAST"><a href="#AT-LAST" class="headerlink" title="AT LAST"></a>AT LAST</h2><p>and now we have an inpendent, clean xmonad.</p>
+<h2 id="CONFIGURATION-TIPS"><a href="#CONFIGURATION-TIPS" class="headerlink" title="CONFIGURATION TIPS"></a>CONFIGURATION TIPS</h2><p>We know the magic key in all window managers is Modkey, without modkey press, every key is our keyboard is normal, but once we press the modkey, all keys if we configured will have some functions, such as move window, maximize window and etc.</p>
+<p>But there comes a thought, what if we don’t press modkey, some keys still have some functions? Yes, the answer is we can. We can use 0 instead of modkey, then without a modkey, the key still can do some other things.</p>
+<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">, ((<span class="number">0</span>, xK_Print), spawn <span class="string">&quot;screen-capture&quot;</span>)                                      <span class="comment">-- full screen capture</span></span><br></pre></td></tr></table></figure>
+
+<p>With the key binding, we can only press <code>print screen</code> key to capture the full desktop.</p>
 
         </div>
 
@@ -474,7 +479,7 @@
         <aside class="page-aside">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#XMONAD"><span class="nav-number">1.</span> <span class="nav-text">XMONAD</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Install-Stack"><span class="nav-number">1.1.</span> <span class="nav-text">Install Stack</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Install-Needed-Dependences"><span class="nav-number">1.2.</span> <span class="nav-text">Install Needed Dependences</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Install-Xmonad"><span class="nav-number">1.3.</span> <span class="nav-text">Install Xmonad</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Stack-simple-usage"><span class="nav-number">1.4.</span> <span class="nav-text">Stack simple usage</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Uninstall-system-xmonad"><span class="nav-number">1.5.</span> <span class="nav-text">Uninstall system xmonad</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Also-change-xmobar"><span class="nav-number">1.6.</span> <span class="nav-text">Also change xmobar</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Upgrade-xmonad-amp-xmonad-contrib"><span class="nav-number">1.7.</span> <span class="nav-text">Upgrade xmonad &amp; xmonad-contrib</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#At-last"><span class="nav-number">1.8.</span> <span class="nav-text">At last</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#XMONAD"><span class="nav-number">1.</span> <span class="nav-text">XMONAD</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#INSTALL-STACK"><span class="nav-number">1.1.</span> <span class="nav-text">INSTALL STACK</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#INSTALL-NEEDED-DEPENDENCES"><span class="nav-number">1.2.</span> <span class="nav-text">INSTALL NEEDED DEPENDENCES</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#INSTALL-XMONAD"><span class="nav-number">1.3.</span> <span class="nav-text">INSTALL XMONAD</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#STACK-SIMPLE-USAGE"><span class="nav-number">1.4.</span> <span class="nav-text">STACK SIMPLE USAGE</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UNINSTALL-SYSTEM-XMONAD"><span class="nav-number">1.5.</span> <span class="nav-text">UNINSTALL SYSTEM XMONAD</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ALSO-CHANGE-XMOBAR"><span class="nav-number">1.6.</span> <span class="nav-text">ALSO CHANGE XMOBAR</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UPGRADE-XMONAD-amp-XMONAD-CONTRIB"><span class="nav-number">1.7.</span> <span class="nav-text">UPGRADE XMONAD &amp; XMONAD-CONTRIB</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AT-LAST"><span class="nav-number">1.8.</span> <span class="nav-text">AT LAST</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CONFIGURATION-TIPS"><span class="nav-number">1.9.</span> <span class="nav-text">CONFIGURATION TIPS</span></a></li></ol></li></ol>
     </div>
 </div>
         </aside>
