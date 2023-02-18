@@ -155,28 +155,25 @@
                 
 
                 <h3 class="home-article-title">
-                    <a href="/2022/04/23/zabbix/">
-                        zabbix
+                    <a href="/2022/05/14/bad-guy/">
+                        Bad Guy
                     </a>
                 </h3>
 
                 <div class="home-article-content markdown-body">
                     
-                        ♥ ZABBIXarchitecture
- server: central component
- database storage: data gathered and configuration stores
- web interface: web...
+                        今天听了《美丽的神话》这首歌，又回想起来大学看过的《神话》这个电视剧。时光匆匆，这么多年又过去了，然而看电视剧的感受还是那么 清晰。全剧最让我感动的就是赵高说他要一步一步往上爬，成为一人之下万人之上的存在。这里也是他和主角正式分道扬镳的地方，如果让我...
                     
                 </div>
 
                 <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sat Apr 23 2022 23:14:46 GMT+0800">2022-04-23</span></span>
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sat May 14 2022 16:53:09 GMT+0800">2022-05-14</span></span>
         
         
     </div>
 
-    <a href="/2022/04/23/zabbix/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a href="/2022/05/14/bad-guy/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -186,26 +183,26 @@
                 
 
                 <h3 class="home-article-title">
-                    <a href="/2022/04/23/vscode/">
-                        vscode
+                    <a href="/2022/04/23/zsh/">
+                        zsh
                     </a>
                 </h3>
 
                 <div class="home-article-content markdown-body">
                     
-                        VSCODEvscode is a code editor with lots of extension. now i will show u how to install and configure it.
-software install1# p...
+                        ZSHchange default location.zshrc and .zcompdump location in $HOME directory.  and we can change it to another folder
+12# add ...
                     
                 </div>
 
                 <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sat Apr 23 2022 23:14:21 GMT+0800">2022-04-23</span></span>
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sat Apr 23 2022 23:15:44 GMT+0800">2022-04-23</span></span>
         
         
     </div>
 
-    <a href="/2022/04/23/vscode/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a href="/2022/04/23/zsh/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -215,27 +212,31 @@ software install1# p...
                 
 
                 <h3 class="home-article-title">
-                    <a href="/2022/04/23/vboxdiskResize/">
-                        vboxdiskResize
+                    <a href="/2022/04/23/zookeeper/">
+                        zookeeper
                     </a>
                 </h3>
 
                 <div class="home-article-content markdown-body">
                     
-                        Virtualbox Disk Resizecheck virtualbox disk size
+                        
+zk单机以及集群搭建（基于docker）
 
-now to resize disk size, unit is Mib. --resize is the size after extend who...
+单机创建并进入docker创建docker，并将有安装包的主机挂载到docker中
+1systemctl start docker
+
+12docker run -d -it --name zk -v /h...
                     
                 </div>
 
                 <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sat Apr 23 2022 23:13:14 GMT+0800">2022-04-23</span></span>
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sat Apr 23 2022 23:15:22 GMT+0800">2022-04-23</span></span>
         
         
     </div>
 
-    <a href="/2022/04/23/vboxdiskResize/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a href="/2022/04/23/zookeeper/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -267,24 +268,35 @@ now to resize disk size, unit is Mib. --resize is the size after extend who...
         </div>
 
         <div class="page-main-content-bottom">
-            <footer class="footer">
-    <div class="info-container">
-        <div class="copyright-info info-item">
-            &copy;
-            
-              <span>2020</span>
-              -
-            
-            2023&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">shutterbug</a>
-        </div>
-        
-        <div class="theme-info info-item">
-            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
-        </div>
-        
-        
-    </div>
-</footer>
+            .footer {
+  font-size: 1rem;
+  color: var(--third-text-color);
+
+
+  a {
+    color: var(--third-text-color);
+
+
+    &:hover {
+      color: var(--primary-color);
+
+    }
+  }
+
+  .info-container {
+    padding-bottom: 10px;
+    text-align: center;
+  }
+
+  .info-item {
+    margin: 5px 0;
+  }
+
+  .icon-animate {
+    animation: icon-animate 1.2s ease-in-out infinite;
+  }
+
+}
 
         </div>
     </div>

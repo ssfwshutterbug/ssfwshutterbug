@@ -220,6 +220,23 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh -c &quot;cd ~/Public/myweb &amp;&amp; hexo g &amp;&amp; hexo d&quot;</span><br></pre></td></tr></table></figure>
 
 
+<h2 id="use"><a href="#use" class="headerlink" title="use $_"></a>use <code>$_</code></h2><p>In bash, <code>$_</code> stands for previous command’s path, if there has one. So with this variable, we can type easily.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">user$ </span><span class="language-bash"><span class="built_in">ls</span> /nix</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">the same as: <span class="built_in">du</span> -sh /nix</span></span><br><span class="line"><span class="meta prompt_">user$ </span><span class="language-bash"><span class="built_in">du</span> -sh <span class="variable">$_</span></span></span><br></pre></td></tr></table></figure>
+
+<h2 id="use-command"><a href="#use-command" class="headerlink" title="use \command"></a>use <code>\command</code></h2><p>We like alias, it makes our life easy. And we prefer to use <code>bat</code> instead of <code>cat</code>, <code>exa</code> instead of <code>ls</code>.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">alias cat=&quot;bat&quot;</span><br><span class="line">alias ls=`exa`</span><br></pre></td></tr></table></figure>
+
+<p>It works fine, but what if we need the original <code>ls</code> or <code>cat</code>, we don’t need to write <code>/bin/ls</code>, we can easily use <code>\ls</code>, it means the original <code>ls</code>, not the alias one.</p>
+<h2 id="view-a-bz-2-file-directly"><a href="#view-a-bz-2-file-directly" class="headerlink" title="view a bz.2 file directly"></a>view a bz.2 file directly</h2><p>xx.bz2 doesn’t need to be extracted, we can view it’s content directly with <code>bzcat</code>. Most of the time we view a bz2 file with linux doc file.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bzcat /usr/share/doc/libvirt-8.7.0-r1/README.gentoo.bz2</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="Delete-Link-To-A-Directory"><a href="#Delete-Link-To-A-Directory" class="headerlink" title="Delete Link To A Directory"></a>Delete Link To A Directory</h2><p>I got a problem, a link <code>Pictures</code> linked to my home directory, so i cannot <code>rm -rf Pictures</code> and <code>unlink Pictures/</code> also failed.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Pictures -&gt; /home/mandalorian</span><br></pre></td></tr></table></figure>
+
+<p>The problem is caused by <a class="link"   target="_blank" rel="noopener" href="https://superuser.com/questions/9181/how-to-remove-a-symbolic-link-to-a-directory" >training slash<i class="fas fa-external-link-alt"></i></a> after link name. When i removed the slash after, it works.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">user$ </span><span class="language-bash"><span class="built_in">unlink</span> Pictures</span></span><br></pre></td></tr></table></figure>
+
 
         </div>
 
@@ -283,24 +300,35 @@
         </div>
 
         <div class="page-main-content-bottom">
-            <footer class="footer">
-    <div class="info-container">
-        <div class="copyright-info info-item">
-            &copy;
-            
-              <span>2020</span>
-              -
-            
-            2023&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">shutterbug</a>
-        </div>
-        
-        <div class="theme-info info-item">
-            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
-        </div>
-        
-        
-    </div>
-</footer>
+            .footer {
+  font-size: 1rem;
+  color: var(--third-text-color);
+
+
+  a {
+    color: var(--third-text-color);
+
+
+    &:hover {
+      color: var(--primary-color);
+
+    }
+  }
+
+  .info-container {
+    padding-bottom: 10px;
+    text-align: center;
+  }
+
+  .info-item {
+    margin: 5px 0;
+  }
+
+  .icon-animate {
+    animation: icon-animate 1.2s ease-in-out infinite;
+  }
+
+}
 
         </div>
     </div>
@@ -371,7 +399,7 @@
         <aside class="page-aside">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#SHELL-TIPS"><span class="nav-number">1.</span> <span class="nav-text">SHELL TIPS</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#EXECUTE-SUB-SHELL-COMMAND"><span class="nav-number">1.1.</span> <span class="nav-text">EXECUTE SUB SHELL COMMAND</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#SHELL-TIPS"><span class="nav-number">1.</span> <span class="nav-text">SHELL TIPS</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#EXECUTE-SUB-SHELL-COMMAND"><span class="nav-number">1.1.</span> <span class="nav-text">EXECUTE SUB SHELL COMMAND</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#use"><span class="nav-number">1.2.</span> <span class="nav-text">use $_</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#use-command"><span class="nav-number">1.3.</span> <span class="nav-text">use \command</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#view-a-bz-2-file-directly"><span class="nav-number">1.4.</span> <span class="nav-text">view a bz.2 file directly</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Delete-Link-To-A-Directory"><span class="nav-number">1.5.</span> <span class="nav-text">Delete Link To A Directory</span></a></li></ol></li></ol>
     </div>
 </div>
         </aside>
