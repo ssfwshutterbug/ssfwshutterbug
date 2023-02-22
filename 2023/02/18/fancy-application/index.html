@@ -218,6 +218,14 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">install <span class="keyword">in</span> gentoo</span></span><br><span class="line"><span class="meta prompt_">user$ </span><span class="language-bash">emerge --ask freerdp</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">simple usage</span></span><br><span class="line">xfreerdp /u:grugo /p:grugo /v:192.168.122.225 /sound:sys:alsa /clipboard /f +bitmap-cache</span><br></pre></td></tr></table></figure>
 
 
+<hr>
+<p><strong>Urxvt</strong></p>
+<p>Ah, that really goes years since last time i use urxvt, with time goes by, i use some kind of modern terminal emulator like alacritty and leave urxvt behind. But when i turn to gentoo linux, all those old, efficient but simple tools remind me again, because the others really contain lots of extensions need to be built and i even don’t use or heard that function or ability. </p>
+<p>Yeah, xterm is also a good choice, it is also very simple and just work fine, it can get lots of my stuff done. But i just wanna to try urxvt, it gives me some abilities which xterm doesn’t have and i really want, such as copy the output via keyboard.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">compile comes first, since once we don<span class="string">&#x27;t compile it with unicode3, we cannot get icons display correctly</span></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="string">and this is my use flag so far</span></span> </span><br><span class="line"></span><br><span class="line">x11-terms/rxvt-unicode 256-color unicode3 perl -startup-notification</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="string">and those are needed extension that will not installed by default</span></span></span><br><span class="line"><span class="meta prompt_">root# </span><span class="language-bash"><span class="string">emerge --ask x11-misc/urxvt-font-size  x11-misc/urxvt-perls</span></span></span><br></pre></td></tr></table></figure>
+
+<p>Another important thing is i finally know that most of terminals have a daemon, which really helpful for faster launch speed and less memory usage.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">start daemon</span></span><br><span class="line">urxvtd --quiet --opendisplay --fork</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">now we run urxvt with urxvtc</span></span><br><span class="line">urxvtc</span><br></pre></td></tr></table></figure>
 
         </div>
 
@@ -281,35 +289,24 @@
         </div>
 
         <div class="page-main-content-bottom">
-            .footer {
-  font-size: 1rem;
-  color: var(--third-text-color);
-
-
-  a {
-    color: var(--third-text-color);
-
-
-    &:hover {
-      color: var(--primary-color);
-
-    }
-  }
-
-  .info-container {
-    padding-bottom: 10px;
-    text-align: center;
-  }
-
-  .info-item {
-    margin: 5px 0;
-  }
-
-  .icon-animate {
-    animation: icon-animate 1.2s ease-in-out infinite;
-  }
-
-}
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2020</span>
+              -
+            
+            2023&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">shutterbug</a>
+        </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
+        </div>
+        
+        
+    </div>
+</footer>
 
         </div>
     </div>

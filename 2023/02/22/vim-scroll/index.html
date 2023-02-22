@@ -9,6 +9,8 @@
     
     <title>
         
+            vim-scroll |
+        
         Screw it!
     </title>
     
@@ -60,7 +62,7 @@
                 <ul class="menu-list">
                     
                         <li class="menu-item">
-                            <a class="active"
+                            <a class=""
                                href="/"
                             >
                                 HOME
@@ -113,7 +115,7 @@
         <ul class="drawer-menu-list">
             
                 <li class="drawer-menu-item flex-center">
-                    <a class="active"
+                    <a class=""
                        href="/">HOME</a>
                 </li>
             
@@ -147,112 +149,114 @@
             <div class="main-content">
 
                 
-                    <div class="home-content-container fade-in-down-animation">
-    <ul class="home-article-list">
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">vim-scroll</span>
+        </div>
+
         
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2022/11/13/convert-md-to-pdf/">
-                        convert-md-to-pdf
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
-                        CONVERT MARKDOWN TO PDFToday, i want to upload a video to bilibili for recording a problem recently met: i cannot typing Chin...
-                    
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/avatar.svg">
                 </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sun Nov 13 2022 21:14:28 GMT+0800">2022-11-13</span></span>
-        
-        
-    </div>
-
-    <a href="/2022/11/13/convert-md-to-pdf/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
+                <div class="info">
+                    <div class="author">
+                        <span class="name">shutterbug</span>
+                        
+                            <span class="author-label">Lv5</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2023-02-22 21:31:48</span>
+        <span class="mobile">2023-02-22 21:31</span>
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
                 
-
-                <h3 class="home-article-title">
-                    <a href="/2022/11/09/vim/">
-                        vim
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
-                        VIMVIM is the most powerful text editor as far as i know, just em amazing!
-
-ABOUT THIS PAGE:This time i will rewrite it, dele...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Wed Nov 09 2022 22:22:38 GMT+0800">2022-11-09</span></span>
-        
-        
-    </div>
-
-    <a href="/2022/11/09/vim/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
+                    <li>
+                        <a href="/categories/linux/">linux</a>&nbsp;
+                    </li>
                 
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/vim/">vim</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
 
-                <h3 class="home-article-title">
-                    <a href="/2022/11/08/not-simple-is-the-best/">
-                        not-simple-is-the-best
-                    </a>
-                </h3>
+    
+    
+    
+    
+</div>
 
-                <div class="home-article-content markdown-body">
-                    
-                        Simple is the best, really?I get to say most of time it is true. Simple is best, it stands a life style. We hope things goes ...
-                    
+                    </div>
                 </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Tue Nov 08 2022 22:44:04 GMT+0800">2022-11-08</span></span>
+            </div>
         
+
+        <div class="article-content markdown-body">
+            <h1 id="VIM-SCROLL"><a href="#VIM-SCROLL" class="headerlink" title="VIM SCROLL"></a>VIM SCROLL</h1><p>Yet, this is a short and simple tip. Sometimes, moment, i wonder which keybinding in vim that i can press to scroll vim lines, at the same time cursor line’s position stays, only the lines scroll.</p>
+<p>But i cannot neither remember which keybinding nor search the correct answer. And finally, i tried to use manually map the keybinding and find it really simple and useful.</p>
+<p>For vim setting:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">map &lt;C-j&gt; Lj``j </span><br><span class="line">map &lt;C-k&gt; Lk``k </span><br></pre></td></tr></table></figure>
+
+<p>For neovim setting:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">map(&#x27;n&#x27;  ,&#x27;&lt;c-j&gt;&#x27;    ,&#x27;Lj``j&#x27;		            	,options)</span><br><span class="line">map(&#x27;n&#x27;  ,&#x27;&lt;c-k&gt;&#x27;    ,&#x27;Hk``k&#x27;		            	,options)</span><br></pre></td></tr></table></figure>
+
+        </div>
+
         
-    </div>
 
-    <a href="/2022/11/08/not-simple-is-the-best/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
         
-    </ul>
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/vim/">#vim</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
 
-    <div class="home-paginator">
-        <div class="paginator">
-    
-        <a class="prev btn"
-           href="/page/9/"
-        >Prev</a>
-    
+        
+            <div class="article-nav">
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2023/02/18/nix/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">nix</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
 
-    
-        <a class="next btn"
-           href="/page/11/"
-        >Next</a>
-    
-</div>
-
+        
     </div>
 </div>
 
@@ -285,6 +289,23 @@ ABOUT THIS PAGE:This time i will rewrite it, dele...
         </div>
     </div>
 
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
     
 
     <div class="right-bottom-side-tools">
@@ -331,6 +352,14 @@ ABOUT THIS PAGE:This time i will rewrite it, dele...
     </div>
 
     
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#VIM-SCROLL"><span class="nav-number">1.</span> <span class="nav-text">VIM SCROLL</span></a></li></ol>
+    </div>
+</div>
+        </aside>
+    
 
     <div class="image-viewer-container">
     <img src="">
@@ -372,7 +401,6 @@ ABOUT THIS PAGE:This time i will rewrite it, dele...
 
 
 
-
 <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/dark-light-toggle.js"></script>
 
 
@@ -384,6 +412,8 @@ ABOUT THIS PAGE:This time i will rewrite it, dele...
 
 
 <div class="post-scripts pjax">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/toc.js"></script>
     
 </div>
 
