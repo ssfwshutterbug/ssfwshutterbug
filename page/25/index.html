@@ -155,6 +155,34 @@
                 
 
                 <h3 class="home-article-title">
+                    <a href="/2022/04/23/git/">
+                        git
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        gitI learned git long time ago, but don’t use it very often, recently i write a script to sync my task todo list with github,...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sat Apr 23 2022 23:01:38 GMT+0800">2022-04-23</span></span>
+        
+        
+    </div>
+
+    <a href="/2022/04/23/git/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
                     <a href="/2022/04/23/ed/">
                         ed
                     </a>
@@ -209,34 +237,6 @@ simple open / quit file
 
             </li>
         
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2022/04/23/anbox/">
-                        anbox
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
-                        AnboxIn this article i will show you how to install anbox with snap and compare snap with flatpak.  anbox is a container-base...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sat Apr 23 2022 22:58:51 GMT+0800">2022-04-23</span></span>
-        
-        
-    </div>
-
-    <a href="/2022/04/23/anbox/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
     </ul>
 
     <div class="home-paginator">
@@ -264,24 +264,35 @@ simple open / quit file
         </div>
 
         <div class="page-main-content-bottom">
-            <footer class="footer">
-    <div class="info-container">
-        <div class="copyright-info info-item">
-            &copy;
-            
-              <span>2020</span>
-              -
-            
-            2023&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">shutterbug</a>
-        </div>
-        
-        <div class="theme-info info-item">
-            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
-        </div>
-        
-        
-    </div>
-</footer>
+            .footer {
+  font-size: 1rem;
+  color: var(--third-text-color);
+
+
+  a {
+    color: var(--third-text-color);
+
+
+    &:hover {
+      color: var(--primary-color);
+
+    }
+  }
+
+  .info-container {
+    padding-bottom: 10px;
+    text-align: center;
+  }
+
+  .info-item {
+    margin: 5px 0;
+  }
+
+  .icon-animate {
+    animation: icon-animate 1.2s ease-in-out infinite;
+  }
+
+}
 
         </div>
     </div>

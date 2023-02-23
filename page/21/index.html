@@ -155,6 +155,38 @@
                 
 
                 <h3 class="home-article-title">
+                    <a href="/2022/04/23/rancher/">
+                        rancher
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        
+rancher + k8s
+
+ubunturancherrancher是用来简化k8s集群管理的图形化web工具，它是运行在docker容器中的一个软件，所以安装rancher需要主机安装了docker，然后简单的通过一个命令将容器跑起来就可以了
+...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sat Apr 23 2022 23:10:09 GMT+0800">2022-04-23</span></span>
+        
+        
+    </div>
+
+    <a href="/2022/04/23/rancher/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
                     <a href="/2022/04/23/python/">
                         python
                     </a>
@@ -207,36 +239,6 @@ python interpreterbecause python is a dynamic la...
 
             </li>
         
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2022/04/23/pandas/">
-                        pandas
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
-                        pandaspandas是python中一个数据处理和科学分析的工具，最为强大的就是数据处理。由于它可以很轻松的处理excel数据，所以也是自动化办公的一个神器。
-install使用pip来安装pandas，pip需要先配置国内源，不然下载速度很慢
-...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sat Apr 23 2022 23:08:20 GMT+0800">2022-04-23</span></span>
-        
-        
-    </div>
-
-    <a href="/2022/04/23/pandas/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
     </ul>
 
     <div class="home-paginator">
@@ -264,24 +266,35 @@ install使用pip来安装pandas，pip需要先配置国内源，不然下载速�
         </div>
 
         <div class="page-main-content-bottom">
-            <footer class="footer">
-    <div class="info-container">
-        <div class="copyright-info info-item">
-            &copy;
-            
-              <span>2020</span>
-              -
-            
-            2023&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">shutterbug</a>
-        </div>
-        
-        <div class="theme-info info-item">
-            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
-        </div>
-        
-        
-    </div>
-</footer>
+            .footer {
+  font-size: 1rem;
+  color: var(--third-text-color);
+
+
+  a {
+    color: var(--third-text-color);
+
+
+    &:hover {
+      color: var(--primary-color);
+
+    }
+  }
+
+  .info-container {
+    padding-bottom: 10px;
+    text-align: center;
+  }
+
+  .info-item {
+    margin: 5px 0;
+  }
+
+  .icon-animate {
+    animation: icon-animate 1.2s ease-in-out infinite;
+  }
+
+}
 
         </div>
     </div>

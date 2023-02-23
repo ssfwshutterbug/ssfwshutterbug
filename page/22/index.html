@@ -155,6 +155,36 @@
                 
 
                 <h3 class="home-article-title">
+                    <a href="/2022/04/23/pandas/">
+                        pandas
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        pandaspandas是python中一个数据处理和科学分析的工具，最为强大的就是数据处理。由于它可以很轻松的处理excel数据，所以也是自动化办公的一个神器。
+install使用pip来安装pandas，pip需要先配置国内源，不然下载速度很慢
+...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sat Apr 23 2022 23:08:20 GMT+0800">2022-04-23</span></span>
+        
+        
+    </div>
+
+    <a href="/2022/04/23/pandas/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
                     <a href="/2022/04/23/openssh/">
                         openssh
                     </a>
@@ -210,39 +240,6 @@ analysize无论是方向键还是del键都不起作用，推测是grub启动的�
 
             </li>
         
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2022/04/23/kubernetes/">
-                        kubernetes
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
-                        kubernetesfeature
-high availablity or no downtime
-scalability or high performance
-disaster recovery (backup and restore)
-
-pro...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sat Apr 23 2022 23:06:20 GMT+0800">2022-04-23</span></span>
-        
-        
-    </div>
-
-    <a href="/2022/04/23/kubernetes/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
     </ul>
 
     <div class="home-paginator">
@@ -270,24 +267,35 @@ pro...
         </div>
 
         <div class="page-main-content-bottom">
-            <footer class="footer">
-    <div class="info-container">
-        <div class="copyright-info info-item">
-            &copy;
-            
-              <span>2020</span>
-              -
-            
-            2023&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">shutterbug</a>
-        </div>
-        
-        <div class="theme-info info-item">
-            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
-        </div>
-        
-        
-    </div>
-</footer>
+            .footer {
+  font-size: 1rem;
+  color: var(--third-text-color);
+
+
+  a {
+    color: var(--third-text-color);
+
+
+    &:hover {
+      color: var(--primary-color);
+
+    }
+  }
+
+  .info-container {
+    padding-bottom: 10px;
+    text-align: center;
+  }
+
+  .info-item {
+    margin: 5px 0;
+  }
+
+  .icon-animate {
+    animation: icon-animate 1.2s ease-in-out infinite;
+  }
+
+}
 
         </div>
     </div>
