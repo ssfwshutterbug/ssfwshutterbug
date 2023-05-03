@@ -213,7 +213,7 @@
 
         <div class="article-content markdown-body">
             <h1 id="NEOVIM"><a href="#NEOVIM" class="headerlink" title="NEOVIM"></a>NEOVIM</h1><p>I think the most interesting thing about NEOVIM is that it natively supports LSP. So what is LSP?</p>
-<p>LSP stands for language server protocol, which first be used in vscode by MicroSoft,it is a standard that our editor and language compiler should follow in order to make our users code much more easily with syntax hint, error hint, syntax autocomplete and so on.</p>
+<p>LSP stands for language server protocol, which first be used in vscode by MicroSoft,it is a standard protocol that our editor and language compiler should follow in order to make our users code much more easily with syntax hint, error hint, syntax autocomplete and so on.</p>
 <h2 id="Rust-Analyzer"><a href="#Rust-Analyzer" class="headerlink" title="Rust Analyzer"></a>Rust Analyzer</h2><p>For example, how can i get neovim to support rust language autocomplete? There are two steps:</p>
 <ol>
 <li>Download <a target="_blank" rel="noopener" href="https://rust-analyzer.github.io/manual.html#rust-analyzer-language-server-binary"><code>rust-analyzer</code></a>, which gives us the ability to autocomplete.</li>
@@ -266,6 +266,16 @@
 <p>In a fact, we don’t need to write the last cmd line to manually run lua-language-server, generally nvim-lspconfig will do the job for us if it can find the executable in path. In this case, i didn’t put lua-language-server in environment <code>$PATH</code>, so i need to manually run it with the last cmd line.</p>
 </li>
 </ul>
+<h2 id="Golang-Language-Server"><a href="#Golang-Language-Server" class="headerlink" title="Golang Language Server"></a>Golang Language Server</h2><p>I use neovim and it support Lsp natively, so the only thing i need to do is <a class="link"   target="_blank" rel="noopener" href="https://github.com/golang/tools/tree/master/gopls" >installing<i class="fas fa-external-link-alt"></i></a> <code>gopls</code> the go language serer and <a class="link"   target="_blank" rel="noopener" href="https://github.com/golang/tools/blob/master/gopls/doc/vim.md" >configuring<i class="fas fa-external-link-alt"></i></a> in neovim.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">download gopls <span class="keyword">in</span> commandline</span></span><br><span class="line">go install golang.org/x/tools/gopls@latest</span><br></pre></td></tr></table></figure>
+
+<p>It will install <code>gopls</code> in our <code>$GOPATH/bin</code>, in order to let neovim to find the executable file, we can move it to <code>~/.local/bin/</code>.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp ~/public/code/go/bin/gopls ~/.local/bin/</span><br></pre></td></tr></table></figure>
+
+<p>Now configure it via <code>lsp-config</code>.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">require(&#x27;lspconfig&#x27;).gopls.setup&#123;</span><br><span class="line">	on_attach = on_attach,</span><br><span class="line">	flags = lsp_flags,</span><br><span class="line">	capabilities = capabilities,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
 
         </div>
 
@@ -417,7 +427,7 @@
         <aside class="page-aside">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#NEOVIM"><span class="nav-number">1.</span> <span class="nav-text">NEOVIM</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Rust-Analyzer"><span class="nav-number">1.1.</span> <span class="nav-text">Rust Analyzer</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Lua-Language-server"><span class="nav-number">1.2.</span> <span class="nav-text">Lua Language server</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#NEOVIM"><span class="nav-number">1.</span> <span class="nav-text">NEOVIM</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Rust-Analyzer"><span class="nav-number">1.1.</span> <span class="nav-text">Rust Analyzer</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Lua-Language-server"><span class="nav-number">1.2.</span> <span class="nav-text">Lua Language server</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Golang-Language-Server"><span class="nav-number">1.3.</span> <span class="nav-text">Golang Language Server</span></a></li></ol></li></ol>
     </div>
 </div>
         </aside>
