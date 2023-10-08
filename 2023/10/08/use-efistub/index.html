@@ -9,6 +9,8 @@
     
     <title>
         
+            use-efistub |
+        
         Stay Hard!
     </title>
     
@@ -60,7 +62,7 @@
                 <ul class="menu-list">
                     
                         <li class="menu-item">
-                            <a class="active"
+                            <a class=""
                                href="/"
                             >
                                 HOME
@@ -113,7 +115,7 @@
         <ul class="drawer-menu-list">
             
                 <li class="drawer-menu-item flex-center">
-                    <a class="active"
+                    <a class=""
                        href="/">HOME</a>
                 </li>
             
@@ -147,117 +149,132 @@
             <div class="main-content">
 
                 
-                    <div class="home-content-container fade-in-down-animation">
-    <ul class="home-article-list">
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">use-efistub</span>
+        </div>
+
         
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2022/05/14/bad-guy/">
-                        Bad Guy
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
-                        今天听了《美丽的神话》这首歌，又回想起来大学看过的《神话》这个电视剧。时光匆匆，这么多年又过去了，然而看电视剧的感受还是那么 清晰。全剧最让我感动的就是赵高说他要一步一步往上爬，成为一人之下万人之上的存在。这里也是他和主角正式分道扬镳的地方，如果让我...
-                    
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/avatar.svg">
                 </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sat May 14 2022 16:53:09 GMT+0800">2022-05-14</span></span>
-        
-        
-    </div>
-
-    <a href="/2022/05/14/bad-guy/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2022/04/23/zsh/">
-                        zsh
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
-                        ZSHchange default location.zshrc and .zcompdump location in $HOME directory.  and we can change it to another folder
-12# add ...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sat Apr 23 2022 23:15:44 GMT+0800">2022-04-23</span></span>
-        
-        
-    </div>
-
-    <a href="/2022/04/23/zsh/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2022/04/23/zookeeper/">
-                        zookeeper
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
+                <div class="info">
+                    <div class="author">
+                        <span class="name">shutterbug</span>
                         
-zk单机以及集群搭建（基于docker）
+                            <span class="author-label">Lv5</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2023-10-08 21:24:08</span>
+        <span class="mobile">2023-10-08 21:24</span>
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/linux/">linux</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/bootloader/">bootloader</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
 
-单机创建并进入docker创建docker，并将有安装包的主机挂载到docker中
-1systemctl start docker
+    
+    
+    
+    
+</div>
 
-12docker run -d -it --name zk -v /h...
-                    
+                    </div>
                 </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sat Apr 23 2022 23:15:22 GMT+0800">2022-04-23</span></span>
+            </div>
         
+
+        <div class="article-content markdown-body">
+            <h1 id="USE-EFI-STUB"><a href="#USE-EFI-STUB" class="headerlink" title="USE EFI STUB"></a>USE EFI STUB</h1><p>I used to use grub as my bootloader, and it works great. But i wanna to try something new, so this time i use EFI stub.</p>
+<p>In a fact, Grub is a secondary bootloader, because UEFI fireware cat act as a bootloader, it stores boot information in NVRom, so we can directly boot linux kernel via UEFI. The only tool we need is <code>efibootmgr</code> which can help us to configure boot information in NVRom.</p>
+<p><em>Assume nvme0n1 is the disk, nvme0n1p1 is ESP partition and nvme0n1p2 is root partition.</em></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">nvme0n1     259:2    0 119.2G  0 disk</span><br><span class="line">├─nvme0n1p1 259:3    0   100M  0 part /efi</span><br><span class="line">└─nvme0n1p2 259:4    0    60G  0 part /</span><br></pre></td></tr></table></figure>
+
+<h2 id="install-tool"><a href="#install-tool" class="headerlink" title="install tool"></a>install tool</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">emerge --ask efibootmgr</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="prepare-efi-boot-entry"><a href="#prepare-efi-boot-entry" class="headerlink" title="prepare efi boot entry"></a>prepare efi boot entry</h2><p>We need create a efi directory under <code>/</code> and mount ESP partition under <code>/efi</code>.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mkfs.fat -F 32 /dev/nvme0n1p1</span><br><span class="line"></span><br><span class="line">mkdir /efi</span><br><span class="line"></span><br><span class="line">mount /dev/nvme0n1p1 /efi</span><br></pre></td></tr></table></figure>
+
+<p>Then create directory and copy kernel boot entry to folder.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /efi/ESP/gentoo</span><br><span class="line"></span><br><span class="line">cp /usr/src/linux/arch/x86/boot/bzImage /efi/EFI/gentoo/bzImage.efi</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="create-UEFI-boot-menu"><a href="#create-UEFI-boot-menu" class="headerlink" title="create UEFI boot menu"></a>create UEFI boot menu</h2><p>Now we can create a UEFI boot menu with <code>efibootmgr</code>. According to <a class="link"   target="_blank" rel="noopener" href="https://wiki.gentoo.org/wiki/EFI_stub" >this article<i class="fas fa-external-link-alt"></i></a>, there are two options for us to choose to specify the root partition.</p>
+<ul>
+<li>configure root partition path to kernel.</li>
+<li>configure root partition path to UEFI.</li>
+</ul>
+<p>I choose the second method, cause it is super easy, only need to add one more parameter <code>-u</code> to efibootmgr command.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">efibootmgr --create --disk /dev/nvme0n1 --part 1 --label &quot;Gentoo EFI Stub&quot; --loader &quot;\EFI\gentoo\bzImage.efi&quot; -u &quot;root=/dev/nvme0n1p2&quot;</span><br></pre></td></tr></table></figure>
+
+
+
+
+        </div>
+
         
-    </div>
 
-    <a href="/2022/04/23/zookeeper/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
         
-    </ul>
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/bootloader/">#bootloader</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
 
-    <div class="home-paginator">
-        <div class="paginator">
-    
-        <a class="prev btn"
-           href="/page/21/"
-        >Prev</a>
-    
+        
+            <div class="article-nav">
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2023/10/08/try-wayland/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">try-wayland</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
 
-    
-        <a class="next btn"
-           href="/page/23/"
-        >Next</a>
-    
-</div>
-
+        
     </div>
 </div>
 
@@ -290,6 +307,23 @@ zk单机以及集群搭建（基于docker）
         </div>
     </div>
 
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
     
 
     <div class="right-bottom-side-tools">
@@ -336,6 +370,14 @@ zk单机以及集群搭建（基于docker）
     </div>
 
     
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#USE-EFI-STUB"><span class="nav-number">1.</span> <span class="nav-text">USE EFI STUB</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#install-tool"><span class="nav-number">1.1.</span> <span class="nav-text">install tool</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#prepare-efi-boot-entry"><span class="nav-number">1.2.</span> <span class="nav-text">prepare efi boot entry</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#create-UEFI-boot-menu"><span class="nav-number">1.3.</span> <span class="nav-text">create UEFI boot menu</span></a></li></ol></li></ol>
+    </div>
+</div>
+        </aside>
+    
 
     <div class="image-viewer-container">
     <img src="">
@@ -377,7 +419,6 @@ zk单机以及集群搭建（基于docker）
 
 
 
-
 <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/dark-light-toggle.js"></script>
 
 
@@ -389,6 +430,8 @@ zk单机以及集群搭建（基于docker）
 
 
 <div class="post-scripts pjax">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/toc.js"></script>
     
 </div>
 
