@@ -9,6 +9,8 @@
     
     <title>
         
+            suspend-system |
+        
         Stay Hard!
     </title>
     
@@ -60,7 +62,7 @@
                 <ul class="menu-list">
                     
                         <li class="menu-item">
-                            <a class="active"
+                            <a class=""
                                href="/"
                             >
                                 HOME
@@ -113,7 +115,7 @@
         <ul class="drawer-menu-list">
             
                 <li class="drawer-menu-item flex-center">
-                    <a class="active"
+                    <a class=""
                        href="/">HOME</a>
                 </li>
             
@@ -147,145 +149,118 @@
             <div class="main-content">
 
                 
-                    <div class="home-content-container fade-in-down-animation">
-    <ul class="home-article-list">
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">suspend-system</span>
+        </div>
+
         
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2023/02/12/docker/">
-                        docker
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
-                        Dockerdocker优点
-启动速度很快
-
-运行需要的内存占用小
-
-可移植性很好：
-比如我们做了一个web app，按照以前的做法，自然是先写代码，再测试，然后在实际的环境中去运行。然后实际的环境与测试的环境并不一致，这就会出现很多问题。而dock...
-                    
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/avatar.svg">
                 </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sun Feb 12 2023 17:20:29 GMT+0800">2023-02-12</span></span>
-        
-        
-    </div>
-
-    <a href="/2023/02/12/docker/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2023/02/12/blender/">
-                        blender
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
+                <div class="info">
+                    <div class="author">
+                        <span class="name">shutterbug</span>
                         
-blender learning
-
-blendershortcut
-
-
-shortcut
-function
-
-
-
-g
-grab
-
-
-r
-rotate
-
-
-s
-scale
-
-
-left click
-choose object
-
-
-middle cli...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sun Feb 12 2023 17:19:36 GMT+0800">2023-02-12</span></span>
-        
-        
-    </div>
-
-    <a href="/2023/02/12/blender/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
+                            <span class="author-label">Lv5</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2023-10-14 15:45:09</span>
+        <span class="mobile">2023-10-14 15:45</span>
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
                 
+                    <li>
+                        <a href="/categories/linux/">linux</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/suspend/">suspend</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
 
-                <h3 class="home-article-title">
-                    <a href="/2023/02/12/vboxDiskResize/">
-                        vboxDiskResize
-                    </a>
-                </h3>
+    
+    
+    
+    
+</div>
 
-                <div class="home-article-content markdown-body">
-                    
-                        Virtualbox Disk Resizecheck virtualbox disk size
-
-now to resize disk size, unit is Mib. --resize is the size after extend who...
-                    
+                    </div>
                 </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sun Feb 12 2023 17:17:04 GMT+0800">2023-02-12</span></span>
+            </div>
         
+
+        <div class="article-content markdown-body">
+            <h1 id="SUSPEND-SYSTEM"><a href="#SUSPEND-SYSTEM" class="headerlink" title="SUSPEND SYSTEM"></a>SUSPEND SYSTEM</h1><p>In the past years, i used systemd and there is command <code>systemctl suspend</code> can do the work. Then i moved to elogind which also has a command <code>loginctl suspend</code>. But now i use wayland with seatd(no need of elogind), so how can i suspend the system?</p>
+<p>Yeah, we can install <code>sys-power/suspend</code>, it cantains <code>s2ram s2disk s2both</code> can help us.</p>
+<p>However i am gonna to install that, cause i find a <a class="link"   target="_blank" rel="noopener" href="https://wiki.gentoo.org/wiki/Suspend_and_hibernate" >better way<i class="fas fa-external-link-alt"></i></a> also called raw way works things out, super simple.</p>
+<p>First, check the support method:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /sys/power/state</span><br></pre></td></tr></table></figure>
+
+<p>Then, directly write to this file:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo mem &gt; /sys/power/state</span><br></pre></td></tr></table></figure>
+
+
+<p>The most important thing is that i know better of linux is a system all about files and the mean of socket.</p>
+
+        </div>
+
         
-    </div>
 
-    <a href="/2023/02/12/vboxDiskResize/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
         
-    </ul>
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/suspend/">#suspend</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
 
-    <div class="home-paginator">
-        <div class="paginator">
-    
-        <a class="prev btn"
-           href="/page/7/"
-        >Prev</a>
-    
+        
+            <div class="article-nav">
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2023/10/08/use-efistub/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">use-efistub</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
 
-    
-        <a class="next btn"
-           href="/page/9/"
-        >Next</a>
-    
-</div>
-
+        
     </div>
 </div>
 
@@ -318,6 +293,23 @@ now to resize disk size, unit is Mib. --resize is the size after extend who...
         </div>
     </div>
 
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
     
 
     <div class="right-bottom-side-tools">
@@ -364,6 +356,14 @@ now to resize disk size, unit is Mib. --resize is the size after extend who...
     </div>
 
     
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#SUSPEND-SYSTEM"><span class="nav-number">1.</span> <span class="nav-text">SUSPEND SYSTEM</span></a></li></ol>
+    </div>
+</div>
+        </aside>
+    
 
     <div class="image-viewer-container">
     <img src="">
@@ -405,7 +405,6 @@ now to resize disk size, unit is Mib. --resize is the size after extend who...
 
 
 
-
 <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/dark-light-toggle.js"></script>
 
 
@@ -417,6 +416,8 @@ now to resize disk size, unit is Mib. --resize is the size after extend who...
 
 
 <div class="post-scripts pjax">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/toc.js"></script>
     
 </div>
 
